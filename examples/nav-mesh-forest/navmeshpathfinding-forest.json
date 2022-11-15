@@ -1,0 +1,2696 @@
+{
+  "firstLayout": "",
+  "gdVersion": {
+    "build": 99,
+    "major": 4,
+    "minor": 0,
+    "revision": 0
+  },
+  "properties": {
+    "adaptGameResolutionAtRuntime": false,
+    "folderProject": false,
+    "orientation": "landscape",
+    "packageName": "com.example.pathfinding",
+    "pixelsRounding": false,
+    "projectUuid": "8e07fc4f-bee3-4fbb-8eab-52cdb9865e84",
+    "scaleMode": "linear",
+    "sizeOnStartupMode": "adaptWidth",
+    "templateSlug": "",
+    "useExternalSourceFiles": false,
+    "version": "1.0.0",
+    "name": "Pathfinding example",
+    "description": "",
+    "author": "",
+    "windowWidth": 800,
+    "windowHeight": 600,
+    "latestCompilationDirectory": "",
+    "maxFPS": 60,
+    "minFPS": 20,
+    "verticalSync": false,
+    "platformSpecificAssets": {},
+    "loadingScreen": {
+      "backgroundColor": 0,
+      "backgroundFadeInDuration": 0.2,
+      "backgroundImageResourceName": "",
+      "gdevelopLogoStyle": "light",
+      "logoAndProgressFadeInDuration": 0.2,
+      "logoAndProgressLogoFadeInDelay": 0.2,
+      "minDuration": 1.5,
+      "progressBarColor": 16777215,
+      "progressBarHeight": 20,
+      "progressBarMaxWidth": 200,
+      "progressBarMinWidth": 40,
+      "progressBarWidthPercent": 30,
+      "showGDevelopSplash": true,
+      "showProgressBar": true
+    },
+    "authorIds": [],
+    "categories": [],
+    "playableDevices": [],
+    "extensionProperties": [
+      {
+        "extension": "NavMeshPathfinding",
+        "property": "AreaBottomBound",
+        "value": "600"
+      },
+      {
+        "extension": "NavMeshPathfinding",
+        "property": "AreaLeftBound",
+        "value": "0"
+      },
+      {
+        "extension": "NavMeshPathfinding",
+        "property": "AreaRightBound",
+        "value": "800"
+      },
+      {
+        "extension": "NavMeshPathfinding",
+        "property": "AreaTopBound",
+        "value": "0"
+      },
+      {
+        "extension": "NavMeshPathfinding",
+        "property": "CellSize",
+        "value": "5"
+      },
+      {
+        "extension": "NavMeshPathfinding",
+        "property": "Viewpoint",
+        "value": "Top-Down"
+      },
+      {
+        "extension": "NavMeshPathfinding",
+        "property": "cellSize",
+        "value": "10"
+      }
+    ],
+    "platforms": [
+      {
+        "name": "GDevelop JS platform"
+      }
+    ],
+    "currentPlatform": "GDevelop JS platform"
+  },
+  "resources": {
+    "resources": [
+      {
+        "alwaysLoaded": false,
+        "file": "Target.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Flag-Pole.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "NodeMarker-1-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "NodeMarker-1-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Tank.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Tank.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Robot.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Robot.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Obstacle.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Obstacle.png",
+        "smoothed": true,
+        "userAdded": true
+      }
+    ],
+    "resourceFolders": []
+  },
+  "objects": [],
+  "objectsGroups": [],
+  "variables": [],
+  "layouts": [
+    {
+      "b": 122,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "Game",
+      "name": "Game",
+      "r": 122,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 122,
+      "uiSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 20,
+        "gridHeight": 20,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.6499999877929692,
+        "windowMask": false
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Flag",
+          "persistentUuid": "aea2950d-0e33-4574-8979-c75cecb2d9ad",
+          "width": 0,
+          "x": 176.5697784423828,
+          "y": -27.895343780517578,
+          "zOrder": 1,
+          "numberProperties": [
+            {
+              "name": "animation",
+              "value": 2674910
+            }
+          ],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Fire",
+          "persistentUuid": "20d2b5b8-8beb-41f5-aed4-335ec9442cd6",
+          "width": 48,
+          "x": 622,
+          "y": 238,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Smoke",
+          "persistentUuid": "dd52d5fc-71e6-408e-9fbe-8d51d525c7c2",
+          "width": 48,
+          "x": 618,
+          "y": 236,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 24,
+          "layer": "",
+          "name": "Tank",
+          "persistentUuid": "9c0f01e4-c8b7-452d-ac3e-1170889f7e08",
+          "width": 32,
+          "x": 122,
+          "y": 298,
+          "zOrder": 26,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Fire",
+          "persistentUuid": "a2f759a6-063f-42b1-a2da-b200b9b9786d",
+          "width": 48,
+          "x": 622,
+          "y": 238,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Smoke",
+          "persistentUuid": "50f150c5-da3a-4c6c-8457-707790a33535",
+          "width": 48,
+          "x": 618,
+          "y": 236,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "f0aae23b-5962-44eb-99e3-507d3623bf78",
+          "width": 20,
+          "x": 645,
+          "y": 420,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "6b448de1-3ba2-449c-8140-679f4544cae5",
+          "width": 20,
+          "x": 536,
+          "y": 383,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "460e999a-c297-49f9-8a90-597d33135e01",
+          "width": 20,
+          "x": 730,
+          "y": 277,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "4bd7dbf6-2245-4ba6-b77e-7df85cfca823",
+          "width": 20,
+          "x": 702,
+          "y": 69,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "dfb061c0-92e7-45ff-a251-76bcefe6cb00",
+          "width": 20,
+          "x": 718,
+          "y": 171,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "82e601f4-ad33-4f46-8c5c-4bc65dabe8fc",
+          "width": 20,
+          "x": 510,
+          "y": 52,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "f30c582d-f9c4-43b5-ad87-6c1147c917c0",
+          "width": 20,
+          "x": 53,
+          "y": 514,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "f3374cb3-5d09-489d-bca0-5af9fa4c2050",
+          "width": 20,
+          "x": 202,
+          "y": 547,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "7d0050f7-18c9-4a56-8a54-b3c7b0ce920c",
+          "width": 20,
+          "x": 235,
+          "y": 454,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "6fd83f2f-298e-4405-887d-1304996506b8",
+          "width": 20,
+          "x": 475,
+          "y": 312,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "8de8e4b8-ba14-48b5-8f28-192462fc7c2b",
+          "width": 20,
+          "x": 617,
+          "y": 19,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "53cc2ece-fdad-49f7-9a05-2054158287a0",
+          "width": 20,
+          "x": 292,
+          "y": 78,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "bad512f2-d4d1-45a9-a2cf-66bf4c54d935",
+          "width": 20,
+          "x": 485,
+          "y": 160,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "e1a2d4c4-a7d4-4dc1-9dc9-2f26a9d2cd09",
+          "width": 20,
+          "x": 397,
+          "y": 438,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "3e727be0-35b4-4ff6-aeca-2a938be48e00",
+          "width": 20,
+          "x": 90,
+          "y": 397,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "b8098d87-fe3f-4bbb-bae2-02ec83479053",
+          "width": 20,
+          "x": 130,
+          "y": 181,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "3286fa9f-c385-49ef-8453-9c2334f20fef",
+          "width": 20,
+          "x": 134,
+          "y": 499,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "ca54aa3d-f070-42d8-84c6-79c286bfc9e6",
+          "width": 20,
+          "x": 570,
+          "y": 518,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "2bf8392b-a457-451b-884d-e13e10b52dc4",
+          "width": 20,
+          "x": 388,
+          "y": 534,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "6562b432-60d9-4881-abdb-82a72a29ac85",
+          "width": 20,
+          "x": 700,
+          "y": 349,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "8917c7ce-4bb1-4287-a351-445326e94498",
+          "width": 20,
+          "x": 694,
+          "y": 526,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "309e60e2-0b36-4c39-adc5-c16c63be1e32",
+          "width": 20,
+          "x": 627,
+          "y": 272,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "cacfce31-a247-4e22-a16c-f35a674ecbef",
+          "width": 20,
+          "x": 615,
+          "y": 127,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "f6fac446-08e2-4114-bcbf-5919fc0aa7f7",
+          "width": 20,
+          "x": 395,
+          "y": 132,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "387bd1fc-bffb-4c5e-a0f1-96d9e696335c",
+          "width": 20,
+          "x": 233,
+          "y": 358,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "1df3a3d0-12e5-48e3-8b89-73a6b6f1560b",
+          "width": 20,
+          "x": 340,
+          "y": 350,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "f33fdef4-2354-4e6d-b62f-8935e58bdd97",
+          "width": 20,
+          "x": 290,
+          "y": 167,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "690d2de1-fadd-4ffc-ad08-5cee639c4c6d",
+          "width": 20,
+          "x": 526,
+          "y": 233,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "9185e6dd-5b87-421e-b2c4-c11fac20b95a",
+          "width": 20,
+          "x": 299,
+          "y": 474,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "687fbcb1-4c4b-47c8-a579-c783bc1f88e5",
+          "width": 20,
+          "x": 461,
+          "y": 466,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "375b3ae6-18ea-45a2-87fd-df69cf2814cb",
+          "width": 20,
+          "x": 521,
+          "y": 115,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "49270d4f-482d-4079-9877-e8ff0c70f3ee",
+          "width": 20,
+          "x": 580,
+          "y": 188,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "747072d7-bca4-46cc-a4db-e54a511f17bc",
+          "width": 20,
+          "x": 617,
+          "y": 353,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "5947aecc-a291-4ff0-957f-826fb8b4fb44",
+          "width": 20,
+          "x": 546,
+          "y": 307,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "5a61a7b0-ed6f-4694-a049-99d274383f7a",
+          "width": 20,
+          "x": 162,
+          "y": 415,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "a2df6a5a-ef40-4191-9671-74043e9fa49d",
+          "width": 20,
+          "x": 66,
+          "y": 317,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "4a310ded-c70e-43f7-9c5e-7a362cc83105",
+          "width": 20,
+          "x": 61,
+          "y": 229,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "aca49bbe-872c-49be-b766-b21d91b890eb",
+          "width": 20,
+          "x": 84,
+          "y": 107,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "612cccf7-991c-46dd-a430-7ac30268b53c",
+          "width": 20,
+          "x": 210,
+          "y": 129,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "2acb47e2-652b-4e54-ac14-3c16c01b1dde",
+          "width": 20,
+          "x": 386,
+          "y": 46,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "e36c5c55-9367-4bc7-b873-bdf90e4be1df",
+          "width": 20,
+          "x": 744,
+          "y": 384,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "62b9f069-fba1-47d6-92a5-97a91f806b9b",
+          "width": 20,
+          "x": 404,
+          "y": 322,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "b86f65cd-9fec-4ab2-867e-220ff9784291",
+          "width": 20,
+          "x": 153,
+          "y": 338,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "0dda905b-f10e-45a5-a796-0eae92cc0487",
+          "width": 20,
+          "x": 233,
+          "y": 262,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "64ae95f8-9b05-4087-af97-e48963a326d4",
+          "width": 20,
+          "x": 755,
+          "y": 25,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "7f201e6f-5932-49b1-b570-2c6cf85fc6e0",
+          "width": 20,
+          "x": 658,
+          "y": 207,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "123425d0-8f93-47f3-a28f-2b8679f19db0",
+          "width": 20,
+          "x": 287,
+          "y": 394,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "1f049e22-df37-47d9-bb3d-7bcdb23c40f1",
+          "width": 20,
+          "x": 213,
+          "y": 194,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "31088076-dff0-410b-809c-bf74583dcc0b",
+          "width": 20,
+          "x": 40,
+          "y": 439,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "7b6999bf-27d9-49e6-91ef-ef86b4b81677",
+          "width": 20,
+          "x": 27,
+          "y": 358,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "94324419-9d8d-44a9-be9d-81f0168bc99b",
+          "width": 20,
+          "x": 25,
+          "y": 169,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "70673f98-c9aa-4c78-867f-f844b5a6bb7e",
+          "width": 20,
+          "x": 63,
+          "y": 28,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "1ec71219-90a9-44b7-8f34-5bc8b7119500",
+          "width": 20,
+          "x": 197,
+          "y": 46,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "c7c6ed91-97b7-435b-81cf-ce89a1ee0773",
+          "width": 20,
+          "x": 722,
+          "y": 439,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "071e91f0-5100-42bc-8ad4-32a660f1e5ec",
+          "width": 20,
+          "x": 495,
+          "y": 553,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "f333aee3-1b93-44a5-9511-fabf91a399fd",
+          "width": 20,
+          "x": 441,
+          "y": 388,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "eb609e9d-caff-4c22-a2f4-19bdbf8c878b",
+          "width": 20,
+          "x": 567,
+          "y": 445,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "b7990caa-902b-4673-b1ee-b97a9a4fa2af",
+          "width": 20,
+          "x": 303,
+          "y": 545,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "29276aae-f8d6-4280-9534-7d87f2edb251",
+          "width": 20,
+          "x": 305,
+          "y": 290,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "ff97897d-f326-495e-9023-c8762775d65c",
+          "width": 20,
+          "x": 546,
+          "y": 307,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "64795963-56b9-4b3e-85b7-1289b18ec550",
+          "width": 20,
+          "x": 546,
+          "y": 307,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "b532cf48-2900-49b7-ae9e-d671ffe4540c",
+          "width": 20,
+          "x": 546,
+          "y": 307,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "4832cefe-8afd-47ae-abeb-1b5ac390ebc0",
+          "width": 20,
+          "x": 546,
+          "y": 307,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "4b3e4715-2ab8-4d2c-847e-d9a5f89dcad4",
+          "width": 20,
+          "x": 546,
+          "y": 307,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "528860a9-fe1a-4918-88a9-f3ea69c99a2b",
+          "width": 20,
+          "x": 546,
+          "y": 307,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "664c3f21-2a56-43a8-961f-7a3ce7d878ff",
+          "width": 20,
+          "x": 546,
+          "y": 307,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "24e8c9a5-84ae-4866-a3de-a1a2ef75a1b5",
+          "width": 20,
+          "x": 546,
+          "y": 307,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "0c805af0-0747-4a34-95e4-62bacd79783e",
+          "width": 20,
+          "x": 546,
+          "y": 307,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "a4001b33-ff1b-4b8a-9cc7-504f7207beb9",
+          "width": 20,
+          "x": 755,
+          "y": 104,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "6f884e47-5cda-4cd7-9845-c2c41274c8c9",
+          "width": 20,
+          "x": 670,
+          "y": 123,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "806e0dd1-fd04-487e-b1b3-f7fcc9510e35",
+          "width": 20,
+          "x": 565,
+          "y": 73,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "3b570114-1dc5-4970-891c-47ea6c558c1d",
+          "width": 20,
+          "x": 254,
+          "y": 28,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "b6888291-90dd-4e67-924a-b0ad25f32cf8",
+          "width": 20,
+          "x": 335,
+          "y": 110,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "7514b905-da27-4610-b761-05bee0b33d46",
+          "width": 20,
+          "x": 454,
+          "y": 84,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "0b53792e-41a6-47dd-9dc4-cd51ced1b424",
+          "width": 20,
+          "x": 427,
+          "y": 200,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "af9784bb-a9fa-48eb-9c6f-a4f8a9ca809e",
+          "width": 20,
+          "x": 365,
+          "y": 252,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "ac91f7bf-e8b3-4420-97f9-0b28b348a16e",
+          "width": 20,
+          "x": 356,
+          "y": 184,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "76706d88-696e-40db-af9d-944b921b964a",
+          "width": 20,
+          "x": 280,
+          "y": 227,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "a86d202b-7174-4078-adad-658648a15036",
+          "width": 20,
+          "x": 623,
+          "y": 561,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "14d8648e-e5ad-4478-b2cf-2202ec6107a2",
+          "width": 20,
+          "x": 747,
+          "y": 494,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "50c72e08-263f-4883-90bb-5d8ea9c59690",
+          "width": 20,
+          "x": 445,
+          "y": 536,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "fc05d201-4597-4c09-924e-5c0ac9bcf1b7",
+          "width": 20,
+          "x": 358,
+          "y": 500,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "3e69c5c7-c8b9-4e91-a02f-f7f88b9d77e0",
+          "width": 20,
+          "x": 342,
+          "y": 413,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "96262095-163f-4316-aa7c-c7646d96696f",
+          "width": 20,
+          "x": 496,
+          "y": 414,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "6239e5ee-c895-446e-b81f-d7c717c03fef",
+          "width": 20,
+          "x": 516,
+          "y": 480,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "7e7078bb-b94e-4dcd-8c95-50fb0c8e558a",
+          "width": 20,
+          "x": 631,
+          "y": 484,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "5b47e49c-8f31-4321-84de-7a7dbe59bee9",
+          "width": 20,
+          "x": 95,
+          "y": 548,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "486b0b26-78e2-4a6d-995e-6d488cd7981b",
+          "width": 20,
+          "x": 253,
+          "y": 528,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "18b19ade-b9aa-41ac-8aae-fc397a20cf14",
+          "width": 20,
+          "x": 451,
+          "y": 250,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "cc3c782c-9ecc-481c-bbf7-9af43c02672e",
+          "width": 20,
+          "x": 187,
+          "y": 487,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "0670ae45-765a-483b-b8bd-3f31cdf6d0ad",
+          "width": 20,
+          "x": 430,
+          "y": 19,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "a04caf87-f3b5-4db4-b197-e74ecdf6c41d",
+          "width": 20,
+          "x": 623,
+          "y": 68,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "ac349c1c-eb1a-4ea7-b9f3-b8591f0e51de",
+          "width": 20,
+          "x": 737,
+          "y": 221,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "1d5020c1-f5e9-475a-812f-435dcaf2a614",
+          "width": 20,
+          "x": 672,
+          "y": 306,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "145caf16-ce43-4147-8f1b-a7d984f25b0a",
+          "width": 20,
+          "x": 144,
+          "y": 240,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "c14af2d6-4ad7-46c8-83aa-567abe76b152",
+          "width": 20,
+          "x": 286,
+          "y": 335,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "5152e1d1-772c-4955-90bc-369956c1ff0c",
+          "width": 20,
+          "x": 193,
+          "y": 296,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "d291d802-f0cf-41af-a8ff-a34b0ff7e0e3",
+          "width": 20,
+          "x": 91,
+          "y": 163,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "f9ef97ba-9a9b-4faa-a700-fdc2889e072e",
+          "width": 20,
+          "x": 31,
+          "y": 80,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "24907bd8-33a5-49a7-b034-0b9399f33e91",
+          "width": 20,
+          "x": 142,
+          "y": 103,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "NewObject",
+          "persistentUuid": "9966554a-086e-41b4-b53f-a8fd9832454e",
+          "width": 0,
+          "x": 264,
+          "y": 570,
+          "zOrder": 30,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "assetStoreId": "",
+          "name": "Flag",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": true,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": true,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Flag-Pole.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 25,
+                        "y": 13
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 0,
+                            "y": 0
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": []
+                },
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": []
+                },
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": []
+                },
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": []
+                },
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": []
+                },
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": []
+                },
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "NodeMarker",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": true,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NodeMarker",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "NodeMarker-1-1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 10,
+                        "y": 6
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 0,
+                            "y": 0
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "Tank",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "NavMeshPathfindingBehavior",
+              "type": "NavMeshPathfinding::NavMeshPathfindingBehavior",
+              "collisionShape": "Dot at center",
+              "extraBorder": 0,
+              "acceleration": 400,
+              "angleOffset": 0,
+              "angularMaxSpeed": 180,
+              "cellSize": 20,
+              "maxSpeed": 200,
+              "rotateObject": true
+            }
+          ],
+          "animations": [
+            {
+              "name": "Tank",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.07999999821186066,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Tank.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 41,
+                        "y": 32
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "Robot",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "NavMeshPathfindingBehavior",
+              "type": "NavMeshPathfinding::NavMeshPathfindingBehavior",
+              "collisionShape": "Dot at center",
+              "extraBorder": 0,
+              "acceleration": 400,
+              "angleOffset": 0,
+              "angularMaxSpeed": 180,
+              "cellSize": 20,
+              "maxSpeed": 200,
+              "rotateObject": true
+            }
+          ],
+          "animations": [
+            {
+              "name": "tank_frame2-0004",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.07999999821186066,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Robot.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 41,
+                        "y": 32
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "Obstacle",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "NavMeshPathfindingObstacleBehavior",
+              "type": "NavMeshPathfinding::NavMeshPathfindingObstacleBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "NewObject",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.07999999821186066,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Obstacle.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "NewObject",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Press \"Return\" to randomize",
+          "font": "",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        }
+      ],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "disabled": true,
+              "type": "BuiltinCommonInstructions::Repeat",
+              "repeatExpression": "40",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Robot",
+                    "434",
+                    "95",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeScale"
+                  },
+                  "parameters": [
+                    "Robot",
+                    "=",
+                    "0.25"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "DebuggerTools::EnableDebugDraw"
+                  },
+                  "parameters": [
+                    "",
+                    "",
+                    "",
+                    "no",
+                    "no",
+                    "no",
+                    "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::SetDestination"
+                  },
+                  "parameters": [
+                    "Tank",
+                    "NavMeshPathfindingBehavior",
+                    "",
+                    "Tank.X()",
+                    "Tank.Y()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::DrawNavMesh"
+                  },
+                  "parameters": [
+                    "Tank",
+                    "NavMeshPathfindingBehavior",
+                    "yes",
+                    "\"255;187;0\"",
+                    "64"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AjoutHasard"
+                  },
+                  "parameters": [
+                    "",
+                    "Robot"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::SetDestination"
+                  },
+                  "parameters": [
+                    "Robot",
+                    "NavMeshPathfindingBehavior",
+                    "",
+                    "Robot.X()",
+                    "Robot.Y()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::DrawNavMesh"
+                  },
+                  "parameters": [
+                    "Robot",
+                    "NavMeshPathfindingBehavior",
+                    "yes",
+                    "\"155;155;155\"",
+                    "64"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MouseButtonReleased"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "Flag",
+                    "=",
+                    "MouseX(\"\",0)",
+                    "=",
+                    "MouseY(\"\",0)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::SetDestination"
+                  },
+                  "parameters": [
+                    "Tank",
+                    "NavMeshPathfindingBehavior",
+                    "",
+                    "MouseX(\"\",0)",
+                    "MouseY(\"\",0)"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "i",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "NodeMarker",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "infiniteLoopWarning": true,
+              "type": "BuiltinCommonInstructions::While",
+              "whileConditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "i",
+                    "<",
+                    "Tank.NavMeshPathfindingBehavior::NodeCount()"
+                  ]
+                }
+              ],
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "NodeMarker",
+                    "Tank.NavMeshPathfindingBehavior::GetNodeX(Variable(i))",
+                    "Tank.NavMeshPathfindingBehavior::GetNodeY(Variable(i))",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "i",
+                    "+",
+                    "1"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::IsMoving"
+              },
+              "parameters": [
+                "Robot",
+                "NavMeshPathfindingBehavior"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::SetDestination"
+              },
+              "parameters": [
+                "Robot",
+                "NavMeshPathfindingBehavior",
+                "",
+                "RandomInRange(0, SceneWindowWidth())",
+                "RandomInRange(0, SceneWindowHeight())"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyReleased"
+              },
+              "parameters": [
+                "",
+                "Return"
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "Obstacle",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "Obstacle",
+                    "=",
+                    "RandomInRange(0, SceneWindowWidth() - Obstacle.Width())",
+                    "=",
+                    "RandomInRange(0, SceneWindowHeight() - Obstacle.Height())"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::SetDestination"
+                  },
+                  "parameters": [
+                    "Tank",
+                    "NavMeshPathfindingBehavior",
+                    "",
+                    "Tank.X()",
+                    "Tank.Y()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AjoutHasard"
+                  },
+                  "parameters": [
+                    "",
+                    "Robot"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::SetDestination"
+                  },
+                  "parameters": [
+                    "Robot",
+                    "NavMeshPathfindingBehavior",
+                    "",
+                    "Robot.X()",
+                    "Robot.Y()"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "layers": [
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453632,
+          "ambientLightColorG": 6010112,
+          "ambientLightColorR": 67108864,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Grid",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "NavMeshPathfindingBehavior",
+          "type": "NavMeshPathfinding::NavMeshPathfindingBehavior"
+        },
+        {
+          "name": "NavMeshPathfindingObstacleBehavior",
+          "type": "NavMeshPathfinding::NavMeshPathfindingObstacleBehavior",
+          "areaTopBound": 0,
+          "cellSize": 5,
+          "areaBottomBound": 0,
+          "areaLeftBound": 0,
+          "areaRightBound": 0,
+          "viewpoint": "Top-Down"
+        }
+      ]
+    }
+  ],
+  "externalEvents": [],
+  "eventsFunctionsExtensions": [
+    {
+      "author": "",
+      "category": "Movement",
+      "extensionNamespace": "",
+      "fullName": "Pathfinding (polygonal mesh based, experimental)",
+      "helpPath": "",
+      "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMy4wLjMsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iSWNvbnMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMzIgMzIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMyIDMyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoyO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9DQo8L3N0eWxlPg0KPHBvbHlsaW5lIGNsYXNzPSJzdDAiIHBvaW50cz0iMTcsMjYgNSwyNiA1LDQgMjcsNCAyNywyNiAyNSwyNiAiLz4NCjxwb2x5bGluZSBjbGFzcz0ic3QwIiBwb2ludHM9IjUsMTkgMTYsOCAyNywxOSAiLz4NCjxsaW5lIGNsYXNzPSJzdDAiIHgxPSIxMiIgeTE9IjQiIHgyPSIxOSIgeTI9IjExIi8+DQo8bGluZSBjbGFzcz0ic3QwIiB4MT0iMjIiIHkxPSI0IiB4Mj0iMjIiIHkyPSIxNCIvPg0KPHBhdGggY2xhc3M9InN0MCIgZD0iTTIwLjUsMTcuNWMtMS45LTEuOS01LjEtMS45LTcsMGMtMS45LDEuOS0xLjksNS4xLDAsN2MxLjQsMS41LDMuNiwxLjgsNS40LDEuMWMwLjYtMC4yLDEuMi0wLjYsMS42LTEuMQ0KCUMyMi40LDIyLjYsMjIuNCwxOS41LDIwLjUsMTcuNXoiLz4NCjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0yMS41LDIzbDMuOSwzLjZjMC44LDAuOCwwLjgsMiwwLDIuOGwwLDBjLTAuOCwwLjgtMiwwLjgtMi44LDBsLTMuNS0zLjUiLz4NCjwvc3ZnPg0K",
+      "name": "NavMeshPathfinding",
+      "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/Line Hero Pack/Master/SVG/Maps and Navigation/Maps and Navigation_map_find_search.svg",
+      "shortDescription": "Pathfinding allows to compute an efficient path for objects, avoiding obstacles on the way.",
+      "version": "0.1.0",
+      "description": "",
+      "tags": [],
+      "authorIds": [
+        "IWykYNRvhCZBN3vEgKEbBPOR3Oc2"
+      ],
+      "dependencies": [],
+      "eventsFunctions": [],
+      "eventsBasedBehaviors": [
+        {
+          "description": "Move the object to a target in straight lines while avoiding all objects that are flagged as obstacles.",
+          "fullName": "Pathfinding (polygonal mesh based, experimental)",
+          "name": "NavMeshPathfindingBehavior",
+          "objectType": "",
+          "eventsFunctions": [],
+          "propertyDescriptors": [
+            {
+              "value": "400",
+              "type": "Number",
+              "label": "Acceleration",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": false,
+              "name": "Acceleration"
+            },
+            {
+              "value": "200",
+              "type": "Number",
+              "label": "Max. speed",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": false,
+              "name": "MaxSpeed"
+            },
+            {
+              "value": "180",
+              "type": "Number",
+              "label": "Rotate speed",
+              "description": "",
+              "group": "Rotation",
+              "extraInformation": [],
+              "hidden": false,
+              "name": "AngularMaxSpeed"
+            },
+            {
+              "value": "",
+              "type": "Boolean",
+              "label": "Rotate object",
+              "description": "",
+              "group": "Rotation",
+              "extraInformation": [],
+              "hidden": false,
+              "name": "RotateObject"
+            },
+            {
+              "value": "0",
+              "type": "Number",
+              "label": "Angle offset",
+              "description": "",
+              "group": "Rotation",
+              "extraInformation": [],
+              "hidden": false,
+              "name": "AngleOffset"
+            },
+            {
+              "value": "Bounding disk",
+              "type": "Choice",
+              "label": "Collision shape",
+              "description": "",
+              "group": "Collision",
+              "extraInformation": [
+                "Bounding disk",
+                "Dot at center"
+              ],
+              "hidden": false,
+              "name": "CollisionShape"
+            },
+            {
+              "value": "0",
+              "type": "Number",
+              "label": "Extra border size",
+              "description": "",
+              "group": "Collision",
+              "extraInformation": [],
+              "hidden": false,
+              "name": "ExtraBorder"
+            }
+          ],
+          "sharedPropertyDescriptors": []
+        },
+        {
+          "description": "Flag the object as being an obstacle for pathfinding.",
+          "fullName": "Obstacle for pathfinding (polygonal mesh based, experimental)",
+          "name": "NavMeshPathfindingObstacleBehavior",
+          "objectType": "",
+          "eventsFunctions": [],
+          "propertyDescriptors": [],
+          "sharedPropertyDescriptors": [
+            {
+              "value": "Top-Down",
+              "type": "Choice",
+              "label": "Viewpoint",
+              "description": "",
+              "group": "",
+              "extraInformation": [
+                "Top-Down",
+                "Isometry 2:1 (26.565°)",
+                "True Isometry (30°)"
+              ],
+              "hidden": false,
+              "name": "Viewpoint"
+            },
+            {
+              "value": "10",
+              "type": "Number",
+              "label": "Cell size",
+              "description": "Cell size for obstacle collision mask rasterization.",
+              "group": "",
+              "extraInformation": [],
+              "hidden": false,
+              "name": "CellSize"
+            },
+            {
+              "value": "",
+              "type": "Number",
+              "label": "Area left bound",
+              "description": "The left bound of the area where objects can go (default to the game resolution).",
+              "group": "",
+              "extraInformation": [],
+              "hidden": false,
+              "name": "AreaLeftBound"
+            },
+            {
+              "value": "",
+              "type": "Number",
+              "label": "Area top bound",
+              "description": "The top bound of the area where objects can go (default to the game resolution).",
+              "group": "",
+              "extraInformation": [],
+              "hidden": false,
+              "name": "AreaTopBound"
+            },
+            {
+              "value": "",
+              "type": "Number",
+              "label": "Area right bound",
+              "description": "The right bound of the area where objects can go (default to the game resolution).",
+              "group": "",
+              "extraInformation": [],
+              "hidden": false,
+              "name": "AreaRightBound"
+            },
+            {
+              "value": "",
+              "type": "Number",
+              "label": "Area bottom bound",
+              "description": "The bottom bound of the area where objects can go (default to the game resolution).",
+              "group": "",
+              "extraInformation": [],
+              "hidden": false,
+              "name": "AreaBottomBound"
+            }
+          ]
+        }
+      ],
+      "eventsBasedObjects": []
+    }
+  ],
+  "externalLayouts": [],
+  "externalSourceFiles": []
+}
