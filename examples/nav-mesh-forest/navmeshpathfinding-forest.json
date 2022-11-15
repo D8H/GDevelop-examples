@@ -2194,8 +2194,8 @@
                   "parameters": [
                     "Tank",
                     "NavMeshPathfindingBehavior",
-                    "",
                     "Tank.X()",
+                    "Tank.Y()",
                     "Tank.Y()"
                   ]
                 },
@@ -2226,8 +2226,8 @@
                   "parameters": [
                     "Robot",
                     "NavMeshPathfindingBehavior",
-                    "",
                     "Robot.X()",
+                    "Robot.Y()",
                     "Robot.Y()"
                   ]
                 },
@@ -2284,9 +2284,19 @@
                   "parameters": [
                     "Tank",
                     "NavMeshPathfindingBehavior",
-                    "",
                     "MouseX(\"\",0)",
+                    "MouseY(\"\",0)",
                     "MouseY(\"\",0)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "DebuggerTools::ConsoleLog"
+                  },
+                  "parameters": [
+                    "ToString(Tank.NavMeshPathfindingBehavior::NodeCount())",
+                    "",
+                    ""
                   ]
                 }
               ]
@@ -2381,8 +2391,8 @@
               "parameters": [
                 "Robot",
                 "NavMeshPathfindingBehavior",
-                "",
                 "RandomInRange(0, SceneWindowWidth())",
+                "RandomInRange(0, SceneWindowHeight())",
                 "RandomInRange(0, SceneWindowHeight())"
               ]
             }
@@ -2433,8 +2443,8 @@
                   "parameters": [
                     "Tank",
                     "NavMeshPathfindingBehavior",
-                    "",
                     "Tank.X()",
+                    "Tank.Y()",
                     "Tank.Y()"
                   ]
                 },
@@ -2454,8 +2464,8 @@
                   "parameters": [
                     "Robot",
                     "NavMeshPathfindingBehavior",
-                    "",
                     "Robot.X()",
+                    "Robot.Y()",
                     "Robot.Y()"
                   ]
                 }
@@ -4351,13 +4361,50 @@
               "objectGroups": []
             },
             {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "doStepPreEvents",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": "const object = objects[0];\r\nconst behaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");\r\nconst behavior = object.getBehavior(behaviorName);\r\n\r\nbehavior.__NavMeshPathfinding.pathfinding.doStepPreEvents(runtimeScene);\r\n",
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "NavMeshPathfinding::NavMeshPathfindingBehavior",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
               "description": "Move the object to a position.",
               "fullName": "Move to a position",
               "functionType": "Action",
               "group": "Movement on the path (NavMesh)",
               "name": "SetDestination",
-              "sentence": "Move _PARAM0_ to _PARAM3_;_PARAM4_",
-              "events": [],
+              "sentence": "Move _PARAM0_ to _PARAM2_;_PARAM3_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": "const object = objects[0];\nconst behaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");\nconst behavior = object.getBehavior(behaviorName);\n\nconst destinationX = eventsFunctionContext.getArgument(\"DestinationX\");\nconst destinationY = eventsFunctionContext.getArgument(\"DestinationY\");\n\nbehavior.__NavMeshPathfinding.pathfinding.moveTo(runtimeScene, destinationX, destinationY);\n",
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ],
               "parameters": [
                 {
                   "description": "Object",
@@ -4372,12 +4419,12 @@
                 },
                 {
                   "description": "Destination X position",
-                  "name": "Parameter",
+                  "name": "DestinationX",
                   "type": "expression"
                 },
                 {
                   "description": "Destination Y position",
-                  "name": "Parameter2",
+                  "name": "DestinationY",
                   "type": "expression"
                 }
               ],
@@ -4459,7 +4506,15 @@
               "group": "Movement on the path (NavMesh)",
               "name": "NodeCount",
               "sentence": "",
-              "events": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": "const object = objects[0];\nconst behaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");\nconst behavior = object.getBehavior(behaviorName);\n\nbehavior.__NavMeshPathfinding.pathfinding.pathFollower.getNodeCount();\n",
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ],
               "expressionType": {
                 "type": "expression"
               },
@@ -4687,7 +4742,36 @@
                 },
                 {
                   "type": "BuiltinCommonInstructions::JsCode",
-                  "inlineCode": "const object = objects[0];\r\nconst behaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");\r\nconst behavior = object.getBehavior(behaviorName);\r\nbehavior.__NavMeshPathfinding = behavior.__NavMeshPathfinding || {};\r\nbehavior.__NavMeshPathfinding.pathfinding =\r\n    new gdjs.__NavMeshPathfinding.NavMeshPathfindingObstacleBehavior(\r\n        runtimeScene, behavior);\r\n",
+                  "inlineCode": "const object = objects[0];\r\nconst behaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");\r\nconst behavior = object.getBehavior(behaviorName);\r\nbehavior.__NavMeshPathfinding = behavior.__NavMeshPathfinding || {};\r\nbehavior.__NavMeshPathfinding.obstacle =\r\n    new gdjs.__NavMeshPathfinding.NavMeshPathfindingObstacleBehavior(\r\n        runtimeScene, behavior);\r\n",
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "NavMeshPathfinding::NavMeshPathfindingObstacleBehavior",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "doStepPreEvents",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": "const object = objects[0];\r\nconst behaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");\r\nconst behavior = object.getBehavior(behaviorName);\r\n\r\nbehavior.__NavMeshPathfinding.obstacle.doStepPreEvents(runtimeScene);",
                   "parameterObjects": "Object",
                   "useStrict": true,
                   "eventsSheetExpanded": true
@@ -4774,6 +4858,16 @@
               "extraInformation": [],
               "hidden": false,
               "name": "AreaBottomBound"
+            },
+            {
+              "value": "",
+              "type": "Number",
+              "label": "",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": true,
+              "name": "IsometricRatio"
             }
           ]
         }
