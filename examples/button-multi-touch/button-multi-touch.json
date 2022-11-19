@@ -389,10 +389,9 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "PanelSpriteButton::AnyTouchPressed"
+                        "value": "IsAnyTouchPressed"
                       },
                       "parameters": [
-                        "",
                         ""
                       ]
                     }
@@ -505,10 +504,9 @@
                             {
                               "type": {
                                 "inverted": true,
-                                "value": "PanelSpriteButton::AnyTouchPressed"
+                                "value": "IsAnyTouchPressed"
                               },
                               "parameters": [
-                                "",
                                 ""
                               ]
                             },
@@ -807,10 +805,9 @@
                                 {
                                   "type": {
                                     "inverted": true,
-                                    "value": "PanelSpriteButton::AnyTouchPressed"
+                                    "value": "IsAnyTouchPressed"
                                   },
                                   "parameters": [
-                                    "",
                                     ""
                                   ]
                                 }
@@ -931,10 +928,9 @@
                             {
                               "type": {
                                 "inverted": true,
-                                "value": "PanelSpriteButton::AnyTouchPressed"
+                                "value": "IsAnyTouchPressed"
                               },
                               "parameters": [
-                                "",
                                 ""
                               ]
                             }
