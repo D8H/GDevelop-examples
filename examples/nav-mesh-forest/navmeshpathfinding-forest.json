@@ -2378,8 +2378,8 @@
                   "parameters": [
                     "",
                     "NodeMarker",
-                    "Tank.NavMeshPathfindingBehavior::GetNodeX(Variable(i))",
-                    "Tank.NavMeshPathfindingBehavior::GetNodeY(Variable(i))",
+                    "Tank.NavMeshPathfindingBehavior::NodeX(Variable(i))",
+                    "Tank.NavMeshPathfindingBehavior::NodeY(Variable(i))",
                     ""
                   ]
                 },
@@ -4552,7 +4552,7 @@
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::JsCode",
-                  "inlineCode": "const object = objects[0];\nconst behaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");\nconst behavior = object.getBehavior(behaviorName);\n\neventsFunctionContext.returnValue = behavior.__NavMeshPathfinding.pathfinding.pathFollower.isMoving();\n",
+                  "inlineCode": "const object = objects[0];\nconst behaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");\nconst behavior = object.getBehavior(behaviorName);\n\neventsFunctionContext.returnValue = behavior.__NavMeshPathfinding.pathfinding.pathFollower.destinationReached();\n",
                   "parameterObjects": "Object",
                   "useStrict": true,
                   "eventsSheetExpanded": false
@@ -4612,7 +4612,7 @@
               "fullName": "Waypoint X position",
               "functionType": "Expression",
               "group": "Movement on the path (NavMesh)",
-              "name": "GetNodeX",
+              "name": "NodeX",
               "sentence": "",
               "events": [
                 {
@@ -4651,7 +4651,7 @@
               "fullName": "Waypoint Y position",
               "functionType": "Expression",
               "group": "Movement on the path (NavMesh)",
-              "name": "GetNodeY",
+              "name": "NodeY",
               "sentence": "",
               "events": [
                 {
@@ -4681,6 +4681,413 @@
                   "description": "Node index (start at 0)",
                   "name": "NodeIndex",
                   "type": "expression"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Return the index of the next waypoint to reach.",
+              "fullName": "Index of the next waypoint",
+              "functionType": "Expression",
+              "group": "Movement on the path (NavMesh)",
+              "name": "NextNodeIndex",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": "const object = objects[0];\nconst behaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");\nconst behavior = object.getBehavior(behaviorName);\n\neventsFunctionContext.returnValue = behavior.__NavMeshPathfinding.pathfinding.pathFollower.getNextNodeIndex();\n",
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "NavMeshPathfinding::NavMeshPathfindingBehavior",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Return the next waypoint X position.",
+              "fullName": "Next waypoint X position",
+              "functionType": "Expression",
+              "group": "Movement on the path (NavMesh)",
+              "name": "NextNodeX",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnNumber"
+                      },
+                      "parameters": [
+                        "Object.Behavior::NodeX(Object.Behavior::NextNodeIndex())"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "NavMeshPathfinding::NavMeshPathfindingBehavior",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Return the next waypoint Y position.",
+              "fullName": "Next waypoint Y position",
+              "functionType": "Expression",
+              "group": "Movement on the path (NavMesh)",
+              "name": "NextNodeY",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnNumber"
+                      },
+                      "parameters": [
+                        "Object.Behavior::NodeY(Object.Behavior::NextNodeIndex())"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "NavMeshPathfinding::NavMeshPathfindingBehavior",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Return the previous waypoint X position.",
+              "fullName": "Previous waypoint X position",
+              "functionType": "Expression",
+              "group": "Movement on the path (NavMesh)",
+              "name": "PreviousNodeX",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnNumber"
+                      },
+                      "parameters": [
+                        "Object.Behavior::NodeX(Object.Behavior::NextNodeIndex() - 1)"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "NavMeshPathfinding::NavMeshPathfindingBehavior",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Return the previous waypoint Y position.",
+              "fullName": "Previous waypoint Y position",
+              "functionType": "Expression",
+              "group": "Movement on the path (NavMesh)",
+              "name": "PreviousNodeY",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnNumber"
+                      },
+                      "parameters": [
+                        "Object.Behavior::NodeY(Object.Behavior::NextNodeIndex() - 1)"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "NavMeshPathfinding::NavMeshPathfindingBehavior",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Return the destination X position.",
+              "fullName": "Destination X position",
+              "functionType": "Expression",
+              "group": "Movement on the path (NavMesh)",
+              "name": "DestinationX",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnNumber"
+                      },
+                      "parameters": [
+                        "Object.Behavior::NodeX(Object.Behavior::NodeCount() - 1)"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "NavMeshPathfinding::NavMeshPathfindingBehavior",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Return the destination Y position.",
+              "fullName": "Destination Y position",
+              "functionType": "Expression",
+              "group": "Movement on the path (NavMesh)",
+              "name": "DestinationY",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnNumber"
+                      },
+                      "parameters": [
+                        "Object.Behavior::NodeY(Object.Behavior::NodeCount() - 1)"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "NavMeshPathfinding::NavMeshPathfindingBehavior",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Return the angle of movement of an object on its path.",
+              "fullName": "Angle of movement on its path",
+              "functionType": "Expression",
+              "group": "Movement on the path (NavMesh)",
+              "name": "MovementAngle",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": "const object = objects[0];\nconst behaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");\nconst behavior = object.getBehavior(behaviorName);\n\nconst angle = eventsFunctionContext.getArgument(\"Angle\");\nconst tolerance = eventsFunctionContext.getArgument(\"Tolerance\");\n\neventsFunctionContext.returnValue = behavior.__NavMeshPathfinding.pathfinding.pathFollower.getMovementAngle(angle, tolerance);\n",
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "NavMeshPathfinding::NavMeshPathfindingBehavior",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Compare the angle of movement of an object on its path.",
+              "fullName": "Angle of movement on its path",
+              "functionType": "Condition",
+              "group": "Movement on the path (NavMesh)",
+              "name": "MovementAngleIsAround",
+              "sentence": "Angle of movement of _PARAM0_ is _PARAM2_ (tolerance: _PARAM3_ degrees)",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "AngleDifference(GetArgumentAsNumber(\"Angle\"), Object.Behavior::MovementAngle())",
+                        "<",
+                        "GetArgumentAsNumber(\"Tolerance\")"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnBoolean"
+                      },
+                      "parameters": [
+                        "True"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "NavMeshPathfinding::NavMeshPathfindingBehavior",
+                  "type": "behavior"
+                },
+                {
+                  "description": "Angle (in degrees)",
+                  "name": "Angle",
+                  "type": "expression"
+                },
+                {
+                  "description": "Tolerance (in degrees)",
+                  "name": "Tolerance",
+                  "type": "expression"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "the number of waypoints on the path.",
+              "fullName": "Speed on the path",
+              "functionType": "ExpressionAndCondition",
+              "group": "Movement on the path (NavMesh)",
+              "name": "Speed",
+              "sentence": "the speed on the path",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": "const object = objects[0];\nconst behaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");\nconst behavior = object.getBehavior(behaviorName);\n\neventsFunctionContext.returnValue = behavior.__NavMeshPathfinding.pathfinding.pathFollower.getSpeed();\n",
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "NavMeshPathfinding::NavMeshPathfindingBehavior",
+                  "type": "behavior"
                 }
               ],
               "objectGroups": []
