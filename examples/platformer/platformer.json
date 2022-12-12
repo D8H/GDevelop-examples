@@ -19754,7 +19754,7 @@
           "functionType": "Action",
           "name": "SetDeadZone",
           "private": true,
-          "sentence": "Change multitouch joystick _PARAM2_ of multitouch controller _PARAM1_ dead zone to _PARAM3_",
+          "sentence": "Change the dead zone of multitouch joystick _PARAM2_ of multitouch controller _PARAM1_ to _PARAM3_",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -20395,7 +20395,7 @@
         },
         {
           "description": "Check if joystick is pushed in a given direction.",
-          "fullName": "Joystick pushed in a direction (4-way movement)",
+          "fullName": "Joystick pushed in a direction (4-way)",
           "functionType": "Condition",
           "name": "DirectionPushed4Way",
           "sentence": "Joystick _PARAM2_ of multitouch controller _PARAM1_ is pushed in direction _PARAM3_",
@@ -20475,7 +20475,7 @@
         },
         {
           "description": "Check if joystick is pushed in a given direction.",
-          "fullName": "Joystick pushed in a direction (8-way movement)",
+          "fullName": "Joystick pushed in a direction (8-way)",
           "functionType": "Condition",
           "name": "DirectionPushed8Way",
           "sentence": "Joystick _PARAM2_ of multitouch controller _PARAM1_ is pushed in direction _PARAM3_",
@@ -20599,7 +20599,7 @@
           "functionType": "Action",
           "name": "SetJoystickForce",
           "private": true,
-          "sentence": "Change the joystick _PARAM2_ of multitouch controller _PARAM1_ force to _PARAM3_",
+          "sentence": "Change the force of the joystick _PARAM2_ of multitouch controller _PARAM1_ to _PARAM3_",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -20682,7 +20682,7 @@
           "functionType": "Action",
           "name": "SetJoystickAngle",
           "private": true,
-          "sentence": "Change the joystick _PARAM2_ of multitouch controller _PARAM1_ angle to _PARAM3_",
+          "sentence": "Change the angle of the joystick _PARAM2_ of multitouch controller _PARAM1_ to _PARAM3_",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
