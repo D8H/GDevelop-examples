@@ -19611,10 +19611,10 @@
         },
         {
           "description": "Check if a button is pressed on a gamepad.",
-          "fullName": "Virtual gamepad button pressed",
+          "fullName": "Multitouch controller button pressed",
           "functionType": "Condition",
           "name": "IsButtonPressed",
-          "sentence": "Button _PARAM2_ of virtual gamepad _PARAM1_ is pressed",
+          "sentence": "Button _PARAM2_ of multitouch controller _PARAM1_ is pressed",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -19644,7 +19644,7 @@
           ],
           "parameters": [
             {
-              "description": "Virtual gamepad identifier (1, 2, 3, 4...)",
+              "description": "Multitouch controller identifier (1, 2, 3, 4...)",
               "name": "ControllerIdentifier",
               "type": "expression"
             },
@@ -19659,10 +19659,10 @@
         },
         {
           "description": "Check if a button is released on a gamepad.",
-          "fullName": "Virtual gamepad button released",
+          "fullName": "Multitouch controller button released",
           "functionType": "Condition",
           "name": "IsButtonReleased",
-          "sentence": "Button _PARAM2_ of virtual gamepad _PARAM1_ is released",
+          "sentence": "Button _PARAM2_ of multitouch controller _PARAM1_ is released",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -19692,7 +19692,7 @@
           ],
           "parameters": [
             {
-              "description": "Virtual gamepad identifier (1, 2, 3, 4...)",
+              "description": "Multitouch controller identifier (1, 2, 3, 4...)",
               "name": "ControllerIdentifier",
               "type": "expression"
             },
@@ -19710,7 +19710,7 @@
           "functionType": "Action",
           "name": "SetButtonState",
           "private": true,
-          "sentence": "Mark _PARAM2_ button as _PARAM3_ for virtual gamepad _PARAM1_",
+          "sentence": "Mark _PARAM2_ button as _PARAM3_ for multitouch controller _PARAM1_",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -19731,7 +19731,7 @@
           ],
           "parameters": [
             {
-              "description": "Virtual gamepad identifier (1, 2, 3, 4...)",
+              "description": "Multitouch controller identifier (1, 2, 3, 4...)",
               "name": "ControllerIdentifier",
               "type": "expression"
             },
@@ -19754,7 +19754,7 @@
           "functionType": "Action",
           "name": "SetDeadZone",
           "private": true,
-          "sentence": "Change multitouch joystick _PARAM2_ of virtual gamepad _PARAM1_ dead zone to _PARAM3_",
+          "sentence": "Change multitouch joystick _PARAM2_ of multitouch controller _PARAM1_ dead zone to _PARAM3_",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -19775,7 +19775,7 @@
           ],
           "parameters": [
             {
-              "description": "Virtual gamepad identifier (1, 2, 3, 4...)",
+              "description": "Multitouch controller identifier (1, 2, 3, 4...)",
               "name": "ControllerIdentifier",
               "type": "expression"
             },
@@ -19799,7 +19799,7 @@
           "functionType": "Expression",
           "name": "DeadZone",
           "private": true,
-          "sentence": "Change multitouch joystick _PARAM2_ of virtual gamepad _PARAM1_ dead zone to _PARAM3_",
+          "sentence": "Change multitouch joystick _PARAM2_ of multitouch controller _PARAM1_ dead zone to _PARAM3_",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -19821,7 +19821,7 @@
           },
           "parameters": [
             {
-              "description": "Virtual gamepad identifier (1, 2, 3, 4...)",
+              "description": "Multitouch controller identifier (1, 2, 3, 4...)",
               "name": "ControllerIdentifier",
               "type": "expression"
             },
@@ -20398,7 +20398,7 @@
           "fullName": "Joystick pushed in a direction (4-way movement)",
           "functionType": "Condition",
           "name": "DirectionPushed4Way",
-          "sentence": "Joystick _PARAM2_ of virtual gamepad _PARAM1_ is pushed in direction _PARAM3_",
+          "sentence": "Joystick _PARAM2_ of multitouch controller _PARAM1_ is pushed in direction _PARAM3_",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -20455,7 +20455,7 @@
           ],
           "parameters": [
             {
-              "description": "Virtual gamepad identifier (1, 2, 3, 4...)",
+              "description": "Multitouch controller identifier (1, 2, 3, 4...)",
               "name": "ControllerIdentifier",
               "type": "expression"
             },
@@ -20478,7 +20478,7 @@
           "fullName": "Joystick pushed in a direction (8-way movement)",
           "functionType": "Condition",
           "name": "DirectionPushed8Way",
-          "sentence": "Joystick _PARAM2_ of virtual gamepad _PARAM1_ is pushed in direction _PARAM3_",
+          "sentence": "Joystick _PARAM2_ of multitouch controller _PARAM1_ is pushed in direction _PARAM3_",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -20535,7 +20535,7 @@
           ],
           "parameters": [
             {
-              "description": "Virtual gamepad identifier (1, 2, 3, 4...)",
+              "description": "Multitouch controller identifier (1, 2, 3, 4...)",
               "name": "ControllerIdentifier",
               "type": "expression"
             },
@@ -20559,7 +20559,7 @@
           "fullName": "Joystick force",
           "functionType": "ExpressionAndCondition",
           "name": "JoystickForce",
-          "sentence": "Joystick _PARAM2_ of virtual gamepad _PARAM1_ force",
+          "sentence": "Joystick _PARAM2_ of multitouch controller _PARAM1_ force",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -20581,7 +20581,7 @@
           },
           "parameters": [
             {
-              "description": "Virtual gamepad identifier (1, 2, 3, 4...)",
+              "description": "Multitouch controller identifier (1, 2, 3, 4...)",
               "name": "ControllerIdentifier",
               "type": "expression"
             },
@@ -20599,7 +20599,7 @@
           "functionType": "Action",
           "name": "SetJoystickForce",
           "private": true,
-          "sentence": "Change the joystick _PARAM2_ of virtual gamepad _PARAM1_ force to _PARAM3_",
+          "sentence": "Change the joystick _PARAM2_ of multitouch controller _PARAM1_ force to _PARAM3_",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -20620,7 +20620,7 @@
           ],
           "parameters": [
             {
-              "description": "Virtual gamepad identifier (1, 2, 3, 4...)",
+              "description": "Multitouch controller identifier (1, 2, 3, 4...)",
               "name": "ControllerIdentifier",
               "type": "expression"
             },
@@ -20664,7 +20664,7 @@
           },
           "parameters": [
             {
-              "description": "Virtual gamepad identifier (1, 2, 3, 4...)",
+              "description": "Multitouch controller identifier (1, 2, 3, 4...)",
               "name": "ControllerIdentifier",
               "type": "expression"
             },
@@ -20682,7 +20682,7 @@
           "functionType": "Action",
           "name": "SetJoystickAngle",
           "private": true,
-          "sentence": "Change the joystick _PARAM2_ of virtual gamepad _PARAM1_ angle to _PARAM3_",
+          "sentence": "Change the joystick _PARAM2_ of multitouch controller _PARAM1_ angle to _PARAM3_",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -20703,7 +20703,7 @@
           ],
           "parameters": [
             {
-              "description": "Virtual gamepad identifier (1, 2, 3, 4...)",
+              "description": "Multitouch controller identifier (1, 2, 3, 4...)",
               "name": "ControllerIdentifier",
               "type": "expression"
             },
@@ -22905,7 +22905,7 @@
             {
               "value": "1",
               "type": "Number",
-              "label": "Virtual gamepad identifier (1, 2, 3, 4...)",
+              "label": "Multitouch controller identifier (1, 2, 3, 4...)",
               "description": "",
               "group": "",
               "extraInformation": [],
@@ -23641,7 +23641,7 @@
             {
               "value": "1",
               "type": "Number",
-              "label": "Virtual gamepad identifier (1, 2, 3, 4...)",
+              "label": "Multitouch controller identifier (1, 2, 3, 4...)",
               "description": "",
               "group": "",
               "extraInformation": [],
