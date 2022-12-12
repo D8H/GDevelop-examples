@@ -5411,6 +5411,7 @@
           "behaviors": [],
           "string": "Score: 0",
           "font": "PTSans-Bold.ttf",
+          "textAlignment": "",
           "characterSize": 40,
           "color": {
             "b": 255,
@@ -5815,6 +5816,7 @@
           "behaviors": [],
           "string": "Congratulations!",
           "font": "PTSans-Bold.ttf",
+          "textAlignment": "",
           "characterSize": 60,
           "color": {
             "b": 255,
@@ -5836,6 +5838,7 @@
           "behaviors": [],
           "string": "You got 100 points!",
           "font": "PTSans-Bold.ttf",
+          "textAlignment": "",
           "characterSize": 40,
           "color": {
             "b": 255,
@@ -5857,6 +5860,7 @@
           "behaviors": [],
           "string": "You got the highest number of points!",
           "font": "PTSans-Bold.ttf",
+          "textAlignment": "",
           "characterSize": 40,
           "color": {
             "b": 255,
@@ -5878,6 +5882,7 @@
           "behaviors": [],
           "string": "Can you get 950 points?",
           "font": "PTSans-Bold.ttf",
+          "textAlignment": "",
           "characterSize": 40,
           "color": {
             "b": 255,
@@ -5904,6 +5909,7 @@
           ],
           "string": "Retry",
           "font": "PTSans-Bold.ttf",
+          "textAlignment": "",
           "characterSize": 65,
           "color": {
             "b": 255,
@@ -19512,7 +19518,7 @@
       "name": "MultitouchJoystick",
       "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/Line Hero Pack/Master/SVG/Videogames/Videogames_controller_joystick_arrows_direction.svg",
       "shortDescription": "Activate a joystick or buttons that can be controlled by interacting with a touchscreen.",
-      "version": "1.1.1",
+      "version": "1.2.0",
       "description": [
         "Users can interact with the multitouch joystick to specify angle and force values.  These values can be used to control other objects in the scene such as movement and rotation, such as for twin-stick shooter games.",
         "",
@@ -19706,6 +19712,7 @@
           "objectGroups": []
         },
         {
+          "description": "Change a button state for a multitouch controller.",
           "fullName": "Button state",
           "functionType": "Action",
           "name": "SetButtonState",
@@ -19750,6 +19757,7 @@
           "objectGroups": []
         },
         {
+          "description": "Change the dead zone radius of a joystick. The deadzone is an area for which movement on sticks won't be taken into account (instead, the stick will be considered as not moved).",
           "fullName": "Dead zone radius",
           "functionType": "Action",
           "name": "SetDeadZone",
@@ -19834,6 +19842,7 @@
           "objectGroups": []
         },
         {
+          "description": "the direction index (left = 1, bottom = 1, right = 2, top = 3) for an angle (in degrees).",
           "fullName": "Angle to 4-way index",
           "functionType": "ExpressionAndCondition",
           "name": "AngleTo4Way",
@@ -19868,6 +19877,7 @@
           "objectGroups": []
         },
         {
+          "description": "the direction index (left = 1, bottom-left = 1... top-left = 7) for an angle (in degrees).",
           "fullName": "Angle to 8-way index",
           "functionType": "ExpressionAndCondition",
           "name": "AngleTo8Way",
@@ -20677,7 +20687,7 @@
           "objectGroups": []
         },
         {
-          "description": "Return the angle the joystick is pointing towards (Range: -180 to 180).",
+          "description": "Change the angle the joystick is pointing towards (Range: -180 to 180).",
           "fullName": "Joystick angle",
           "functionType": "Action",
           "name": "SetJoystickAngle",
@@ -20734,6 +20744,19 @@
               "name": "onCreated",
               "sentence": "",
               "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "This is necessary because of a bug. It can be removed after the 5.1.152 release of GDevelop.",
+                  "comment2": ""
+                },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
