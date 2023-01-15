@@ -654,20 +654,6 @@
           "effects": [],
           "behaviors": [
             {
-              "name": "GridBasedTopDownMovement",
-              "type": "PixelPerfectMovement::GridBasedTopDownMovement",
-              "TopDownMovement": "TopDownMovement",
-              "PixelPerfectTopDownMovement": "PixelPerfectTopDownMovement",
-              "UpKeyPressedDuration": 0,
-              "DownKeyPressedDuration": 0,
-              "LeftKeyPressedDuration": 0,
-              "RightKeyPressedDuration": 0,
-              "UpKeyPressed": false,
-              "DownKeyPressed": false,
-              "LeftKeyPressed": false,
-              "RightKeyPressed": false
-            },
-            {
               "name": "PixelPerfectTopDownMovement",
               "type": "PixelPerfectMovement::PixelPerfectTopDownMovement",
               "TopDownMovement": "TopDownMovement",
@@ -677,16 +663,16 @@
               "TargetX": 0
             },
             {
+              "allowDiagonals": false,
+              "deceleration": 50,
               "name": "TopDownMovement",
               "type": "TopDownMovementBehavior::TopDownMovementBehavior",
-              "allowDiagonals": true,
               "maxSpeed": 100,
               "rotateObject": false,
               "acceleration": 400,
               "angleOffset": 0,
               "angularMaxSpeed": 180,
               "customIsometryAngle": 30,
-              "deceleration": 800,
               "ignoreDefaultControls": false,
               "movementAngleOffset": 0,
               "viewpoint": "TopDown"
@@ -2037,10 +2023,6 @@
       ],
       "behaviorsSharedData": [
         {
-          "name": "GridBasedTopDownMovement",
-          "type": "PixelPerfectMovement::GridBasedTopDownMovement"
-        },
-        {
           "name": "PixelPerfectTopDownMovement",
           "type": "PixelPerfectMovement::PixelPerfectTopDownMovement"
         },
@@ -2371,17 +2353,6 @@
                           "actions": [
                             {
                               "type": {
-                                "value": "PixelPerfectMovement::PixelPerfectTopDownMovement::SetPropertyTargetX"
-                              },
-                              "parameters": [
-                                "Object",
-                                "Behavior",
-                                "=",
-                                "Object.Behavior::PropertyOffsetX() + Object.Behavior::PropertyPixelSize() * ceil((Object.X() + PixelPerfectMovement::BrakingDistance(Object.TopDownMovement::XVelocity(), Object.TopDownMovement::Deceleration()) - Object.Behavior::PropertyOffsetX()) / Object.Behavior::PropertyPixelSize())"
-                              ]
-                            },
-                            {
-                              "type": {
                                 "value": "PixelPerfectMovement::PixelPerfectTopDownMovement::SetPropertyTargetDirectionX"
                               },
                               "parameters": [
@@ -2389,6 +2360,17 @@
                                 "Behavior",
                                 "=",
                                 "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PixelPerfectMovement::PixelPerfectTopDownMovement::SetPropertyTargetX"
+                              },
+                              "parameters": [
+                                "Object",
+                                "Behavior",
+                                "=",
+                                "Object.Behavior::PropertyOffsetX() + Object.Behavior::PropertyPixelSize() * ceil((Object.X() + PixelPerfectMovement::BrakingDistance(Object.TopDownMovement::XVelocity(), Object.TopDownMovement::Deceleration()) - Object.Behavior::PropertyOffsetX()) / Object.Behavior::PropertyPixelSize())"
                               ]
                             }
                           ],
@@ -2499,19 +2481,6 @@
                       ]
                     },
                     {
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "Move to the target as the movement behavior would do.",
-                      "comment2": ""
-                    },
-                    {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -2539,6 +2508,178 @@
                       ],
                       "actions": [],
                       "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "When the dirction change from X to Y, stop on X as soon as possible to make a sharp turn.",
+                          "comment2": ""
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Or"
+                              },
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "value": "TopDownMovementBehavior::TopDownMovementBehavior::IsUsingControl"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "TopDownMovement",
+                                    "\"Up\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "TopDownMovementBehavior::TopDownMovementBehavior::IsUsingControl"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "TopDownMovement",
+                                    "\"Down\""
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "PixelPerfectMovement::PixelPerfectTopDownMovement::PropertyTargetDirectionX"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "Behavior",
+                                    "=",
+                                    "1"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "PixelPerfectMovement::PixelPerfectTopDownMovement::SetPropertyTargetX"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "Behavior",
+                                    "=",
+                                    "Object.Behavior::PropertyOffsetX() + Object.Behavior::PropertyPixelSize() * ceil((Object.X() - Object.Behavior::PropertyOffsetX()) / Object.Behavior::PropertyPixelSize())"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "PixelPerfectMovement::PixelPerfectTopDownMovement::PropertyTargetDirectionX"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "Behavior",
+                                    "=",
+                                    "-1"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "PixelPerfectMovement::PixelPerfectTopDownMovement::SetPropertyTargetX"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "Behavior",
+                                    "=",
+                                    "Object.Behavior::PropertyOffsetX() + Object.Behavior::PropertyPixelSize() * floor((Object.X() - Object.Behavior::PropertyOffsetX()) / Object.Behavior::PropertyPixelSize())"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "disabled": true,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "TopDownMovementBehavior::DiagonalsAllowed"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "TopDownMovement"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PixelPerfectMovement::PixelPerfectTopDownMovement::PropertyTargetDirectionX"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "Behavior",
+                                    "!=",
+                                    "0"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "TopDownMovementBehavior::TopDownMovementBehavior::SetVelocityY"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "TopDownMovement",
+                                    "=",
+                                    "0"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Move to the target as the movement behavior would do.",
+                          "comment2": ""
+                        },
                         {
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
@@ -2732,7 +2873,7 @@
                                 "value": "DebuggerTools::ConsoleLog"
                               },
                               "parameters": [
-                                "\"X: \" + ToString(Object.X()) + \" Speed: \" + ToString(Object.Behavior::SpeedX())",
+                                "\"X: \" + ToString(Object.X()) + \" Speed: \" + ToString(Object.TopDownMovement::XVelocity())",
                                 "",
                                 ""
                               ]
@@ -2935,19 +3076,6 @@
                       ]
                     },
                     {
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "Move to the target as the movement behavior would do.",
-                      "comment2": ""
-                    },
-                    {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -2975,6 +3103,178 @@
                       ],
                       "actions": [],
                       "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "When the dirction change from Y to X, stop on Y as soon as possible to make a sharp turn.",
+                          "comment2": ""
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Or"
+                              },
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "value": "TopDownMovementBehavior::TopDownMovementBehavior::IsUsingControl"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "TopDownMovement",
+                                    "\"Left\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "TopDownMovementBehavior::TopDownMovementBehavior::IsUsingControl"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "TopDownMovement",
+                                    "\"Right\""
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "PixelPerfectMovement::PixelPerfectTopDownMovement::PropertyTargetDirectionX"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "Behavior",
+                                    "=",
+                                    "1"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "PixelPerfectMovement::PixelPerfectTopDownMovement::SetPropertyTargetY"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "Behavior",
+                                    "=",
+                                    "Object.Behavior::PropertyOffsetY() + Object.Behavior::PropertyPixelSize() * ceil((Object.Y() - Object.Behavior::PropertyOffsetY()) / Object.Behavior::PropertyPixelSize())"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "PixelPerfectMovement::PixelPerfectTopDownMovement::PropertyTargetDirectionX"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "Behavior",
+                                    "=",
+                                    "-1"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "PixelPerfectMovement::PixelPerfectTopDownMovement::SetPropertyTargetX"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "Behavior",
+                                    "=",
+                                    "Object.Behavior::PropertyOffsetY() + Object.Behavior::PropertyPixelSize() * floor((Object.Y() - Object.Behavior::PropertyOffsetY()) / Object.Behavior::PropertyPixelSize())"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "disabled": true,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "TopDownMovementBehavior::DiagonalsAllowed"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "TopDownMovement"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PixelPerfectMovement::PixelPerfectTopDownMovement::PropertyTargetDirectionX"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "Behavior",
+                                    "!=",
+                                    "0"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "TopDownMovementBehavior::TopDownMovementBehavior::SetVelocityX"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "TopDownMovement",
+                                    "=",
+                                    "0"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Move to the target as the movement behavior would do.",
+                          "comment2": ""
+                        },
                         {
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
@@ -3504,11 +3804,6 @@
                       ]
                     }
                   ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": []
                 }
               ],
               "parameters": [
