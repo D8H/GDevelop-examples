@@ -459,6 +459,24 @@
         "name": "assets\\FlammeBonus.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Joueur1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Joueur1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Joueur4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Joueur4.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -7612,6 +7630,232 @@
           "type": "TopDownMovementBehavior::TopDownMovementBehavior"
         }
       ]
+    },
+    {
+      "b": 209,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "Test",
+      "name": "Test",
+      "r": 209,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 209,
+      "uiSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.8578431372549019,
+        "windowMask": false
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "NewSprite",
+          "persistentUuid": "5fe3f787-fcc3-4c76-99fb-c0d6a30ec616",
+          "width": 0,
+          "x": 271,
+          "y": 258,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "NewSprite2",
+          "persistentUuid": "d5d7972b-8764-4bbc-a43d-ff6f412c7c87",
+          "width": 0,
+          "x": 234,
+          "y": 167,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "NewSprite2",
+          "persistentUuid": "7c66e23d-52c1-4e33-aff4-f2e77e542276",
+          "width": 0,
+          "x": 308,
+          "y": 168,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "assetStoreId": "",
+          "name": "NewSprite",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "TopDownCornerSlider",
+              "type": "TopDownCornerSliding::TopDownCornerSlider",
+              "TopDownMovement": "TopDownMovement",
+              "PixelSize": 1,
+              "OffsetX": 0,
+              "OffsetY": 0
+            },
+            {
+              "acceleration": 400,
+              "allowDiagonals": true,
+              "angleOffset": 0,
+              "angularMaxSpeed": 180,
+              "customIsometryAngle": 30,
+              "deceleration": 800,
+              "ignoreDefaultControls": false,
+              "maxSpeed": 200,
+              "movementAngleOffset": 0,
+              "name": "TopDownMovement",
+              "rotateObject": false,
+              "type": "TopDownMovementBehavior::TopDownMovementBehavior",
+              "viewpoint": "TopDown"
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Joueur1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "NewSprite2",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "TopDownCornerSliderObstacle",
+              "type": "TopDownCornerSliding::TopDownCornerSliderObstacle",
+              "SlidingCornerSize": 0
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Joueur4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "events": [],
+      "layers": [
+        {
+          "ambientLightColorB": 1,
+          "ambientLightColorG": 134217728,
+          "ambientLightColorR": 1597066561,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "TopDownCornerSlider",
+          "type": "TopDownCornerSliding::TopDownCornerSlider"
+        },
+        {
+          "name": "TopDownCornerSliderObstacle",
+          "type": "TopDownCornerSliding::TopDownCornerSliderObstacle"
+        },
+        {
+          "name": "TopDownMovement",
+          "type": "TopDownMovementBehavior::TopDownMovementBehavior"
+        }
+      ]
     }
   ],
   "externalEvents": [
@@ -7843,6 +8087,588 @@
     }
   ],
   "eventsFunctionsExtensions": [
+    {
+      "author": "",
+      "category": "Movement",
+      "extensionNamespace": "",
+      "fullName": "Top-down corner sliding",
+      "helpPath": "",
+      "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0ibWRpLXN1YmRpcmVjdG9yeS1hcnJvdy1yaWdodCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGQ9Ik0xOSwxNUwxMywyMUwxMS41OCwxOS41OEwxNS4xNywxNkg0VjRINlYxNEgxNS4xN0wxMS41OCwxMC40MkwxMyw5TDE5LDE1WiIgLz48L3N2Zz4=",
+      "name": "TopDownCornerSliding",
+      "previewIconUrl": "https://asset-resources.gdevelop.io/public-resources/Icons/f1e89ff4f907ed2245e2d4ad2d5f52f9e1bb6d0127aa370d44cc77462e5be8e3_subdirectory-arrow-right.svg",
+      "shortDescription": "",
+      "version": "0.2.0",
+      "description": [
+        "It can be used for:",
+        "*  ([open the project online](https://editor.gdevelop.io/?project=example://goose-bomberman))",
+        ""
+      ],
+      "origin": {
+        "identifier": "PixelPerfectMovement",
+        "name": "gdevelop-extension-store"
+      },
+      "tags": [
+        "top down",
+        "movement",
+        "grid"
+      ],
+      "authorIds": [
+        "IWykYNRvhCZBN3vEgKEbBPOR3Oc2"
+      ],
+      "dependencies": [],
+      "eventsFunctions": [
+        {
+          "description": "Define JavaScript classes for top-down.",
+          "fullName": "Define JavaScript classes for top-down",
+          "functionType": "Action",
+          "name": "DefineJavaScriptForTopDown",
+          "private": true,
+          "sentence": "Define JavaScript classes  for top-down",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "GlobalVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "__pixelPerfect.TopDownClassesDefined",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetGlobalVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "__pixelPerfect.TopDownClassesDefined",
+                    "True"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "",
+                    "gdjs.TopDownMovementRuntimeBehavior.prototype.actuallyDoStepPreEvents = gdjs.TopDownMovementRuntimeBehavior.prototype.doStepPreEvents;",
+                    "gdjs.TopDownMovementRuntimeBehavior.prototype.doStepPreEvents = function (instanceContainer) {",
+                    "    this.actuallyDoStepPreEvents(instanceContainer);",
+                    "",
+                    "    for (const topDownMovementHook of this._topDownMovementHooks) {",
+                    "        topDownMovementHook.afterPositionUpdate(null);",
+                    "    }",
+                    "}",
+                    "",
+                    "const deltasX = [1, 1, 0, -1, -1, -1, 0, 1];",
+                    "const deltasY = [0, 1, 1, 1, 0, -1, -1, -1];",
+                    "",
+                    "const CornerSlider =  /** @class */ (function () {",
+                    "",
+                    "  /**",
+                    "   * @param {gdjs.RuntimeBehavior} behavior",
+                    "   * @param {gdjs.TopDownMovementRuntimeBehavior} topDownBehavior",
+                    "   */",
+                    "  function CornerSlider(instanceContainer, behavior, topDownBehavior) {",
+                    "    /** @type {gdjs.RuntimeBehavior} */",
+                    "    this.behavior = behavior;",
+                    "    /** @type {gdjs.TopDownMovementRuntimeBehavior} */",
+                    "    this.topDownBehavior = topDownBehavior;",
+                    "",
+                    "    topDownBehavior.registerHook(this);",
+                    "",
+                    "    /** @type {number | null} */",
+                    "    this.targetX = null;",
+                    "    /** @type {number | null} */",
+                    "    this.targetY = null;",
+                    "    this.targetDirectionX = 0;",
+                    "    this.targetDirectionY = 0;",
+                    "    this.lastDirection = -1;",
+                    "    this.isVelocityAdjusted = false;",
+                    "    this.isVelocityAdjustedOnX = false;",
+                    "    this.isVelocityAdjustedOnY = false;",
+                    "",
+                    "    ",
+                    "    this.potentialCollidingObjects = [];",
+                    "    this.potentialCollidingObjects.length = 0;",
+                    "    this.collidingObjects = [];",
+                    "    this.collidingObjects.length = 0;",
+                    "    this.manager = ObstacleManager.getManager(instanceContainer);",
+                    "  }",
+                    "",
+                    "  /**",
+                    "   * Return the direction to use instead of the direction given in",
+                    "   * parameter.",
+                    "   * @param {gdjs.TopDownMovementRuntimeBehavior.TopDownMovementHookContext} context",
+                    "   * @return {number}",
+                    "   */",
+                    "  CornerSlider.prototype.overrideDirection = function (context) {",
+                    "    let direction = context.getDirection();",
+                    "    if (!this.behavior.activated()) {",
+                    "      return direction;",
+                    "    }",
+                    "",
+                    "    /** @type {number} */",
+                    "    const cellSize = this.behavior._getPixelSize();",
+                    "    const that = this.topDownBehavior;",
+                    "    const object = that.owner;",
+                    "",
+                    "    if (cellSize <= 0 || that._allowDiagonals) {",
+                    "      return direction;",
+                    "    }",
+                    "",
+                    "",
+                    "",
+                    "    return direction;",
+                    "  }",
+                    "",
+                    "  /**",
+                    "   * Called before the acceleration and new direction is applied to the",
+                    "   * velocity.",
+                    "   * @param {gdjs.TopDownMovementRuntimeBehavior.TopDownMovementHookContext} context",
+                    "   */",
+                    "  CornerSlider.prototype.beforeSpeedUpdate = function (context) {}",
+                    "",
+                    "  /**",
+                    "   * Called before the velocity is applied to the object position and",
+                    "   * angle.",
+                    "   */",
+                    "  CornerSlider.prototype.beforePositionUpdate = function () {}",
+                    "",
+                    "  CornerSlider.prototype.afterPositionUpdate = function () {",
+                    "    const that = this.topDownBehavior;",
+                    "    const object = that.owner;",
+                    "    /** @type {Obstacle[]} */",
+                    "    const obstacles = [];",
+                    "    this.manager.getAllObstaclesAround(object.getAABB(), 32, obstacles);",
+                    "    const otherObjects = obstacles.map(obstacle => obstacle.owner);",
+                    "    object.separateFromObjects(otherObjects);",
+                    "  }",
+                    "",
+                    "  const epsilon = 1 / (1 << 20);",
+                    "",
+                    "  CornerSlider.prototype.doStepPostEvents = function (instanceContainer) {",
+                    "    const that = this.topDownBehavior;",
+                    "    const object = that.owner;",
+                    "",
+                    "  }",
+                    "",
+                    "  return CornerSlider;",
+                    "}());",
+                    "",
+                    "/**",
+                    " * An obstacle manager for fast spacial search.",
+                    " */",
+                    "const ObstacleManager =  /** @class */ (function () {",
+                    "  /**",
+                    "   * Create a manager.",
+                    "   */",
+                    "  function ObstacleManager() {",
+                    "    this.obstacleRBush = new rbush();",
+                    "  }",
+                    "",
+                    "  /**",
+                    "   * Get the obstacle manager of an instance container.",
+                    "   * @param {gdjs.RuntimeInstanceContainer} instanceContainer",
+                    "   * @return {ObstacleManager}",
+                    "   */",
+                    "  ObstacleManager.getManager = function (instanceContainer) {",
+                    "    if (!instanceContainer.__topDownCornerSlidingExtension) {",
+                    "        instanceContainer.__topDownCornerSlidingExtension = {};",
+                    "    }",
+                    "    if (!instanceContainer.__topDownCornerSlidingExtension.manager) {",
+                    "        // Create the shared manager if necessary.",
+                    "        instanceContainer.__topDownCornerSlidingExtension.manager = new ObstacleManager();",
+                    "    }",
+                    "    return instanceContainer.__topDownCornerSlidingExtension.manager;",
+                    "  };",
+                    "",
+                    "  /**",
+                    "   * Register an obstacle.",
+                    "   * @param {Obstacle} obstacle",
+                    "   */",
+                    "  ObstacleManager.prototype.addObstacle = function (obstacle) {",
+                    "    obstacle.currentRBushAABB.updateAABBFromOwner();",
+                    "    this.obstacleRBush.insert(obstacle.currentRBushAABB);",
+                    "  }",
+                    "",
+                    "  /**",
+                    "   * Unregister an obstacle.",
+                    "   * @param {Obstacle} obstacle",
+                    "   */",
+                    "  ObstacleManager.prototype.removeObstacle = function (obstacle) {",
+                    "    this.obstacleRBush.remove(obstacle.currentRBushAABB);",
+                    "  }",
+                    "",
+                    "  /**",
+                    "   * Returns all the boids around the specified boid.",
+                    "   * @param {gdjs.AABB} aabb",
+                    "   * @param {number} maxMovementLength",
+                    "   * @param {Obstacle[]} result the returned array.",
+                    "   * @return {Obstacle[]} An array with all obstacles near the object.",
+                    "   */",
+                    "  ObstacleManager.prototype.getAllObstaclesAround = function (aabb, maxMovementLength, result) {",
+                    "    const searchArea = gdjs.staticObject(",
+                    "      ObstacleManager.prototype.getAllObstaclesAround",
+                    "    );",
+                    "    searchArea.minX = aabb.min[0] - maxMovementLength;",
+                    "    searchArea.minY = aabb.min[1] - maxMovementLength;",
+                    "    searchArea.maxX = aabb.max[0] + maxMovementLength;",
+                    "    searchArea.maxY = aabb.max[1] + maxMovementLength;",
+                    "    /** @type {gdjs.BehaviorRBushAABB[]} */",
+                    "    const nearbyObstacles = this.obstacleRBush.search(searchArea);",
+                    "",
+                    "    result.length = 0;",
+                    "    for (let i = 0; i < nearbyObstacles.length; i++) {",
+                    "      /** @type {gdjs.Obstacle[]} */",
+                    "      const obstacle = nearbyObstacles[i].behavior;",
+                    "      result.push(obstacle);",
+                    "    }",
+                    "",
+                    "    return result;",
+                    "  }",
+                    "",
+                    "  return ObstacleManager;",
+                    "}());",
+                    "",
+                    "/**",
+                    " * NavMeshPathfindingObstacleRuntimeBehavior represents a behavior allowing objects to be",
+                    " * considered as a obstacle by objects having Pathfinding Behavior.",
+                    " */",
+                    "const Obstacle = /** @class */ (function () {",
+                    "    /**",
+                    "     * ",
+                    "     * @param {gdjs.RuntimeInstanceContainer} instanceContainer",
+                    "     * @param {gdjs.RuntimeBehavior} behavior",
+                    "     */",
+                    "    function Obstacle(instanceContainer, behavior) {",
+                    "        this._oldX = 0;",
+                    "        this._oldY = 0;",
+                    "        this._oldWidth = 0;",
+                    "        this._oldHeight = 0;",
+                    "        this._registeredInManager = false;",
+                    "        this.behavior = behavior;",
+                    "        this.currentRBushAABB = new gdjs.BehaviorRBushAABB(",
+                    "          behavior",
+                    "        );",
+                    "        this._manager = ObstacleManager.getManager(instanceContainer);",
+                    "        // Note that we can't use getX(), getWidth()... of owner here:",
+                    "        // The owner is not yet fully constructed.",
+                    "    }",
+                    "    Obstacle.prototype.onCreated = function () {",
+                    "        this._manager.addObstacle(this);",
+                    "        this._registeredInManager = true;",
+                    "    };",
+                    "    Obstacle.prototype.onDestroy = function () {",
+                    "        if (this._manager && this._registeredInManager) {",
+                    "            this._manager.removeObstacle(this);",
+                    "        }",
+                    "    };",
+                    "    Obstacle.prototype.doStepPreEvents = function (instanceContainer) {",
+                    "        var owner = this.behavior.owner;",
+                    "        // Make sure the obstacle is or is not in the obstacles manager.",
+                    "        if (!this.behavior.activated() && this._registeredInManager) {",
+                    "            this._manager.removeObstacle(this);",
+                    "            this._registeredInManager = false;",
+                    "        }",
+                    "        else {",
+                    "            if (this.behavior.activated() && !this._registeredInManager) {",
+                    "                this._manager.addObstacle(this);",
+                    "                this._registeredInManager = true;",
+                    "            }",
+                    "        }",
+                    "        // Track changes in size or position",
+                    "        if (this._oldX !== owner.getX() ||",
+                    "            this._oldY !== owner.getY() ||",
+                    "            this._oldWidth !== owner.getWidth() ||",
+                    "            this._oldHeight !== owner.getHeight()) {",
+                    "            if (this._registeredInManager) {",
+                    "                this._manager.removeObstacle(this);",
+                    "                this._manager.addObstacle(this);",
+                    "            }",
+                    "            this._oldX = owner.getX();",
+                    "            this._oldY = owner.getY();",
+                    "            this._oldWidth = owner.getWidth();",
+                    "            this._oldHeight = owner.getHeight();",
+                    "        }",
+                    "    };",
+                    "    Obstacle.prototype.doStepPostEvents = function (instanceContainer) { };",
+                    "    Obstacle.prototype.onActivate = function () {",
+                    "        if (this._registeredInManager) {",
+                    "            return;",
+                    "        }",
+                    "        this._manager.addObstacle(this);",
+                    "        this._registeredInManager = true;",
+                    "    };",
+                    "    Obstacle.prototype.onDeActivate = function () {",
+                    "        if (!this._registeredInManager) {",
+                    "            return;",
+                    "        }",
+                    "        this._manager.removeObstacle(this);",
+                    "        this._registeredInManager = false;",
+                    "    };",
+                    "    return Obstacle;",
+                    "}());",
+                    "",
+                    "gdjs.__topDownCornerSlidingExtension = gdjs.__topDownCornerSlidingExtension || {};",
+                    "gdjs.__topDownCornerSlidingExtension.CornerSlider = CornerSlider;",
+                    "gdjs.__topDownCornerSlidingExtension.Obstacle = Obstacle;",
+                    "gdjs.__topDownCornerSlidingExtension.ObstacleManager = ObstacleManager;",
+                    "",
+                    ""
+                  ],
+                  "parameterObjects": "",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ]
+            }
+          ],
+          "parameters": [],
+          "objectGroups": []
+        }
+      ],
+      "eventsBasedBehaviors": [
+        {
+          "description": "",
+          "fullName": "Top-down corner slider",
+          "name": "TopDownCornerSlider",
+          "objectType": "",
+          "eventsFunctions": [
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "onCreated",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TopDownCornerSliding::DefineJavaScriptForTopDown"
+                      },
+                      "parameters": [
+                        "",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "\r",
+                    "const object = objects[0];\r",
+                    "const behaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");\r",
+                    "const behavior = object.getBehavior(behaviorName);\r",
+                    "\r",
+                    "/** @type {gdjs.TopDownMovementRuntimeBehavior} */\r",
+                    "const topDownBehavior = object.getBehavior(behavior._getTopDownMovement());\r",
+                    "\r",
+                    "behavior.__topDownCornerSlidingExtension = behavior.__topDownCornerSlidingExtension || {};\r",
+                    "behavior.__topDownCornerSlidingExtension.cornerSlider = new gdjs.__topDownCornerSlidingExtension.CornerSlider(runtimeScene, behavior, topDownBehavior);\r",
+                    ""
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "TopDownCornerSliding::TopDownCornerSlider",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            }
+          ],
+          "propertyDescriptors": [
+            {
+              "value": "",
+              "type": "Behavior",
+              "label": "Top-down movement behavior",
+              "description": "",
+              "group": "",
+              "extraInformation": [
+                "TopDownMovementBehavior::TopDownMovementBehavior"
+              ],
+              "hidden": false,
+              "name": "TopDownMovement"
+            },
+            {
+              "value": "1",
+              "type": "Number",
+              "label": "Pixel size",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": false,
+              "name": "PixelSize"
+            },
+            {
+              "value": "0",
+              "type": "Number",
+              "label": "Pixel grid offset X",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": false,
+              "name": "OffsetX"
+            },
+            {
+              "value": "0",
+              "type": "Number",
+              "label": "Pixel grid offset Y",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": false,
+              "name": "OffsetY"
+            }
+          ],
+          "sharedPropertyDescriptors": []
+        },
+        {
+          "description": "",
+          "fullName": "",
+          "name": "TopDownCornerSliderObstacle",
+          "objectType": "",
+          "eventsFunctions": [
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "onCreated",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Initiate and attach properties as objects variables",
+                  "comment2": ""
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TopDownCornerSliding::DefineJavaScriptForTopDown"
+                      },
+                      "parameters": [
+                        "",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const object = objects[0];\r",
+                    "const behaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");\r",
+                    "const behavior = object.getBehavior(behaviorName);\r",
+                    "\r",
+                    "behavior.__topDownCornerSlidingExtension = behavior.__topDownCornerSlidingExtension || {};\r",
+                    "behavior.__topDownCornerSlidingExtension.obstacle =\r",
+                    "    new gdjs.__topDownCornerSlidingExtension.Obstacle(runtimeScene, behavior);\r",
+                    "behavior.__topDownCornerSlidingExtension.obstacle.onCreated(runtimeScene, behavior);\r",
+                    ""
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "TopDownCornerSliding::TopDownCornerSliderObstacle",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "doStepPreEvents",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const object = objects[0];\r",
+                    "const behaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");\r",
+                    "const behavior = object.getBehavior(behaviorName);\r",
+                    "\r",
+                    "behavior.__topDownCornerSlidingExtension.obstacle.doStepPreEvents(runtimeScene);\r",
+                    ""
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "TopDownCornerSliding::TopDownCornerSliderObstacle",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            }
+          ],
+          "propertyDescriptors": [
+            {
+              "value": "0",
+              "type": "Number",
+              "unit": "Pixel",
+              "label": "Sliding corner size",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": false,
+              "name": "SlidingCornerSize"
+            }
+          ],
+          "sharedPropertyDescriptors": []
+        }
+      ],
+      "eventsBasedObjects": []
+    },
     {
       "author": "Bouh",
       "category": "Input",
