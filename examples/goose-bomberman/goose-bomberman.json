@@ -2223,36 +2223,19 @@
           ]
         },
         {
-          "name": "Goose",
+          "name": "ScoreIcon",
           "objects": [
             {
-              "name": "Goose1"
+              "name": "ScoreIcon1"
             },
             {
-              "name": "Goose2"
+              "name": "ScoreIcon2"
             },
             {
-              "name": "Goose3"
+              "name": "ScoreIcon3"
             },
             {
-              "name": "Goose4"
-            }
-          ]
-        },
-        {
-          "name": "ScoreGoose",
-          "objects": [
-            {
-              "name": "ScoreGoose1"
-            },
-            {
-              "name": "ScoreGoose2"
-            },
-            {
-              "name": "ScoreGoose3"
-            },
-            {
-              "name": "ScoreGoose4"
+              "name": "ScoreIcon4"
             }
           ]
         }
@@ -2285,7 +2268,7 @@
           "customSize": true,
           "height": 23,
           "layer": "",
-          "name": "ScoreGoose1",
+          "name": "ScoreIcon1",
           "persistentUuid": "906f526d-ae6c-414a-8084-114f9a51cd0a",
           "width": 33,
           "x": 36,
@@ -2306,7 +2289,7 @@
           "customSize": true,
           "height": 23,
           "layer": "",
-          "name": "ScoreGoose2",
+          "name": "ScoreIcon2",
           "persistentUuid": "2cc418a5-16ad-465f-a4bc-ff0f479488b8",
           "width": 33,
           "x": 132,
@@ -2327,7 +2310,7 @@
           "customSize": true,
           "height": 23,
           "layer": "",
-          "name": "ScoreGoose4",
+          "name": "ScoreIcon4",
           "persistentUuid": "1713db2a-fecc-4906-b55c-8a68cc53ab88",
           "width": 33,
           "x": 324,
@@ -2348,7 +2331,7 @@
           "customSize": true,
           "height": 23,
           "layer": "",
-          "name": "ScoreGoose3",
+          "name": "ScoreIcon3",
           "persistentUuid": "69e1ebf6-95a0-4c89-a026-0666d11c2762",
           "width": 33,
           "x": 228,
@@ -2679,6 +2662,11 @@
               "name": "TopDownMovementAnimator",
               "type": "TopDownMovementAnimator::TopDownMovementAnimator",
               "TopDownMovement": "TopDownMovement"
+            },
+            {
+              "name": "YSort",
+              "type": "YSort::YSort",
+              "Offset": 34
             }
           ],
           "animations": [
@@ -2691,13 +2679,13 @@
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
-                      "hasCustomCollisionMask": false,
-                      "image": "Joueur1.png",
+                      "hasCustomCollisionMask": true,
+                      "image": "OieBlancheDroite.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 9,
+                        "y": 6
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -2705,7 +2693,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 9,
+                            "y": 6
+                          },
+                          {
+                            "x": 57,
+                            "y": 6
+                          },
+                          {
+                            "x": 57,
+                            "y": 54
+                          },
+                          {
+                            "x": 9,
+                            "y": 54
+                          }
+                        ]
+                      ]
                     }
                   ]
                 }
@@ -2720,13 +2727,13 @@
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
-                      "hasCustomCollisionMask": false,
-                      "image": "Joueur1.png",
+                      "hasCustomCollisionMask": true,
+                      "image": "OieBlancheGauche.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 9,
+                        "y": 6
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -2734,7 +2741,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 9,
+                            "y": 6
+                          },
+                          {
+                            "x": 57,
+                            "y": 6
+                          },
+                          {
+                            "x": 57,
+                            "y": 54
+                          },
+                          {
+                            "x": 9,
+                            "y": 54
+                          }
+                        ]
+                      ]
                     }
                   ]
                 }
@@ -2749,13 +2775,13 @@
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
-                      "hasCustomCollisionMask": false,
-                      "image": "Joueur1.png",
+                      "hasCustomCollisionMask": true,
+                      "image": "OieBlancheHaut.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
                         "x": 0,
-                        "y": 0
+                        "y": 26
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -2763,7 +2789,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 27
+                          },
+                          {
+                            "x": 48,
+                            "y": 27
+                          },
+                          {
+                            "x": 48,
+                            "y": 75
+                          },
+                          {
+                            "x": 0,
+                            "y": 75
+                          }
+                        ]
+                      ]
                     }
                   ]
                 }
@@ -2778,13 +2823,13 @@
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
-                      "hasCustomCollisionMask": false,
-                      "image": "Joueur1.png",
+                      "hasCustomCollisionMask": true,
+                      "image": "OieBlancheBas.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
                         "x": 0,
-                        "y": 0
+                        "y": 8
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -2792,7 +2837,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 8
+                          },
+                          {
+                            "x": 48,
+                            "y": 8
+                          },
+                          {
+                            "x": 48,
+                            "y": 56
+                          },
+                          {
+                            "x": 0,
+                            "y": 56
+                          }
+                        ]
+                      ]
                     }
                   ]
                 }
@@ -2908,6 +2972,11 @@
               "name": "TopDownMovementAnimator",
               "type": "TopDownMovementAnimator::TopDownMovementAnimator",
               "TopDownMovement": "TopDownMovement"
+            },
+            {
+              "name": "YSort",
+              "type": "YSort::YSort",
+              "Offset": 34
             }
           ],
           "animations": [
@@ -2920,13 +2989,13 @@
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
-                      "hasCustomCollisionMask": false,
-                      "image": "Joueur2.png",
+                      "hasCustomCollisionMask": true,
+                      "image": "OieGriseDroite.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 9,
+                        "y": 6
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -2934,7 +3003,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 9,
+                            "y": 6
+                          },
+                          {
+                            "x": 57,
+                            "y": 6
+                          },
+                          {
+                            "x": 57,
+                            "y": 54
+                          },
+                          {
+                            "x": 9,
+                            "y": 54
+                          }
+                        ]
+                      ]
                     }
                   ]
                 }
@@ -2949,13 +3037,13 @@
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
-                      "hasCustomCollisionMask": false,
-                      "image": "Joueur2.png",
+                      "hasCustomCollisionMask": true,
+                      "image": "OieGriseGauche.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 9,
+                        "y": 6
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -2963,7 +3051,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 9,
+                            "y": 6
+                          },
+                          {
+                            "x": 57,
+                            "y": 6
+                          },
+                          {
+                            "x": 57,
+                            "y": 54
+                          },
+                          {
+                            "x": 9,
+                            "y": 54
+                          }
+                        ]
+                      ]
                     }
                   ]
                 }
@@ -2978,13 +3085,13 @@
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
-                      "hasCustomCollisionMask": false,
-                      "image": "Joueur2.png",
+                      "hasCustomCollisionMask": true,
+                      "image": "OieGriseHaut.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
                         "x": 0,
-                        "y": 0
+                        "y": 26
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -2992,7 +3099,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 27
+                          },
+                          {
+                            "x": 48,
+                            "y": 27
+                          },
+                          {
+                            "x": 48,
+                            "y": 75
+                          },
+                          {
+                            "x": 0,
+                            "y": 75
+                          }
+                        ]
+                      ]
                     }
                   ]
                 }
@@ -3007,13 +3133,13 @@
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
-                      "hasCustomCollisionMask": false,
-                      "image": "Joueur2.png",
+                      "hasCustomCollisionMask": true,
+                      "image": "OieGriseBas.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
                         "x": 0,
-                        "y": 0
+                        "y": 8
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -3021,7 +3147,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 8
+                          },
+                          {
+                            "x": 48,
+                            "y": 8
+                          },
+                          {
+                            "x": 48,
+                            "y": 56
+                          },
+                          {
+                            "x": 0,
+                            "y": 56
+                          }
+                        ]
+                      ]
                     }
                   ]
                 }
@@ -3137,6 +3282,11 @@
               "name": "TopDownMovementAnimator",
               "type": "TopDownMovementAnimator::TopDownMovementAnimator",
               "TopDownMovement": "TopDownMovement"
+            },
+            {
+              "name": "YSort",
+              "type": "YSort::YSort",
+              "Offset": 34
             }
           ],
           "animations": [
@@ -3149,13 +3299,13 @@
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
-                      "hasCustomCollisionMask": false,
-                      "image": "Joueur3.png",
+                      "hasCustomCollisionMask": true,
+                      "image": "OieRoseDroite.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 9,
+                        "y": 6
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -3163,7 +3313,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 9,
+                            "y": 6
+                          },
+                          {
+                            "x": 57,
+                            "y": 6
+                          },
+                          {
+                            "x": 57,
+                            "y": 54
+                          },
+                          {
+                            "x": 9,
+                            "y": 54
+                          }
+                        ]
+                      ]
                     }
                   ]
                 }
@@ -3178,13 +3347,13 @@
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
-                      "hasCustomCollisionMask": false,
-                      "image": "Joueur3.png",
+                      "hasCustomCollisionMask": true,
+                      "image": "OieRoseGauche.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 9,
+                        "y": 6
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -3192,7 +3361,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 9,
+                            "y": 6
+                          },
+                          {
+                            "x": 57,
+                            "y": 6
+                          },
+                          {
+                            "x": 57,
+                            "y": 54
+                          },
+                          {
+                            "x": 9,
+                            "y": 54
+                          }
+                        ]
+                      ]
                     }
                   ]
                 }
@@ -3207,13 +3395,13 @@
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
-                      "hasCustomCollisionMask": false,
-                      "image": "Joueur3.png",
+                      "hasCustomCollisionMask": true,
+                      "image": "OieRoseHaut.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
                         "x": 0,
-                        "y": 0
+                        "y": 26
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -3221,7 +3409,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 27
+                          },
+                          {
+                            "x": 48,
+                            "y": 27
+                          },
+                          {
+                            "x": 48,
+                            "y": 75
+                          },
+                          {
+                            "x": 0,
+                            "y": 75
+                          }
+                        ]
+                      ]
                     }
                   ]
                 }
@@ -3236,13 +3443,13 @@
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
-                      "hasCustomCollisionMask": false,
-                      "image": "Joueur3.png",
+                      "hasCustomCollisionMask": true,
+                      "image": "OieRoseBas.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
                         "x": 0,
-                        "y": 0
+                        "y": 8
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -3250,7 +3457,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 8
+                          },
+                          {
+                            "x": 48,
+                            "y": 8
+                          },
+                          {
+                            "x": 48,
+                            "y": 56
+                          },
+                          {
+                            "x": 0,
+                            "y": 56
+                          }
+                        ]
+                      ]
                     }
                   ]
                 }
@@ -3366,6 +3592,11 @@
               "name": "TopDownMovementAnimator",
               "type": "TopDownMovementAnimator::TopDownMovementAnimator",
               "TopDownMovement": "TopDownMovement"
+            },
+            {
+              "name": "YSort",
+              "type": "YSort::YSort",
+              "Offset": 34
             }
           ],
           "animations": [
@@ -3378,13 +3609,13 @@
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
-                      "hasCustomCollisionMask": false,
-                      "image": "Joueur4.png",
+                      "hasCustomCollisionMask": true,
+                      "image": "OieMarronDroite.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 9,
+                        "y": 6
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -3392,7 +3623,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 9,
+                            "y": 6
+                          },
+                          {
+                            "x": 57,
+                            "y": 6
+                          },
+                          {
+                            "x": 57,
+                            "y": 54
+                          },
+                          {
+                            "x": 9,
+                            "y": 54
+                          }
+                        ]
+                      ]
                     }
                   ]
                 }
@@ -3407,13 +3657,13 @@
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
-                      "hasCustomCollisionMask": false,
-                      "image": "Joueur4.png",
+                      "hasCustomCollisionMask": true,
+                      "image": "OieMarronGauche.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 9,
+                        "y": 6
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -3421,7 +3671,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 9,
+                            "y": 6
+                          },
+                          {
+                            "x": 57,
+                            "y": 6
+                          },
+                          {
+                            "x": 57,
+                            "y": 54
+                          },
+                          {
+                            "x": 9,
+                            "y": 54
+                          }
+                        ]
+                      ]
                     }
                   ]
                 }
@@ -3436,13 +3705,13 @@
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
-                      "hasCustomCollisionMask": false,
-                      "image": "Joueur4.png",
+                      "hasCustomCollisionMask": true,
+                      "image": "OieMarronHaut.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
                         "x": 0,
-                        "y": 0
+                        "y": 26
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -3450,7 +3719,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 27
+                          },
+                          {
+                            "x": 48,
+                            "y": 27
+                          },
+                          {
+                            "x": 48,
+                            "y": 75
+                          },
+                          {
+                            "x": 0,
+                            "y": 75
+                          }
+                        ]
+                      ]
                     }
                   ]
                 }
@@ -3465,13 +3753,13 @@
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
-                      "hasCustomCollisionMask": false,
-                      "image": "Joueur4.png",
+                      "hasCustomCollisionMask": true,
+                      "image": "OieMarronBas.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
                         "x": 0,
-                        "y": 0
+                        "y": 8
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -3479,7 +3767,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 8
+                          },
+                          {
+                            "x": 48,
+                            "y": 8
+                          },
+                          {
+                            "x": 48,
+                            "y": 56
+                          },
+                          {
+                            "x": 0,
+                            "y": 56
+                          }
+                        ]
+                      ]
                     }
                   ]
                 }
@@ -4428,595 +4735,7 @@
         },
         {
           "assetStoreId": "",
-          "name": "Goose1",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "Right",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "OieBlancheDroite.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 9,
-                        "y": 6
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 9,
-                            "y": 6
-                          },
-                          {
-                            "x": 57,
-                            "y": 6
-                          },
-                          {
-                            "x": 57,
-                            "y": 54
-                          },
-                          {
-                            "x": 9,
-                            "y": 54
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Left",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "OieBlancheGauche.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 9,
-                        "y": 6
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 9,
-                            "y": 6
-                          },
-                          {
-                            "x": 57,
-                            "y": 6
-                          },
-                          {
-                            "x": 57,
-                            "y": 54
-                          },
-                          {
-                            "x": 9,
-                            "y": 54
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Up",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "OieBlancheHaut.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 26
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 27
-                          },
-                          {
-                            "x": 48,
-                            "y": 27
-                          },
-                          {
-                            "x": 48,
-                            "y": 75
-                          },
-                          {
-                            "x": 0,
-                            "y": 75
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Down",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "OieBlancheBas.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 8
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 8
-                          },
-                          {
-                            "x": 48,
-                            "y": 8
-                          },
-                          {
-                            "x": 48,
-                            "y": 56
-                          },
-                          {
-                            "x": 0,
-                            "y": 56
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "assetStoreId": "",
-          "name": "Goose2",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "Right",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "OieGriseDroite.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 9,
-                        "y": 6
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Left",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "OieGriseGauche.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 9,
-                        "y": 6
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Up",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "OieGriseHaut.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": -4,
-                        "y": 26
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Down",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "OieGriseBas.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": -4,
-                        "y": 8
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "assetStoreId": "",
-          "name": "Goose3",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "Right",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "OieRoseDroite.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 9,
-                        "y": 6
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Left",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "OieRoseGauche.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 9,
-                        "y": 6
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Up",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "OieRoseHaut.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": -4,
-                        "y": 26
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Down",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "OieRoseBas.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": -4,
-                        "y": 8
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "assetStoreId": "",
-          "name": "Goose4",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "Right",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "OieMarronDroite.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 9,
-                        "y": 6
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Left",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "OieMarronGauche.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 9,
-                        "y": 6
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Up",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "OieMarronHaut.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": -4,
-                        "y": 26
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Down",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "OieMarronBas.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": -4,
-                        "y": 8
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "assetStoreId": "",
-          "name": "ScoreGoose1",
+          "name": "ScoreIcon1",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
@@ -5057,7 +4776,7 @@
         },
         {
           "assetStoreId": "",
-          "name": "ScoreGoose2",
+          "name": "ScoreIcon2",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
@@ -5098,7 +4817,7 @@
         },
         {
           "assetStoreId": "",
-          "name": "ScoreGoose3",
+          "name": "ScoreIcon3",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
@@ -5145,7 +4864,7 @@
         },
         {
           "assetStoreId": "",
-          "name": "ScoreGoose4",
+          "name": "ScoreIcon4",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
@@ -5209,18 +4928,6 @@
                 "0",
                 "0"
               ]
-            },
-            {
-              "type": {
-                "value": "DebuggerTools::EnableDebugDraw"
-              },
-              "parameters": [
-                "",
-                "",
-                "yes",
-                "no",
-                "no"
-              ]
             }
           ],
           "events": [
@@ -5272,7 +4979,7 @@
                     "value": "VarObjet"
                   },
                   "parameters": [
-                    "ScoreGoose",
+                    "ScoreIcon",
                     "PlayerNum",
                     ">",
                     "GlobalVariable(PlayerCount)"
@@ -5285,7 +4992,7 @@
                     "value": "Delete"
                   },
                   "parameters": [
-                    "ScoreGoose",
+                    "ScoreIcon",
                     ""
                   ]
                 }
@@ -6219,162 +5926,6 @@
                     "Player",
                     "=",
                     "255"
-                  ]
-                }
-              ]
-            }
-          ],
-          "parameters": []
-        },
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "name": "Objects as hitboxes",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "DepartScene"
-                  },
-                  "parameters": [
-                    ""
-                  ]
-                }
-              ],
-              "actions": [],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Players are just filled squares so it's easier to set the collision mask. Geese are used to skin them.",
-                  "comment2": ""
-                },
-                {
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "Player",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "CreateByName"
-                      },
-                      "parameters": [
-                        "",
-                        "Goose",
-                        "\"Goose\" + Player.VariableString(Number)",
-                        "Player.X()",
-                        "Player.Y()",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ModVarObjet"
-                      },
-                      "parameters": [
-                        "Goose",
-                        "PlayerNum",
-                        "=",
-                        "Player.Variable(Number)"
-                      ]
-                    }
-                  ],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Cache"
-                          },
-                          "parameters": [
-                            "Player"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::ForEach",
-              "object": "Player",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjet"
-                  },
-                  "parameters": [
-                    "Goose",
-                    "PlayerNum",
-                    "=",
-                    "Player.Variable(Number)"
-                  ]
-                }
-              ],
-              "actions": [],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "MettreXY"
-                      },
-                      "parameters": [
-                        "Goose",
-                        "=",
-                        "Player.X()",
-                        "=",
-                        "Player.Y()"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ChangeAnimation"
-                      },
-                      "parameters": [
-                        "Goose",
-                        "=",
-                        "Player.Animation()"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ChangePlan"
-                      },
-                      "parameters": [
-                        "Goose",
-                        "=",
-                        "Player.Y() + 24 + 10"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Opacity"
-                      },
-                      "parameters": [
-                        "Goose",
-                        "=",
-                        "Player.Opacity()"
-                      ]
-                    }
                   ]
                 }
               ]
@@ -14964,7 +14515,7 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "height": 48,
           "layer": "",
           "name": "Player1",
@@ -15489,7 +15040,7 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "height": 48,
           "layer": "",
           "name": "Player2",
@@ -15504,7 +15055,7 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "height": 48,
           "layer": "",
           "name": "Player3",
@@ -15519,7 +15070,7 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "height": 48,
           "layer": "",
           "name": "Player4",
@@ -16375,17 +15926,16 @@
       ],
       "editionSettings": {
         "grid": true,
-        "gridB": 255,
-        "gridG": 180,
+        "gridType": "rectangular",
+        "gridWidth": 24,
         "gridHeight": 24,
         "gridOffsetX": 0,
         "gridOffsetY": 0,
-        "gridR": 158,
-        "gridType": "rectangular",
-        "gridWidth": 24,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
         "snap": true,
-        "windowMask": false,
-        "zoomFactor": 0.808
+        "zoomFactor": 0.808,
+        "windowMask": false
       }
     },
     {
@@ -16409,7 +15959,7 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "height": 48,
           "layer": "",
           "name": "Player1",
@@ -17024,7 +16574,7 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "height": 48,
           "layer": "",
           "name": "Player2",
@@ -17354,7 +16904,7 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "height": 48,
           "layer": "",
           "name": "Player3",
@@ -17369,7 +16919,7 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "height": 48,
           "layer": "",
           "name": "Player4",
@@ -18195,17 +17745,16 @@
       ],
       "editionSettings": {
         "grid": true,
-        "gridB": 255,
-        "gridG": 180,
+        "gridType": "rectangular",
+        "gridWidth": 24,
         "gridHeight": 24,
         "gridOffsetX": 0,
         "gridOffsetY": 0,
-        "gridR": 158,
-        "gridType": "rectangular",
-        "gridWidth": 24,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
         "snap": true,
-        "windowMask": false,
-        "zoomFactor": 0.928
+        "zoomFactor": 0.928,
+        "windowMask": false
       }
     },
     {
@@ -18229,7 +17778,7 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "height": 48,
           "layer": "",
           "name": "Player1",
@@ -18844,7 +18393,7 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "height": 48,
           "layer": "",
           "name": "Player2",
@@ -19189,7 +18738,7 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "height": 48,
           "layer": "",
           "name": "Player3",
@@ -19204,7 +18753,7 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "height": 48,
           "layer": "",
           "name": "Player4",
