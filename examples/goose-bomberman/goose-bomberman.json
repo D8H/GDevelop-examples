@@ -8414,7 +8414,6 @@
                     "gdjs.__topDownCornerSlidingExtension = gdjs.__topDownCornerSlidingExtension || {};",
                     "gdjs.__topDownCornerSlidingExtension.CornerSlider = CornerSlider;",
                     "gdjs.__topDownCornerSlidingExtension.Obstacle = Obstacle;",
-                    "gdjs.__topDownCornerSlidingExtension.ObstacleManager = ObstacleManager;",
                     "",
                     ""
                   ],
@@ -8631,6 +8630,114 @@
                   "parameterObjects": "Object",
                   "useStrict": true,
                   "eventsSheetExpanded": true
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "TopDownCornerSliding::TopDownCornerSliderObstacle",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "onActivate",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const object = objects[0];",
+                    "const behaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");",
+                    "const behavior = object.getBehavior(behaviorName);",
+                    "",
+                    "behavior.__topDownCornerSlidingExtension.obstacle.onActivate(runtimeScene);",
+                    ""
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "TopDownCornerSliding::TopDownCornerSliderObstacle",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "onDeActivate",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const object = objects[0];",
+                    "const behaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");",
+                    "const behavior = object.getBehavior(behaviorName);",
+                    "",
+                    "behavior.__topDownCornerSlidingExtension.obstacle.onDeActivate(runtimeScene);",
+                    ""
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "TopDownCornerSliding::TopDownCornerSliderObstacle",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "onDestroy",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const object = objects[0];",
+                    "const behaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");",
+                    "const behavior = object.getBehavior(behaviorName);",
+                    "",
+                    "behavior.__topDownCornerSlidingExtension.obstacle.onDestroy(runtimeScene);",
+                    ""
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
                 }
               ],
               "parameters": [
