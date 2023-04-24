@@ -2410,17 +2410,26 @@
                         "Variable(lastBubblePathPosition) - 32",
                         ""
                       ]
-                    },
+                    }
+                  ],
+                  "events": [
                     {
-                      "type": {
-                        "value": "CurvedMovement::SpeedPathMovement::SetSpeed"
-                      },
-                      "parameters": [
-                        "BoardBubble",
-                        "SpeedPathMovement",
-                        "=",
-                        "Variable(lastBubbleSpeed)",
-                        ""
+                      "disabled": true,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "CurvedMovement::SpeedPathMovement::SetSpeed"
+                          },
+                          "parameters": [
+                            "BoardBubble",
+                            "SpeedPathMovement",
+                            "=",
+                            "Variable(lastBubbleSpeed)",
+                            ""
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -2439,6 +2448,25 @@
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
+            {
+              "disabled": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "CurvedMovement::SpeedPathMovement::AccelarateAt"
+                  },
+                  "parameters": [
+                    "BoardBubble",
+                    "SpeedPathMovement",
+                    "50",
+                    "100",
+                    ""
+                  ]
+                }
+              ]
+            },
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
@@ -2846,6 +2874,8 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "disabled": true,
+          "folded": true,
           "name": "Insert bubbles",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -3513,6 +3543,8 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "disabled": true,
+          "folded": true,
           "name": "Merge queues",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -3982,6 +4014,8 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "disabled": true,
+          "folded": true,
           "name": "Combo",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -12125,6 +12159,120 @@
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "DebuggerTools::ConsoleLog"
+                      },
+                      "parameters": [
+                        "\"Acceleration: \" + ToString(Object.Behavior::PropertyAcceleration())",
+                        "",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CurvedMovement::SpeedPathMovement::PropertyShouldLoop"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnBoolean"
+                      },
+                      "parameters": [
+                        "True"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "CurvedMovement::SpeedPathMovement::HasReachedTarget"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CurvedMovement::SpeedPathMovement::PropertySpeed"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnBoolean"
+                      },
+                      "parameters": [
+                        "True"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "CurvedMovement::SpeedPathMovement::HasReachedOrigin"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CurvedMovement::SpeedPathMovement::PropertySpeed"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "<",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnBoolean"
+                      },
+                      "parameters": [
+                        "True"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
@@ -12133,25 +12281,10 @@
                       "parameters": [
                         "Object",
                         "Behavior",
-                        "!=",
+                        "=",
                         "0"
                       ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetReturnBoolean"
-                      },
-                      "parameters": [
-                        "True"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
+                    },
                     {
                       "type": {
                         "value": "CurvedMovement::SpeedPathMovement::PropertyAcceleration"
@@ -12159,7 +12292,7 @@
                       "parameters": [
                         "Object",
                         "Behavior",
-                        "!=",
+                        "=",
                         "0"
                       ]
                     }
@@ -12170,92 +12303,25 @@
                         "value": "SetReturnBoolean"
                       },
                       "parameters": [
-                        "True"
+                        "False"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "DebuggerTools::ConsoleLog"
+                      },
+                      "parameters": [
+                        "\"false\"",
+                        "",
+                        ""
                       ]
                     }
                   ]
                 },
                 {
+                  "disabled": true,
                   "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Or"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "value": "CurvedMovement::SpeedPathMovement::PropertyShouldLoop"
-                          },
-                          "parameters": [
-                            "Object",
-                            "Behavior"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::And"
-                          },
-                          "parameters": [],
-                          "subInstructions": [
-                            {
-                              "type": {
-                                "inverted": true,
-                                "value": "CurvedMovement::SpeedPathMovement::HasReachedTarget"
-                              },
-                              "parameters": [
-                                "Object",
-                                "Behavior",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "CurvedMovement::SpeedPathMovement::PropertySpeed"
-                              },
-                              "parameters": [
-                                "Object",
-                                "Behavior",
-                                ">",
-                                "0"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::And"
-                          },
-                          "parameters": [],
-                          "subInstructions": [
-                            {
-                              "type": {
-                                "inverted": true,
-                                "value": "CurvedMovement::SpeedPathMovement::HasReachedOrigin"
-                              },
-                              "parameters": [
-                                "Object",
-                                "Behavior",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "CurvedMovement::SpeedPathMovement::PropertySpeed"
-                              },
-                              "parameters": [
-                                "Object",
-                                "Behavior",
-                                "<",
-                                "0"
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ],
+                  "conditions": [],
                   "actions": [
                     {
                       "type": {
