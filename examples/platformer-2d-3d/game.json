@@ -979,6 +979,155 @@
         "metadata": "",
         "name": "Coin.glb",
         "userAdded": true
+      },
+      {
+        "file": "assets/Female Casual2.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "Female Casual.glb",
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/staging/public-resources/Animated People/40a5465dd69e0cc5ff477d826c32968c0500041aff99ee2142862326a0a3363f_Female Casual.glb",
+          "name": "Female Casual.glb"
+        }
+      },
+      {
+        "file": "Ambulance.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "Ambulance.glb",
+        "userAdded": true
+      },
+      {
+        "file": "Dragon2.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "Dragon2.glb",
+        "userAdded": true
+      },
+      {
+        "file": "Orc.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "Orc.glb",
+        "userAdded": false
+      },
+      {
+        "file": "Mushnub Evolved.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "Mushnub Evolved.glb",
+        "userAdded": false
+      },
+      {
+        "file": "assets/Fish.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "Fish.glb",
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/staging/public-resources/3D Colorful Monsters/Standing/e4bae9f2a7b60ca5f6493da221dc60e8cd5967d7bf35b37e91df97852f723baf_Fish.glb",
+          "name": "Fish.glb"
+        }
+      },
+      {
+        "file": "assets/Tribal.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "Tribal.glb",
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/staging/public-resources/3D Colorful Monsters/Standing/0d7dd5e8201535df3f021fae2500da8c4d155aea1e1f6a8ed619af3205bdea30_Tribal.glb",
+          "name": "Tribal.glb"
+        }
+      },
+      {
+        "file": "assets/Tractor Police.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "Tractor Police.glb",
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/staging/public-resources/3D Cars/9a8a954d7030da8e708f32861db47151bded252e0035abc76a30b6c775194111_Tractor Police.glb",
+          "name": "Tractor Police.glb"
+        }
+      },
+      {
+        "file": "Birch Tree 1.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "Birch Tree 1.glb",
+        "userAdded": true
+      },
+      {
+        "file": "Common Tree 1.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "Common Tree 1.glb",
+        "userAdded": true
+      },
+      {
+        "file": "ship_wreck.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "ship_wreck.glb",
+        "userAdded": true
+      },
+      {
+        "file": "Fox.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "Fox.glb",
+        "userAdded": true
+      },
+      {
+        "file": "Trex.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "Trex.glb",
+        "userAdded": false
+      },
+      {
+        "file": "Apatosaurus.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "Apatosaurus.glb",
+        "userAdded": false
+      },
+      {
+        "file": "Parasaurolophus.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "Parasaurolophus.glb",
+        "userAdded": false
+      },
+      {
+        "file": "Triceratops.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "Triceratops.glb",
+        "userAdded": false
+      },
+      {
+        "file": "Cooking Knife.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "Cooking Knife.glb",
+        "userAdded": false
+      },
+      {
+        "file": "Building Dock.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "Building Dock.glb",
+        "userAdded": true
+      },
+      {
+        "file": "Femal Adventurer.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "Femal Adventurer.glb",
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -1013,7 +1162,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 1.0800778004377412,
+        "zoomFactor": 0.8283818581670269,
         "windowMask": false
       },
       "objectsGroups": [
@@ -1584,21 +1733,6 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "Player",
-          "persistentUuid": "c16f7249-5bf3-4438-b1c8-38eaf26b9e5f",
-          "width": 0,
-          "x": 216,
-          "y": 282,
-          "zOrder": 63,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
           "name": "Fly",
           "persistentUuid": "5cec30fb-fbc0-40d9-bad6-a1a70c85aa59",
           "width": 0,
@@ -1713,11 +1847,162 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Player",
+          "persistentUuid": "b5fbf2f9-ea33-4994-afed-30df96b4a65f",
+          "width": 0,
+          "x": 223,
+          "y": 282,
+          "zOrder": 66,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Fish",
+          "persistentUuid": "3a7b688f-12ab-4386-8eb1-b1e25cd504df",
+          "width": 0,
+          "x": 512,
+          "y": 400,
+          "zOrder": 67,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Tribal",
+          "persistentUuid": "d305e97e-e6b1-4722-b99c-35e2f6dbd45b",
+          "width": 0,
+          "x": 827,
+          "y": 472,
+          "zOrder": 68,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 68.12194525058538,
+          "height": 254,
+          "layer": "",
+          "name": "New3DModel5",
+          "persistentUuid": "04ebb7e0-2cf7-414b-9ece-efa13844799d",
+          "width": 270,
+          "x": 293,
+          "y": 282,
+          "zOrder": 70,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "New3DModel6",
+          "persistentUuid": "ff7a6aa1-4b9a-4bf5-b7a2-19fed10c50ea",
+          "width": 0,
+          "x": 526,
+          "y": 145,
+          "zOrder": 72,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "New3DModel7",
+          "persistentUuid": "1aad0ea3-21b2-43c2-9c7e-3995e1e68075",
+          "width": 0,
+          "x": 691,
+          "y": 292,
+          "zOrder": 73,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "New3DModel8",
+          "persistentUuid": "cf6c2a1f-5c61-4d3a-9653-861db1fc2bad",
+          "width": 0,
+          "x": 830,
+          "y": 295,
+          "zOrder": 74,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "New3DModel10",
+          "persistentUuid": "bde81b89-696f-416f-aef8-fdc0443c19c0",
+          "width": 0,
+          "x": 336,
+          "y": 380,
+          "zOrder": 75,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "New3DModel11",
+          "persistentUuid": "8912f49b-20ee-4fae-a0a8-5e3040f958a1",
+          "width": 0,
+          "x": 313,
+          "y": 466,
+          "zOrder": 76,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "New3DModel12",
+          "persistentUuid": "16077963-fd9d-43bc-9ac7-1e406288e6ce",
+          "width": 0,
+          "x": 680,
+          "y": 453,
+          "zOrder": 77,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
         {
-          "assetStoreId": "",
+          "assetStoreId": "0aaeea77be52b02ec77afa2ee2fb1e23d4c7d9b175ee2371672960d4777098d8",
           "name": "Player",
           "tags": "",
           "type": "Scene3D::Model3DObject",
@@ -1734,7 +2019,7 @@
               "IsLookingLeft": false,
               "IdleAnimationName": "Idle",
               "RunAnimationName": "Run",
-              "JumpAnimationName": "Jump",
+              "JumpAnimationName": "RunningJump",
               "FallAnimationName": "Fall",
               "ClimbAnimationName": "Climb"
             },
@@ -1832,107 +2117,77 @@
             }
           ],
           "content": {
-            "centerLocation": "ObjectCenter",
-            "depth": 71,
-            "height": 100,
-            "keepAspectRatio": false,
+            "centerLocation": "ModelOrigin",
+            "depth": 302,
+            "height": 112,
+            "keepAspectRatio": true,
             "materialType": "StandardWithoutMetalness",
-            "modelResourceName": "Animated Platformer Character.glb",
+            "modelResourceName": "Female Casual.glb",
             "originLocation": "ModelOrigin",
             "rotationX": 0,
             "rotationY": 90,
             "rotationZ": 0,
-            "width": 46,
+            "width": 58,
             "animations": [
               {
                 "loop": true,
                 "name": "Idle",
-                "source": "CharacterArmature|Idle"
-              },
-              {
-                "loop": false,
-                "name": "Death",
-                "source": "CharacterArmature|Death"
-              },
-              {
-                "loop": false,
-                "name": "Duck",
-                "source": "CharacterArmature|Duck"
-              },
-              {
-                "loop": false,
-                "name": "HitReact",
-                "source": "CharacterArmature|HitReact"
-              },
-              {
-                "loop": true,
-                "name": "Idle_Gun",
-                "source": "CharacterArmature|Idle_Gun"
-              },
-              {
-                "loop": true,
-                "name": "Idle_Shoot",
-                "source": "CharacterArmature|Idle_Shoot"
-              },
-              {
-                "loop": false,
-                "name": "Jump",
-                "source": "CharacterArmature|Jump"
-              },
-              {
-                "loop": true,
-                "name": "Jump_Idle",
-                "source": "CharacterArmature|Jump_Idle"
-              },
-              {
-                "loop": false,
-                "name": "Jump_Land",
-                "source": "CharacterArmature|Jump_Land"
-              },
-              {
-                "loop": true,
-                "name": "No",
-                "source": "CharacterArmature|No"
-              },
-              {
-                "loop": false,
-                "name": "Punch",
-                "source": "CharacterArmature|Punch"
-              },
-              {
-                "loop": true,
-                "name": "Run",
-                "source": "CharacterArmature|Run"
-              },
-              {
-                "loop": true,
-                "name": "Run_Gun",
-                "source": "CharacterArmature|Run_Gun"
-              },
-              {
-                "loop": true,
-                "name": "Run_Shoot",
-                "source": "CharacterArmature|Run_Shoot"
+                "source": "Female_Idle"
               },
               {
                 "loop": true,
                 "name": "Walk",
-                "source": "CharacterArmature|Walk"
+                "source": "Female_Walk"
               },
               {
                 "loop": true,
-                "name": "Walk_Gun",
-                "source": "CharacterArmature|Walk_Gun"
+                "name": "Run",
+                "source": "Female_Run"
               },
               {
-                "loop": true,
-                "name": "Wave",
-                "source": "CharacterArmature|Wave"
+                "loop": false,
+                "name": "Jump",
+                "source": "Female_Jump"
               },
               {
-                "loop": true,
-                "name": "Yes",
-                "source": "CharacterArmature|Yes"
+                "loop": false,
+                "name": "Punch",
+                "source": "Female_Punch"
+              },
+              {
+                "loop": false,
+                "name": "Death",
+                "source": "Female_Death"
+              },
+              {
+                "loop": false,
+                "name": "RunningJump",
+                "source": "Female_RunningJump"
+              },
+              {
+                "loop": false,
+                "name": "Roll",
+                "source": "Female_Roll"
+              },
+              {
+                "loop": false,
+                "name": "Sitting",
+                "source": "Female_Sitting"
+              },
+              {
+                "loop": false,
+                "name": "Standing",
+                "source": "Female_Standing"
+              },
+              {
+                "loop": false,
+                "name": "SwordSlash",
+                "source": "Female_SwordSlash"
+              },
+              {
+                "loop": false,
+                "name": "Clapping",
+                "source": "Female_Clapping"
               }
             ]
           }
@@ -4006,6 +4261,1039 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "fd40ac7010b2bb82a044e20f4c38548eecf48817c941c87b13c6b5f175073c13",
+          "name": "MaleShirt",
+          "tags": "",
+          "type": "Scene3D::Model3DObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "centerLocation": "ModelOrigin",
+            "depth": 156,
+            "height": 145,
+            "keepAspectRatio": true,
+            "materialType": "Basic",
+            "modelResourceName": "Male Shirt.glb",
+            "originLocation": "ModelOrigin",
+            "rotationX": 0,
+            "rotationY": 90,
+            "rotationZ": 0,
+            "width": 28,
+            "animations": [
+              {
+                "loop": true,
+                "name": "Idle",
+                "source": "Man_Idle"
+              },
+              {
+                "loop": true,
+                "name": "Walk",
+                "source": "Man_Walk"
+              },
+              {
+                "loop": true,
+                "name": "Run",
+                "source": "Man_Run"
+              },
+              {
+                "loop": false,
+                "name": "Jump",
+                "source": "Man_Jump"
+              },
+              {
+                "loop": false,
+                "name": "Punch",
+                "source": "Man_Punch"
+              },
+              {
+                "loop": false,
+                "name": "Death",
+                "source": "Man_Death"
+              },
+              {
+                "loop": false,
+                "name": "RunningJump",
+                "source": "Man_RunningJump"
+              },
+              {
+                "loop": false,
+                "name": "Roll",
+                "source": "Man_Roll"
+              },
+              {
+                "loop": false,
+                "name": "Sitting",
+                "source": "Man_Sitting"
+              },
+              {
+                "loop": false,
+                "name": "Standing",
+                "source": "Man_Standing"
+              },
+              {
+                "loop": false,
+                "name": "SwordSlash",
+                "source": "Man_SwordSlash"
+              },
+              {
+                "loop": false,
+                "name": "Clapping",
+                "source": "Man_Clapping"
+              }
+            ]
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "New3DModel",
+          "tags": "",
+          "type": "Scene3D::Model3DObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "centerLocation": "ModelOrigin",
+            "depth": 100,
+            "height": 100,
+            "keepAspectRatio": true,
+            "materialType": "Basic",
+            "modelResourceName": "Dragon2.glb",
+            "originLocation": "ModelOrigin",
+            "rotationX": 0,
+            "rotationY": 0,
+            "rotationZ": 0,
+            "width": 100,
+            "animations": [
+              {
+                "loop": false,
+                "name": "Death",
+                "source": "Death"
+              },
+              {
+                "loop": false,
+                "name": "Fast_Flying",
+                "source": "Fast_Flying"
+              },
+              {
+                "loop": false,
+                "name": "Flying_Idle",
+                "source": "Flying_Idle"
+              },
+              {
+                "loop": false,
+                "name": "Headbutt",
+                "source": "Headbutt"
+              },
+              {
+                "loop": false,
+                "name": "HitReact",
+                "source": "HitReact"
+              },
+              {
+                "loop": false,
+                "name": "No",
+                "source": "No"
+              },
+              {
+                "loop": false,
+                "name": "Punch",
+                "source": "Punch"
+              },
+              {
+                "loop": false,
+                "name": "Yes",
+                "source": "Yes"
+              }
+            ]
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "New3DModel2",
+          "tags": "",
+          "type": "Scene3D::Model3DObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "centerLocation": "ModelOrigin",
+            "depth": 100,
+            "height": 100,
+            "keepAspectRatio": true,
+            "materialType": "Basic",
+            "modelResourceName": "Orc.glb",
+            "originLocation": "ModelOrigin",
+            "rotationX": 0,
+            "rotationY": 0,
+            "rotationZ": 0,
+            "width": 100,
+            "animations": [
+              {
+                "loop": false,
+                "name": "Death",
+                "source": "Death"
+              },
+              {
+                "loop": false,
+                "name": "Duck",
+                "source": "Duck"
+              },
+              {
+                "loop": false,
+                "name": "HitReact",
+                "source": "HitReact"
+              },
+              {
+                "loop": false,
+                "name": "Idle",
+                "source": "Idle"
+              },
+              {
+                "loop": false,
+                "name": "Jump",
+                "source": "Jump"
+              },
+              {
+                "loop": false,
+                "name": "Jump_Idle",
+                "source": "Jump_Idle"
+              },
+              {
+                "loop": false,
+                "name": "Jump_Land",
+                "source": "Jump_Land"
+              },
+              {
+                "loop": false,
+                "name": "No",
+                "source": "No"
+              },
+              {
+                "loop": false,
+                "name": "Punch",
+                "source": "Punch"
+              },
+              {
+                "loop": false,
+                "name": "Run",
+                "source": "Run"
+              },
+              {
+                "loop": false,
+                "name": "Walk",
+                "source": "Walk"
+              },
+              {
+                "loop": false,
+                "name": "Wave",
+                "source": "Wave"
+              },
+              {
+                "loop": false,
+                "name": "Weapon",
+                "source": "Weapon"
+              },
+              {
+                "loop": false,
+                "name": "Yes",
+                "source": "Yes"
+              }
+            ]
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "New3DModel3",
+          "tags": "",
+          "type": "Scene3D::Model3DObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "centerLocation": "ModelOrigin",
+            "depth": 100,
+            "height": 100,
+            "keepAspectRatio": true,
+            "materialType": "Basic",
+            "modelResourceName": "Mushnub Evolved.glb",
+            "originLocation": "ModelOrigin",
+            "rotationX": 0,
+            "rotationY": 0,
+            "rotationZ": 0,
+            "width": 100,
+            "animations": [
+              {
+                "loop": false,
+                "name": "Bite_Front",
+                "source": "Bite_Front"
+              },
+              {
+                "loop": false,
+                "name": "Dance",
+                "source": "Dance"
+              },
+              {
+                "loop": false,
+                "name": "Death",
+                "source": "Death"
+              },
+              {
+                "loop": false,
+                "name": "HitRecieve",
+                "source": "HitRecieve"
+              },
+              {
+                "loop": false,
+                "name": "Idle",
+                "source": "Idle"
+              },
+              {
+                "loop": false,
+                "name": "Jump",
+                "source": "Jump"
+              },
+              {
+                "loop": false,
+                "name": "No",
+                "source": "No"
+              },
+              {
+                "loop": false,
+                "name": "Walk",
+                "source": "Walk"
+              },
+              {
+                "loop": false,
+                "name": "Yes",
+                "source": "Yes"
+              }
+            ]
+          }
+        },
+        {
+          "assetStoreId": "23f86ad8b04c82898df397563f305c08ed37b072b0fa740d926aee556ca9c0d3",
+          "name": "Fish",
+          "tags": "",
+          "type": "Scene3D::Model3DObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "centerLocation": "ModelOrigin",
+            "depth": 71,
+            "height": 113,
+            "keepAspectRatio": true,
+            "materialType": "StandardWithoutMetalness",
+            "modelResourceName": "Fish.glb",
+            "originLocation": "ModelOrigin",
+            "rotationX": 0,
+            "rotationY": 0,
+            "rotationZ": 0,
+            "width": 140,
+            "animations": [
+              {
+                "loop": false,
+                "name": "Idle",
+                "source": "Idle"
+              },
+              {
+                "loop": false,
+                "name": "Walk",
+                "source": "Walk"
+              },
+              {
+                "loop": false,
+                "name": "Run",
+                "source": "Run"
+              },
+              {
+                "loop": false,
+                "name": "Duck",
+                "source": "Duck"
+              },
+              {
+                "loop": false,
+                "name": "Jump",
+                "source": "Jump"
+              },
+              {
+                "loop": false,
+                "name": "Punch",
+                "source": "Punch"
+              },
+              {
+                "loop": false,
+                "name": "Death",
+                "source": "Death"
+              },
+              {
+                "loop": false,
+                "name": "JumpIdle",
+                "source": "Jump_Idle"
+              },
+              {
+                "loop": false,
+                "name": "JumpLand",
+                "source": "Jump_Land"
+              },
+              {
+                "loop": false,
+                "name": "HitReact",
+                "source": "HitReact"
+              },
+              {
+                "loop": false,
+                "name": "Wave",
+                "source": "Wave"
+              },
+              {
+                "loop": false,
+                "name": "Weapon",
+                "source": "Weapon"
+              },
+              {
+                "loop": false,
+                "name": "Yes",
+                "source": "Yes"
+              },
+              {
+                "loop": false,
+                "name": "No",
+                "source": "No"
+              }
+            ]
+          }
+        },
+        {
+          "assetStoreId": "a141f504b8604c6149509fe4fc2f759b0d452fb4bea399a61a59881156e7d80d",
+          "name": "Tribal",
+          "tags": "",
+          "type": "Scene3D::Model3DObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "centerLocation": "ModelOrigin",
+            "depth": 41,
+            "height": 118,
+            "keepAspectRatio": true,
+            "materialType": "StandardWithoutMetalness",
+            "modelResourceName": "Tribal.glb",
+            "originLocation": "ModelOrigin",
+            "rotationX": 0,
+            "rotationY": 0,
+            "rotationZ": 0,
+            "width": 139,
+            "animations": [
+              {
+                "loop": false,
+                "name": "Idle",
+                "source": "Idle"
+              },
+              {
+                "loop": false,
+                "name": "Walk",
+                "source": "Walk"
+              },
+              {
+                "loop": false,
+                "name": "Run",
+                "source": "Run"
+              },
+              {
+                "loop": false,
+                "name": "Duck",
+                "source": "Duck"
+              },
+              {
+                "loop": false,
+                "name": "Jump",
+                "source": "Jump"
+              },
+              {
+                "loop": false,
+                "name": "Punch",
+                "source": "Punch"
+              },
+              {
+                "loop": false,
+                "name": "Death",
+                "source": "Death"
+              },
+              {
+                "loop": false,
+                "name": "JumpIdle",
+                "source": "Jump_Idle"
+              },
+              {
+                "loop": false,
+                "name": "JumpLand",
+                "source": "Jump_Land"
+              },
+              {
+                "loop": false,
+                "name": "HitReact",
+                "source": "HitReact"
+              },
+              {
+                "loop": false,
+                "name": "Wave",
+                "source": "Wave"
+              },
+              {
+                "loop": false,
+                "name": "Weapon",
+                "source": "Weapon"
+              },
+              {
+                "loop": false,
+                "name": "Yes",
+                "source": "Yes"
+              },
+              {
+                "loop": false,
+                "name": "No",
+                "source": "No"
+              }
+            ]
+          }
+        },
+        {
+          "assetStoreId": "cf3ffdabf0bc508dc19c4ed0d7e134177a86a54f8c0100a99fd0f91c290df5c1",
+          "name": "TractorPolice",
+          "tags": "",
+          "type": "Scene3D::Model3DObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "centerLocation": "ModelOrigin",
+            "depth": 48,
+            "height": 50,
+            "keepAspectRatio": true,
+            "materialType": "Basic",
+            "modelResourceName": "Tractor Police.glb",
+            "originLocation": "ModelOrigin",
+            "rotationX": 90,
+            "rotationY": 0,
+            "rotationZ": -90,
+            "width": 63,
+            "animations": []
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "New3DModel4",
+          "tags": "",
+          "type": "Scene3D::Model3DObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "centerLocation": "ModelOrigin",
+            "depth": 100,
+            "height": 100,
+            "keepAspectRatio": true,
+            "materialType": "Basic",
+            "modelResourceName": "Birch Tree 1.glb",
+            "originLocation": "ModelOrigin",
+            "rotationX": 0,
+            "rotationY": 0,
+            "rotationZ": 0,
+            "width": 100,
+            "animations": []
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "New3DModel5",
+          "tags": "",
+          "type": "Scene3D::Model3DObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "centerLocation": "ModelOrigin",
+            "depth": 100,
+            "height": 100,
+            "keepAspectRatio": true,
+            "materialType": "StandardWithoutMetalness",
+            "modelResourceName": "Common Tree 1.glb",
+            "originLocation": "ModelOrigin",
+            "rotationX": 0,
+            "rotationY": -90,
+            "rotationZ": 0,
+            "width": 100,
+            "animations": []
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "New3DModel6",
+          "tags": "",
+          "type": "Scene3D::Model3DObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "centerLocation": "ObjectCenter",
+            "depth": 100,
+            "height": 100,
+            "keepAspectRatio": true,
+            "materialType": "Basic",
+            "modelResourceName": "ship_wreck.glb",
+            "originLocation": "ObjectCenter",
+            "rotationX": 90,
+            "rotationY": 0,
+            "rotationZ": -90,
+            "width": 100,
+            "animations": []
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "New3DModel7",
+          "tags": "",
+          "type": "Scene3D::Model3DObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "centerLocation": "ModelOrigin",
+            "depth": 100,
+            "height": 100,
+            "keepAspectRatio": true,
+            "materialType": "Basic",
+            "modelResourceName": "Fox.glb",
+            "originLocation": "ModelOrigin",
+            "rotationX": 90,
+            "rotationY": 0,
+            "rotationZ": 90,
+            "width": 100,
+            "animations": [
+              {
+                "loop": false,
+                "name": "Attack",
+                "source": "Attack"
+              },
+              {
+                "loop": false,
+                "name": "Death",
+                "source": "Death"
+              },
+              {
+                "loop": false,
+                "name": "Eating",
+                "source": "Eating"
+              },
+              {
+                "loop": true,
+                "name": "Run",
+                "source": "Gallop"
+              },
+              {
+                "loop": false,
+                "name": "RunJump",
+                "source": "Gallop_Jump"
+              },
+              {
+                "loop": false,
+                "name": "Idle",
+                "source": "Idle"
+              },
+              {
+                "loop": true,
+                "name": "Idle2",
+                "source": "Idle_2"
+              },
+              {
+                "loop": false,
+                "name": "Idle2HeadLow",
+                "source": "Idle_2_HeadLow"
+              },
+              {
+                "loop": false,
+                "name": "IdleHitReactLeft",
+                "source": "Idle_HitReact_Left"
+              },
+              {
+                "loop": false,
+                "name": "IdleHitReactRight",
+                "source": "Idle_HitReact_Right"
+              },
+              {
+                "loop": false,
+                "name": "JumpToIdle",
+                "source": "Jump_ToIdle"
+              },
+              {
+                "loop": true,
+                "name": "Walk",
+                "source": "Walk"
+              }
+            ]
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "New3DModel8",
+          "tags": "",
+          "type": "Scene3D::Model3DObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "centerLocation": "ModelOrigin",
+            "depth": 100,
+            "height": 100,
+            "keepAspectRatio": true,
+            "materialType": "Basic",
+            "modelResourceName": "Trex.glb",
+            "originLocation": "ModelOrigin",
+            "rotationX": 90,
+            "rotationY": 0,
+            "rotationZ": 90,
+            "width": 100,
+            "animations": [
+              {
+                "loop": false,
+                "name": "Attack",
+                "source": "TRex_Attack"
+              },
+              {
+                "loop": false,
+                "name": "Death",
+                "source": "TRex_Death"
+              },
+              {
+                "loop": true,
+                "name": "Idle",
+                "source": "TRex_Idle"
+              },
+              {
+                "loop": false,
+                "name": "Jump",
+                "source": "TRex_Jump"
+              },
+              {
+                "loop": true,
+                "name": "Run",
+                "source": "TRex_Run"
+              },
+              {
+                "loop": true,
+                "name": "Walk",
+                "source": "TRex_Walk"
+              }
+            ]
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "New3DModel9",
+          "tags": "",
+          "type": "Scene3D::Model3DObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "centerLocation": "ModelOrigin",
+            "depth": 100,
+            "height": 100,
+            "keepAspectRatio": true,
+            "materialType": "Basic",
+            "modelResourceName": "Triceratops.glb",
+            "originLocation": "ModelOrigin",
+            "rotationX": 0,
+            "rotationY": 0,
+            "rotationZ": 0,
+            "width": 100,
+            "animations": [
+              {
+                "loop": false,
+                "name": "Apatosaurus_Attack",
+                "source": "Apatosaurus_Attack"
+              },
+              {
+                "loop": false,
+                "name": "Apatosaurus_Idle",
+                "source": "Apatosaurus_Idle"
+              },
+              {
+                "loop": false,
+                "name": "Apatosaurus_Jump",
+                "source": "Apatosaurus_Jump"
+              },
+              {
+                "loop": false,
+                "name": "Apatosaurus_Run",
+                "source": "Apatosaurus_Run"
+              },
+              {
+                "loop": false,
+                "name": "Apatosaurus_Walk",
+                "source": "Apatosaurus_Walk"
+              },
+              {
+                "loop": false,
+                "name": "Stegosaurus_Death",
+                "source": "Stegosaurus_Death"
+              },
+              {
+                "loop": false,
+                "name": "Parasaurolophus_Attack",
+                "source": "Parasaurolophus_Attack"
+              },
+              {
+                "loop": false,
+                "name": "Parasaurolophus_Death",
+                "source": "Parasaurolophus_Death"
+              },
+              {
+                "loop": false,
+                "name": "Parasaurolophus_Idle",
+                "source": "Parasaurolophus_Idle"
+              },
+              {
+                "loop": false,
+                "name": "Parasaurolophus_Jump",
+                "source": "Parasaurolophus_Jump"
+              },
+              {
+                "loop": false,
+                "name": "Parasaurolophus_Run",
+                "source": "Parasaurolophus_Run"
+              },
+              {
+                "loop": false,
+                "name": "Parasaurolophus_Walk",
+                "source": "Parasaurolophus_Walk"
+              },
+              {
+                "loop": false,
+                "name": "Triceratops_Attack",
+                "source": "Triceratops_Attack"
+              },
+              {
+                "loop": false,
+                "name": "Triceratops_Death",
+                "source": "Triceratops_Death"
+              },
+              {
+                "loop": false,
+                "name": "Triceratops_Idle",
+                "source": "Triceratops_Idle"
+              },
+              {
+                "loop": false,
+                "name": "Triceratops_Jump",
+                "source": "Triceratops_Jump"
+              },
+              {
+                "loop": false,
+                "name": "Triceratops_Run",
+                "source": "Triceratops_Run"
+              },
+              {
+                "loop": false,
+                "name": "Triceratops_Walk",
+                "source": "Triceratops_Walk"
+              }
+            ]
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "New3DModel10",
+          "tags": "",
+          "type": "Scene3D::Model3DObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "centerLocation": "ModelOrigin",
+            "depth": 100,
+            "height": 100,
+            "keepAspectRatio": true,
+            "materialType": "Basic",
+            "modelResourceName": "Cooking Knife.glb",
+            "originLocation": "ModelOrigin",
+            "rotationX": -90,
+            "rotationY": 0,
+            "rotationZ": 0,
+            "width": 100,
+            "animations": []
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "New3DModel11",
+          "tags": "",
+          "type": "Scene3D::Model3DObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "centerLocation": "ModelOrigin",
+            "depth": 100,
+            "height": 100,
+            "keepAspectRatio": true,
+            "materialType": "Basic",
+            "modelResourceName": "Building Dock.glb",
+            "originLocation": "ModelOrigin",
+            "rotationX": 90,
+            "rotationY": 0,
+            "rotationZ": 0,
+            "width": 100,
+            "animations": []
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "New3DModel12",
+          "tags": "",
+          "type": "Scene3D::Model3DObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "centerLocation": "ModelOrigin",
+            "depth": 100,
+            "height": 100,
+            "keepAspectRatio": true,
+            "materialType": "Basic",
+            "modelResourceName": "Femal Adventurer.glb",
+            "originLocation": "ModelOrigin",
+            "rotationX": 0,
+            "rotationY": 90,
+            "rotationZ": 0,
+            "width": 100,
+            "animations": [
+              {
+                "loop": false,
+                "name": "Death",
+                "source": "Death"
+              },
+              {
+                "loop": false,
+                "name": "GunShoot",
+                "source": "Gun_Shoot"
+              },
+              {
+                "loop": false,
+                "name": "HitRecieve2",
+                "source": "HitRecieve_2"
+              },
+              {
+                "loop": false,
+                "name": "HitRecieve",
+                "source": "HitRecieve"
+              },
+              {
+                "loop": true,
+                "name": "Idle",
+                "source": "Idle"
+              },
+              {
+                "loop": true,
+                "name": "IdleGun",
+                "source": "Idle_Gun"
+              },
+              {
+                "loop": true,
+                "name": "IdleGunPointing",
+                "source": "Idle_Gun_Pointing"
+              },
+              {
+                "loop": false,
+                "name": "IdleGunShoot",
+                "source": "Idle_Gun_Shoot"
+              },
+              {
+                "loop": true,
+                "name": "IdleNeutral",
+                "source": "Idle_Neutral"
+              },
+              {
+                "loop": true,
+                "name": "IdleSword",
+                "source": "Idle_Sword"
+              },
+              {
+                "loop": false,
+                "name": "Interact",
+                "source": "Interact"
+              },
+              {
+                "loop": false,
+                "name": "KickLeft",
+                "source": "Kick_Left"
+              },
+              {
+                "loop": false,
+                "name": "KickRight",
+                "source": "Kick_Right"
+              },
+              {
+                "loop": false,
+                "name": "PunchLeft",
+                "source": "Punch_Left"
+              },
+              {
+                "loop": false,
+                "name": "PunchRight",
+                "source": "Punch_Right"
+              },
+              {
+                "loop": false,
+                "name": "Roll",
+                "source": "Roll"
+              },
+              {
+                "loop": true,
+                "name": "RunBack",
+                "source": "Run_Back"
+              },
+              {
+                "loop": true,
+                "name": "Run",
+                "source": "Run"
+              },
+              {
+                "loop": true,
+                "name": "RunLeft",
+                "source": "Run_Left"
+              },
+              {
+                "loop": true,
+                "name": "RunRight",
+                "source": "Run_Right"
+              },
+              {
+                "loop": false,
+                "name": "RunShoot",
+                "source": "Run_Shoot"
+              },
+              {
+                "loop": false,
+                "name": "SwordSlash",
+                "source": "Sword_Slash"
+              },
+              {
+                "loop": true,
+                "name": "Walk",
+                "source": "Walk"
+              },
+              {
+                "loop": false,
+                "name": "Wave",
+                "source": "Wave"
+              }
+            ]
+          }
         }
       ],
       "events": [
