@@ -648,6 +648,17 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Settings UI/Toggle Switch/pixel art/ebdb63dcba9c53d41a0a468ba28929bf88b1b8698d672fc17568723fe1fbc3cc_Square White Toggle_On.png",
           "name": "Square White Toggle_On.png"
         }
+      },
+      {
+        "file": "assets/Femal Witch.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "Femal Witch.glb",
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/3D Animated Characters/bfcac35d635d90e19bbdfd3dd7f51bfb0f8d055f2c44b9a23ebe73d84bc0c196_Femal Witch.glb",
+          "name": "Femal Witch.glb"
+        }
       }
     ],
     "resourceFolders": []
@@ -679,7 +690,19 @@
         "zoomFactor": 0.546875,
         "windowMask": false
       },
-      "objectsGroups": [],
+      "objectsGroups": [
+        {
+          "name": "Character",
+          "objects": [
+            {
+              "name": "RedHero"
+            },
+            {
+              "name": "FemalWitch"
+            }
+          ]
+        }
+      ],
       "variables": [],
       "instances": [
         {
@@ -691,8 +714,8 @@
           "name": "RedHero",
           "persistentUuid": "af466afd-f3eb-44c7-80ac-624cd4855459",
           "width": 144,
-          "x": 228,
-          "y": 305,
+          "x": 148,
+          "y": 307,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -1148,6 +1171,22 @@
           "x": 320,
           "y": 628,
           "zOrder": 35,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 126.62093638441864,
+          "height": 157,
+          "layer": "",
+          "name": "FemalWitch",
+          "persistentUuid": "533a81d2-282a-4b64-b419-073f83f54fdb",
+          "width": 42.08072282741785,
+          "x": 306,
+          "y": 317,
+          "zOrder": 36,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3923,6 +3962,150 @@
               "width": 22
             }
           }
+        },
+        {
+          "assetStoreId": "5bae2ae256d7c74d5331f37a8a01ba2a474ec548ce033bf58646cbbbd8222871",
+          "name": "FemalWitch",
+          "tags": "",
+          "type": "Scene3D::Model3DObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "centerLocation": "ModelOrigin",
+            "depth": 78,
+            "height": 78,
+            "keepAspectRatio": true,
+            "materialType": "StandardWithoutMetalness",
+            "modelResourceName": "Femal Witch.glb",
+            "originLocation": "ModelOrigin",
+            "rotationX": 0,
+            "rotationY": 90,
+            "rotationZ": 0,
+            "width": 78,
+            "animations": [
+              {
+                "loop": true,
+                "name": "Idle",
+                "source": "Idle"
+              },
+              {
+                "loop": true,
+                "name": "Walk",
+                "source": "Walk"
+              },
+              {
+                "loop": false,
+                "name": "Wave",
+                "source": "Wave"
+              },
+              {
+                "loop": true,
+                "name": "Run",
+                "source": "Run"
+              },
+              {
+                "loop": false,
+                "name": "Death",
+                "source": "Death"
+              },
+              {
+                "loop": false,
+                "name": "GunShoot",
+                "source": "Gun_Shoot"
+              },
+              {
+                "loop": false,
+                "name": "HitRecieve2",
+                "source": "HitRecieve_2"
+              },
+              {
+                "loop": false,
+                "name": "HitRecieve",
+                "source": "HitRecieve"
+              },
+              {
+                "loop": true,
+                "name": "IdleGun",
+                "source": "Idle_Gun"
+              },
+              {
+                "loop": true,
+                "name": "IdleGunPointing",
+                "source": "Idle_Gun_Pointing"
+              },
+              {
+                "loop": false,
+                "name": "IdleGunShoot",
+                "source": "Idle_Gun_Shoot"
+              },
+              {
+                "loop": true,
+                "name": "IdleNeutral",
+                "source": "Idle_Neutral"
+              },
+              {
+                "loop": true,
+                "name": "IdleSword",
+                "source": "Idle_Sword"
+              },
+              {
+                "loop": false,
+                "name": "Interact",
+                "source": "Interact"
+              },
+              {
+                "loop": false,
+                "name": "KickLeft",
+                "source": "Kick_Left"
+              },
+              {
+                "loop": false,
+                "name": "KickRight",
+                "source": "Kick_Right"
+              },
+              {
+                "loop": false,
+                "name": "PunchLeft",
+                "source": "Punch_Left"
+              },
+              {
+                "loop": false,
+                "name": "PunchRight",
+                "source": "Punch_Right"
+              },
+              {
+                "loop": false,
+                "name": "Roll",
+                "source": "Roll"
+              },
+              {
+                "loop": true,
+                "name": "RunBack",
+                "source": "Run_Back"
+              },
+              {
+                "loop": true,
+                "name": "RunLeft",
+                "source": "Run_Left"
+              },
+              {
+                "loop": true,
+                "name": "RunRight",
+                "source": "Run_Right"
+              },
+              {
+                "loop": false,
+                "name": "RunShoot",
+                "source": "Run_Shoot"
+              },
+              {
+                "loop": false,
+                "name": "SwordSlash",
+                "source": "Sword_Slash"
+              }
+            ]
+          }
         }
       ],
       "events": [
@@ -3954,7 +4137,7 @@
                     "value": "AnimatableCapability::AnimatableBehavior::PlayAnimation"
                   },
                   "parameters": [
-                    "RedHero",
+                    "Character",
                     "Animation"
                   ]
                 }
@@ -3979,7 +4162,7 @@
                     "value": "AnimatableCapability::AnimatableBehavior::PauseAnimation"
                   },
                   "parameters": [
-                    "RedHero",
+                    "Character",
                     "Animation"
                   ]
                 }
@@ -4004,7 +4187,7 @@
                     "value": "AnimatableCapability::AnimatableBehavior::SetName"
                   },
                   "parameters": [
-                    "RedHero",
+                    "Character",
                     "Animation",
                     "=",
                     "\"Run\""
@@ -4031,7 +4214,7 @@
                     "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
                   },
                   "parameters": [
-                    "RedHero",
+                    "Character",
                     "Animation",
                     "=",
                     "2"
@@ -4164,7 +4347,7 @@
                     "value": "AnimatableCapability::AnimatableBehavior::SetSpeedScale"
                   },
                   "parameters": [
-                    "RedHero",
+                    "Character",
                     "Animation",
                     "=",
                     "SpeedScaleSlider.Value()"
@@ -4239,7 +4422,7 @@
                     "value": "FlippableCapability::FlippableBehavior::FlipX"
                   },
                   "parameters": [
-                    "RedHero",
+                    "Character",
                     "Flippable",
                     "yes"
                   ]
@@ -4265,7 +4448,7 @@
                     "value": "FlippableCapability::FlippableBehavior::FlipX"
                   },
                   "parameters": [
-                    "RedHero",
+                    "Character",
                     "Flippable",
                     ""
                   ]
@@ -4291,7 +4474,7 @@
                     "value": "FlippableCapability::FlippableBehavior::FlipY"
                   },
                   "parameters": [
-                    "RedHero",
+                    "Character",
                     "Flippable",
                     "yes"
                   ]
@@ -4317,7 +4500,7 @@
                     "value": "FlippableCapability::FlippableBehavior::FlipY"
                   },
                   "parameters": [
-                    "RedHero",
+                    "Character",
                     "Flippable",
                     "no"
                   ]
@@ -4516,7 +4699,7 @@
                     "value": "ScalableCapability::ScalableBehavior::SetValue"
                   },
                   "parameters": [
-                    "RedHero",
+                    "Character",
                     "Scale",
                     "=",
                     "ScaleSlider.Value()"
@@ -4543,7 +4726,7 @@
                     "value": "ScalableCapability::ScalableBehavior::SetX"
                   },
                   "parameters": [
-                    "RedHero",
+                    "Character",
                     "Scale",
                     "=",
                     "ScaleXSlider.Value()"
@@ -4570,7 +4753,7 @@
                     "value": "ScalableCapability::ScalableBehavior::SetY"
                   },
                   "parameters": [
-                    "RedHero",
+                    "Character",
                     "Scale",
                     "=",
                     "ScaleYSlider.Value()"
@@ -4645,7 +4828,7 @@
                     "value": "ResizableCapability::ResizableBehavior::SetWidth"
                   },
                   "parameters": [
-                    "RedHero",
+                    "Character",
                     "Resizable",
                     "=",
                     "WidthSlider.Value()"
@@ -4672,7 +4855,7 @@
                     "value": "ResizableCapability::ResizableBehavior::SetHeight"
                   },
                   "parameters": [
-                    "RedHero",
+                    "Character",
                     "Resizable",
                     "=",
                     "HeightSlider.Value()"
@@ -4916,6 +5099,10 @@
         {
           "name": "Flippable",
           "type": "FlippableCapability::FlippableBehavior"
+        },
+        {
+          "name": "Object3D",
+          "type": "Scene3D::Base3DBehavior"
         },
         {
           "name": "Opacity",
