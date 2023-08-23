@@ -6673,11 +6673,11 @@
               "actions": [
                 {
                   "type": {
-                    "value": "FlippableCapability::FlippableBehavior::FlipX"
+                    "value": "Scene3D::Base3DBehavior::FlipZ"
                   },
                   "parameters": [
                     "FemalWitch",
-                    "Flippable",
+                    "Object3D",
                     "yes"
                   ]
                 }
@@ -6699,11 +6699,11 @@
               "actions": [
                 {
                   "type": {
-                    "value": "FlippableCapability::FlippableBehavior::FlipX"
+                    "value": "Scene3D::Base3DBehavior::FlipZ"
                   },
                   "parameters": [
                     "FemalWitch",
-                    "Flippable",
+                    "Object3D",
                     ""
                   ]
                 }
@@ -6715,11 +6715,11 @@
                 {
                   "type": {
                     "inverted": true,
-                    "value": "FlippableCapability::FlippableBehavior::FlippedX"
+                    "value": "Scene3D::Base3DBehavior::FlippedZ"
                   },
                   "parameters": [
                     "FemalWitch",
-                    "Flippable"
+                    "Object3D"
                   ]
                 }
               ],
@@ -6741,11 +6741,11 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "FlippableCapability::FlippableBehavior::FlippedX"
+                    "value": "Scene3D::Base3DBehavior::FlippedZ"
                   },
                   "parameters": [
                     "FemalWitch",
-                    "Flippable"
+                    "Object3D"
                   ]
                 }
               ],
