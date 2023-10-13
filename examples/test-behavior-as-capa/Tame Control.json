@@ -701,6 +701,17 @@
               "name": "FemalWitch"
             }
           ]
+        },
+        {
+          "name": "AnimationButton",
+          "objects": [
+            {
+              "name": "RunButton"
+            },
+            {
+              "name": "JumpButton"
+            }
+          ]
         }
       ],
       "variables": [],
@@ -1064,7 +1075,7 @@
           "persistentUuid": "9a76090d-b823-49aa-a05c-e232c6b76b3c",
           "width": 0,
           "x": 96,
-          "y": 434,
+          "y": 480,
           "zOrder": 28,
           "numberProperties": [],
           "stringProperties": [],
@@ -1079,7 +1090,7 @@
           "persistentUuid": "5013e401-1953-4676-9bd4-20d5ad2830fa",
           "width": 0,
           "x": 96,
-          "y": 500,
+          "y": 546,
           "zOrder": 29,
           "numberProperties": [],
           "stringProperties": [],
@@ -1094,7 +1105,7 @@
           "persistentUuid": "b34269a1-5795-48ff-9b94-fb89d45d548b",
           "width": 0,
           "x": 32,
-          "y": 574,
+          "y": 620,
           "zOrder": 30,
           "numberProperties": [],
           "stringProperties": [],
@@ -1109,7 +1120,7 @@
           "persistentUuid": "cccc6dce-5d68-41f8-98aa-89e0fe31fedf",
           "width": 0,
           "x": 96,
-          "y": 562,
+          "y": 608,
           "zOrder": 31,
           "numberProperties": [],
           "stringProperties": [],
@@ -1124,7 +1135,7 @@
           "persistentUuid": "cddd1630-3389-4130-9075-1258f6d3d412",
           "width": 0,
           "x": 32,
-          "y": 446,
+          "y": 492,
           "zOrder": 32,
           "numberProperties": [],
           "stringProperties": [],
@@ -1139,7 +1150,7 @@
           "persistentUuid": "1f46b6a3-0213-466c-8ac6-afedbc61742c",
           "width": 0,
           "x": 32,
-          "y": 512,
+          "y": 558,
           "zOrder": 33,
           "numberProperties": [],
           "stringProperties": [],
@@ -1154,7 +1165,7 @@
           "persistentUuid": "fef6a454-1eab-4675-92b0-7c369075e851",
           "width": 0,
           "x": 32,
-          "y": 640,
+          "y": 684,
           "zOrder": 34,
           "numberProperties": [],
           "stringProperties": [],
@@ -1169,7 +1180,7 @@
           "persistentUuid": "e0c500e6-97d7-4176-90d6-4cb7420beada",
           "width": 0,
           "x": 320,
-          "y": 628,
+          "y": 672,
           "zOrder": 35,
           "numberProperties": [],
           "stringProperties": [],
@@ -1203,6 +1214,66 @@
           "x": 1120,
           "y": 576,
           "zOrder": 37,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Animation3DTimeSlider",
+          "persistentUuid": "374c5d8b-d454-40e0-bdce-8305ce85872d",
+          "width": 0,
+          "x": 32,
+          "y": 428,
+          "zOrder": 38,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Animation3DTimeLabel",
+          "persistentUuid": "e677c7be-61e1-4675-9146-ec22ed24925b",
+          "width": 0,
+          "x": 320,
+          "y": 416,
+          "zOrder": 39,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Animation2DTimeSlider",
+          "persistentUuid": "3fc60ce8-e575-492a-a9ed-da61db648ed2",
+          "width": 0,
+          "x": 32,
+          "y": 356,
+          "zOrder": 40,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Animation2DTimeLabel",
+          "persistentUuid": "a01e9d7c-906a-44b7-b228-c07f8096ca0e",
+          "width": 0,
+          "x": 320,
+          "y": 352,
+          "zOrder": 41,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3980,6 +4051,184 @@
           }
         },
         {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "Animation3DTimeLabel",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Anim 3D time",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 40,
+          "color": {
+            "b": 202,
+            "g": 202,
+            "r": 202
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "Animation2DTimeLabel",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Anim 2D time",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 40,
+          "color": {
+            "b": 202,
+            "g": 202,
+            "r": 202
+          }
+        },
+        {
+          "assetStoreId": "bfeeb465a4a164b560a2215e3ff9e78e66123af43cbf7ef1f22d56fca4271c80",
+          "name": "Animation3DTimeSlider",
+          "tags": "",
+          "type": "PanelSpriteSlider::PanelSpriteSlider",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "BarTopPadding": 6,
+            "BarLeftPadding": 6,
+            "BarRightPadding": 6,
+            "BarBottomPadding": 6,
+            "LabelMargin": 6,
+            "MinValue": 0,
+            "MaxValue": 1,
+            "InitialValue": 2,
+            "StepSize": 0
+          },
+          "childrenContent": {
+            "Background": {
+              "bottomMargin": 4,
+              "height": 28,
+              "leftMargin": 2,
+              "rightMargin": 2,
+              "texture": "Square White Slider Border.png",
+              "tiled": false,
+              "topMargin": 4,
+              "width": 265
+            },
+            "FillBar": {
+              "bottomMargin": 2,
+              "height": 16,
+              "leftMargin": 0,
+              "rightMargin": 0,
+              "texture": "Square White Slider Fill Bar.png",
+              "tiled": false,
+              "topMargin": 0,
+              "width": 16
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "It displays the value when it changes.",
+              "font": "",
+              "textAlignment": "",
+              "characterSize": 20,
+              "color": {
+                "b": 221,
+                "g": 221,
+                "r": 221
+              }
+            },
+            "Thumb": {
+              "bottomMargin": 2,
+              "height": 36,
+              "leftMargin": 1,
+              "rightMargin": 1,
+              "texture": "Square White Slider Thumb.png",
+              "tiled": false,
+              "topMargin": 2,
+              "width": 22
+            }
+          }
+        },
+        {
+          "assetStoreId": "bfeeb465a4a164b560a2215e3ff9e78e66123af43cbf7ef1f22d56fca4271c80",
+          "name": "Animation2DTimeSlider",
+          "tags": "",
+          "type": "PanelSpriteSlider::PanelSpriteSlider",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "BarTopPadding": 6,
+            "BarLeftPadding": 6,
+            "BarRightPadding": 6,
+            "BarBottomPadding": 6,
+            "LabelMargin": 6,
+            "MinValue": 0,
+            "MaxValue": 1,
+            "InitialValue": 2,
+            "StepSize": 0
+          },
+          "childrenContent": {
+            "Background": {
+              "bottomMargin": 4,
+              "height": 28,
+              "leftMargin": 2,
+              "rightMargin": 2,
+              "texture": "Square White Slider Border.png",
+              "tiled": false,
+              "topMargin": 4,
+              "width": 265
+            },
+            "FillBar": {
+              "bottomMargin": 2,
+              "height": 16,
+              "leftMargin": 0,
+              "rightMargin": 0,
+              "texture": "Square White Slider Fill Bar.png",
+              "tiled": false,
+              "topMargin": 0,
+              "width": 16
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "It displays the value when it changes.",
+              "font": "",
+              "textAlignment": "",
+              "characterSize": 20,
+              "color": {
+                "b": 221,
+                "g": 221,
+                "r": 221
+              }
+            },
+            "Thumb": {
+              "bottomMargin": 2,
+              "height": 36,
+              "leftMargin": 1,
+              "rightMargin": 1,
+              "texture": "Square White Slider Thumb.png",
+              "tiled": false,
+              "topMargin": 2,
+              "width": 22
+            }
+          }
+        },
+        {
           "assetStoreId": "615de0316452630b9f4f6a39decc82e2449b82c1afd1ff24d6470dad2922177b",
           "name": "NextButton",
           "tags": "",
@@ -4457,6 +4706,188 @@
                     "Animation",
                     "=",
                     "SpeedScaleSlider.Value()"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "DepartScene"
+                      },
+                      "parameters": [
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+                      },
+                      "parameters": [
+                        "AnimationButton",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PanelSpriteSlider::PanelSpriteSlider::SetMaxValue"
+                  },
+                  "parameters": [
+                    "Animation2DTimeSlider",
+                    "=",
+                    "RedHero.Animation::Duration()",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteSlider::PanelSpriteSlider::SetMaxValue"
+                  },
+                  "parameters": [
+                    "Animation3DTimeSlider",
+                    "=",
+                    "FemalWitch.Animation::Duration()",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "AnimatableCapability::AnimatableBehavior::IsAnimationPaused"
+                  },
+                  "parameters": [
+                    "RedHero",
+                    "Animation"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PanelSpriteSlider::PanelSpriteSlider::SetValue"
+                  },
+                  "parameters": [
+                    "Animation2DTimeSlider",
+                    "=",
+                    "RedHero.Animation::ElapsedTime()",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "AnimatableCapability::AnimatableBehavior::IsAnimationPaused"
+                  },
+                  "parameters": [
+                    "FemalWitch",
+                    "Animation"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PanelSpriteSlider::PanelSpriteSlider::SetValue"
+                  },
+                  "parameters": [
+                    "Animation3DTimeSlider",
+                    "=",
+                    "FemalWitch.Animation::ElapsedTime()",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::IsAnimationPaused"
+                  },
+                  "parameters": [
+                    "RedHero",
+                    "Animation"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteSlider::PanelSpriteSlider::IsBeingDragged"
+                  },
+                  "parameters": [
+                    "Animation2DTimeSlider",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetElapsedTime"
+                  },
+                  "parameters": [
+                    "RedHero",
+                    "Animation",
+                    "=",
+                    "Animation2DTimeSlider.Value()"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::IsAnimationPaused"
+                  },
+                  "parameters": [
+                    "FemalWitch",
+                    "Animation"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteSlider::PanelSpriteSlider::IsBeingDragged"
+                  },
+                  "parameters": [
+                    "Animation3DTimeSlider",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetElapsedTime"
+                  },
+                  "parameters": [
+                    "FemalWitch",
+                    "Animation",
+                    "=",
+                    "Animation3DTimeSlider.Value()"
                   ]
                 }
               ]
