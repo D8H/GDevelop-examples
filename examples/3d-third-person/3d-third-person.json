@@ -5083,7 +5083,9 @@
       "shortDescription": "Display texts in 3D scenes.",
       "version": "0.1.0",
       "description": "Display texts with 3D position and rotation.",
-      "tags": [],
+      "tags": [
+        "3d"
+      ],
       "authorIds": [
         "IWykYNRvhCZBN3vEgKEbBPOR3Oc2"
       ],
@@ -11726,7 +11728,7 @@
       "eventsBasedBehaviors": [],
       "eventsBasedObjects": [
         {
-          "defaultName": "",
+          "defaultName": "Text",
           "description": "A text in 3D.",
           "fullName": "3D text",
           "is3D": true,
