@@ -1,0 +1,3267 @@
+{
+  "firstLayout": "",
+  "gdVersion": {
+    "build": 99,
+    "major": 4,
+    "minor": 0,
+    "revision": 0
+  },
+  "properties": {
+    "adaptGameResolutionAtRuntime": true,
+    "antialiasingMode": "MSAA",
+    "antialisingEnabledOnMobile": false,
+    "folderProject": false,
+    "orientation": "landscape",
+    "packageName": "com.example.gamename",
+    "pixelsRounding": false,
+    "projectUuid": "bc10a9dc-3701-4cd4-a386-9f6f6dcf22be",
+    "scaleMode": "linear",
+    "sizeOnStartupMode": "adaptWidth",
+    "templateSlug": "",
+    "useExternalSourceFiles": false,
+    "version": "1.0.0",
+    "name": "SimpleRope",
+    "description": "",
+    "author": "",
+    "windowWidth": 1280,
+    "windowHeight": 720,
+    "latestCompilationDirectory": "",
+    "maxFPS": 60,
+    "minFPS": 20,
+    "verticalSync": false,
+    "platformSpecificAssets": {},
+    "loadingScreen": {
+      "backgroundColor": 0,
+      "backgroundFadeInDuration": 0.2,
+      "backgroundImageResourceName": "",
+      "gdevelopLogoStyle": "light",
+      "logoAndProgressFadeInDuration": 0.2,
+      "logoAndProgressLogoFadeInDelay": 0.2,
+      "minDuration": 1.5,
+      "progressBarColor": 16777215,
+      "progressBarHeight": 20,
+      "progressBarMaxWidth": 200,
+      "progressBarMinWidth": 40,
+      "progressBarWidthPercent": 30,
+      "showGDevelopSplash": true,
+      "showProgressBar": true
+    },
+    "watermark": {
+      "placement": "bottom-left",
+      "showWatermark": true
+    },
+    "authorIds": [],
+    "authorUsernames": [],
+    "categories": [],
+    "playableDevices": [],
+    "extensionProperties": [],
+    "platforms": [
+      {
+        "name": "GDevelop JS platform"
+      }
+    ],
+    "currentPlatform": "GDevelop JS platform"
+  },
+  "resources": {
+    "resources": [
+      {
+        "alwaysLoaded": false,
+        "file": "assets/snake.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\snake.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/NewSprite.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/GreyBall.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "GreyBall",
+        "smoothed": true,
+        "userAdded": false
+      }
+    ],
+    "resourceFolders": []
+  },
+  "objects": [],
+  "objectsFolderStructure": {
+    "folderName": "__ROOT"
+  },
+  "objectsGroups": [],
+  "variables": [],
+  "layouts": [
+    {
+      "b": 49,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "Untitled_32scene",
+      "name": "Untitled scene",
+      "r": 49,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 49,
+      "uiSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.546875,
+        "windowMask": false
+      },
+      "objectsGroups": [
+        {
+          "name": "RopePoint",
+          "objects": [
+            {
+              "name": "RopePoint0"
+            },
+            {
+              "name": "RopePoint1"
+            }
+          ]
+        }
+      ],
+      "variables": [
+        {
+          "folded": true,
+          "name": "index",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Rope",
+          "persistentUuid": "49ef27a2-1c26-4fb3-b2a1-455038e5ba74",
+          "width": 0,
+          "x": 159,
+          "y": 326,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "assetStoreId": "",
+          "name": "Rope",
+          "type": "SpriteRope::SpriteRope",
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "ObjectStack",
+              "type": "ObjectStack::ObjectStack"
+            }
+          ],
+          "content": {
+            "PointCount": 15
+          },
+          "childrenContent": {
+            "Image": {
+              "adaptCollisionMaskAutomatically": true,
+              "updateIfNotVisible": false,
+              "animations": [
+                {
+                  "name": "",
+                  "useMultipleDirections": false,
+                  "directions": [
+                    {
+                      "looping": false,
+                      "timeBetweenFrames": 0.08,
+                      "sprites": [
+                        {
+                          "hasCustomCollisionMask": true,
+                          "image": "assets\\snake.png",
+                          "points": [],
+                          "originPoint": {
+                            "name": "origine",
+                            "x": 0,
+                            "y": 0
+                          },
+                          "centerPoint": {
+                            "automatic": true,
+                            "name": "centre",
+                            "x": 0,
+                            "y": 0
+                          },
+                          "customCollisionMask": [
+                            [
+                              {
+                                "x": 0,
+                                "y": 0
+                              },
+                              {
+                                "x": 918,
+                                "y": 0
+                              },
+                              {
+                                "x": 918,
+                                "y": 117
+                              },
+                              {
+                                "x": 0,
+                                "y": 117
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "RopePoint0",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "DraggablePhysics",
+              "type": "DraggablePhysics::DraggablePhysics",
+              "PhysicsBehavior": "Physics2",
+              "MouseButton": "Left",
+              "MaxForce": 500,
+              "Frequency": 10,
+              "Damping": 1,
+              "MouseJointID": 1.00000000000091,
+              "EnableAutomaticDragging": true
+            },
+            {
+              "name": "Physics2",
+              "type": "Physics2::Physics2Behavior",
+              "bodyType": "Dynamic",
+              "bullet": false,
+              "fixedRotation": false,
+              "canSleep": true,
+              "shape": "Circle",
+              "shapeDimensionA": 32,
+              "shapeDimensionB": 0,
+              "shapeOffsetX": 0,
+              "shapeOffsetY": 0,
+              "polygonOrigin": "Center",
+              "vertices": [],
+              "density": 1,
+              "friction": 0.3,
+              "restitution": 0.1,
+              "linearDamping": 0.1,
+              "angularDamping": 0.1,
+              "gravityScale": 1,
+              "layers": 1,
+              "masks": 1
+            }
+          ],
+          "animations": [
+            {
+              "name": "NewSprite",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 32
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 64
+                          },
+                          {
+                            "x": 0,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "RopePoint1",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "DraggablePhysics",
+              "type": "DraggablePhysics::DraggablePhysics",
+              "PhysicsBehavior": "Physics2",
+              "MouseButton": "Left",
+              "MaxForce": 500,
+              "Frequency": 10,
+              "Damping": 1,
+              "MouseJointID": 1.00000000000091,
+              "EnableAutomaticDragging": true
+            },
+            {
+              "name": "Physics2",
+              "type": "Physics2::Physics2Behavior",
+              "bodyType": "Dynamic",
+              "bullet": false,
+              "fixedRotation": false,
+              "canSleep": true,
+              "shape": "Circle",
+              "shapeDimensionA": 32,
+              "shapeDimensionB": 0,
+              "shapeOffsetX": 0,
+              "shapeOffsetY": 0,
+              "polygonOrigin": "Center",
+              "vertices": [],
+              "density": 1,
+              "friction": 0.3,
+              "restitution": 0.1,
+              "linearDamping": 0.1,
+              "angularDamping": 0.1,
+              "gravityScale": 1,
+              "layers": 1,
+              "masks": 1
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "GreyBall",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 32
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 64
+                          },
+                          {
+                            "x": 0,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "objectsFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "objectName": "Rope"
+          },
+          {
+            "objectName": "RopePoint0"
+          },
+          {
+            "objectName": "RopePoint1"
+          }
+        ]
+      },
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "Rope",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "index",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Repeat",
+                  "repeatExpression": "15",
+                  "conditions": [],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "mod(index, 2)",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "RopePoint0",
+                            "Rope.X() + index * 64 + 32",
+                            "Rope.Y()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ObjectStack::ObjectStack::AddOnTop"
+                          },
+                          "parameters": [
+                            "Rope",
+                            "ObjectStack",
+                            "RopePoint0",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "mod(index, 2)",
+                            "=",
+                            "1"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "RopePoint1",
+                            "Rope.X() + index * 64 + 32",
+                            "Rope.Y()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ObjectStack::ObjectStack::AddOnTop"
+                          },
+                          "parameters": [
+                            "Rope",
+                            "ObjectStack",
+                            "RopePoint1",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "index",
+                            "+",
+                            "1"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "index",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Repeat",
+                  "repeatExpression": "7",
+                  "conditions": [],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "ObjectStack::ContainsBetween"
+                          },
+                          "parameters": [
+                            "",
+                            "Rope",
+                            "ObjectStack",
+                            "RopePoint",
+                            "index - 1",
+                            "index",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Physics2::AddRopeJoint"
+                          },
+                          "parameters": [
+                            "RopePoint0",
+                            "Physics2",
+                            "RopePoint0.X() + 16",
+                            "RopePoint0.Y()",
+                            "RopePoint1",
+                            "RopePoint1.X() - 16",
+                            "RopePoint1.Y()",
+                            "32",
+                            "yes",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "ObjectStack::ContainsBetween"
+                          },
+                          "parameters": [
+                            "",
+                            "Rope",
+                            "ObjectStack",
+                            "RopePoint",
+                            "index",
+                            "index + 1",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Physics2::AddRopeJoint"
+                          },
+                          "parameters": [
+                            "RopePoint0",
+                            "Physics2",
+                            "RopePoint0.X() - 16",
+                            "RopePoint0.Y()",
+                            "RopePoint1",
+                            "RopePoint1.X() + 16",
+                            "RopePoint1.Y()",
+                            "32",
+                            "yes",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "index",
+                            "+",
+                            "2"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "layers": [
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Light",
+              "doubleParameters": {
+                "elevation": 45,
+                "intensity": 1,
+                "rotation": 0
+              },
+              "stringParameters": {
+                "groundColor": "64;64;64",
+                "skyColor": "255;255;255",
+                "top": "Y-"
+              },
+              "booleanParameters": {}
+            }
+          ]
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "Animation",
+          "type": "AnimatableCapability::AnimatableBehavior"
+        },
+        {
+          "name": "DraggablePhysics",
+          "type": "DraggablePhysics::DraggablePhysics"
+        },
+        {
+          "name": "Effect",
+          "type": "EffectCapability::EffectBehavior"
+        },
+        {
+          "name": "Flippable",
+          "type": "FlippableCapability::FlippableBehavior"
+        },
+        {
+          "name": "ObjectStack",
+          "type": "ObjectStack::ObjectStack"
+        },
+        {
+          "name": "Opacity",
+          "type": "OpacityCapability::OpacityBehavior"
+        },
+        {
+          "name": "Physics2",
+          "type": "Physics2::Physics2Behavior",
+          "gravityX": 0,
+          "gravityY": 0,
+          "scaleX": 100,
+          "scaleY": 100
+        },
+        {
+          "name": "Resizable",
+          "type": "ResizableCapability::ResizableBehavior"
+        },
+        {
+          "name": "Scale",
+          "type": "ScalableCapability::ScalableBehavior"
+        }
+      ]
+    }
+  ],
+  "externalEvents": [],
+  "eventsFunctionsExtensions": [
+    {
+      "author": "",
+      "category": "Movement",
+      "extensionNamespace": "",
+      "fullName": "Draggable (for physics objects)",
+      "helpPath": "",
+      "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMy4wLjMsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iSWNvbnMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMzIgMzIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMyIDMyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cGF0aCBkPSJNMjcsMTFjMC0yLTIuMi0zLjYtNS42LTQuNEMyMC42LDMuMiwxOSwxLDE3LDFzLTMuNiwyLjItNC40LDUuNkM5LjIsNy40LDcsOSw3LDExYzAsMiwyLjIsMy42LDUuNiw0LjQNCgljMC4zLDEuMiwwLjYsMi4yLDEuMSwzLjFjMC4zLDAuNSwwLjksMC43LDEuNCwwLjRjMC41LTAuMywwLjctMC45LDAuNC0xLjRjLTAuMy0wLjUtMC41LTEuMS0wLjctMS44YzAuNywwLjEsMS41LDAuMSwyLjIsMC4xDQoJYzAuOCwwLDEuNSwwLDIuMi0wLjFjLTAuMywxLTAuNywxLjktMS4xLDIuNWMtMC4zLDAuNC0wLjIsMS4xLDAuMiwxLjRjMC4yLDAuMSwwLjQsMC4yLDAuNiwwLjJjMC4zLDAsMC42LTAuMSwwLjgtMC40DQoJYzAuNy0xLDEuMy0yLjQsMS43LTRDMjQuOCwxNC42LDI3LDEzLDI3LDExeiBNMTcsM2MwLjcsMCwxLjYsMS4yLDIuMiwzLjNjLTAuNy0wLjEtMS41LTAuMS0yLjItMC4xcy0xLjUsMC0yLjIsMC4xDQoJQzE1LjQsNC4yLDE2LjMsMywxNywzeiBNOSwxMWMwLTAuNywxLjItMS42LDMuMy0yLjJjLTAuMSwwLjctMC4xLDEuNS0wLjEsMi4yYzAsMC44LDAsMS41LDAuMSwyLjJDMTAuMiwxMi42LDksMTEuNyw5LDExeiBNMTcsMTMuOQ0KCWMtMSwwLTEuOS0wLjEtMi43LTAuMmMtMC4xLTAuOC0wLjItMS43LTAuMi0yLjdjMC0xLDAuMS0xLjksMC4yLTIuN0MxNS4xLDguMiwxNiw4LjEsMTcsOC4xczEuOSwwLjEsMi43LDAuMg0KCWMwLjEsMC44LDAuMiwxLjcsMC4yLDIuN2MwLDAuOS0wLjEsMS44LTAuMiwyLjdDMTguOSwxMy44LDE4LDEzLjksMTcsMTMuOXogTTIxLjcsMTMuMmMwLjEtMC43LDAuMS0xLjUsMC4xLTIuMg0KCWMwLTAuOCwwLTEuNS0wLjEtMi4yQzIzLjgsOS40LDI1LDEwLjMsMjUsMTFDMjUsMTEuNywyMy44LDEyLjYsMjEuNywxMy4yeiIvPg0KPHBhdGggZD0iTTI5LjksMTcuNUMyOS43LDE3LjIsMjkuNCwxNywyOSwxN2MtMi4yLDAtNC4zLDEtNS42LDIuOEwyMi41LDIxYy0xLjEsMS4zLTIuOCwyLTQuNSwyaC0zYy0wLjYsMC0xLTAuNC0xLTFzMC40LTEsMS0xaDEuOQ0KCWMxLjYsMCwzLjEtMS4zLDMuMS0yLjljMCwwLDAtMC4xLDAtMC4xYzAtMC41LTAuNS0xLTEtMWwtNi4xLDBjLTMuNiwwLTYuNSwxLjYtOC4xLDQuMmwtMi43LDQuMmMtMC4yLDAuMy0wLjIsMC43LDAsMWwzLDUNCgljMC4xLDAuMiwwLjQsMC40LDAuNiwwLjVjMC4xLDAsMC4xLDAsMC4yLDBjMC4yLDAsMC40LTAuMSwwLjYtMC4yYzMuOC0yLjUsOC4yLTMuOCwxMi43LTMuOGMzLjMsMCw2LjMtMS44LDcuOS00LjdsMi43LTQuOA0KCUMzMCwxOC4yLDMwLDE3LjgsMjkuOSwxNy41eiIvPg0KPC9zdmc+DQo=",
+      "name": "DraggablePhysics",
+      "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/Glyphster Pack/Master/SVG/Virtual Reality/Virtual Reality_hand_vr_ar_360.svg",
+      "shortDescription": "Drag a physics object with the mouse (or touch).",
+      "version": "1.2.0",
+      "description": [
+        "Enables players to click and drag on physics objects to move them.  The object retains velocity when the click is released, allowing players to fling objects across the screen.",
+        "",
+        "Note:",
+        "- The default \"draggable\" behavior will not work on objects with the physics behavior. This extension should be used instead.",
+        "- This extension will only work on objects that have the physics behavior.",
+        "- Kinematic physics mode is incompatible with this extension. The object will be changed to dynamic mode.",
+        "",
+        "The Parking Jam example uses this extension ([open the project online](https://editor.gdevelop.io/?project=example://parking-jam))."
+      ],
+      "origin": {
+        "identifier": "DraggablePhysics",
+        "name": "gdevelop-extension-store"
+      },
+      "tags": [
+        "physics",
+        "drag",
+        "mouse",
+        "pointer",
+        "cursor",
+        "touch",
+        "physics",
+        "object",
+        "joint",
+        "fling"
+      ],
+      "authorIds": [
+        "gqDaZjCfevOOxBYkK6zlhtZnXCg1"
+      ],
+      "dependencies": [],
+      "eventsFunctions": [],
+      "eventsBasedBehaviors": [
+        {
+          "description": "Drag a physics object with the mouse (or touch).",
+          "fullName": "Draggable (for physics objects)",
+          "name": "DraggablePhysics",
+          "objectType": "",
+          "eventsFunctions": [
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "doStepPreEvents",
+              "sentence": "",
+              "events": [
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "Change \"kinematic\" to \"dynamic\" to prevent crash",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Physics2::IsKinematic"
+                          },
+                          "parameters": [
+                            "Object",
+                            "PhysicsBehavior"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Physics2::SetDynamic"
+                          },
+                          "parameters": [
+                            "Object",
+                            "PhysicsBehavior"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "Mouse",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Create mouse joints and save the joint ID"
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "DraggablePhysics::DraggablePhysics::PropertyEnableAutomaticDragging"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Behavior"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "MouseButtonFromTextPressed"
+                              },
+                              "parameters": [
+                                "",
+                                "Object.Behavior::PropertyMouseButton()"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "DraggablePhysics::DraggablePhysics::IsBeingDragged"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "Behavior",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SourisSurObjet"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "",
+                                    "",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "Physics2::AddMouseJoint"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "PhysicsBehavior",
+                                    "MouseX(Object.Layer(),0)",
+                                    "MouseY(Object.Layer(),0)",
+                                    "Object.Behavior::PropertyMaxForce()",
+                                    "Object.Behavior::PropertyFrequency()",
+                                    "Object.Behavior::PropertyDamping()",
+                                    "__DraggablePhysics.MouseJointID"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "DraggablePhysics::DraggablePhysics::SetPropertyMouseJointID"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "Behavior",
+                                    "=",
+                                    "Variable(__DraggablePhysics.MouseJointID)"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Delete the mouse joint"
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "DraggablePhysics::DraggablePhysics::PropertyEnableAutomaticDragging"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Behavior"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "MouseButtonFromTextReleased"
+                          },
+                          "parameters": [
+                            "",
+                            "Object.Behavior::PropertyMouseButton()"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "DraggablePhysics::DraggablePhysics::ReleaseDrag"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Behavior",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Update the position of the mouse joint to follow the mouse"
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "DraggablePhysics::DraggablePhysics::IsBeingDragged"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Behavior",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Physics2::MouseJointTarget"
+                          },
+                          "parameters": [
+                            "Object",
+                            "PhysicsBehavior",
+                            "Object.Behavior::PropertyMouseJointID()",
+                            "MouseX(Object.Layer(),0)",
+                            "MouseY(Object.Layer(),0)"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "DraggablePhysics::DraggablePhysics",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Start dragging object.",
+              "fullName": "Start dragging object",
+              "functionType": "Action",
+              "name": "StartDragging",
+              "sentence": "Start dragging (physics) _PARAM0_ ",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "DraggablePhysics::DraggablePhysics::IsBeingDragged"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Physics2::AddMouseJoint"
+                      },
+                      "parameters": [
+                        "Object",
+                        "PhysicsBehavior",
+                        "MouseX(Object.Layer(),0)",
+                        "MouseY(Object.Layer(),0)",
+                        "Object.Behavior::PropertyMaxForce()",
+                        "Object.Behavior::PropertyFrequency()",
+                        "Object.Behavior::PropertyDamping()",
+                        "__DraggablePhysics.MouseJointID"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "DraggablePhysics::DraggablePhysics::SetPropertyMouseJointID"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "Variable(__DraggablePhysics.MouseJointID)"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "DraggablePhysics::DraggablePhysics",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Release dragged object.",
+              "fullName": "Release dragged object",
+              "functionType": "Action",
+              "name": "ReleaseDrag",
+              "sentence": "Release _PARAM0_ from being dragged (physics)",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "DraggablePhysics::DraggablePhysics::IsBeingDragged"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Physics2::Remove joint"
+                      },
+                      "parameters": [
+                        "Object",
+                        "PhysicsBehavior",
+                        "Object.Behavior::PropertyMouseJointID()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "DraggablePhysics::DraggablePhysics::SetPropertyMouseJointID"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "DraggablePhysics::DraggablePhysics",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Check if object is being dragged.",
+              "fullName": "Is being dragged",
+              "functionType": "Condition",
+              "name": "IsBeingDragged",
+              "sentence": "_PARAM0_ is being dragged (physics)",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "DraggablePhysics::DraggablePhysics::PropertyMouseJointID"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "!=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnBoolean"
+                      },
+                      "parameters": [
+                        "True"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "DraggablePhysics::DraggablePhysics",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "onDeActivate",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "DraggablePhysics::DraggablePhysics::ReleaseDrag"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "DraggablePhysics::DraggablePhysics",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "the mouse button used to move the object.",
+              "fullName": "Mouse button",
+              "functionType": "ExpressionAndCondition",
+              "group": "Draggable (for physics objects) configuration",
+              "name": "MouseButton",
+              "sentence": "the dragging mouse button",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnString"
+                      },
+                      "parameters": [
+                        "Object.Behavior::PropertyMouseButton()"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "expressionType": {
+                "supplementaryInformation": "[\"Left\",\"Right\",\"Middle\"]",
+                "type": "stringWithSelector"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "DraggablePhysics::DraggablePhysics",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "ActionWithOperator",
+              "getterName": "MouseButton",
+              "name": "SetMouseButton",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "DraggablePhysics::DraggablePhysics::SetPropertyMouseButton"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "GetArgumentAsString(\"Value\")"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "DraggablePhysics::DraggablePhysics",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "the maximum joint force (in Newtons) of the object.",
+              "fullName": "Maximum force",
+              "functionType": "ExpressionAndCondition",
+              "group": "Draggable configuration",
+              "name": "MaxForce",
+              "sentence": "the maximum force",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnNumber"
+                      },
+                      "parameters": [
+                        "Object.Behavior::PropertyMaxForce()"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "DraggablePhysics::DraggablePhysics",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "ActionWithOperator",
+              "getterName": "MaxForce",
+              "name": "SetMaxForce",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "DraggablePhysics::DraggablePhysics::SetPropertyMaxForce"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "GetArgumentAsNumber(\"Value\")"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "DraggablePhysics::DraggablePhysics",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "the joint frequency (per second) of the object.",
+              "fullName": "Frequency",
+              "functionType": "ExpressionAndCondition",
+              "group": "Draggable configuration",
+              "name": "Frequency",
+              "sentence": "the frequency",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnNumber"
+                      },
+                      "parameters": [
+                        "Object.Behavior::PropertyFrequency()"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "DraggablePhysics::DraggablePhysics",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "ActionWithOperator",
+              "getterName": "Frequency",
+              "name": "SetFrequency",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "DraggablePhysics::DraggablePhysics::SetPropertyFrequency"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "GetArgumentAsNumber(\"Value\")"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "DraggablePhysics::DraggablePhysics",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "the joint damping ratio (range: 0 to 1) of the object. ",
+              "fullName": "Damping ratio",
+              "functionType": "ExpressionAndCondition",
+              "group": "Draggable configuration",
+              "name": "Damping",
+              "sentence": "the damping ratio (range: 0 to 1)",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnNumber"
+                      },
+                      "parameters": [
+                        "Object.Behavior::PropertyDamping()"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "DraggablePhysics::DraggablePhysics",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "ActionWithOperator",
+              "getterName": "Damping",
+              "name": "SetDamping",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "DraggablePhysics::DraggablePhysics::SetPropertyDamping"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "GetArgumentAsNumber(\"Value\")"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "DraggablePhysics::DraggablePhysics",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Check if automatic dragging is enabled.",
+              "fullName": "Automatic dragging",
+              "functionType": "Condition",
+              "group": "Draggable (for physics objects) configuration",
+              "name": "IsAutomaticDraggingEnabled",
+              "sentence": "Automatic dragging is enabled on _PARAM0_ ",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "DraggablePhysics::DraggablePhysics::PropertyEnableAutomaticDragging"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnBoolean"
+                      },
+                      "parameters": [
+                        "True"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "DraggablePhysics::DraggablePhysics",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Enable (or disable) automatic dragging with the mouse or touch.",
+              "fullName": "Enable (or disable) automatic dragging",
+              "functionType": "Action",
+              "group": "Draggable (for physics objects) configuration",
+              "name": "SetEnableAutomaticDragging",
+              "sentence": "Enable automatic dragging on _PARAM0_: _PARAM2_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "GetArgumentAsBoolean"
+                      },
+                      "parameters": [
+                        "\"Value\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "DraggablePhysics::DraggablePhysics::SetPropertyEnableAutomaticDragging"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "no"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "GetArgumentAsBoolean"
+                      },
+                      "parameters": [
+                        "\"Value\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "DraggablePhysics::DraggablePhysics::SetPropertyEnableAutomaticDragging"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "yes"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "DraggablePhysics::DraggablePhysics",
+                  "type": "behavior"
+                },
+                {
+                  "defaultValue": "yes",
+                  "description": "EnableAutomaticDragging",
+                  "name": "Value",
+                  "optional": true,
+                  "type": "yesorno"
+                }
+              ],
+              "objectGroups": []
+            }
+          ],
+          "propertyDescriptors": [
+            {
+              "value": "",
+              "type": "Behavior",
+              "label": "Physics behavior",
+              "description": "",
+              "group": "",
+              "extraInformation": [
+                "Physics2::Physics2Behavior"
+              ],
+              "name": "PhysicsBehavior"
+            },
+            {
+              "value": "Left",
+              "type": "Choice",
+              "label": "Mouse button",
+              "description": "",
+              "group": "",
+              "extraInformation": [
+                "Left",
+                "Right",
+                "Middle"
+              ],
+              "name": "MouseButton"
+            },
+            {
+              "value": "500",
+              "type": "Number",
+              "unit": "Newton",
+              "label": "Maximum force",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "name": "MaxForce"
+            },
+            {
+              "value": "10",
+              "type": "Number",
+              "label": "Frequency (Hz) ",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "name": "Frequency"
+            },
+            {
+              "value": "1",
+              "type": "Number",
+              "label": "Damping ratio (Range: 0 to 1)",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "name": "Damping"
+            },
+            {
+              "value": "",
+              "type": "Number",
+              "label": "",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": true,
+              "name": "MouseJointID"
+            },
+            {
+              "value": "true",
+              "type": "Boolean",
+              "label": "Enable automatic dragging",
+              "description": "If automatic dragging is disabled, use the \"Start drag\" and \"Release drag\" actions.",
+              "group": "",
+              "extraInformation": [],
+              "name": "EnableAutomaticDragging"
+            }
+          ],
+          "sharedPropertyDescriptors": []
+        }
+      ],
+      "eventsBasedObjects": []
+    },
+    {
+      "author": "D8H",
+      "category": "Game mechanic",
+      "extensionNamespace": "",
+      "fullName": "Object Stack",
+      "helpPath": "",
+      "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMy4wLjMsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iSWNvbnMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMzIgMzIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMyIDMyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoyO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9DQo8L3N0eWxlPg0KPHBhdGggY2xhc3M9InN0MCIgZD0iTTE4LDI5SDhjLTIuMiwwLTQtMS44LTQtNFY3YzAtMi4yLDEuOC00LDQtNGgxMGMyLjIsMCw0LDEuOCw0LDR2MThDMjIsMjcuMiwyMC4yLDI5LDE4LDI5eiIvPg0KPHBhdGggY2xhc3M9InN0MCIgZD0iTTIyLDYuNGw1LDNjMS45LDEuMSwyLjUsMy42LDEuMyw1LjVMMjIsMjUuNSIvPg0KPHBhdGggY2xhc3M9InN0MCIgZD0iTTI4LDE2bDAuNSwwLjdjMS4zLDEuOCwwLjgsNC4zLTEsNS42bC01LjcsNCIvPg0KPGxpbmUgY2xhc3M9InN0MCIgeDE9IjgiIHkxPSI3IiB4Mj0iOCIgeTI9IjkiLz4NCjxsaW5lIGNsYXNzPSJzdDAiIHgxPSIxOCIgeTE9IjIzIiB4Mj0iMTgiIHkyPSIyNSIvPg0KPHBhdGggY2xhc3M9InN0MCIgZD0iTTEwLjQsMTYuNmMwLjUsMC41LDEuMywwLjUsMS44LDBsMC44LTAuOGwwLjgsMC44YzAuNSwwLjUsMS4zLDAuNSwxLjgsMGMwLjUtMC41LDAuNS0xLjQsMC0xLjlsLTAuOC0wLjhMMTMsMTINCglsLTEuOCwxLjlsLTAuOCwwLjhDOS45LDE1LjIsOS45LDE2LjEsMTAuNCwxNi42eiIvPg0KPGxpbmUgY2xhc3M9InN0MCIgeDE9IjEyIiB5MT0iMjAiIHgyPSIxNCIgeTI9IjIwIi8+DQo8bGluZSBjbGFzcz0ic3QwIiB4MT0iMTMiIHkxPSIxNyIgeDI9IjEzIiB5Mj0iMTkiLz4NCjwvc3ZnPg0K",
+      "name": "ObjectStack",
+      "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/Line Hero Pack/Master/SVG/Videogames/Videogames_cards_game_solitaire_poker_blackjack_casino.svg",
+      "shortDescription": "An ordered list of objects and a shuffle action.",
+      "version": "0.2.0",
+      "description": [
+        "It provides:",
+        "* Actions to modify a stack of objects",
+        "* Conditions to access the objects of a stack",
+        "* A shuffle action",
+        "",
+        "It can be helpful for:",
+        "* Card games",
+        "* Fair randomness (for instance, to create a stack of predetermined bonus and randomize the order they appear)",
+        "",
+        "3 examples use it:",
+        "* a card system demonstration ([open the project online](https://editor.gdevelop.io/?project=example://card-system))",
+        "* a Klondike solitaire ([open the project online](https://editor.gdevelop.io/?project=example://klondike-solitaire))",
+        "* a Zuma-like ([open the project online](https://editor.gdevelop.io/?project=example://smoothy))"
+      ],
+      "origin": {
+        "identifier": "ObjectStack",
+        "name": "gdevelop-extension-store"
+      },
+      "tags": [
+        "card",
+        "stack",
+        "pick",
+        "list",
+        "queue"
+      ],
+      "authorIds": [
+        "IWykYNRvhCZBN3vEgKEbBPOR3Oc2"
+      ],
+      "dependencies": [],
+      "eventsFunctions": [
+        {
+          "description": "Define helper classes JavaScript code.",
+          "fullName": "Define helper classes",
+          "functionType": "Action",
+          "name": "DefineHelperClasses",
+          "private": true,
+          "sentence": "Define helper classes JavaScript code",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "if (gdjs._objectStackExtension) {",
+                "    return;",
+                "}",
+                "",
+                "// Remove from deleted objects from stacks.",
+                "gdjs.registerObjectDeletedFromSceneCallback(function (runtimeScene, obj) {",
+                "    const extension = runtimeScene._objectStackExtension;",
+                "    if (!extension) {",
+                "        return;",
+                "    }",
+                "    if (extension.allUsedObjects.has(obj)) {",
+                "        extension.allUsedObjects.delete(obj);",
+                "        for (const objectStack of extension.allObjectStacks) {",
+                "            objectStack.remove(obj);",
+                "        }",
+                "    }",
+                "});",
+                "",
+                "class ObjectStack {",
+                "    /**",
+                "     * @type {Array<gdjs.RuntimeObject>}",
+                "     */",
+                "    stack = [];",
+                "",
+                "    /**",
+                "     * Make contains(), remove() and unicity checks more efficients.",
+                "     * @type {Set<gdjs.RuntimeObject>}",
+                "     */",
+                "    objectSet = new Set();",
+                "",
+                "    /**",
+                "     * @param {gdjs.RuntimeObject} object",
+                "     */",
+                "    addOnTop(object) {",
+                "        if (this.objectSet.has(object)) {",
+                "            return false;",
+                "        }",
+                "        this.stack.push(object);",
+                "        this.objectSet.add(object);",
+                "        return true;",
+                "    }",
+                "",
+                "    /**",
+                "     * @param {gdjs.RuntimeObject} object",
+                "     * @param {number} height",
+                "     */",
+                "    insert(object, height) {",
+                "        if (this.objectSet.has(object)) {",
+                "            return false;",
+                "        }",
+                "        this.stack.splice(height, 0, object);",
+                "        this.objectSet.add(object);",
+                "        return true;",
+                "    }",
+                "",
+                "    /**",
+                "     * @param {gdjs.RuntimeObject} object",
+                "     */",
+                "    remove(object) {",
+                "        if (this.objectSet.has(object)) {",
+                "            // The top element is likely to be removed from the stack.",
+                "            // Make its removal O(1)",
+                "            if (object === this.stack[this.stack.length - 1]) {",
+                "                this.stack.pop();",
+                "            }",
+                "            else {",
+                "                const index = this.stack.indexOf(object);",
+                "                if (index >= 0) {",
+                "                    this.stack.splice(index, 1);",
+                "                }",
+                "            }",
+                "            this.objectSet.delete(object);",
+                "        }",
+                "    }",
+                "",
+                "    clear() {",
+                "        this.stack.length = 0;",
+                "        this.objectSet.clear();",
+                "    }",
+                "",
+                "    /**",
+                "     * @param {number} insertHeight",
+                "     * @param {ObjectStack} other",
+                "     * @param {number} lowerBound",
+                "     * @param {number} upperBound",
+                "     */",
+                "    takeInto(insertHeight, other, lowerBound, upperBound) {",
+                "        upperBound = Math.min(upperBound, other.stack.length - 1);",
+                "        for (let height = lowerBound; height <= upperBound; height++) {",
+                "            const insertedObject = other.stack[height];",
+                "            this.stack.splice(insertHeight, 0, insertedObject);",
+                "            this.objectSet.add(insertedObject);",
+                "            insertHeight++;",
+                "        }",
+                "        if (lowerBound <= upperBound) {",
+                "            for (let height = lowerBound; height <= upperBound; height++) {",
+                "                other.objectSet.delete(other.stack[height]);",
+                "            }",
+                "            other.stack.splice(lowerBound, upperBound - lowerBound + 1);",
+                "        }",
+                "    }",
+                "",
+                "    shuffle() {",
+                "        // Fisher–Yates shuffle",
+                "        for (let i = this.stack.length - 1; i >= 1; i--) {",
+                "            // TODO use a seed",
+                "            const j = Math.floor(Math.random() * (i + 1));",
+                "            const swap = this.stack[i];",
+                "            this.stack[i] = this.stack[j]",
+                "            this.stack[j] = swap;",
+                "        }",
+                "    }",
+                "",
+                "    /**",
+                "     * @param {gdjs.RuntimeObject} object",
+                "     */",
+                "    heightOf(object) {",
+                "        return this.stack.indexOf(object);",
+                "    }",
+                "",
+                "    height() {",
+                "        return this.stack.length;",
+                "    }",
+                "",
+                "    isEmpty() {",
+                "        return this.stack.length === 0;",
+                "    }",
+                "",
+                "    /**",
+                "     * @param {gdjs.RuntimeObject} object",
+                "     * @param {number} lowerBound",
+                "     * @param {number} upperBound",
+                "     */",
+                "    containsBetween(object, lowerBound, upperBound) {",
+                "        upperBound = Math.min(upperBound, this.stack.length - 1);",
+                "        for (let i = lowerBound; i <= upperBound; i++) {",
+                "            if (this.stack[i] === object) {",
+                "                return true;",
+                "            }",
+                "        }",
+                "        return false;",
+                "    }",
+                "",
+                "    /**",
+                "     * @param {gdjs.RuntimeObject} object",
+                "     * @param {number} height",
+                "     */",
+                "    containsAt(object, height) {",
+                "        return this.stack[height] === object;",
+                "    }",
+                "",
+                "    /**",
+                "     * @param {gdjs.RuntimeObject} object",
+                "     */",
+                "    hasOnTop(object) {",
+                "        return this.stack.length > 0 && this.stack[this.stack.length - 1] === object;",
+                "    }",
+                "",
+                "    /**",
+                "     * @param {gdjs.RuntimeObject} object",
+                "     */",
+                "    contains(object) {",
+                "        return this.objectSet.has(object);",
+                "    }",
+                "}",
+                "",
+                "gdjs._objectStackExtension = {",
+                "    ObjectStack",
+                "}"
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": true
+            }
+          ],
+          "parameters": [],
+          "objectGroups": []
+        },
+        {
+          "description": "Check if the stack contains the object between a range. The lower and upper bounds are included.",
+          "fullName": "Contain between a range",
+          "functionType": "Condition",
+          "group": "Object Stack",
+          "name": "ContainsBetween",
+          "sentence": "_PARAM3_ is into the stack of _PARAM1_ between _PARAM4_ and _PARAM5_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "const stackBehaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");",
+                "/** @type {Hashtable<gdjs.RuntimeObject[]>} */",
+                "const stackObjectsLists = eventsFunctionContext.getObjectsLists(\"Object\");",
+                "/** @type {Hashtable<gdjs.RuntimeObject[]>} */",
+                "const elementObjectsLists = eventsFunctionContext.getObjectsLists(\"Element\");",
+                "const lowerBound = Math.max(0, eventsFunctionContext.getArgument(\"LowerBound\"));",
+                "let upperBound = eventsFunctionContext.getArgument(\"UpperBound\");",
+                "",
+                "eventsFunctionContext.returnValue = gdjs.evtTools.object.twoListsTest(",
+                "  (stackObject, element) => {",
+                "    const behavior = stackObject.getBehavior(stackBehaviorName);",
+                "    return behavior.objectStack.containsBetween(element, lowerBound, upperBound);",
+                "  },",
+                "  stackObjectsLists,",
+                "  elementObjectsLists,",
+                "  false",
+                ");"
+              ],
+              "parameterObjects": "Object",
+              "useStrict": true,
+              "eventsSheetExpanded": true
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Stack",
+              "name": "Object",
+              "type": "objectList"
+            },
+            {
+              "description": "Stack behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "ObjectStack::ObjectStack",
+              "type": "behavior"
+            },
+            {
+              "description": "Element",
+              "name": "Element",
+              "type": "objectList"
+            },
+            {
+              "description": "Lower bound",
+              "name": "LowerBound",
+              "type": "expression"
+            },
+            {
+              "description": "Upper bound",
+              "name": "UpperBound",
+              "type": "expression"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Check if the stack contains the object at a height.",
+          "fullName": "Contain at",
+          "functionType": "Condition",
+          "group": "Object Stack",
+          "name": "ContainsAt",
+          "sentence": "_PARAM3_ is into the stack of _PARAM1_ at _PARAM4_ ",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "const stackBehaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");",
+                "/** @type {Hashtable<gdjs.RuntimeObject[]>} */",
+                "const stackObjectsLists = eventsFunctionContext.getObjectsLists(\"Object\");",
+                "/** @type {Hashtable<gdjs.RuntimeObject[]>} */",
+                "const elementObjectsLists = eventsFunctionContext.getObjectsLists(\"Element\");",
+                "",
+                "const height = eventsFunctionContext.getArgument(\"Height\");",
+                "",
+                "// This code is duplicated from ContainsBetween because the picking wouldn't pass from one function to the other.",
+                "eventsFunctionContext.returnValue = gdjs.evtTools.object.twoListsTest(",
+                "  (stackObject, element) => {",
+                "    const behavior = stackObject.getBehavior(stackBehaviorName);",
+                "    return behavior.objectStack.containsAt(element, height);",
+                "  },",
+                "  stackObjectsLists,",
+                "  elementObjectsLists,",
+                "  false",
+                ");",
+                ""
+              ],
+              "parameterObjects": "Object",
+              "useStrict": true,
+              "eventsSheetExpanded": true
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Stack",
+              "name": "Object",
+              "type": "objectList"
+            },
+            {
+              "description": "Stack behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "ObjectStack::ObjectStack",
+              "type": "behavior"
+            },
+            {
+              "description": "Element",
+              "name": "Element",
+              "type": "objectList"
+            },
+            {
+              "description": "Height",
+              "name": "Height",
+              "type": "expression"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Check if an object is on the stack top.",
+          "fullName": "Stack top",
+          "functionType": "Condition",
+          "group": "Object Stack",
+          "name": "HasOnTop",
+          "sentence": "_PARAM3_ is on top of the stack of _PARAM1_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "const stackBehaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");",
+                "/** @type {Hashtable<gdjs.RuntimeObject[]>} */",
+                "const stackObjectsLists = eventsFunctionContext.getObjectsLists(\"Object\");",
+                "/** @type {Hashtable<gdjs.RuntimeObject[]>} */",
+                "const elementObjectsLists = eventsFunctionContext.getObjectsLists(\"Element\");",
+                "",
+                "eventsFunctionContext.returnValue = gdjs.evtTools.object.twoListsTest(",
+                "  (stackObject, element) => {",
+                "    const behavior = stackObject.getBehavior(stackBehaviorName);",
+                "    return behavior.objectStack.hasOnTop(element);",
+                "  },",
+                "  stackObjectsLists,",
+                "  elementObjectsLists,",
+                "  false",
+                ");"
+              ],
+              "parameterObjects": "Object",
+              "useStrict": true,
+              "eventsSheetExpanded": true
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Stack",
+              "name": "Object",
+              "type": "objectList"
+            },
+            {
+              "description": "Stack behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "ObjectStack::ObjectStack",
+              "type": "behavior"
+            },
+            {
+              "description": "Element",
+              "name": "Element",
+              "type": "objectList"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Check if the stack contains the object.",
+          "fullName": "Contain",
+          "functionType": "Condition",
+          "group": "Object Stack",
+          "name": "Contains",
+          "sentence": "_PARAM3_ is into the stack of _PARAM1_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "const stackBehaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");",
+                "/** @type {Hashtable<gdjs.RuntimeObject[]>} */",
+                "const stackObjectsLists = eventsFunctionContext.getObjectsLists(\"Object\");",
+                "/** @type {Hashtable<gdjs.RuntimeObject[]>} */",
+                "const elementObjectsLists = eventsFunctionContext.getObjectsLists(\"Element\");",
+                "",
+                "eventsFunctionContext.returnValue = gdjs.evtTools.object.twoListsTest(",
+                "  (stackObject, element) => {",
+                "    const behavior = stackObject.getBehavior(stackBehaviorName);",
+                "    return behavior.objectStack.contains(element);",
+                "  },",
+                "  stackObjectsLists,",
+                "  elementObjectsLists,",
+                "  false",
+                ");"
+              ],
+              "parameterObjects": "Object",
+              "useStrict": true,
+              "eventsSheetExpanded": true
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Stack",
+              "name": "Object",
+              "type": "objectList"
+            },
+            {
+              "description": "Stack behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "ObjectStack::ObjectStack",
+              "type": "behavior"
+            },
+            {
+              "description": "Element",
+              "name": "Element",
+              "type": "objectList"
+            }
+          ],
+          "objectGroups": []
+        }
+      ],
+      "eventsBasedBehaviors": [
+        {
+          "description": "Hold an ordered list of objects.",
+          "fullName": "Object Stack",
+          "name": "ObjectStack",
+          "objectType": "",
+          "eventsFunctions": [
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "onCreated",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ObjectStack::DefineHelperClasses"
+                      },
+                      "parameters": [
+                        "",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const ObjectStack = gdjs._objectStackExtension.ObjectStack;",
+                    "",
+                    "const object = objects[0];",
+                    "const behaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");",
+                    "const behavior = object.getBehavior(behaviorName);",
+                    "",
+                    "behavior.objectStack = new ObjectStack();",
+                    "",
+                    "if (!runtimeScene._objectStackExtension) {",
+                    "  runtimeScene._objectStackExtension = {",
+                    "    allObjectStacks: new Set(),",
+                    "    // Its only use is to have a O(1) check for",
+                    "    // deleted objects that have never been in a stack.",
+                    "    allUsedObjects: new Set()",
+                    "  };",
+                    "}",
+                    "runtimeScene._objectStackExtension.allObjectStacks.add(behavior.objectStack);",
+                    ""
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "ObjectStack::ObjectStack",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "onDestroy",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const object = objects[0];",
+                    "const behaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");",
+                    "const behavior = object.getBehavior(behaviorName);",
+                    "",
+                    "runtimeScene._objectStackExtension.allObjectStacks.delete(behavior);",
+                    ""
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "ObjectStack::ObjectStack",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Add the object on the top of the stack.",
+              "fullName": "Add on top",
+              "functionType": "Action",
+              "name": "AddOnTop",
+              "sentence": "Add _PARAM2_ on top of the stack of _PARAM0_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const object = objects[0];",
+                    "const behaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");",
+                    "const behavior = object.getBehavior(behaviorName);",
+                    "const elements = eventsFunctionContext.getObjects(\"Elements\");",
+                    "",
+                    "const stack = behavior.objectStack;",
+                    "for (const element of elements) {",
+                    "  const isAdded = stack.addOnTop(element);",
+                    "  if (isAdded) {",
+                    "    runtimeScene._objectStackExtension.allUsedObjects.add(object);",
+                    "  }",
+                    "}"
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "ObjectStack::ObjectStack",
+                  "type": "behavior"
+                },
+                {
+                  "description": "Object",
+                  "name": "Elements",
+                  "type": "objectList"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Insert the object into the stack.",
+              "fullName": "Insert into the stack",
+              "functionType": "Action",
+              "name": "Insert",
+              "sentence": "Insert _PARAM2_ into the stack of _PARAM0_ at height: _PARAM3_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const object = objects[0];",
+                    "const behaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");",
+                    "const behavior = object.getBehavior(behaviorName);",
+                    "const elements = eventsFunctionContext.getObjects(\"Elements\");",
+                    "let height = eventsFunctionContext.getArgument(\"Height\");",
+                    "",
+                    "const stack = behavior.objectStack;",
+                    "",
+                    "if (height < 0 || height > stack.height()) {",
+                    "  console.error(`Tried to insert in the stack at ${height} where the stack is ${stack.length} height.`);",
+                    "  height = Math.min(0, Math.max(stack.height(), height))",
+                    "}",
+                    "",
+                    "for (const element of elements) {",
+                    "  const isAdded = stack.insert(element, height);",
+                    "  if (isAdded) {",
+                    "    runtimeScene._objectStackExtension.allUsedObjects.add(object);",
+                    "  }",
+                    "}"
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "ObjectStack::ObjectStack",
+                  "type": "behavior"
+                },
+                {
+                  "description": "Object",
+                  "name": "Elements",
+                  "type": "objectList"
+                },
+                {
+                  "description": "Height",
+                  "name": "Height",
+                  "type": "expression"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Remove the object from the stack.",
+              "fullName": "Remove from the stack",
+              "functionType": "Action",
+              "name": "Remove",
+              "sentence": "Remove _PARAM2_ from the stack of _PARAM0_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const object = objects[0];",
+                    "const behaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");",
+                    "const behavior = object.getBehavior(behaviorName);",
+                    "const elements = eventsFunctionContext.getObjects(\"Elements\");",
+                    "",
+                    "const stack = behavior.objectStack;",
+                    "for (const element of elements) {",
+                    "  const isAdded = stack.remove(element);",
+                    "}"
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "ObjectStack::ObjectStack",
+                  "type": "behavior"
+                },
+                {
+                  "description": "Object",
+                  "name": "Elements",
+                  "type": "objectList"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Remove any object from the stack.",
+              "fullName": "Clear",
+              "functionType": "Action",
+              "name": "Clear",
+              "sentence": "Remove every object of the stack of _PARAM0_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const object = objects[0];",
+                    "const behaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");",
+                    "const behavior = object.getBehavior(behaviorName);",
+                    "",
+                    "behavior.objectStack.clear();"
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "ObjectStack::ObjectStack",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Move the objects from a stack into another.",
+              "fullName": "Move into the stack",
+              "functionType": "Action",
+              "name": "MoveInto",
+              "sentence": "Move the objects of the stack of _PARAM3_ from:_PARAM5_ to:_PARAM6_ into the stack of _PARAM0_ at height: _PARAM2_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const object = objects[0];",
+                    "const behaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");",
+                    "const behavior = object.getBehavior(behaviorName);",
+                    "const otherStacks = eventsFunctionContext.getObjects(\"Stack\");",
+                    "const otherStackBehaviorName = eventsFunctionContext.getBehaviorName(\"StackBehavior\");",
+                    "const insertHeight = eventsFunctionContext.getArgument(\"Height\");",
+                    "const lowerBound = Math.max(0, eventsFunctionContext.getArgument(\"LowerBound\"));",
+                    "const upperBound = eventsFunctionContext.getArgument(\"UpperBound\");",
+                    "",
+                    "for (const otherStack of otherStacks) {",
+                    "    const otherObjectStack = otherStack.getBehavior(otherStackBehaviorName).objectStack;",
+                    "    behavior.objectStack.takeInto(insertHeight, otherObjectStack, lowerBound, upperBound);",
+                    "}"
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "ObjectStack::ObjectStack",
+                  "type": "behavior"
+                },
+                {
+                  "description": "Height",
+                  "name": "Height",
+                  "type": "expression"
+                },
+                {
+                  "description": "Stack",
+                  "name": "Stack",
+                  "type": "objectList"
+                },
+                {
+                  "description": "Stack behavior",
+                  "name": "StackBehavior",
+                  "supplementaryInformation": "ObjectStack::ObjectStack",
+                  "type": "behavior"
+                },
+                {
+                  "description": "Lower bound",
+                  "name": "LowerBound",
+                  "type": "expression"
+                },
+                {
+                  "description": "Upper bound",
+                  "name": "UpperBound",
+                  "type": "expression"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Move all the object from a stack into another.",
+              "fullName": "Move all into the stack",
+              "functionType": "Action",
+              "name": "MoveAllInto",
+              "sentence": "Move all the objects of the stack of _PARAM3_ into the stack of _PARAM0_ at height: _PARAM2_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ObjectStack::ObjectStack::MoveInto"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "GetArgumentAsNumber(\"Height\")",
+                        "Stack",
+                        "StackBehavior",
+                        "0",
+                        "Stack.StackBehavior::Height() - 1",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "ObjectStack::ObjectStack",
+                  "type": "behavior"
+                },
+                {
+                  "description": "Height",
+                  "name": "Height",
+                  "type": "expression"
+                },
+                {
+                  "description": "Stack",
+                  "name": "Stack",
+                  "type": "objectList"
+                },
+                {
+                  "description": "Stack behavior",
+                  "name": "StackBehavior",
+                  "supplementaryInformation": "ObjectStack::ObjectStack",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Move all the object from a stack into another one at the top.",
+              "fullName": "Move all on top of the stack",
+              "functionType": "Action",
+              "name": "MoveAllOnTop",
+              "sentence": "Move all the objects of the stack of _PARAM2_ on the top of the stack of _PARAM0_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ObjectStack::ObjectStack::MoveInto"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "Object.Behavior::Height()",
+                        "Stack",
+                        "StackBehavior",
+                        "0",
+                        "Stack.StackBehavior::Height() - 1",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "ObjectStack::ObjectStack",
+                  "type": "behavior"
+                },
+                {
+                  "description": "Stack",
+                  "name": "Stack",
+                  "type": "objectList"
+                },
+                {
+                  "description": "Stack behavior",
+                  "name": "StackBehavior",
+                  "supplementaryInformation": "ObjectStack::ObjectStack",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Shuffle the stack.",
+              "fullName": "Shuffle",
+              "functionType": "Action",
+              "name": "Shuffle",
+              "sentence": "Shuffle the stack of _PARAM0_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const object = objects[0];",
+                    "const behaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");",
+                    "const behavior = object.getBehavior(behaviorName);",
+                    "",
+                    "behavior.objectStack.shuffle();"
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "ObjectStack::ObjectStack",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "The height of an element in the stack.",
+              "fullName": "Height of a stack element",
+              "functionType": "Expression",
+              "name": "HeightOf",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const behaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");",
+                    "const behavior = objects[0].getBehavior(behaviorName);",
+                    "const elements = eventsFunctionContext.getObjects(\"Elements\");",
+                    "",
+                    "eventsFunctionContext.returnValue = behavior.objectStack.heightOf(elements[0]);"
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "ObjectStack::ObjectStack",
+                  "type": "behavior"
+                },
+                {
+                  "description": "Object",
+                  "name": "Elements",
+                  "type": "objectList"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "the number of objects in the stack.",
+              "fullName": "Stack height",
+              "functionType": "ExpressionAndCondition",
+              "name": "Height",
+              "sentence": "the number of objects in the stack",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const behaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");",
+                    "const behavior = objects[0].getBehavior(behaviorName);",
+                    "",
+                    "eventsFunctionContext.returnValue = behavior.objectStack.height();",
+                    ""
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "ObjectStack::ObjectStack",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Compare the number of objects in the stack.",
+              "fullName": "Stack height (deprecated)",
+              "functionType": "Condition",
+              "name": "CheckHeight",
+              "private": true,
+              "sentence": "_PARAM0_ has _PARAM2_ objects in its stack",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "ObjectStack::ObjectStack::Height"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "Height",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnBoolean"
+                      },
+                      "parameters": [
+                        "True"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "ObjectStack::ObjectStack",
+                  "type": "behavior"
+                },
+                {
+                  "description": "Stack height",
+                  "name": "Height",
+                  "type": "expression"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Check if the stack is empty.",
+              "fullName": "Is empty",
+              "functionType": "Condition",
+              "name": "IsEmpty",
+              "sentence": "The stack of _PARAM0_ is empty",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const object = objects[0];",
+                    "const behaviorName = eventsFunctionContext.getBehaviorName(\"Behavior\");",
+                    "const behavior = object.getBehavior(behaviorName);",
+                    "",
+                    "eventsFunctionContext.returnValue = behavior.objectStack.isEmpty();"
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "ObjectStack::ObjectStack",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            }
+          ],
+          "propertyDescriptors": [],
+          "sharedPropertyDescriptors": []
+        }
+      ],
+      "eventsBasedObjects": []
+    },
+    {
+      "author": "",
+      "category": "",
+      "extensionNamespace": "",
+      "fullName": "Sprite rope",
+      "helpPath": "",
+      "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0ibWRpLWJyaWRnZSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGQ9Ik03LDE0VjEwLjkxQzYuMjgsMTAuNTggNS42MSwxMC4xOCA1LDkuNzFWMTRIN001LDE4SDNWMTZIMVYxNEgzVjdINVY4LjQzQzYuOCwxMCA5LjI3LDExIDEyLDExQzE0LjczLDExIDE3LjIsMTAgMTksOC40M1Y3SDIxVjE0SDIzVjE2SDIxVjE4SDE5VjE2SDVWMThNMTcsMTAuOTFWMTRIMTlWOS43MUMxOC4zOSwxMC4xOCAxNy43MiwxMC41OCAxNywxMC45MU0xNiwxNFYxMS4zMkMxNS4zNiwxMS41NSAxNC42OSwxMS43MiAxNCwxMS44NFYxNEgxNk0xMywxNFYxMS45NkwxMiwxMkwxMSwxMS45NlYxNEgxM00xMCwxNFYxMS44NEM5LjMxLDExLjcyIDguNjQsMTEuNTUgOCwxMS4zMlYxNEgxMFoiIC8+PC9zdmc+",
+      "name": "SpriteRope",
+      "previewIconUrl": "https://asset-resources.gdevelop.io/public-resources/Icons/daf3c1828ce1c9549b2243ab4787c827bd4dfea561321215e3c8d5545438f5fa_bridge.svg",
+      "shortDescription": "",
+      "version": "",
+      "description": "",
+      "tags": [],
+      "authorIds": [
+        "IWykYNRvhCZBN3vEgKEbBPOR3Oc2"
+      ],
+      "dependencies": [],
+      "eventsFunctions": [
+        {
+          "description": "Define helper classes JavaScript code.",
+          "fullName": "Define helper classes",
+          "functionType": "Action",
+          "name": "DefineHelperClasses",
+          "private": true,
+          "sentence": "Define helper classes JavaScript code",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "if (gdjs.__sprite3DExtension) {",
+                "    return;",
+                "}",
+                "",
+                "class SpriteRope {",
+                "    /** @type {gdjs.CustomRuntimeObject} */",
+                "    object;",
+                "    /** @type {Array<PIXI.Point>} */",
+                "    points = [];",
+                "    /** @type {PIXI.SimpleRope} */",
+                "    rope;",
+                "",
+                "    /**",
+                "     * @param object {gdjs.CustomRuntimeObject2D}",
+                "     * @param pointsCount {number}",
+                "     */",
+                "    constructor(object, pointsCount) {",
+                "        this.object = object;",
+                "        for (let i = 0; i < pointsCount; i++) {",
+                "            this.points.push(new PIXI.Point());",
+                "        }",
+                "        /** @type {gdjs.PixiImageManager} */",
+                "        const imageManager = object.getInstanceContainer().getGame().getImageManager();",
+                "        /** @type {SpriteObjectDataType} */",
+                "        const spriteData = object._instanceContainer._objects.get(\"Image\");",
+                "        const resourceName = spriteData.animations[0].directions[0].sprites[0].image;",
+                "        const rope = new PIXI.SimpleRope(imageManager.getPIXITexture(resourceName), this.points);",
+                "        object.getRendererObject().addChild(rope);",
+                "    }",
+                "",
+                "    /**",
+                "     * @param index {number}",
+                "     * @param x {number}",
+                "     * @param y {number}",
+                "     */",
+                "    setPointPosition(index, x, y) {",
+                "        const point = this.points[index];",
+                "",
+                "        point.x = x;",
+                "        point.y = y;",
+                "    }",
+                "}",
+                "",
+                "gdjs.__spriteRopeExtension = {",
+                "    SpriteRope",
+                "};",
+                ""
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": true
+            }
+          ],
+          "parameters": [],
+          "objectGroups": []
+        }
+      ],
+      "eventsBasedBehaviors": [],
+      "eventsBasedObjects": [
+        {
+          "defaultName": "Rope",
+          "description": "",
+          "fullName": "Sprite rope",
+          "name": "SpriteRope",
+          "eventsFunctions": [
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "onCreated",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SpriteRope::DefineHelperClasses"
+                      },
+                      "parameters": [
+                        "",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "/** @type {gdjs.CustomRuntimeObject2D} */\r",
+                    "const object = objects[0];\r",
+                    "\r",
+                    "object.__spriteRopeExtension = {};\r",
+                    "object.__spriteRopeExtension.spriteRope = new gdjs.__spriteRopeExtension.SpriteRope(object, 20);\r",
+                    ""
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "SpriteRope::SpriteRope",
+                  "type": "object"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Move a point of the rope.",
+              "fullName": "Point position",
+              "functionType": "Action",
+              "name": "SetPointPosition",
+              "sentence": "Move the point _PARAM1_ of _PARAM0_ to _PARAM2_ ; _PARAM3_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const index = eventsFunctionContext.getArgument(\"Index\");",
+                    "const x = eventsFunctionContext.getArgument(\"PointX\");",
+                    "const y = eventsFunctionContext.getArgument(\"PointY\");",
+                    "",
+                    "const spriteRope = object.__spriteRopeExtension.spriteRope;",
+                    "spriteRope.setPointPosition(index, x, y);",
+                    ""
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "SpriteRope::SpriteRope",
+                  "type": "object"
+                },
+                {
+                  "description": "Point index",
+                  "name": "Index",
+                  "type": "expression"
+                },
+                {
+                  "description": "Position X",
+                  "name": "PointX",
+                  "type": "expression"
+                },
+                {
+                  "description": "Position Y",
+                  "name": "PointY",
+                  "type": "expression"
+                }
+              ],
+              "objectGroups": []
+            }
+          ],
+          "propertyDescriptors": [
+            {
+              "value": "20",
+              "type": "Number",
+              "unit": "Dimensionless",
+              "label": "Point count",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "name": "PointCount"
+            },
+            {
+              "value": "3",
+              "type": "Number",
+              "unit": "Dimensionless",
+              "label": "Interpolation point count",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "name": "InterpolationPointCount"
+            }
+          ],
+          "objects": [
+            {
+              "adaptCollisionMaskAutomatically": true,
+              "assetStoreId": "",
+              "name": "Image",
+              "type": "Sprite",
+              "updateIfNotVisible": false,
+              "variables": [],
+              "effects": [],
+              "behaviors": [],
+              "animations": [
+                {
+                  "name": "",
+                  "useMultipleDirections": false,
+                  "directions": [
+                    {
+                      "looping": false,
+                      "timeBetweenFrames": 0.08,
+                      "sprites": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "objectsFolderStructure": {
+            "folderName": "__ROOT",
+            "children": [
+              {
+                "objectName": "Image"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "externalLayouts": [],
+  "externalSourceFiles": []
+}
