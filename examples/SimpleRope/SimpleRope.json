@@ -952,24 +952,6 @@
               "actions": [
                 {
                   "type": {
-                    "value": "MettreXY"
-                  },
-                  "parameters": [
-                    "Rope",
-                    "=",
-                    "0",
-                    "=",
-                    "0"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
                     "value": "Cache"
                   },
                   "parameters": [
@@ -1049,22 +1031,6 @@
                         "1"
                       ]
                     }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "index",
-                    "=",
-                    "1"
                   ]
                 }
               ]
@@ -3499,6 +3465,27 @@
                 "    }",
                 "}",
                 "",
+                "class SpriteRopeRenderer extends gdjs.CustomRuntimeObject2DRenderer {",
+                "    constructor(",
+                "      object,",
+                "      instanceContainer,",
+                "      parent",
+                "    ) {",
+                "        super(object, instanceContainer, parent);",
+                "    }",
+                "",
+                "    _updatePIXIContainer() {",
+                "      this._pixiContainer.visible = !this._object.hidden;",
+                "      this._pixiContainer.alpha = this._object.getOpacity() / 255;",
+                "",
+                "      this._isContainerDirty = false;",
+                "    }",
+                "",
+                "    updateX() {}",
+                "    updateY() {}",
+                "    updateAngle() {}",
+                "}",
+                "",
                 "/**",
                 " * Cubic interpolation based on https://github.com/osuushi/Smooth.js",
                 " */",
@@ -3529,7 +3516,8 @@
                 "}",
                 "",
                 "gdjs.__spriteRopeExtension = {",
-                "    SpriteRope",
+                "    SpriteRope,",
+                "    SpriteRopeRenderer",
                 "};",
                 ""
               ],
@@ -3574,11 +3562,16 @@
                 {
                   "type": "BuiltinCommonInstructions::JsCode",
                   "inlineCode": [
+                    "const { SpriteRope, SpriteRopeRenderer } = gdjs.__spriteRopeExtension;\r",
+                    "\r",
                     "/** @type {gdjs.CustomRuntimeObject2D} */\r",
                     "const object = objects[0];\r",
                     "\r",
+                    "object._renderer = new SpriteRopeRenderer(object, object._instanceContainer, object.getInstanceContainer());\r",
+                    "\r",
                     "object.__spriteRopeExtension = {};\r",
-                    "object.__spriteRopeExtension.spriteRope = new gdjs.__spriteRopeExtension.SpriteRope(object, 15);\r",
+                    "object.__spriteRopeExtension.spriteRope = new SpriteRope(object, 15);\r",
+                    "\r",
                     ""
                   ],
                   "parameterObjects": "Object",
