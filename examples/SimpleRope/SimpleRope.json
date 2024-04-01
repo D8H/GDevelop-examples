@@ -99,6 +99,33 @@
         "name": "Wall",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/TriangleTrail.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\TriangleTrail.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/WhiteDisk.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\WhiteDisk.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Wall.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Wall.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -113,8 +140,8 @@
     {
       "b": 49,
       "disableInputWhenNotFocused": true,
-      "mangledName": "Untitled_32scene",
-      "name": "Untitled scene",
+      "mangledName": "PhysicsRope",
+      "name": "PhysicsRope",
       "r": 49,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
@@ -236,12 +263,13 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "depth": 48,
+          "height": 117,
           "layer": "",
           "name": "Rope",
           "persistentUuid": "972c96e6-1603-4684-adbf-6099a1f8df6d",
-          "width": 0,
+          "width": 918,
           "x": 154,
           "y": 94,
           "zOrder": 1,
@@ -752,7 +780,7 @@
                           "parameters": [
                             "",
                             "RopePoint0",
-                            "Rope.X() + index * 64 + 32",
+                            "Rope.X() + 918 - (index * 64 + 32)",
                             "Rope.Y()",
                             ""
                           ]
@@ -792,7 +820,7 @@
                           "parameters": [
                             "",
                             "RopePoint1",
-                            "Rope.X() + index * 64 + 32",
+                            "Rope.X() + 918 - (index * 64 + 32)",
                             "Rope.Y()",
                             ""
                           ]
@@ -876,10 +904,10 @@
                           "parameters": [
                             "RopePoint0",
                             "Physics2",
-                            "RopePoint0.X() + 16",
+                            "RopePoint0.X() - 16",
                             "RopePoint0.Y()",
                             "RopePoint1",
-                            "RopePoint1.X() - 16",
+                            "RopePoint1.X() + 16",
                             "RopePoint1.Y()",
                             "32",
                             "yes",
@@ -914,10 +942,10 @@
                           "parameters": [
                             "RopePoint0",
                             "Physics2",
-                            "RopePoint0.X() - 16",
+                            "RopePoint0.X() + 16",
                             "RopePoint0.Y()",
                             "RopePoint1",
-                            "RopePoint1.X() + 16",
+                            "RopePoint1.X() - 16",
                             "RopePoint1.Y()",
                             "32",
                             "yes",
@@ -1130,10 +1158,1146 @@
           "type": "TextContainerCapability::TextContainerBehavior"
         }
       ]
+    },
+    {
+      "b": 49,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "BallTrail",
+      "name": "BallTrail",
+      "r": 49,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 49,
+      "uiSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.546875,
+        "windowMask": false
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 64,
+          "layer": "",
+          "name": "Wall",
+          "persistentUuid": "eb6eb5bb-ddbb-4f48-bfbb-07365bbfc2d4",
+          "width": 1405,
+          "x": -64,
+          "y": -64,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 64,
+          "layer": "",
+          "name": "Wall",
+          "persistentUuid": "e944dee0-1819-4f85-8cbe-02933f6c0190",
+          "width": 1405,
+          "x": -64,
+          "y": 720,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 845,
+          "layer": "",
+          "name": "Wall",
+          "persistentUuid": "ff42c72e-e08b-41ed-aeb7-5b3a1f222f3f",
+          "width": 64,
+          "x": -64,
+          "y": -64,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 845,
+          "layer": "",
+          "name": "Wall",
+          "persistentUuid": "f5e57a99-17f2-4996-af5d-43ed1b7ec095",
+          "width": 64,
+          "x": 1280,
+          "y": -64,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "assetStoreId": "",
+          "name": "Trail",
+          "type": "SpriteRope::SpriteRope",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "InterpolationPointCount": 0,
+            "InterpolationFactor": 1
+          },
+          "childrenContent": {
+            "Image": {
+              "adaptCollisionMaskAutomatically": true,
+              "updateIfNotVisible": false,
+              "animations": [
+                {
+                  "name": "",
+                  "useMultipleDirections": false,
+                  "directions": [
+                    {
+                      "looping": false,
+                      "timeBetweenFrames": 0.08,
+                      "sprites": [
+                        {
+                          "hasCustomCollisionMask": true,
+                          "image": "assets\\TriangleTrail.png",
+                          "points": [],
+                          "originPoint": {
+                            "name": "origine",
+                            "x": 0,
+                            "y": 0
+                          },
+                          "centerPoint": {
+                            "automatic": true,
+                            "name": "centre",
+                            "x": 0,
+                            "y": 0
+                          },
+                          "customCollisionMask": [
+                            [
+                              {
+                                "x": 8,
+                                "y": 0
+                              },
+                              {
+                                "x": 256,
+                                "y": 0
+                              },
+                              {
+                                "x": 256,
+                                "y": 32
+                              },
+                              {
+                                "x": 8,
+                                "y": 32
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Ball",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Bounce",
+              "type": "Bounce::Bounce",
+              "OldX": 0,
+              "OldY": 2.0247e-320,
+              "OldForceAngle": 2.0247e-320,
+              "OldForceLength": 2.0247e-320,
+              "NormalAngle": 2.0247e-320,
+              "BounceCount": 0
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\WhiteDisk.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 16,
+                        "y": 16
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 32,
+                            "y": 0
+                          },
+                          {
+                            "x": 32,
+                            "y": 32
+                          },
+                          {
+                            "x": 0,
+                            "y": 32
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Wall",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Wall.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 64
+                          },
+                          {
+                            "x": 0,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "objectsFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "objectName": "Trail"
+          },
+          {
+            "objectName": "Ball"
+          },
+          {
+            "objectName": "Wall"
+          }
+        ]
+      },
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Repeat",
+              "repeatExpression": "40",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Ball",
+                    "RandomFloatInRange(100, 1180)",
+                    "RandomFloatInRange(100, 620)",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Trail",
+                    "Ball.X()",
+                    "Ball.Y()",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "LinkedObjects::LinkObjects"
+                  },
+                  "parameters": [
+                    "",
+                    "Trail",
+                    "Ball"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AddForceAL"
+                  },
+                  "parameters": [
+                    "Ball",
+                    "RandomFloat(360)",
+                    "600",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "Trail",
+                    "Opacity",
+                    "=",
+                    "128"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Ball",
+                "Wall",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Bounce::Bounce::BounceOff"
+              },
+              "parameters": [
+                "Ball",
+                "Bounce",
+                "Wall",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "Ball",
+                "Wall",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "Trail",
+          "conditions": [
+            {
+              "type": {
+                "value": "LinkedObjects::PickObjectsLinkedTo"
+              },
+              "parameters": [
+                "",
+                "Ball",
+                "Trail",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SpriteRope::SpriteRope::Pull"
+              },
+              "parameters": [
+                "Trail",
+                "Ball.X()",
+                "Ball.Y()",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
+      "layers": [
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Light",
+              "doubleParameters": {
+                "elevation": 45,
+                "intensity": 1,
+                "rotation": 0
+              },
+              "stringParameters": {
+                "groundColor": "64;64;64",
+                "skyColor": "255;255;255",
+                "top": "Y-"
+              },
+              "booleanParameters": {}
+            }
+          ]
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "Animation",
+          "type": "AnimatableCapability::AnimatableBehavior"
+        },
+        {
+          "name": "Bounce",
+          "type": "Bounce::Bounce"
+        },
+        {
+          "name": "Effect",
+          "type": "EffectCapability::EffectBehavior"
+        },
+        {
+          "name": "Flippable",
+          "type": "FlippableCapability::FlippableBehavior"
+        },
+        {
+          "name": "Opacity",
+          "type": "OpacityCapability::OpacityBehavior"
+        },
+        {
+          "name": "Resizable",
+          "type": "ResizableCapability::ResizableBehavior"
+        },
+        {
+          "name": "Scale",
+          "type": "ScalableCapability::ScalableBehavior"
+        }
+      ]
     }
   ],
   "externalEvents": [],
   "eventsFunctionsExtensions": [
+    {
+      "author": "@4ian",
+      "category": "Movement",
+      "extensionNamespace": "",
+      "fullName": "Bounce (using forces)",
+      "helpPath": "/extensions/bounce/explanations",
+      "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0ibWRpLXZvbGxleWJhbGwiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIsMkExMCwxMCAwIDAsMSAyMiwxMkExMCwxMCAwIDAsMSAxMiwyMkExMCwxMCAwIDAsMSAyLDEyQTEwLDEwIDAgMCwxIDEyLDJNMTMuNiwyMC4zNUMxNS45NiwxOC4wNCAxNy42OSwxNS4wOCAxOC41LDExLjc2QzE3Ljg0LDExLjYyIDE3LjE4LDExLjU0IDE2LjUsMTEuNUMxNS41NiwxNS4xMSAxMy40MSwxOC4yMiAxMC41LDIwLjM3QzExLDIwLjQ1IDExLjUsMjAuNSAxMiwyMC41QzEyLjU1LDIwLjUgMTMuMDgsMjAuNDUgMTMuNiwyMC4zNU05LjIzLDIwLjA0QzEyLjIzLDE4LjA3IDE0LjUsMTUuMDUgMTUuNDYsMTEuNUMxNC43MSwxMS41NSAxMy45NywxMS42NSAxMy4yNywxMS44MUMxMi4xOCwxNC44OSA5Ljk3LDE3LjQ0IDcuMTMsMTguOTdDNy43NywxOS40MiA4LjUsMTkuNzggOS4yMywyMC4wNE0yMC41LDEyLjM3QzIwLjE2LDEyLjIzIDE5LjgxLDEyLjExIDE5LjQ2LDEyQzE4Ljc2LDE0LjkgMTcuMzksMTcuNTMgMTUuNTQsMTkuNzNDMTguMzYsMTguNDQgMjAuMzUsMTUuNjQgMjAuNSwxMi4zN00zLjU2LDExLjA0QzMuNSwxMS4zNSAzLjUsMTEuNjggMy41LDEyQzMuNSwxNC41IDQuNTcsMTYuNzMgNi4yNywxOC4yOEM2Ljg2LDE4IDcuNDEsMTcuNjYgNy45NCwxNy4yOUM2LjA4LDE1LjU0IDQuNTgsMTMuNDEgMy41NiwxMS4wNE01LjMzLDYuNzRDNC43Myw3LjUgNC4yNiw4LjM1IDMuOTUsOS4yOEM0LjkyLDEyLjEzIDYuNTgsMTQuNjYgOC43NCwxNi42N0M5LjI1LDE2LjI0IDkuNzIsMTUuNzcgMTAuMTUsMTUuMjZDNy43NCwxMy4wMyA2LDEwLjA4IDUuMzMsNi43NE04LjA0LDQuNUM3LjM2LDQuODUgNi43Myw1LjMgNi4xOCw1LjgyQzYuNzEsOS4yMSA4LjM3LDEyLjIzIDEwLjc3LDE0LjQ3QzExLjE3LDEzLjkxIDExLjUsMTMuMzIgMTEuODIsMTIuN0M5LjY4LDEwLjU2IDguMjgsNy42OSA4LjA0LDQuNU0xOS45Niw5LjAzQzE4LjcsOC42OCAxNy4zNyw4LjUgMTYsOC41QzE0LjEsOC41IDEyLjI4LDguODUgMTAuNjEsOS41QzEwLjk2LDEwLjEgMTEuMzUsMTAuNjcgMTEuOCwxMS4yQzEzLjEyLDEwLjc1IDE0LjUzLDEwLjUgMTYsMTAuNUMxNy41NywxMC41IDE5LjA4LDEwLjc4IDIwLjQ3LDExLjI5QzIwLjQsMTAuNSAyMC4yMyw5Ljc0IDE5Ljk2LDkuMDNNMTcuNTQsNS41N0MxNy4wMyw1LjUgMTYuNSw1LjUgMTYsNS41QzEzLjY5LDUuNSAxMS40Nyw1Ljk0IDkuNDQsNi43M0M5LjYyLDcuMzggOS44Niw4IDEwLjE0LDguNjFDMTEuOTYsNy44OSAxMy45Myw3LjUgMTYsNy41QzE3LjE4LDcuNSAxOC4zMiw3LjYzIDE5LjQyLDcuODdDMTguOTMsNyAxOC4yOSw2LjIxIDE3LjU0LDUuNTdNMTYsNC41QzE0Ljc5LDMuODcgMTMuNDQsMy41IDEyLDMuNUMxMC45NSwzLjUgOS45NCwzLjcgOSw0LjA1QzkuMDQsNC42MyA5LjExLDUuMiA5LjIxLDUuNzVDMTEuMzEsNC45NSAxMy42LDQuNSAxNiw0LjVaIiAvPjwvc3ZnPg==",
+      "name": "Bounce",
+      "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/volleyball.svg",
+      "shortDescription": "Bounce the object off another object it just touched.",
+      "version": "0.2.1",
+      "description": [
+        "Provides an action to make the object bounce from another object it just touched.",
+        "",
+        "> ⚠️ This *won't work* with Physics engine or Platformer characters. This is working with objects that are moved using actions or behaviors using **the forces**.",
+        "",
+        "The Breakout-like example uses this extension to make balls bounce ([open the project online](https://editor.gdevelop.io/?project=example://breakout))."
+      ],
+      "origin": {
+        "identifier": "Bounce",
+        "name": "gdevelop-extension-store"
+      },
+      "tags": [
+        "bounce",
+        "bullet",
+        "ricochet"
+      ],
+      "authorIds": [
+        "wWP8BSlAW0UP4NeaHa2LcmmDzmH2"
+      ],
+      "dependencies": [],
+      "eventsFunctions": [],
+      "eventsBasedBehaviors": [
+        {
+          "description": "Provides an action to make the object bounce from another object it just touched. Add a permanent force to the object and, when in collision with another one, use the action to make it bounce realistically.",
+          "fullName": "Bounce",
+          "name": "Bounce",
+          "objectType": "",
+          "eventsFunctions": [
+            {
+              "description": "Bounce the object off another object it is currently colliding with, according to the angle and the speed of forces applied on the object.\nMake sure to test for a collision between the two objects before launching this action. All the forces will be removed from the object, and a new permanent force will be added to make the object bounce.",
+              "fullName": "Bounce off another object",
+              "functionType": "Action",
+              "name": "BounceOff",
+              "sentence": "Bounce _PARAM0_ off _PARAM2_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "To bounce the object realistically, we first separate it from the obstacle. The collision engine will do it by moving the object through the shortest \"normal vector\" of the edge that was collided.\nWe store the position of the object before being moved so that we know the angle of this \"normal vector\". Once we know it, we add a force in the direction of the normal vector, and we add the difference between the normal vector and the previous angle of movement."
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Bounce::Bounce::SetPropertyOldX"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "Object.X()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Bounce::Bounce::SetPropertyOldY"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "Object.Y()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Bounce::Bounce::SetPropertyOldForceAngle"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "Object.ForceAngle()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Bounce::Bounce::SetPropertyOldForceLength"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "Object.ForceLength()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SeparateFromObjects"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Obstacle",
+                        "yes"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Or"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "PosX"
+                              },
+                              "parameters": [
+                                "Object",
+                                "!=",
+                                "Object.Behavior::PropertyOldX()"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PosY"
+                              },
+                              "parameters": [
+                                "Object",
+                                "!=",
+                                "Object.Behavior::PropertyOldY()"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Bounce::Bounce::SetPropertyNormalAngle"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Behavior",
+                            "=",
+                            "ToDeg(atan2(Object.Y() - Object.Behavior::PropertyOldY(), Object.X() - Object.Behavior::PropertyOldX()))"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Arreter"
+                          },
+                          "parameters": [
+                            "Object"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AddForceAL"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Object.Behavior::PropertyNormalAngle()+AngleDifference(Object.Behavior::PropertyNormalAngle(), Object.Behavior::PropertyOldForceAngle()+180)",
+                            "Object.Behavior::PropertyOldForceLength()",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Bounce::Bounce::SetPropertyBounceCount"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Behavior",
+                            "+",
+                            "1"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "Bounce::Bounce",
+                  "type": "behavior"
+                },
+                {
+                  "description": "The objects to bounce on",
+                  "name": "Obstacle",
+                  "type": "objectList"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Bounce the object off another object it is currently colliding with, according to the angle and the speed of forces applied on the object.\nThe bounce will always be calculated *to go toward the specified angle (the \"normal angle\")*. For example, if the object is arriving at this exact angle, it will bounce in the opposite direction.\n\nMake sure to test for a collision between the two objects before launching this action. All the forces will be removed from the object, and a new permanent force will be added to make the object bounce.",
+              "fullName": "Bounce off another object toward a specified angle",
+              "functionType": "Action",
+              "name": "BounceOffSpecificAngle",
+              "sentence": "Bounce _PARAM0_ off _PARAM2_ assuming a normal angle of _PARAM3_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Check if there is a collision between the object and an obstacle and if so, do the bounce by stopping the object and adding a force so that it goes in the \"reflected\" direction, using the \"normal\" angle provided. \nThis provides a realistic bounce."
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Bounce::Bounce::SetPropertyOldX"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "Object.X()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Bounce::Bounce::SetPropertyOldY"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "Object.Y()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Bounce::Bounce::SetPropertyOldForceAngle"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "Object.ForceAngle()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Bounce::Bounce::SetPropertyOldForceLength"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "Object.ForceLength()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SeparateFromObjects"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Obstacle",
+                        "yes"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Or"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "PosX"
+                              },
+                              "parameters": [
+                                "Object",
+                                "!=",
+                                "Object.Behavior::PropertyOldX()"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PosY"
+                              },
+                              "parameters": [
+                                "Object",
+                                "!=",
+                                "Object.Behavior::PropertyOldY()"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Bounce::Bounce::SetPropertyNormalAngle"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Behavior",
+                            "=",
+                            "GetArgumentAsNumber(\"NormalAngle\")"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Arreter"
+                          },
+                          "parameters": [
+                            "Object"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AddForceAL"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Object.Behavior::PropertyNormalAngle()+AngleDifference(Object.Behavior::PropertyNormalAngle(), Object.Behavior::PropertyOldForceAngle()+180)",
+                            "Object.Behavior::PropertyOldForceLength()",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Bounce::Bounce::SetPropertyBounceCount"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Behavior",
+                            "+",
+                            "1"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "Bounce::Bounce",
+                  "type": "behavior"
+                },
+                {
+                  "description": "The objects to bounce on",
+                  "name": "Obstacle",
+                  "type": "objectList"
+                },
+                {
+                  "description": "The \"normal\" angle, in degrees, to bounce against",
+                  "longDescription": "This can be understood at the direction that the bounce must go toward.",
+                  "name": "NormalAngle",
+                  "type": "expression"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Bounce the object off another object it is currently colliding with, according to the angle and the speed of forces applied on the object.\nThe bounce will always be vertical, like if the object is *colliding a perfectly horizontal obstacle* (like the top/bottom of the screen in a pong game). For example, if the object is arriving with an angle of exactly 90 degrees, it will bounce in the opposite direction: -90 degrees.\n\nMake sure to test for a collision between the two objects before launching this action. All the forces will be removed from the object, and a new permanent force will be added to make the object bounce.",
+              "fullName": "Bounce vertically",
+              "functionType": "Action",
+              "name": "BounceOffVertically",
+              "sentence": "Bounce _PARAM0_ off _PARAM2_ - always vertically",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Bounce::Bounce::BounceOffSpecificAngle"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "Obstacle",
+                        "90",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "Bounce::Bounce",
+                  "type": "behavior"
+                },
+                {
+                  "description": "The objects to bounce on",
+                  "name": "Obstacle",
+                  "type": "objectList"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Bounce the object off another object it is currently colliding with, according to the angle and the speed of forces applied on the object.\nThe bounce will always be horizontal, like if the object is *colliding a perfectly vertical obstacle* (like paddles in a pong game). For example, if the object is arriving with an angle of exactly 0 degrees, it will bounce in the opposite direction: 180 degrees.\n\nMake sure to test for a collision between the two objects before launching this action. All the forces will be removed from the object, and a new permanent force will be added to make the object bounce.",
+              "fullName": "Bounce horizontally",
+              "functionType": "Action",
+              "name": "BounceOffHorizontally",
+              "sentence": "Bounce _PARAM0_ off _PARAM2_ - always horizontally",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Bounce::Bounce::BounceOffSpecificAngle"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "Obstacle",
+                        "0",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "Bounce::Bounce",
+                  "type": "behavior"
+                },
+                {
+                  "description": "The objects to bounce on",
+                  "name": "Obstacle",
+                  "type": "objectList"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "the number of times this object has bounced off another object.",
+              "fullName": "Bounce count",
+              "functionType": "ExpressionAndCondition",
+              "name": "BounceCount",
+              "sentence": "the bounce count",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnNumber"
+                      },
+                      "parameters": [
+                        "Object.Behavior::PropertyBounceCount()"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "Bounce::Bounce",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            }
+          ],
+          "propertyDescriptors": [
+            {
+              "value": "0",
+              "type": "Number",
+              "label": "",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": true,
+              "name": "OldX"
+            },
+            {
+              "value": "",
+              "type": "Number",
+              "label": "",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": true,
+              "name": "OldY"
+            },
+            {
+              "value": "",
+              "type": "Number",
+              "label": "",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": true,
+              "name": "OldForceAngle"
+            },
+            {
+              "value": "",
+              "type": "Number",
+              "label": "",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": true,
+              "name": "OldForceLength"
+            },
+            {
+              "value": "",
+              "type": "Number",
+              "label": "",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": true,
+              "name": "NormalAngle"
+            },
+            {
+              "value": "0",
+              "type": "Number",
+              "unit": "Dimensionless",
+              "label": "Bounce count",
+              "description": "Number of times this object has bounced off another object",
+              "group": "",
+              "extraInformation": [],
+              "hidden": true,
+              "name": "BounceCount"
+            }
+          ],
+          "sharedPropertyDescriptors": []
+        }
+      ],
+      "eventsBasedObjects": []
+    },
     {
       "author": "",
       "category": "Movement",
@@ -3393,7 +4557,11 @@
                 "class SpriteRope {",
                 "    /** @type {gdjs.CustomRuntimeObject} */",
                 "    object;",
-                "    /** @type {Array<number>} */",
+                "    /** ",
+                "     * The head is at the end of the array",
+                "     * because users are used to have sprites facing right.",
+                "     * @type {Array<number>}",
+                "     */",
                 "    pointsX = [];",
                 "    /** @type {Array<number>} */",
                 "    pointsY = [];",
@@ -3402,19 +4570,21 @@
                 "    /** @type {PIXI.SimpleRope} */",
                 "    rope;",
                 "    /** @type {number} */",
-                "    interpolationFactor = 4;",
+                "    interpolationFactor;",
                 "",
                 "    /**",
                 "     * @param object {gdjs.CustomRuntimeObject2D}",
-                "     * @param pointsCount {number}",
+                "     * @param pointCount {number}",
+                "     * @param interpolationFactor {number}",
                 "     */",
-                "    constructor(object, pointsCount) {",
+                "    constructor(object, pointCount, interpolationFactor) {",
                 "        this.object = object;",
-                "        for (let i = 0; i < pointsCount; i++) {",
+                "        this.interpolationFactor = interpolationFactor;",
+                "        for (let i = 0; i < pointCount; i++) {",
                 "            this.pointsX.push(0);",
                 "            this.pointsY.push(0);",
                 "        }",
-                "        for (let i = 0; i < (pointsCount - 1) * this.interpolationFactor + 1; i++) {",
+                "        for (let i = 0; i < (pointCount - 1) * this.interpolationFactor + 1; i++) {",
                 "            this.interpolatedPoints.push(new PIXI.Point());",
                 "        }",
                 "        /** @type {gdjs.PixiImageManager} */",
@@ -3427,13 +4597,94 @@
                 "    }",
                 "",
                 "    /**",
+                "     * @param pointCount {number}",
+                "     */",
+                "    setPointCount(pointCount) {",
+                "        const oldPointCount = this.pointsX.length;",
+                "        if (pointCount < oldPointCount) {",
+                "            const removedCount = oldPointCount - pointCount;",
+                "            this.pointsX.splice(0, removedCount);",
+                "            this.pointsY.splice(0, removedCount);",
+                "        }",
+                "        else if (pointCount > oldPointCount) {",
+                "            const addedCount = pointCount - oldPointCount;",
+                "            duplicateFirst(this.pointsX, addedCount);",
+                "            duplicateFirst(this.pointsY, addedCount);",
+                "        }",
+                "        this.setInterpolationFactor(this.interpolationFactor);",
+                "    }",
+                "",
+                "    /**",
+                "     * @param interpolationFactor {number}",
+                "     */",
+                "    setInterpolationFactor(interpolationFactor) {",
+                "        const pointCount = this.pointsX.length;",
+                "        const oldInterpolatedPointCount = this.interpolationFactor.length;",
+                "        const newInterpolatedPointCount = (pointCount - 1) * interpolationFactor + 1;",
+                "        this.interpolatedPoints.length = newInterpolatedPointCount;",
+                "        ",
+                "        for (let index = oldInterpolatedPointCount; index < newInterpolatedPointCount; index++) {",
+                "            this.interpolatedPoints[index] = new PIXI.Point(); ",
+                "        }",
+                "        this.interpolationFactor = interpolationFactor;",
+                "    }",
+                "",
+                "    /**",
                 "     * @param index {number}",
                 "     * @param x {number}",
                 "     * @param y {number}",
                 "     */",
                 "    setPointPosition(index, x, y) {",
-                "        this.pointsX[index] = x;",
-                "        this.pointsY[index] = y;",
+                "        const last = this.pointsX.length - 1;",
+                "        this.pointsX[last - index] = x;",
+                "        this.pointsY[last - index] = y;",
+                "    }",
+                "",
+                "    /**",
+                "     * @param index {number}",
+                "     * @param x {number}",
+                "     */",
+                "    setPointX(index, x) {",
+                "        const last = this.pointsX.length - 1;",
+                "        this.pointsX[last - index] = x;",
+                "    }",
+                "",
+                "    /**",
+                "     * @param index {number}",
+                "     * @param y {number}",
+                "     */",
+                "    setPointY(index, y) {",
+                "        const last = this.pointsX.length - 1;",
+                "        this.pointsY[last - index] = y;",
+                "    }",
+                "",
+                "    /**",
+                "     * @param index {number}",
+                "     * @return {number}",
+                "     */",
+                "    getPointX(index) {",
+                "        const last = this.pointsX.length - 1;",
+                "        return this.pointsX[last - index];",
+                "    }",
+                "",
+                "    /**",
+                "     * @param index {number}",
+                "     * @return {number}",
+                "     */",
+                "    getPointY(index) {",
+                "        const last = this.pointsX.length - 1;",
+                "        return this.pointsY[last - index];",
+                "    }",
+                "",
+                "    /**",
+                "     * @param x {number}",
+                "     * @param y {number}",
+                "     */",
+                "    pull(x, y) {",
+                "        this.pointsX.shift();",
+                "        this.pointsY.shift();",
+                "        this.pointsX.push(x);",
+                "        this.pointsY.push(y);",
                 "    }",
                 "",
                 "    updatePoints() {",
@@ -3443,7 +4694,7 @@
                 "        const pointsCount = this.pointsX.length;",
                 "        for (let pointIndex = 0; pointIndex < pointsCount - 1; pointIndex++)",
                 "        {",
-                "            const interpolatedPointIndex = 4 * pointIndex;",
+                "            const interpolatedPointIndex = this.interpolationFactor * pointIndex;",
                 "            const interpolatedPoint = this.interpolatedPoints[interpolatedPointIndex];",
                 "            interpolatedPoint.x = this.pointsX[pointIndex];",
                 "            interpolatedPoint.y = this.pointsY[pointIndex];",
@@ -3484,6 +4735,17 @@
                 "    updateX() {}",
                 "    updateY() {}",
                 "    updateAngle() {}",
+                "}",
+                "",
+                "/**",
+                " * @param array {Array<number>}",
+                " * @param addedCount {number}",
+                " */",
+                "function duplicateFirst(array, addedCount) {",
+                "    const first = array[0];",
+                "    array.length += addedCount;",
+                "    array.copyWithin(addedCount, 0, oldPointCount - 1);",
+                "    array.fill(first, 0, addedCount - 1);",
                 "}",
                 "",
                 "/**",
@@ -3569,14 +4831,111 @@
                     "\r",
                     "object._renderer = new SpriteRopeRenderer(object, object._instanceContainer, object.getInstanceContainer());\r",
                     "\r",
+                    "const pointCount = object._getPointCount();\r",
+                    "const interpolationFactor = object._getInterpolationFactor();\r",
+                    "\r",
                     "object.__spriteRopeExtension = {};\r",
-                    "object.__spriteRopeExtension.spriteRope = new SpriteRope(object, 15);\r",
+                    "object.__spriteRopeExtension.spriteRope = new SpriteRope(object, pointCount, interpolationFactor);\r",
                     "\r",
                     ""
                   ],
                   "parameterObjects": "Object",
                   "useStrict": true,
                   "eventsSheetExpanded": true
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SpriteRope::SpriteRope::UpdateFromProperties"
+                      },
+                      "parameters": [
+                        "Object",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "SpriteRope::SpriteRope",
+                  "type": "object"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "onHotReloading",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SpriteRope::SpriteRope::UpdateFromProperties"
+                      },
+                      "parameters": [
+                        "Object",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "SpriteRope::SpriteRope",
+                  "type": "object"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Update from properties.",
+              "fullName": "Update from properties",
+              "functionType": "Action",
+              "name": "UpdateFromProperties",
+              "private": true,
+              "sentence": "Update from properties of _PARAM0_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SpriteRope::SpriteRope::SetPointCount"
+                      },
+                      "parameters": [
+                        "Object",
+                        "=",
+                        "PointCount",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SpriteRope::SpriteRope::SetInterpolationFactor"
+                      },
+                      "parameters": [
+                        "Object",
+                        "=",
+                        "InterpolationFactor",
+                        ""
+                      ]
+                    }
+                  ]
                 }
               ],
               "parameters": [
@@ -3634,7 +4993,7 @@
                     "const y = eventsFunctionContext.getArgument(\"PointY\");",
                     "",
                     "const spriteRope = object.__spriteRopeExtension.spriteRope;",
-                    "spriteRope.setPointPosition(index, x, y);",
+                    "spriteRope.setPointPosition(Math.round(index), x, y);",
                     ""
                   ],
                   "parameterObjects": "Object",
@@ -3666,6 +5025,373 @@
                 }
               ],
               "objectGroups": []
+            },
+            {
+              "description": "the X position of rope point",
+              "fullName": "Point X",
+              "functionType": "ExpressionAndCondition",
+              "name": "PointX",
+              "sentence": "the X position of rope point _PARAM1_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const object = objects[0];",
+                    "const index = Math.round(eventsFunctionContext.getArgument(\"Index\"));",
+                    "",
+                    "const spriteRope = object.__spriteRopeExtension.spriteRope;",
+                    "eventsFunctionContext.returnValue = spriteRope.getPointX(index);",
+                    ""
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "SpriteRope::SpriteRope",
+                  "type": "object"
+                },
+                {
+                  "description": "Point index",
+                  "name": "Index",
+                  "type": "expression"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "Point X",
+              "functionType": "ActionWithOperator",
+              "getterName": "PointX",
+              "name": "SetPointX",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const object = objects[0];",
+                    "const index = Math.round(eventsFunctionContext.getArgument(\"Index\"));",
+                    "const x = eventsFunctionContext.getArgument(\"Value\");",
+                    "",
+                    "const spriteRope = object.__spriteRopeExtension.spriteRope;",
+                    "spriteRope.setPointX(index, x);",
+                    ""
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "SpriteRope::SpriteRope",
+                  "type": "object"
+                },
+                {
+                  "description": "Point index",
+                  "name": "Index",
+                  "type": "expression"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "the Y position of rope point",
+              "fullName": "Point Y",
+              "functionType": "ExpressionAndCondition",
+              "name": "PointY",
+              "sentence": "the Y position of rope point _PARAM1_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const object = objects[0];",
+                    "const index = Math.round(eventsFunctionContext.getArgument(\"Index\"));",
+                    "",
+                    "const spriteRope = object.__spriteRopeExtension.spriteRope;",
+                    "eventsFunctionContext.returnValue = spriteRope.getPointY(index);",
+                    ""
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "SpriteRope::SpriteRope",
+                  "type": "object"
+                },
+                {
+                  "description": "Point index",
+                  "name": "Index",
+                  "type": "expression"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "Point X",
+              "functionType": "ActionWithOperator",
+              "getterName": "PointY",
+              "name": "SetPointY",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const object = objects[0];",
+                    "const index = Math.round(eventsFunctionContext.getArgument(\"Index\"));",
+                    "const y = eventsFunctionContext.getArgument(\"Value\");",
+                    "",
+                    "const spriteRope = object.__spriteRopeExtension.spriteRope;",
+                    "spriteRope.setPointY(index, y);",
+                    ""
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "SpriteRope::SpriteRope",
+                  "type": "object"
+                },
+                {
+                  "description": "Point index",
+                  "name": "Index",
+                  "type": "expression"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Pull the rope by adding a new point and removing the last one.",
+              "fullName": "Pull the rope",
+              "functionType": "Action",
+              "name": "Pull",
+              "sentence": "Pull the rope of _PARAM0_ to _PARAM1_ ; _PARAM2_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const object = objects[0];",
+                    "const x = eventsFunctionContext.getArgument(\"PointX\");",
+                    "const y = eventsFunctionContext.getArgument(\"PointY\");",
+                    "",
+                    "const spriteRope = object.__spriteRopeExtension.spriteRope;",
+                    "spriteRope.pull(x, y);",
+                    ""
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "SpriteRope::SpriteRope",
+                  "type": "object"
+                },
+                {
+                  "description": "Position X",
+                  "name": "PointX",
+                  "type": "expression"
+                },
+                {
+                  "description": "Position Y",
+                  "name": "PointY",
+                  "type": "expression"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "the point count of the object.",
+              "fullName": "Point count",
+              "functionType": "ExpressionAndCondition",
+              "group": "Sprite rope configuration",
+              "name": "PointCount",
+              "sentence": "the point count",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnNumber"
+                      },
+                      "parameters": [
+                        "PointCount"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "SpriteRope::SpriteRope",
+                  "type": "object"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "ActionWithOperator",
+              "getterName": "PointCount",
+              "name": "SetPointCount",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SpriteRope::SpriteRope::SetPropertyPointCount"
+                      },
+                      "parameters": [
+                        "Object",
+                        "=",
+                        "Value"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const object = objects[0];",
+                    "const value = Math.round(eventsFunctionContext.getArgument(\"Value\"));",
+                    "",
+                    "const spriteRope = object.__spriteRopeExtension.spriteRope;",
+                    "spriteRope.setPointCount(value);",
+                    ""
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "SpriteRope::SpriteRope",
+                  "type": "object"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "the interpolation factor of the object.",
+              "fullName": "Interpolation factor",
+              "functionType": "ExpressionAndCondition",
+              "group": "Sprite rope configuration",
+              "name": "InterpolationFactor",
+              "sentence": "the interpolation factor",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnNumber"
+                      },
+                      "parameters": [
+                        "InterpolationFactor"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "SpriteRope::SpriteRope",
+                  "type": "object"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "ActionWithOperator",
+              "getterName": "InterpolationFactor",
+              "name": "SetInterpolationFactor",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SpriteRope::SpriteRope::SetPropertyInterpolationFactor"
+                      },
+                      "parameters": [
+                        "Object",
+                        "=",
+                        "Value"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const object = objects[0];",
+                    "const value = Math.round(Math.max(1, eventsFunctionContext.getArgument(\"Value\")));",
+                    "",
+                    "const spriteRope = object.__spriteRopeExtension.spriteRope;",
+                    "spriteRope.setInterpolationFactor(value);",
+                    ""
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "SpriteRope::SpriteRope",
+                  "type": "object"
+                }
+              ],
+              "objectGroups": []
             }
           ],
           "propertyDescriptors": [
@@ -3680,14 +5406,14 @@
               "name": "PointCount"
             },
             {
-              "value": "3",
+              "value": "4",
               "type": "Number",
               "unit": "Dimensionless",
-              "label": "Interpolation point count",
+              "label": "Interpolation factor",
               "description": "",
               "group": "",
               "extraInformation": [],
-              "name": "InterpolationPointCount"
+              "name": "InterpolationFactor"
             }
           ],
           "objects": [
