@@ -190,8 +190,8 @@
           "name": "Rope",
           "persistentUuid": "49ef27a2-1c26-4fb3-b2a1-455038e5ba74",
           "width": 0,
-          "x": 164,
-          "y": 295,
+          "x": 1091,
+          "y": 341,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -270,8 +270,8 @@
           "name": "Rope",
           "persistentUuid": "972c96e6-1603-4684-adbf-6099a1f8df6d",
           "width": 918,
-          "x": 154,
-          "y": 94,
+          "x": 1091,
+          "y": 132,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -285,8 +285,8 @@
           "name": "Rope",
           "persistentUuid": "dc39bd32-cc96-4b0d-8e8b-8dd307da2e9e",
           "width": 0,
-          "x": 155,
-          "y": 504,
+          "x": 1091,
+          "y": 546,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -736,6 +736,18 @@
           "actions": [],
           "events": [
             {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Build a chain of physics objects."
+            },
+            {
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "Rope",
               "conditions": [],
@@ -780,7 +792,7 @@
                           "parameters": [
                             "",
                             "RopePoint0",
-                            "Rope.X() + 918 - (index * 64 + 32)",
+                            "Rope.X() - (32 + index * 64)",
                             "Rope.Y()",
                             ""
                           ]
@@ -820,7 +832,7 @@
                           "parameters": [
                             "",
                             "RopePoint1",
-                            "Rope.X() + 918 - (index * 64 + 32)",
+                            "Rope.X() - (32 + index * 64)",
                             "Rope.Y()",
                             ""
                           ]
@@ -989,6 +1001,18 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Move the rope according to the Physics objects."
         },
         {
           "type": "BuiltinCommonInstructions::ForEach",
@@ -7277,6 +7301,16 @@
               "group": "",
               "extraInformation": [],
               "name": "InterpolationFactor"
+            },
+            {
+              "value": "Center-Right",
+              "type": "String",
+              "label": "",
+              "description": "Only used by the scene editor.",
+              "group": "",
+              "extraInformation": [],
+              "hidden": true,
+              "name": "ParentOrigin"
             }
           ],
           "objects": [
