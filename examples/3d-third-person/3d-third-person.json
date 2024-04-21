@@ -2535,8 +2535,8 @@
                   "parameters": [
                     "",
                     "Text3D",
-                    "Coin.X()",
-                    "Coin.Y()",
+                    "Grass3.X()",
+                    "Grass3.Y()",
                     ""
                   ]
                 },
@@ -2548,7 +2548,7 @@
                     "Text3D",
                     "Object3D",
                     "=",
-                    "Coin.Object3D::Z() + 20"
+                    "Grass3.Object3D::Z() + 40"
                   ]
                 },
                 {
@@ -2572,6 +2572,23 @@
                     "0"
                   ]
                 }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Text3D",
+                "Text",
+                "=",
+                "\"Grass: \" + ToString(round(TimeFromStart()))"
               ]
             }
           ]
