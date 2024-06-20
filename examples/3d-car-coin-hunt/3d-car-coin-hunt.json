@@ -2022,7 +2022,9 @@
               "type": "TrafficCar::TrafficCar",
               "SpeedMax": 200,
               "RoadTargetEdge": 100.00000000005824,
-              "SpeedPathMovement": "SpeedPathMovement"
+              "SpeedPathMovement": "SpeedPathMovement",
+              "Deceleration": 400,
+              "Acceleration": 100
             }
           ],
           "content": {
@@ -2364,7 +2366,18 @@
                 {
                   "type": "BuiltinCommonInstructions::ForEach",
                   "object": "Road",
-                  "conditions": [],
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "RandomFloat(1)",
+                        "<",
+                        "0.5"
+                      ]
+                    }
+                  ],
                   "actions": [
                     {
                       "type": {
@@ -37876,7 +37889,7 @@
                       "parameters": [
                         "PathIndex",
                         "=",
-                        "Object.Behavior::RotatedPathIndex(Roads[Shape][Object.Behavior::UnrotatedEdge(OriginEdge)].PathsByEdge[Object.Behavior::UnrotatedEdge(TargetEdge)])"
+                        "Object.Behavior::PathIndex(OriginEdge, TargetEdge)"
                       ]
                     },
                     {
@@ -38025,6 +38038,105 @@
                   "name": "SpeedPathMovement",
                   "supplementaryInformation": "CurvedMovement::SpeedPathMovement",
                   "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "Path name",
+              "functionType": "StringExpression",
+              "name": "PathName",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnString"
+                      },
+                      "parameters": [
+                        "Paths[Object.Behavior::PathIndex(OriginEdge, TargetEdge)].PathName"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "expressionType": {
+                "type": "string"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "TiledRoad::RoadTile",
+                  "type": "behavior"
+                },
+                {
+                  "description": "Origin edge",
+                  "name": "OriginEdge",
+                  "type": "expression"
+                },
+                {
+                  "description": "Target edge",
+                  "name": "TargetEdge",
+                  "type": "expression"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "Path index",
+              "functionType": "Expression",
+              "name": "PathIndex",
+              "private": true,
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnNumber"
+                      },
+                      "parameters": [
+                        "mod(Roads[Shape][Object.Behavior::UnrotatedEdge(OriginEdge)].PathsByEdge[Object.Behavior::UnrotatedEdge(TargetEdge)] + 3 * Object.Behavior::DirectionDelta(), 12)"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "TiledRoad::RoadTile",
+                  "type": "behavior"
+                },
+                {
+                  "description": "Origin edge",
+                  "name": "OriginEdge",
+                  "type": "expression"
+                },
+                {
+                  "description": "Target edge",
+                  "name": "TargetEdge",
+                  "type": "expression"
                 }
               ],
               "objectGroups": []
@@ -38674,6 +38786,73 @@
                   "description": "Value",
                   "name": "Value",
                   "type": "expression"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "Is crossroad",
+              "functionType": "Condition",
+              "name": "IsCrossroad",
+              "sentence": "_PARAM0_ is a crossroad",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "TiledRoad::RoadTile::PropertyShapeName"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Behavior",
+                            "=",
+                            "\"Crossroads\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "TiledRoad::RoadTile::PropertyShapeName"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Behavior",
+                            "=",
+                            "\"T-Shaped crossroads\""
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnBoolean"
+                      },
+                      "parameters": [
+                        "True"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "TiledRoad::RoadTile",
+                  "type": "behavior"
                 }
               ],
               "objectGroups": []
@@ -39417,86 +39596,43 @@
               ],
               "events": [
                 {
+                  "disabled": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TrafficCar::TrafficCar::SetPropertyNextCarDistance"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "1000"
+                      ]
+                    }
+                  ]
+                },
+                {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "value": "ObjectStack::Contains"
+                        "value": "TrafficCar::TrafficCar::PropertyNextCarDistance"
                       },
                       "parameters": [
-                        "",
-                        "Road",
-                        "ObjectStack",
                         "Object",
-                        "0"
+                        "Behavior",
+                        "<",
+                        "150"
                       ]
                     }
                   ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "CellX",
-                        "=",
-                        "RoadGrid.ObjectRectangularGrid::CellX(Road)"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "CellY",
-                        "=",
-                        "RoadGrid.ObjectRectangularGrid::CellY(Road)"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "TargetEdge",
-                        "=",
-                        "Object.Behavior::PropertyRoadTargetEdge()"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "PositionOnPath",
-                        "=",
-                        "Object.SpeedPathMovement::PositionOnPath()"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "PositionMin",
-                        "=",
-                        "123456890"
-                      ]
-                    }
-                  ],
+                  "actions": [],
                   "events": [
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
-                        {
-                          "type": {
-                            "value": "AjoutObjConcern"
-                          },
-                          "parameters": [
-                            "",
-                            "Object"
-                          ]
-                        },
                         {
                           "type": {
                             "value": "ObjectStack::Contains"
@@ -39508,46 +39644,168 @@
                             "Object",
                             "0"
                           ]
-                        },
+                        }
+                      ],
+                      "actions": [
                         {
                           "type": {
-                            "value": "TrafficCar::TrafficCar::PropertyRoadTargetEdge"
+                            "value": "SetNumberVariable"
                           },
                           "parameters": [
-                            "Object",
-                            "Behavior",
+                            "CellX",
                             "=",
-                            "TargetEdge"
+                            "RoadGrid.ObjectRectangularGrid::CellX(Road)"
                           ]
                         },
                         {
                           "type": {
-                            "value": "CurvedMovement::SpeedPathMovement::PositionOnPath"
+                            "value": "SetNumberVariable"
                           },
                           "parameters": [
-                            "Object",
-                            "SpeedPathMovement",
-                            ">",
+                            "CellY",
+                            "=",
+                            "RoadGrid.ObjectRectangularGrid::CellY(Road)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "TargetEdge",
+                            "=",
+                            "Object.Behavior::PropertyRoadTargetEdge()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
                             "PositionOnPath",
-                            ""
+                            "=",
+                            "Object.SpeedPathMovement::PositionOnPath()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "PathLength",
+                            "=",
+                            "Object.SpeedPathMovement::PathLength()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "PositionMin",
+                            "=",
+                            "123456890"
                           ]
                         }
                       ],
-                      "actions": [],
                       "events": [
                         {
-                          "type": "BuiltinCommonInstructions::ForEach",
-                          "object": "Object",
+                          "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
                           "actions": [
                             {
                               "type": {
-                                "value": "SetNumberVariable"
+                                "value": "DebuggerTools::ConsoleLog"
                               },
                               "parameters": [
-                                "PositionMin",
+                                "\"Check: \" + CellX + \" \" + CellY",
+                                "\"info\"",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "AjoutObjConcern"
+                              },
+                              "parameters": [
+                                "",
+                                "Object"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ObjectStack::Contains"
+                              },
+                              "parameters": [
+                                "",
+                                "Road",
+                                "ObjectStack",
+                                "Object",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "TrafficCar::TrafficCar::PropertyRoadTargetEdge"
+                              },
+                              "parameters": [
+                                "Object",
+                                "Behavior",
                                 "=",
-                                "min(PositionMin, Object.SpeedPathMovement::PositionOnPath())"
+                                "TargetEdge"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "CurvedMovement::SpeedPathMovement::PositionOnPath"
+                              },
+                              "parameters": [
+                                "Object",
+                                "SpeedPathMovement",
+                                ">",
+                                "PositionOnPath",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::ForEach",
+                              "object": "Object",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberVariable"
+                                  },
+                                  "parameters": [
+                                    "PositionMin",
+                                    "=",
+                                    "min(PositionMin, Object.SpeedPathMovement::PositionOnPath())"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "DebuggerTools::ConsoleLog"
+                                  },
+                                  "parameters": [
+                                    "\"PositionMin: \" + PositionMin",
+                                    "\"info\"",
+                                    ""
+                                  ]
+                                }
                               ]
                             }
                           ]
@@ -39574,7 +39832,7 @@
                               "parameters": [
                                 "NextCarDistance",
                                 "+",
-                                "PositionMin"
+                                "PositionMin - PositionOnPath"
                               ]
                             }
                           ]
@@ -39601,235 +39859,479 @@
                               "parameters": [
                                 "NextCarDistance",
                                 "+",
-                                ""
+                                "PathLength - PositionOnPath"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "CellX",
+                                "+",
+                                "TiledRoad::EdgeDeltaX(TargetEdge)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "CellY",
+                                "+",
+                                "TiledRoad::EdgeDeltaY(TargetEdge)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "OriginEdge",
+                                "+",
+                                "TiledRoad::OppositeEdge(TargetEdge)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "TargetEdge",
+                                "=",
+                                "Road.RoadTile::RandomTargetEdgeFrom(OriginEdge)"
                               ]
                             }
                           ]
-                        }
-                      ]
-                    },
-                    {
-                      "infiniteLoopWarning": true,
-                      "type": "BuiltinCommonInstructions::While",
-                      "whileConditions": [
+                        },
                         {
-                          "type": {
-                            "value": "NumberVariable"
-                          },
-                          "parameters": [
-                            "PositionMin",
-                            "=",
-                            "123456890"
+                          "infiniteLoopWarning": true,
+                          "type": "BuiltinCommonInstructions::While",
+                          "whileConditions": [
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "PositionMin",
+                                "=",
+                                "123456890"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "NextCarDistance",
+                                "<",
+                                "1000"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "Iteration",
+                                "<",
+                                "100"
+                              ]
+                            }
+                          ],
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "Iteration",
+                                "+",
+                                "1"
+                              ]
+                            }
+                          ],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "DebuggerTools::ConsoleLog"
+                                  },
+                                  "parameters": [
+                                    "\"Check: \" + CellX + \" \" + CellY",
+                                    "\"info\"",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "AjoutObjConcern"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Object"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "AjoutObjConcern"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Road"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ObjectRectangularGrid::ContainsAt"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "RoadGrid",
+                                    "ObjectRectangularGrid",
+                                    "Road",
+                                    "CellX",
+                                    "CellY",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [],
+                              "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "TiledRoad::RoadTile::IsCrossroad"
+                                      },
+                                      "parameters": [
+                                        "Road",
+                                        "RoadTile",
+                                        ""
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "SetNumberVariable"
+                                      },
+                                      "parameters": [
+                                        "PositionMin",
+                                        "=",
+                                        "0"
+                                      ]
+                                    }
+                                  ],
+                                  "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "ObjectStack::ObjectStack::Height"
+                                          },
+                                          "parameters": [
+                                            "Road",
+                                            "ObjectStack",
+                                            "=",
+                                            "0",
+                                            ""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "NumberVariable"
+                                          },
+                                          "parameters": [
+                                            "Iteration",
+                                            "=",
+                                            "1"
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "SetNumberVariable"
+                                          },
+                                          "parameters": [
+                                            "NextCarDistance",
+                                            "=",
+                                            "150"
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "inverted": true,
+                                        "value": "TiledRoad::RoadTile::IsCrossroad"
+                                      },
+                                      "parameters": [
+                                        "Road",
+                                        "RoadTile",
+                                        ""
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [],
+                                  "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "ObjectStack::Contains"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            "Road",
+                                            "ObjectStack",
+                                            "Object",
+                                            "0"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "TrafficCar::TrafficCar::PropertyRoadTargetEdge"
+                                          },
+                                          "parameters": [
+                                            "Object",
+                                            "Behavior",
+                                            "=",
+                                            "TargetEdge"
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [],
+                                      "events": [
+                                        {
+                                          "type": "BuiltinCommonInstructions::ForEach",
+                                          "object": "Object",
+                                          "conditions": [],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetNumberVariable"
+                                              },
+                                              "parameters": [
+                                                "PositionMin",
+                                                "=",
+                                                "min(PositionMin, Object.SpeedPathMovement::PositionOnPath())"
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "NumberVariable"
+                                          },
+                                          "parameters": [
+                                            "PositionMin",
+                                            "!=",
+                                            "123456890"
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "SetNumberVariable"
+                                          },
+                                          "parameters": [
+                                            "NextCarDistance",
+                                            "+",
+                                            "PositionMin"
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "NumberVariable"
+                                          },
+                                          "parameters": [
+                                            "PositionMin",
+                                            "=",
+                                            "123456890"
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "SetNumberVariable"
+                                          },
+                                          "parameters": [
+                                            "NextCarDistance",
+                                            "+",
+                                            "CurvedMovement::PathLength(Road.RoadTile::PathName(OriginEdge, TargetEdge))"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "SetNumberVariable"
+                                          },
+                                          "parameters": [
+                                            "CellX",
+                                            "+",
+                                            "TiledRoad::EdgeDeltaX(TargetEdge)"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "SetNumberVariable"
+                                          },
+                                          "parameters": [
+                                            "CellY",
+                                            "+",
+                                            "TiledRoad::EdgeDeltaY(TargetEdge)"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "SetNumberVariable"
+                                          },
+                                          "parameters": [
+                                            "OriginEdge",
+                                            "+",
+                                            "TiledRoad::OppositeEdge(TargetEdge)"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "SetNumberVariable"
+                                          },
+                                          "parameters": [
+                                            "TargetEdge",
+                                            "=",
+                                            "Road.RoadTile::RandomTargetEdgeFrom(OriginEdge)"
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
                           ]
-                        }
-                      ],
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberVariable"
-                          },
-                          "parameters": [
-                            "PositionMin",
-                            "=",
-                            "123456890"
-                          ]
-                        }
-                      ],
-                      "events": [
+                        },
                         {
                           "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
+                          "conditions": [],
+                          "actions": [
                             {
                               "type": {
-                                "value": "AjoutObjConcern"
-                              },
-                              "parameters": [
-                                "",
-                                "Object"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "AjoutObjConcern"
-                              },
-                              "parameters": [
-                                "",
-                                "Road"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ObjectRectangularGrid::ContainsAt"
-                              },
-                              "parameters": [
-                                "",
-                                "RoadGrid",
-                                "ObjectRectangularGrid",
-                                "Road",
-                                "CellX",
-                                "CellY",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ObjectStack::Contains"
-                              },
-                              "parameters": [
-                                "",
-                                "Road",
-                                "ObjectStack",
-                                "Object",
-                                "0"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "TrafficCar::TrafficCar::PropertyRoadTargetEdge"
+                                "value": "TrafficCar::TrafficCar::SetPropertyNextCarDistance"
                               },
                               "parameters": [
                                 "Object",
                                 "Behavior",
                                 "=",
-                                "TargetEdge"
+                                "NextCarDistance"
                               ]
                             }
                           ],
-                          "actions": [],
                           "events": [
                             {
-                              "type": "BuiltinCommonInstructions::ForEach",
-                              "object": "Object",
+                              "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [],
                               "actions": [
                                 {
                                   "type": {
-                                    "value": "SetNumberVariable"
+                                    "value": "DebuggerTools::ConsoleLog"
                                   },
                                   "parameters": [
-                                    "PositionMin",
-                                    "=",
-                                    "min(PositionMin, Object.SpeedPathMovement::PositionOnPath())"
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "NumberVariable"
-                                  },
-                                  "parameters": [
-                                    "PositionMin",
-                                    "!=",
-                                    "123456890"
-                                  ]
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "SetNumberVariable"
-                                  },
-                                  "parameters": [
-                                    "NextCarDistance",
-                                    "+",
-                                    "PositionMin"
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "NumberVariable"
-                                  },
-                                  "parameters": [
-                                    "PositionMin",
-                                    "=",
-                                    "123456890"
-                                  ]
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "SetNumberVariable"
-                                  },
-                                  "parameters": [
-                                    "NextCarDistance",
-                                    "+",
+                                    "\"NextCarDistance: \" + NextCarDistance",
+                                    "\"info\"",
                                     ""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "SetNumberVariable"
-                                  },
-                                  "parameters": [
-                                    "CellX",
-                                    "+",
-                                    "TiledRoad::EdgeDeltaX(TargetEdge)"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "SetNumberVariable"
-                                  },
-                                  "parameters": [
-                                    "CellY",
-                                    "+",
-                                    "TiledRoad::EdgeDeltaY(TargetEdge)"
                                   ]
                                 }
                               ]
                             }
                           ]
                         }
+                      ],
+                      "variables": [
+                        {
+                          "folded": true,
+                          "name": "CellX",
+                          "type": "number",
+                          "value": 0
+                        },
+                        {
+                          "folded": true,
+                          "name": "CellY",
+                          "type": "number",
+                          "value": 0
+                        },
+                        {
+                          "folded": true,
+                          "name": "OriginEdge",
+                          "type": "number",
+                          "value": 0
+                        },
+                        {
+                          "folded": true,
+                          "name": "TargetEdge",
+                          "type": "number",
+                          "value": 0
+                        },
+                        {
+                          "folded": true,
+                          "name": "PositionOnPath",
+                          "type": "number",
+                          "value": 0
+                        },
+                        {
+                          "folded": true,
+                          "name": "NextCarDistance",
+                          "type": "number",
+                          "value": 0
+                        },
+                        {
+                          "folded": true,
+                          "name": "PositionMin",
+                          "type": "number",
+                          "value": 0
+                        },
+                        {
+                          "folded": true,
+                          "name": "PathLength",
+                          "type": "number",
+                          "value": 0
+                        },
+                        {
+                          "folded": true,
+                          "name": "Iteration",
+                          "type": "number",
+                          "value": 0
+                        }
                       ]
-                    }
-                  ],
-                  "variables": [
-                    {
-                      "folded": true,
-                      "name": "CellX",
-                      "type": "number",
-                      "value": 0
-                    },
-                    {
-                      "folded": true,
-                      "name": "CellY",
-                      "type": "number",
-                      "value": 0
-                    },
-                    {
-                      "folded": true,
-                      "name": "TargetEdge",
-                      "type": "number",
-                      "value": 0
-                    },
-                    {
-                      "folded": true,
-                      "name": "PositionOnPath",
-                      "type": "number",
-                      "value": 0
-                    },
-                    {
-                      "folded": true,
-                      "name": "NextCarDistance",
-                      "type": "number",
-                      "value": 0
-                    },
-                    {
-                      "folded": true,
-                      "name": "PositionMin",
-                      "type": "number",
-                      "value": 0
                     }
                   ]
                 }
@@ -39893,6 +40395,179 @@
           "name": "TrafficCar",
           "objectType": "",
           "eventsFunctions": [
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "doStepPreEvents",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "TrafficCar::TrafficCar::PropertyNextCarDistance"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        ">=",
+                        "150"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "CurvedMovement::SpeedPathMovement::AccelarateAt"
+                      },
+                      "parameters": [
+                        "Object",
+                        "SpeedPathMovement",
+                        "SpeedMax",
+                        "Acceleration",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "TrafficCar::TrafficCar::PropertyNextCarDistance"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "<",
+                        "150"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "CurvedMovement::SpeedPathMovement::AccelarateAt"
+                      },
+                      "parameters": [
+                        "Object",
+                        "SpeedPathMovement",
+                        "0",
+                        "-Deceleration",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "disabled": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "DebuggerTools::ConsoleLog"
+                      },
+                      "parameters": [
+                        "\"NextCarDistance: \" + NextCarDistance",
+                        "\"info\"",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TrafficCar::TrafficCar::SetPropertyNextCarDistance"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "-",
+                        "max(0, Object.SpeedPathMovement::PositionOnPath() - OldPathPosition)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TrafficCar::TrafficCar::SetPropertyOldPathPosition"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "Object.SpeedPathMovement::PositionOnPath()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "CurvedMovement::SpeedPathMovement::HasReachedAnEnd"
+                      },
+                      "parameters": [
+                        "Object",
+                        "SpeedPathMovement",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TrafficCar::TrafficCar::SetPropertySpeed"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "Object.SpeedPathMovement::Speed()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "disabled": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "DebuggerTools::ConsoleLog"
+                      },
+                      "parameters": [
+                        "\"Speed: \" + Speed",
+                        "\"info\"",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "TrafficCar::TrafficCar",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
             {
               "fullName": "Switch of road",
               "functionType": "Action",
@@ -40019,6 +40694,17 @@
                             "=",
                             "SpeedMax",
                             ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "TrafficCar::TrafficCar::SetPropertyOldPathPosition"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Behavior",
+                            "=",
+                            "Object.SpeedPathMovement::PositionOnPath()"
                           ]
                         }
                       ],
@@ -40219,13 +40905,24 @@
                             },
                             {
                               "type": {
+                                "value": "TrafficCar::TrafficCar::SetPropertyOldPathPosition"
+                              },
+                              "parameters": [
+                                "Object",
+                                "Behavior",
+                                "=",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
                                 "value": "CurvedMovement::SpeedPathMovement::SetSpeed"
                               },
                               "parameters": [
                                 "Object",
                                 "SpeedPathMovement",
                                 "=",
-                                "SpeedMax",
+                                "Speed",
                                 ""
                               ]
                             }
@@ -40332,6 +41029,26 @@
               "name": "SpeedMax"
             },
             {
+              "value": "50",
+              "type": "Number",
+              "unit": "PixelAcceleration",
+              "label": "Acceleration",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "name": "Acceleration"
+            },
+            {
+              "value": "100",
+              "type": "Number",
+              "unit": "PixelAcceleration",
+              "label": "Deceleration",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "name": "Deceleration"
+            },
+            {
               "value": "",
               "type": "Number",
               "unit": "Dimensionless",
@@ -40362,6 +41079,39 @@
               "extraInformation": [],
               "hidden": true,
               "name": "HasJustBeenCreated"
+            },
+            {
+              "value": "0",
+              "type": "Number",
+              "unit": "Pixel",
+              "label": "",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": true,
+              "name": "NextCarDistance"
+            },
+            {
+              "value": "0",
+              "type": "Number",
+              "unit": "Pixel",
+              "label": "",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": true,
+              "name": "OldPathPosition"
+            },
+            {
+              "value": "0",
+              "type": "Number",
+              "unit": "PixelSpeed",
+              "label": "",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": true,
+              "name": "Speed"
             }
           ],
           "sharedPropertyDescriptors": []
@@ -43051,7 +43801,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.20220707303602234,
+        "zoomFactor": 0.3111974942445259,
         "windowMask": false
       }
     }
