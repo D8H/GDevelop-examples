@@ -845,6 +845,12 @@
       ],
       "objects": [
         {
+          "areaMaxX": 64,
+          "areaMaxY": 64,
+          "areaMaxZ": 64,
+          "areaMinX": 0,
+          "areaMinY": 0,
+          "areaMinZ": 0,
           "assetStoreId": "",
           "name": "Dust",
           "type": "ParticleEmitter3D::ParticleEmitter3D",
@@ -929,7 +935,38 @@
                 }
               ]
             }
-          }
+          },
+          "instances": [],
+          "layers": [
+            {
+              "ambientLightColorB": 200,
+              "ambientLightColorG": 200,
+              "ambientLightColorR": 200,
+              "camera3DFarPlaneDistance": 10000,
+              "camera3DFieldOfView": 45,
+              "camera3DNearPlaneDistance": 3,
+              "cameraType": "",
+              "followBaseLayerCamera": false,
+              "isLightingLayer": false,
+              "isLocked": false,
+              "name": "",
+              "renderingType": "",
+              "visibility": true,
+              "cameras": [
+                {
+                  "defaultSize": true,
+                  "defaultViewport": true,
+                  "height": 0,
+                  "viewportBottom": 1,
+                  "viewportLeft": 0,
+                  "viewportRight": 1,
+                  "viewportTop": 0,
+                  "width": 0
+                }
+              ],
+              "effects": []
+            }
+          ]
         },
         {
           "assetStoreId": "",
@@ -1096,6 +1133,12 @@
           }
         },
         {
+          "areaMaxX": 64,
+          "areaMaxY": 64,
+          "areaMaxZ": 64,
+          "areaMinX": 0,
+          "areaMinY": 0,
+          "areaMinZ": 0,
           "assetStoreId": "112c69f62e03fa6df7716cc6b8f174c17857fbf71c8d3fffd16fa8fdbfa49bf1",
           "name": "SteeringJoystick",
           "type": "SpriteMultitouchJoystick::SpriteMultitouchJoystick",
@@ -1176,9 +1219,46 @@
                 }
               ]
             }
-          }
+          },
+          "instances": [],
+          "layers": [
+            {
+              "ambientLightColorB": 200,
+              "ambientLightColorG": 200,
+              "ambientLightColorR": 200,
+              "camera3DFarPlaneDistance": 10000,
+              "camera3DFieldOfView": 45,
+              "camera3DNearPlaneDistance": 3,
+              "cameraType": "",
+              "followBaseLayerCamera": false,
+              "isLightingLayer": false,
+              "isLocked": false,
+              "name": "",
+              "renderingType": "",
+              "visibility": true,
+              "cameras": [
+                {
+                  "defaultSize": true,
+                  "defaultViewport": true,
+                  "height": 0,
+                  "viewportBottom": 1,
+                  "viewportLeft": 0,
+                  "viewportRight": 1,
+                  "viewportTop": 0,
+                  "width": 0
+                }
+              ],
+              "effects": []
+            }
+          ]
         },
         {
+          "areaMaxX": 64,
+          "areaMaxY": 64,
+          "areaMaxZ": 64,
+          "areaMinX": 0,
+          "areaMinY": 0,
+          "areaMinZ": 0,
           "assetStoreId": "112c69f62e03fa6df7716cc6b8f174c17857fbf71c8d3fffd16fa8fdbfa49bf1",
           "name": "PedalJoystick",
           "type": "SpriteMultitouchJoystick::SpriteMultitouchJoystick",
@@ -1270,7 +1350,38 @@
                 }
               ]
             }
-          }
+          },
+          "instances": [],
+          "layers": [
+            {
+              "ambientLightColorB": 200,
+              "ambientLightColorG": 200,
+              "ambientLightColorR": 200,
+              "camera3DFarPlaneDistance": 10000,
+              "camera3DFieldOfView": 45,
+              "camera3DNearPlaneDistance": 3,
+              "cameraType": "",
+              "followBaseLayerCamera": false,
+              "isLightingLayer": false,
+              "isLocked": false,
+              "name": "",
+              "renderingType": "",
+              "visibility": true,
+              "cameras": [
+                {
+                  "defaultSize": true,
+                  "defaultViewport": true,
+                  "height": 0,
+                  "viewportBottom": 1,
+                  "viewportLeft": 0,
+                  "viewportRight": 1,
+                  "viewportTop": 0,
+                  "width": 0
+                }
+              ],
+              "effects": []
+            }
+          ]
         },
         {
           "assetStoreId": "cddab55130dbd5a0b36f763200e876fb514aa608e1b057a136ebdb5f80006e2c",
@@ -1280,6 +1391,12 @@
             {
               "folded": true,
               "name": "Force",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "folded": true,
+              "name": "Direction",
               "type": "number",
               "value": 0
             }
@@ -1302,8 +1419,8 @@
               "vertices": [],
               "density": 1,
               "friction": 2,
-              "restitution": 1.5,
-              "linearDamping": 4,
+              "restitution": 0.5,
+              "linearDamping": 0,
               "angularDamping": 20,
               "gravityScale": 0,
               "layers": 1,
@@ -1752,6 +1869,12 @@
           }
         },
         {
+          "areaMaxX": 64,
+          "areaMaxY": 64,
+          "areaMaxZ": 64,
+          "areaMinX": 0,
+          "areaMinY": 0,
+          "areaMinZ": 0,
           "assetStoreId": "",
           "name": "CoinPickUp",
           "type": "ParticleEmitter3D::ParticleEmitter3D",
@@ -1831,7 +1954,38 @@
                 }
               ]
             }
-          }
+          },
+          "instances": [],
+          "layers": [
+            {
+              "ambientLightColorB": 200,
+              "ambientLightColorG": 200,
+              "ambientLightColorR": 200,
+              "camera3DFarPlaneDistance": 10000,
+              "camera3DFieldOfView": 45,
+              "camera3DNearPlaneDistance": 3,
+              "cameraType": "",
+              "followBaseLayerCamera": false,
+              "isLightingLayer": false,
+              "isLocked": false,
+              "name": "",
+              "renderingType": "",
+              "visibility": true,
+              "cameras": [
+                {
+                  "defaultSize": true,
+                  "defaultViewport": true,
+                  "height": 0,
+                  "viewportBottom": 1,
+                  "viewportLeft": 0,
+                  "viewportRight": 1,
+                  "viewportTop": 0,
+                  "width": 0
+                }
+              ],
+              "effects": []
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -2246,7 +2400,7 @@
                             "Player",
                             "Force",
                             "=",
-                            "-4"
+                            "-2"
                           ]
                         }
                       ]
@@ -2273,7 +2427,7 @@
                             "Player",
                             "Force",
                             "=",
-                            "6"
+                            "3"
                           ]
                         }
                       ]
@@ -2335,141 +2489,419 @@
                       ]
                     },
                     {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
+                      "colorB": 228,
+                      "colorG": 176,
+                      "colorR": 74,
+                      "creationTime": 0,
+                      "disabled": true,
+                      "name": "",
+                      "source": "",
+                      "type": "BuiltinCommonInstructions::Group",
+                      "events": [
                         {
-                          "type": {
-                            "value": "Physics2::ApplyPolarForce"
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
                           },
-                          "parameters": [
-                            "Player",
-                            "Physics2",
-                            "Player.Angle()",
-                            "Player.Force",
-                            "Player.CenterX()",
-                            "Player.CenterY()"
+                          "comment": "When going backward, a car go back in its trail without direction change."
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "KeyPressed"
+                              },
+                              "parameters": [
+                                "",
+                                "Right"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Physics2::ApplyTorque"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Physics2",
+                                "0.002 * Player.Physics2::LinearVelocity() * sign(Player.Force)"
+                              ]
+                            }
                           ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "When going backward, a car go back in its trail without direction change."
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
+                        },
                         {
-                          "type": {
-                            "value": "KeyPressed"
-                          },
-                          "parameters": [
-                            "",
-                            "Right"
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "KeyPressed"
+                              },
+                              "parameters": [
+                                "",
+                                "Left"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Physics2::ApplyTorque"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Physics2",
+                                "-0.002 * Player.Physics2::LinearVelocity() * sign(Player.Force)"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsDirectionPushed4Way"
+                              },
+                              "parameters": [
+                                "SteeringJoystick",
+                                "\"Right\"",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Physics2::ApplyTorque"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Physics2",
+                                "0.002 * Player.Physics2::LinearVelocity() * sign(Player.Force) * SteeringJoystick.StickForce()"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsDirectionPushed4Way"
+                              },
+                              "parameters": [
+                                "SteeringJoystick",
+                                "\"Left\"",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Physics2::ApplyTorque"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Physics2",
+                                "-0.002 * Player.Physics2::LinearVelocity() * sign(Player.Force) * SteeringJoystick.StickForce()"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Physics2::ApplyPolarForce"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Physics2",
+                                "Player.Angle()",
+                                "Player.Force",
+                                "Player.CenterX() + XFromAngleAndDistance(Player.Angle(), Player.Width() / 2)",
+                                "Player.CenterY() + YFromAngleAndDistance(Player.Angle(), Player.Width() / 2)"
+                              ]
+                            }
                           ]
                         }
                       ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Physics2::ApplyTorque"
-                          },
-                          "parameters": [
-                            "Player",
-                            "Physics2",
-                            "0.002 * Player.Physics2::LinearVelocity() * sign(Player.Force)"
-                          ]
-                        }
-                      ]
+                      "parameters": []
                     },
                     {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
+                      "colorB": 228,
+                      "colorG": 176,
+                      "colorR": 74,
+                      "creationTime": 0,
+                      "name": "",
+                      "source": "",
+                      "type": "BuiltinCommonInstructions::Group",
+                      "events": [
                         {
-                          "type": {
-                            "value": "KeyPressed"
-                          },
-                          "parameters": [
-                            "",
-                            "Left"
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": true,
+                                "value": "KeyPressed"
+                              },
+                              "parameters": [
+                                "",
+                                "Right"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "inverted": true,
+                                "value": "KeyPressed"
+                              },
+                              "parameters": [
+                                "",
+                                "Left"
+                              ]
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "Direction",
+                                    "<",
+                                    "0"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "Direction",
+                                    "=",
+                                    "min(0, Player.Direction + 120 * TimeDelta())"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "Direction",
+                                    ">",
+                                    "0"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "Direction",
+                                    "=",
+                                    "max(0, Player.Direction - 120 * TimeDelta())"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "KeyPressed"
+                              },
+                              "parameters": [
+                                "",
+                                "Right"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Direction",
+                                "=",
+                                "min(1, Player.Direction + 120 * TimeDelta())"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "KeyPressed"
+                              },
+                              "parameters": [
+                                "",
+                                "Left"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Direction",
+                                "=",
+                                "max(-1, Player.Direction - 120 * TimeDelta())"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "disabled": true,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsDirectionPushed4Way"
+                              },
+                              "parameters": [
+                                "SteeringJoystick",
+                                "\"Right\"",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Physics2::ApplyTorque"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Physics2",
+                                "SteeringJoystick.StickForce()"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "disabled": true,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsDirectionPushed4Way"
+                              },
+                              "parameters": [
+                                "SteeringJoystick",
+                                "\"Left\"",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Physics2::ApplyTorque"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Physics2",
+                                "-SteeringJoystick.StickForce()"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Physics2::ApplyPolarForce"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Physics2",
+                                "Player.Angle() + Player.Direction * 60",
+                                "Player.Force",
+                                "Player.CenterX() + XFromAngleAndDistance(Player.Angle(), Player.Width() / 2)",
+                                "Player.CenterY() + YFromAngleAndDistance(Player.Angle(), Player.Width() / 2)"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Physics2::ApplyPolarForce"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Physics2",
+                                "Player.Physics2::LinearVelocityAngle()",
+                                "- Player.Physics2::LinearVelocity() * 0.003 * abs(sin(ToRad(Player.Physics2::LinearVelocityAngle() - (Player.Angle() + Player.Direction * 60))))",
+                                "Player.CenterX() + XFromAngleAndDistance(Player.Angle(), Player.Width() / 2)",
+                                "Player.CenterY() + YFromAngleAndDistance(Player.Angle(), Player.Width() / 2)"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Physics2::ApplyPolarForce"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Physics2",
+                                "Player.Physics2::LinearVelocityAngle()",
+                                "- Player.Physics2::LinearVelocity() * 0.003 * abs(sin(ToRad(Player.Physics2::LinearVelocityAngle() - Player.Angle())))",
+                                "Player.CenterX() - XFromAngleAndDistance(Player.Angle(), Player.Width() / 2)",
+                                "Player.CenterY() - YFromAngleAndDistance(Player.Angle(), Player.Width() / 2)"
+                              ]
+                            }
                           ]
                         }
                       ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Physics2::ApplyTorque"
-                          },
-                          "parameters": [
-                            "Player",
-                            "Physics2",
-                            "-0.002 * Player.Physics2::LinearVelocity() * sign(Player.Force)"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsDirectionPushed4Way"
-                          },
-                          "parameters": [
-                            "SteeringJoystick",
-                            "\"Right\"",
-                            ""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Physics2::ApplyTorque"
-                          },
-                          "parameters": [
-                            "Player",
-                            "Physics2",
-                            "0.002 * Player.Physics2::LinearVelocity() * sign(Player.Force) * SteeringJoystick.StickForce()"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsDirectionPushed4Way"
-                          },
-                          "parameters": [
-                            "SteeringJoystick",
-                            "\"Left\"",
-                            ""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Physics2::ApplyTorque"
-                          },
-                          "parameters": [
-                            "Player",
-                            "Physics2",
-                            "-0.002 * Player.Physics2::LinearVelocity() * sign(Player.Force) * SteeringJoystick.StickForce()"
-                          ]
-                        }
-                      ]
+                      "parameters": []
                     },
                     {
                       "type": "BuiltinCommonInstructions::Comment",
@@ -2484,6 +2916,7 @@
                       "comment": "If on/off road, increase/decrease linear damping."
                     },
                     {
+                      "disabled": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [],
                       "actions": [
@@ -2501,6 +2934,7 @@
                       ]
                     },
                     {
+                      "disabled": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -3595,6 +4029,12 @@
           }
         },
         {
+          "areaMaxX": 64,
+          "areaMaxY": 64,
+          "areaMaxZ": 64,
+          "areaMinX": 0,
+          "areaMinY": 0,
+          "areaMinZ": 0,
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "SubmitButton",
           "type": "PanelSpriteButton::PanelSpriteButton",
@@ -3681,9 +4121,46 @@
               "topMargin": 32,
               "width": 256
             }
-          }
+          },
+          "instances": [],
+          "layers": [
+            {
+              "ambientLightColorB": 200,
+              "ambientLightColorG": 200,
+              "ambientLightColorR": 200,
+              "camera3DFarPlaneDistance": 10000,
+              "camera3DFieldOfView": 45,
+              "camera3DNearPlaneDistance": 3,
+              "cameraType": "",
+              "followBaseLayerCamera": false,
+              "isLightingLayer": false,
+              "isLocked": false,
+              "name": "",
+              "renderingType": "",
+              "visibility": true,
+              "cameras": [
+                {
+                  "defaultSize": true,
+                  "defaultViewport": true,
+                  "height": 0,
+                  "viewportBottom": 1,
+                  "viewportLeft": 0,
+                  "viewportRight": 1,
+                  "viewportTop": 0,
+                  "width": 0
+                }
+              ],
+              "effects": []
+            }
+          ]
         },
         {
+          "areaMaxX": 64,
+          "areaMaxY": 64,
+          "areaMaxZ": 64,
+          "areaMinX": 0,
+          "areaMinY": 0,
+          "areaMinZ": 0,
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "RestartButton",
           "type": "PanelSpriteButton::PanelSpriteButton",
@@ -3770,7 +4247,38 @@
               "topMargin": 32,
               "width": 256
             }
-          }
+          },
+          "instances": [],
+          "layers": [
+            {
+              "ambientLightColorB": 200,
+              "ambientLightColorG": 200,
+              "ambientLightColorR": 200,
+              "camera3DFarPlaneDistance": 10000,
+              "camera3DFieldOfView": 45,
+              "camera3DNearPlaneDistance": 3,
+              "cameraType": "",
+              "followBaseLayerCamera": false,
+              "isLightingLayer": false,
+              "isLocked": false,
+              "name": "",
+              "renderingType": "",
+              "visibility": true,
+              "cameras": [
+                {
+                  "defaultSize": true,
+                  "defaultViewport": true,
+                  "height": 0,
+                  "viewportBottom": 1,
+                  "viewportLeft": 0,
+                  "viewportRight": 1,
+                  "viewportTop": 0,
+                  "width": 0
+                }
+              ],
+              "effects": []
+            }
+          ]
         },
         {
           "assetStoreId": "",
@@ -13081,6 +13589,12 @@
       "eventsBasedBehaviors": [],
       "eventsBasedObjects": [
         {
+          "areaMaxX": 64,
+          "areaMaxY": 64,
+          "areaMaxZ": 64,
+          "areaMinX": 0,
+          "areaMinY": 0,
+          "areaMinZ": 0,
           "defaultName": "ParticleEmitter",
           "description": "Display a large number of particles to create visual effects.",
           "fullName": "3D particle emitter",
@@ -16061,7 +16575,39 @@
                 "objectName": "Particle"
               }
             ]
-          }
+          },
+          "objectsGroups": [],
+          "layers": [
+            {
+              "ambientLightColorB": 200,
+              "ambientLightColorG": 200,
+              "ambientLightColorR": 200,
+              "camera3DFarPlaneDistance": 10000,
+              "camera3DFieldOfView": 45,
+              "camera3DNearPlaneDistance": 3,
+              "cameraType": "",
+              "followBaseLayerCamera": false,
+              "isLightingLayer": false,
+              "isLocked": false,
+              "name": "",
+              "renderingType": "",
+              "visibility": true,
+              "cameras": [
+                {
+                  "defaultSize": true,
+                  "defaultViewport": true,
+                  "height": 0,
+                  "viewportBottom": 1,
+                  "viewportLeft": 0,
+                  "viewportRight": 1,
+                  "viewportTop": 0,
+                  "width": 0
+                }
+              ],
+              "effects": []
+            }
+          ],
+          "instances": []
         }
       ]
     },
@@ -17396,6 +17942,12 @@
       ],
       "eventsBasedObjects": [
         {
+          "areaMaxX": 64,
+          "areaMaxY": 64,
+          "areaMaxZ": 64,
+          "areaMinX": 0,
+          "areaMinY": 0,
+          "areaMinZ": 0,
           "defaultName": "Button",
           "description": "A button that can be customized.",
           "fullName": "Button (panel sprite)",
@@ -18876,7 +19428,39 @@
                 "objectName": "Pressed"
               }
             ]
-          }
+          },
+          "objectsGroups": [],
+          "layers": [
+            {
+              "ambientLightColorB": 200,
+              "ambientLightColorG": 200,
+              "ambientLightColorR": 200,
+              "camera3DFarPlaneDistance": 10000,
+              "camera3DFieldOfView": 45,
+              "camera3DNearPlaneDistance": 3,
+              "cameraType": "",
+              "followBaseLayerCamera": false,
+              "isLightingLayer": false,
+              "isLocked": false,
+              "name": "",
+              "renderingType": "",
+              "visibility": true,
+              "cameras": [
+                {
+                  "defaultSize": true,
+                  "defaultViewport": true,
+                  "height": 0,
+                  "viewportBottom": 1,
+                  "viewportLeft": 0,
+                  "viewportRight": 1,
+                  "viewportTop": 0,
+                  "width": 0
+                }
+              ],
+              "effects": []
+            }
+          ],
+          "instances": []
         }
       ]
     },
@@ -25792,6 +26376,12 @@
       ],
       "eventsBasedObjects": [
         {
+          "areaMaxX": 64,
+          "areaMaxY": 64,
+          "areaMaxZ": 64,
+          "areaMinX": 0,
+          "areaMinY": 0,
+          "areaMinZ": 0,
           "defaultName": "Joystick",
           "description": "Joystick for touchscreens.",
           "fullName": "Multitouch Joystick",
@@ -26826,7 +27416,39 @@
                 "objectName": "Border"
               }
             ]
-          }
+          },
+          "objectsGroups": [],
+          "layers": [
+            {
+              "ambientLightColorB": 200,
+              "ambientLightColorG": 200,
+              "ambientLightColorR": 200,
+              "camera3DFarPlaneDistance": 10000,
+              "camera3DFieldOfView": 45,
+              "camera3DNearPlaneDistance": 3,
+              "cameraType": "",
+              "followBaseLayerCamera": false,
+              "isLightingLayer": false,
+              "isLocked": false,
+              "name": "",
+              "renderingType": "",
+              "visibility": true,
+              "cameras": [
+                {
+                  "defaultSize": true,
+                  "defaultViewport": true,
+                  "height": 0,
+                  "viewportBottom": 1,
+                  "viewportLeft": 0,
+                  "viewportRight": 1,
+                  "viewportTop": 0,
+                  "width": 0
+                }
+              ],
+              "effects": []
+            }
+          ],
+          "instances": []
         }
       ]
     }
