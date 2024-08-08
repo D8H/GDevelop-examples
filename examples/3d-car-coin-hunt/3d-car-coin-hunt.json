@@ -841,6 +841,22 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "Debug",
+          "name": "Debug",
+          "persistentUuid": "24cc9dba-a895-4da3-937e-e98c37fc8c52",
+          "width": 0,
+          "x": 116,
+          "y": 319,
+          "zOrder": 44,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -1420,8 +1436,8 @@
               "density": 1,
               "friction": 2,
               "restitution": 0.5,
-              "linearDamping": 0,
-              "angularDamping": 20,
+              "linearDamping": 0.5,
+              "angularDamping": 15,
               "gravityScale": 0,
               "layers": 1,
               "masks": 1
@@ -1986,6 +2002,30 @@
               "effects": []
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "Debug",
+          "type": "PrimitiveDrawing::Drawer",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "fillOpacity": 255,
+          "outlineSize": 1,
+          "outlineOpacity": 255,
+          "fillColor": {
+            "b": 239,
+            "g": 0,
+            "r": 255
+          },
+          "outlineColor": {
+            "b": 239,
+            "g": 0,
+            "r": 255
+          },
+          "absoluteCoordinates": false,
+          "clearBetweenFrames": true,
+          "antialiasing": "none"
         }
       ],
       "objectsFolderStructure": {
@@ -2076,6 +2116,9 @@
           },
           {
             "objectName": "CameraTarget"
+          },
+          {
+            "objectName": "Debug"
           }
         ]
       },
@@ -2849,15 +2892,97 @@
                           "actions": [
                             {
                               "type": {
-                                "value": "Physics2::ApplyPolarForce"
+                                "value": "PrimitiveDrawing::FillColor"
                               },
                               "parameters": [
+                                "Debug",
+                                "\"99;99;99\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PrimitiveDrawing::OutlineColor"
+                              },
+                              "parameters": [
+                                "Debug",
+                                "\"0;0;0\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PrimitiveDrawing::Rectangle"
+                              },
+                              "parameters": [
+                                "Debug",
+                                "-Player.Width() / 2",
+                                "-Player.Height() / 2",
+                                "Player.Width() / 2",
+                                "Player.Height() / 2"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PrimitiveDrawing::OutlineColor"
+                              },
+                              "parameters": [
+                                "Debug",
+                                "\"126;211;33\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Debug::DrawForce"
+                              },
+                              "parameters": [
+                                "Debug",
+                                "Player",
+                                "Physics2",
+                                "Player.Physics2::LinearVelocityAngle()",
+                                "Player.Physics2::LinearVelocity()",
+                                "Player.CenterX()",
+                                "Player.CenterY()",
+                                "Debug",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "PrimitiveDrawing::FillColor"
+                              },
+                              "parameters": [
+                                "Debug",
+                                "\"42;167;0\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PrimitiveDrawing::OutlineColor"
+                              },
+                              "parameters": [
+                                "Debug",
+                                "\"42;167;0\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Debug::AddForce"
+                              },
+                              "parameters": [
+                                "",
                                 "Player",
                                 "Physics2",
                                 "Player.Angle() + Player.Direction * 60",
                                 "Player.Force",
                                 "Player.CenterX() + XFromAngleAndDistance(Player.Angle(), Player.Width() / 2)",
-                                "Player.CenterY() + YFromAngleAndDistance(Player.Angle(), Player.Width() / 2)"
+                                "Player.CenterY() + YFromAngleAndDistance(Player.Angle(), Player.Width() / 2)",
+                                "Debug",
+                                ""
                               ]
                             }
                           ]
@@ -2868,15 +2993,36 @@
                           "actions": [
                             {
                               "type": {
-                                "value": "Physics2::ApplyPolarForce"
+                                "value": "PrimitiveDrawing::FillColor"
                               },
                               "parameters": [
+                                "Debug",
+                                "\"255;183;0\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PrimitiveDrawing::OutlineColor"
+                              },
+                              "parameters": [
+                                "Debug",
+                                "\"255;183;0\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Debug::AddForce"
+                              },
+                              "parameters": [
+                                "",
                                 "Player",
                                 "Physics2",
                                 "Player.Physics2::LinearVelocityAngle()",
                                 "- Player.Physics2::LinearVelocity() * 0.003 * abs(sin(ToRad(Player.Physics2::LinearVelocityAngle() - (Player.Angle() + Player.Direction * 60))))",
                                 "Player.CenterX() + XFromAngleAndDistance(Player.Angle(), Player.Width() / 2)",
-                                "Player.CenterY() + YFromAngleAndDistance(Player.Angle(), Player.Width() / 2)"
+                                "Player.CenterY() + YFromAngleAndDistance(Player.Angle(), Player.Width() / 2)",
+                                "Debug",
+                                ""
                               ]
                             }
                           ]
@@ -2887,15 +3033,36 @@
                           "actions": [
                             {
                               "type": {
-                                "value": "Physics2::ApplyPolarForce"
+                                "value": "PrimitiveDrawing::FillColor"
                               },
                               "parameters": [
+                                "Debug",
+                                "\"255;0;0\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PrimitiveDrawing::OutlineColor"
+                              },
+                              "parameters": [
+                                "Debug",
+                                "\"255;0;0\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Debug::AddForce"
+                              },
+                              "parameters": [
+                                "",
                                 "Player",
                                 "Physics2",
                                 "Player.Physics2::LinearVelocityAngle()",
                                 "- Player.Physics2::LinearVelocity() * 0.003 * abs(sin(ToRad(Player.Physics2::LinearVelocityAngle() - Player.Angle())))",
                                 "Player.CenterX() - XFromAngleAndDistance(Player.Angle(), Player.Width() / 2)",
-                                "Player.CenterY() - YFromAngleAndDistance(Player.Angle(), Player.Width() / 2)"
+                                "Player.CenterY() - YFromAngleAndDistance(Player.Angle(), Player.Width() / 2)",
+                                "Debug",
+                                ""
                               ]
                             }
                           ]
@@ -3737,6 +3904,39 @@
               },
               "stringParameters": {
                 "color": "0;0;0"
+              },
+              "booleanParameters": {}
+            }
+          ]
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "Debug",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Light",
+              "doubleParameters": {
+                "elevation": 45,
+                "intensity": 1,
+                "rotation": 0
+              },
+              "stringParameters": {
+                "groundColor": "64;64;64",
+                "skyColor": "255;255;255",
+                "top": "Y-"
               },
               "booleanParameters": {}
             }
@@ -27451,6 +27651,282 @@
           "instances": []
         }
       ]
+    },
+    {
+      "author": "",
+      "category": "",
+      "extensionNamespace": "",
+      "fullName": "",
+      "helpPath": "",
+      "iconUrl": "",
+      "name": "Debug",
+      "previewIconUrl": "",
+      "shortDescription": "",
+      "version": "",
+      "description": "",
+      "tags": [],
+      "authorIds": [],
+      "dependencies": [],
+      "globalVariables": [],
+      "sceneVariables": [],
+      "eventsFunctions": [
+        {
+          "fullName": "Add force with debug",
+          "functionType": "Action",
+          "name": "AddForce",
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Debug::DrawForce"
+                  },
+                  "parameters": [
+                    "",
+                    "Object",
+                    "Physics2",
+                    "Angle",
+                    "Length",
+                    "OriginX",
+                    "OriginY",
+                    "ShapePainter",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Physics2::ApplyPolarForce"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Physics2",
+                    "Angle",
+                    "Length",
+                    "OriginX",
+                    "OriginY"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "",
+              "name": "Object",
+              "type": "objectList"
+            },
+            {
+              "description": "",
+              "name": "Physics2",
+              "supplementaryInformation": "Physics2::Physics2Behavior",
+              "type": "behavior"
+            },
+            {
+              "description": "",
+              "name": "Angle",
+              "type": "expression"
+            },
+            {
+              "description": "",
+              "name": "Length",
+              "type": "expression"
+            },
+            {
+              "description": "",
+              "name": "OriginX",
+              "type": "expression"
+            },
+            {
+              "description": "",
+              "name": "OriginY",
+              "type": "expression"
+            },
+            {
+              "description": "",
+              "name": "ShapePainter",
+              "supplementaryInformation": "PrimitiveDrawing::Drawer",
+              "type": "objectList"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "fullName": "Draw force",
+          "functionType": "Action",
+          "name": "DrawForce",
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "DeltaAngle",
+                    "=",
+                    "AngleBetweenPositions(Object.CenterX(), Object.CenterY(), OriginX, OriginY) - Object.Angle()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "DeltaLength",
+                    "=",
+                    "DistanceBetweenPositions(Object.CenterX(), Object.CenterY(), OriginX, OriginY)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "LineX",
+                    "=",
+                    "XFromAngleAndDistance(DeltaAngle, DeltaLength)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "LineY",
+                    "=",
+                    "YFromAngleAndDistance(DeltaAngle, DeltaLength)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "LineAngle",
+                    "=",
+                    "Angle - Object.Angle()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "LineLength",
+                    "=",
+                    "Length * 60"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PrimitiveDrawing::LineV2"
+                  },
+                  "parameters": [
+                    "ShapePainter",
+                    "LineX",
+                    "LineY",
+                    "LineX + XFromAngleAndDistance(LineAngle, LineLength)",
+                    "LineY + YFromAngleAndDistance(LineAngle, LineLength)",
+                    "2"
+                  ]
+                }
+              ],
+              "variables": [
+                {
+                  "folded": true,
+                  "name": "LineX",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "folded": true,
+                  "name": "LineY",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "folded": true,
+                  "name": "LineAngle",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "folded": true,
+                  "name": "LineLength",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "folded": true,
+                  "name": "DeltaAngle",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "folded": true,
+                  "name": "DeltaLength",
+                  "type": "number",
+                  "value": 0
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "",
+              "name": "Object",
+              "type": "objectList"
+            },
+            {
+              "description": "",
+              "name": "Physics2",
+              "supplementaryInformation": "Physics2::Physics2Behavior",
+              "type": "behavior"
+            },
+            {
+              "description": "",
+              "name": "Angle",
+              "type": "expression"
+            },
+            {
+              "description": "",
+              "name": "Length",
+              "type": "expression"
+            },
+            {
+              "description": "",
+              "name": "OriginX",
+              "type": "expression"
+            },
+            {
+              "description": "",
+              "name": "OriginY",
+              "type": "expression"
+            },
+            {
+              "description": "",
+              "name": "ShapePainter",
+              "supplementaryInformation": "PrimitiveDrawing::Drawer",
+              "type": "objectList"
+            }
+          ],
+          "objectGroups": []
+        }
+      ],
+      "eventsBasedBehaviors": [],
+      "eventsBasedObjects": []
     }
   ],
   "externalLayouts": [
