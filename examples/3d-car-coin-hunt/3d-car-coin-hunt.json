@@ -1436,7 +1436,7 @@
               "density": 1,
               "friction": 2,
               "restitution": 0.5,
-              "linearDamping": 0.5,
+              "linearDamping": 0.25,
               "angularDamping": 15,
               "gravityScale": 0,
               "layers": 1,
@@ -2470,7 +2470,7 @@
                             "Player",
                             "Force",
                             "=",
-                            "3"
+                            "4"
                           ]
                         }
                       ]
@@ -2977,7 +2977,7 @@
                                 "",
                                 "Player",
                                 "Physics2",
-                                "Player.Angle() + Player.Direction * 60",
+                                "Player.Angle() + Player.Direction * 30",
                                 "Player.Force",
                                 "Player.CenterX() + XFromAngleAndDistance(Player.Angle(), Player.Width() / 2)",
                                 "Player.CenterY() + YFromAngleAndDistance(Player.Angle(), Player.Width() / 2)",
@@ -3018,7 +3018,7 @@
                                 "Player",
                                 "Physics2",
                                 "Player.Physics2::LinearVelocityAngle()",
-                                "- Player.Physics2::LinearVelocity() * 0.003 * abs(sin(ToRad(Player.Physics2::LinearVelocityAngle() - (Player.Angle() + Player.Direction * 60))))",
+                                "- Player.Physics2::LinearVelocity() * 0.005 * abs(sin(ToRad(Player.Physics2::LinearVelocityAngle() - (Player.Angle() + Player.Direction * 30))))",
                                 "Player.CenterX() + XFromAngleAndDistance(Player.Angle(), Player.Width() / 2)",
                                 "Player.CenterY() + YFromAngleAndDistance(Player.Angle(), Player.Width() / 2)",
                                 "Debug",
@@ -3058,11 +3058,40 @@
                                 "Player",
                                 "Physics2",
                                 "Player.Physics2::LinearVelocityAngle()",
-                                "- Player.Physics2::LinearVelocity() * 0.003 * abs(sin(ToRad(Player.Physics2::LinearVelocityAngle() - Player.Angle())))",
+                                "- Player.Physics2::LinearVelocity() * 0.005 * abs(sin(ToRad(Player.Physics2::LinearVelocityAngle() - Player.Angle())))",
                                 "Player.CenterX() - XFromAngleAndDistance(Player.Angle(), Player.Width() / 2)",
                                 "Player.CenterY() - YFromAngleAndDistance(Player.Angle(), Player.Width() / 2)",
                                 "Debug",
                                 ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "Physics2::LinearVelocityLength"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Physics2",
+                                ">",
+                                "800"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Physics2::LinearVelocityAngle"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Physics2",
+                                "Player.Physics2::LinearVelocityAngle()",
+                                "800"
                               ]
                             }
                           ]
