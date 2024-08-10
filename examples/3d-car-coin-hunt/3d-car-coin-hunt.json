@@ -1448,8 +1448,8 @@
               "density": 1,
               "friction": 2,
               "restitution": 0.5,
-              "linearDamping": 0.25,
-              "angularDamping": 15,
+              "linearDamping": 0,
+              "angularDamping": 0,
               "gravityScale": 0,
               "layers": 1,
               "masks": 1
@@ -1458,8 +1458,8 @@
               "name": "PhysicsCar",
               "type": "TopDownCar::PhysicsCar",
               "Physics2": "Physics2",
-              "Acceleration": 4,
-              "SlippingRatio": 0.001,
+              "Acceleration": 1,
+              "SlippingRatio": 0.42,
               "Direction": 0,
               "IsRightPressed": false,
               "IsLeftPressed": false,
@@ -3033,7 +3033,7 @@
                                 "Player",
                                 "Physics2",
                                 ">",
-                                "800"
+                                "1000"
                               ]
                             }
                           ],
@@ -3046,7 +3046,7 @@
                                 "Player",
                                 "Physics2",
                                 "Player.Physics2::LinearVelocityAngle()",
-                                "800"
+                                "1000"
                               ]
                             }
                           ]
@@ -3960,7 +3960,7 @@
           "name": "Physics2",
           "type": "Physics2::Physics2Behavior",
           "gravityX": 0,
-          "gravityY": 9.8,
+          "gravityY": 0,
           "scaleX": 100,
           "scaleY": 100
         },
@@ -28130,7 +28130,7 @@
                         "Object",
                         "Physics2",
                         "Object.Physics2::LinearVelocityAngle()",
-                        "Object.Physics2::LinearVelocity()",
+                        "Object.Physics2::LinearVelocity() / 100",
                         "Object.CenterX()",
                         "Object.CenterY()",
                         "Debug",
@@ -28235,7 +28235,7 @@
                             "Object",
                             "Physics2",
                             "Object.Behavior::LinearVelocityAngleAt(RearWheelX, RearWheelY)",
-                            "Object.Behavior::LinearVelocityAt(RearWheelX, RearWheelY)",
+                            "Object.Behavior::LinearVelocityAt(RearWheelX, RearWheelY) / 100",
                             "RearWheelX",
                             "RearWheelY",
                             "Debug",
@@ -28251,7 +28251,7 @@
                             "Object",
                             "Physics2",
                             "Object.Behavior::LinearVelocityAngleAt(FrontWheelX, FrontWheelY)",
-                            "Object.Behavior::LinearVelocityAt(FrontWheelX, FrontWheelY)",
+                            "Object.Behavior::LinearVelocityAt(FrontWheelX, FrontWheelY) / 100",
                             "FrontWheelX",
                             "FrontWheelY",
                             "Debug",
@@ -28422,7 +28422,7 @@
                             "Object",
                             "Physics2",
                             "FrontWheelAngle + 90",
-                            "-SlippingRatio * Object.Behavior::LinearVelocityAt(FrontWheelX, FrontWheelY) * sin(ToRad(Object.Behavior::LinearVelocityAngleAt(FrontWheelX, FrontWheelY) - FrontWheelAngle)) / TimeDelta() * Object.Physics2::Mass()",
+                            "-SlippingRatio * Object.Behavior::LinearVelocityAt(FrontWheelX, FrontWheelY) * sin(ToRad(Object.Behavior::LinearVelocityAngleAt(FrontWheelX, FrontWheelY) - FrontWheelAngle)) / TimeDelta() * Object.Physics2::Mass() / 100",
                             "FrontWheelX",
                             "FrontWheelY",
                             "Debug",
@@ -28474,7 +28474,7 @@
                             "Object",
                             "Physics2",
                             "Object.Angle() + 90",
-                            "- SlippingRatio * Object.Behavior::LinearVelocityAt(RearWheelX, RearWheelY) * sin(ToRad(Object.Behavior::LinearVelocityAngleAt(RearWheelX, RearWheelY) - Object.Angle())) / TimeDelta() * Object.Physics2::Mass()",
+                            "- SlippingRatio * Object.Behavior::LinearVelocityAt(RearWheelX, RearWheelY) * sin(ToRad(Object.Behavior::LinearVelocityAngleAt(RearWheelX, RearWheelY) - Object.Angle())) / TimeDelta() * Object.Physics2::Mass() / 100",
                             "RearWheelX",
                             "RearWheelY",
                             "Debug",
@@ -29023,6 +29023,7 @@
               "description": "",
               "group": "",
               "extraInformation": [],
+              "hidden": true,
               "name": "IsDownPressed"
             }
           ],
