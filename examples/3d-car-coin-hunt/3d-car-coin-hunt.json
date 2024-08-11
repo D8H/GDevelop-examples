@@ -849,6 +849,7 @@
           "width": 0,
           "x": 1349,
           "y": -111,
+          "z": 10,
           "zOrder": 43,
           "numberProperties": [],
           "stringProperties": [],
@@ -1458,7 +1459,7 @@
               "name": "PhysicsCar",
               "type": "TopDownCar::PhysicsCar",
               "Physics2": "Physics2",
-              "Acceleration": 1,
+              "Acceleration": 500,
               "SlippingRatio": 0.5,
               "Direction": 0,
               "IsRightPressed": false,
@@ -2480,6 +2481,7 @@
                       ]
                     },
                     {
+                      "disabled": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -2508,6 +2510,7 @@
                       ]
                     },
                     {
+                      "disabled": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -2536,523 +2539,158 @@
                       ]
                     },
                     {
-                      "colorB": 228,
-                      "colorG": 176,
-                      "colorR": 74,
-                      "creationTime": 0,
-                      "disabled": true,
-                      "name": "",
-                      "source": "",
-                      "type": "BuiltinCommonInstructions::Group",
-                      "events": [
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
                         {
-                          "type": "BuiltinCommonInstructions::Comment",
-                          "color": {
-                            "b": 109,
-                            "g": 230,
-                            "r": 255,
-                            "textB": 0,
-                            "textG": 0,
-                            "textR": 0
+                          "type": {
+                            "value": "KeyPressed"
                           },
-                          "comment": "When going backward, a car go back in its trail without direction change."
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "KeyPressed"
-                              },
-                              "parameters": [
-                                "",
-                                "Right"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "Physics2::ApplyTorque"
-                              },
-                              "parameters": [
-                                "Player",
-                                "Physics2",
-                                "0.002 * Player.Physics2::LinearVelocity() * sign(Player.Force)"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "KeyPressed"
-                              },
-                              "parameters": [
-                                "",
-                                "Left"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "Physics2::ApplyTorque"
-                              },
-                              "parameters": [
-                                "Player",
-                                "Physics2",
-                                "-0.002 * Player.Physics2::LinearVelocity() * sign(Player.Force)"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsDirectionPushed4Way"
-                              },
-                              "parameters": [
-                                "SteeringJoystick",
-                                "\"Right\"",
-                                ""
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "Physics2::ApplyTorque"
-                              },
-                              "parameters": [
-                                "Player",
-                                "Physics2",
-                                "0.002 * Player.Physics2::LinearVelocity() * sign(Player.Force) * SteeringJoystick.StickForce()"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsDirectionPushed4Way"
-                              },
-                              "parameters": [
-                                "SteeringJoystick",
-                                "\"Left\"",
-                                ""
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "Physics2::ApplyTorque"
-                              },
-                              "parameters": [
-                                "Player",
-                                "Physics2",
-                                "-0.002 * Player.Physics2::LinearVelocity() * sign(Player.Force) * SteeringJoystick.StickForce()"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "Physics2::ApplyPolarForce"
-                              },
-                              "parameters": [
-                                "Player",
-                                "Physics2",
-                                "Player.Angle()",
-                                "Player.Force",
-                                "Player.CenterX() + XFromAngleAndDistance(Player.Angle(), Player.Width() / 2)",
-                                "Player.CenterY() + YFromAngleAndDistance(Player.Angle(), Player.Width() / 2)"
-                              ]
-                            }
+                          "parameters": [
+                            "",
+                            "Left"
                           ]
                         }
                       ],
-                      "parameters": []
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "TopDownCar::PhysicsCar::SimulateLeft"
+                          },
+                          "parameters": [
+                            "Player",
+                            "PhysicsCar",
+                            ""
+                          ]
+                        }
+                      ]
                     },
                     {
-                      "colorB": 228,
-                      "colorG": 176,
-                      "colorR": 74,
-                      "creationTime": 0,
-                      "name": "",
-                      "source": "",
-                      "type": "BuiltinCommonInstructions::Group",
-                      "events": [
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
                         {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "KeyPressed"
-                              },
-                              "parameters": [
-                                "",
-                                "Left"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "TopDownCar::PhysicsCar::SimulateLeft"
-                              },
-                              "parameters": [
-                                "Player",
-                                "PhysicsCar",
-                                ""
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "KeyPressed"
-                              },
-                              "parameters": [
-                                "",
-                                "Right"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "TopDownCar::PhysicsCar::SimulateRight"
-                              },
-                              "parameters": [
-                                "Player",
-                                "PhysicsCar",
-                                ""
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "disabled": true,
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsDirectionPushed4Way"
-                              },
-                              "parameters": [
-                                "SteeringJoystick",
-                                "\"Right\"",
-                                ""
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "Physics2::ApplyTorque"
-                              },
-                              "parameters": [
-                                "Player",
-                                "Physics2",
-                                "SteeringJoystick.StickForce()"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "disabled": true,
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsDirectionPushed4Way"
-                              },
-                              "parameters": [
-                                "SteeringJoystick",
-                                "\"Left\"",
-                                ""
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "Physics2::ApplyTorque"
-                              },
-                              "parameters": [
-                                "Player",
-                                "Physics2",
-                                "-SteeringJoystick.StickForce()"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "disabled": true,
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "PrimitiveDrawing::FillColor"
-                              },
-                              "parameters": [
-                                "Debug",
-                                "\"99;99;99\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PrimitiveDrawing::OutlineColor"
-                              },
-                              "parameters": [
-                                "Debug",
-                                "\"0;0;0\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PrimitiveDrawing::Rectangle"
-                              },
-                              "parameters": [
-                                "Debug",
-                                "-Player.Width() / 2",
-                                "-Player.Height() / 2",
-                                "Player.Width() / 2",
-                                "Player.Height() / 2"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PrimitiveDrawing::OutlineColor"
-                              },
-                              "parameters": [
-                                "Debug",
-                                "\"126;211;33\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "TopDownCar::DrawForce"
-                              },
-                              "parameters": [
-                                "Debug",
-                                "Player",
-                                "Physics2",
-                                "Player.Physics2::LinearVelocityAngle()",
-                                "Player.Physics2::LinearVelocity()",
-                                "Player.CenterX()",
-                                "Player.CenterY()",
-                                "Debug",
-                                ""
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "disabled": true,
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "PrimitiveDrawing::FillColor"
-                              },
-                              "parameters": [
-                                "Debug",
-                                "\"42;167;0\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PrimitiveDrawing::OutlineColor"
-                              },
-                              "parameters": [
-                                "Debug",
-                                "\"42;167;0\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "TopDownCar::AddForce"
-                              },
-                              "parameters": [
-                                "",
-                                "Player",
-                                "Physics2",
-                                "Player.Angle() + Player.Direction * 30",
-                                "Player.Force",
-                                "Player.CenterX() + XFromAngleAndDistance(Player.Angle(), Player.Width() / 2)",
-                                "Player.CenterY() + YFromAngleAndDistance(Player.Angle(), Player.Width() / 2)",
-                                "Debug",
-                                ""
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "disabled": true,
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "PrimitiveDrawing::FillColor"
-                              },
-                              "parameters": [
-                                "Debug",
-                                "\"255;183;0\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PrimitiveDrawing::OutlineColor"
-                              },
-                              "parameters": [
-                                "Debug",
-                                "\"255;183;0\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "TopDownCar::AddForce"
-                              },
-                              "parameters": [
-                                "",
-                                "Player",
-                                "Physics2",
-                                "(Player.Angle() + Player.Direction * 30) + 90",
-                                "-SlippingRatio * TopDownCar::LinearVelocityAt() * sin(ToRad(Player.Physics2::LinearVelocityAngle() - (Player.Angle() + Player.Direction * 30))) / TimeDelta() * Player.Physics2::Mass()",
-                                "Player.CenterX() + XFromAngleAndDistance(Player.Angle(), Player.Width() / 2)",
-                                "Player.CenterY() + YFromAngleAndDistance(Player.Angle(), Player.Width() / 2)",
-                                "Debug",
-                                ""
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "disabled": true,
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "PrimitiveDrawing::FillColor"
-                              },
-                              "parameters": [
-                                "Debug",
-                                "\"255;0;0\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PrimitiveDrawing::OutlineColor"
-                              },
-                              "parameters": [
-                                "Debug",
-                                "\"255;0;0\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "TopDownCar::AddForce"
-                              },
-                              "parameters": [
-                                "",
-                                "Player",
-                                "Physics2",
-                                "Player.Angle() + 90",
-                                "- SlippingRatio * Player.Physics2::LinearVelocity() * sin(ToRad(Player.Physics2::LinearVelocityAngle() - Player.Angle())) / TimeDelta() * Player.Physics2::Mass()",
-                                "Player.CenterX() - XFromAngleAndDistance(Player.Angle(), Player.Width() / 2)",
-                                "Player.CenterY() - YFromAngleAndDistance(Player.Angle(), Player.Width() / 2)",
-                                "Debug",
-                                ""
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "disabled": true,
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "Physics2::AngularVelocity"
-                              },
-                              "parameters": [
-                                "Player",
-                                "Physics2",
-                                "=",
-                                "90"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "TopDownCar::PhysicsCar::Step"
-                              },
-                              "parameters": [
-                                "Player",
-                                "PhysicsCar",
-                                "Debug",
-                                ""
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "Physics2::LinearVelocityLength"
-                              },
-                              "parameters": [
-                                "Player",
-                                "Physics2",
-                                ">",
-                                "1000"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "Physics2::LinearVelocityAngle"
-                              },
-                              "parameters": [
-                                "Player",
-                                "Physics2",
-                                "Player.Physics2::LinearVelocityAngle()",
-                                "1000"
-                              ]
-                            }
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Right"
                           ]
                         }
                       ],
-                      "parameters": []
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "TopDownCar::PhysicsCar::SimulateRight"
+                          },
+                          "parameters": [
+                            "Player",
+                            "PhysicsCar",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "disabled": true,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsDirectionPushed4Way"
+                          },
+                          "parameters": [
+                            "SteeringJoystick",
+                            "\"Right\"",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Physics2::ApplyTorque"
+                          },
+                          "parameters": [
+                            "Player",
+                            "Physics2",
+                            "SteeringJoystick.StickForce()"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "disabled": true,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsDirectionPushed4Way"
+                          },
+                          "parameters": [
+                            "SteeringJoystick",
+                            "\"Left\"",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Physics2::ApplyTorque"
+                          },
+                          "parameters": [
+                            "Player",
+                            "Physics2",
+                            "-SteeringJoystick.StickForce()"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "TopDownCar::PhysicsCar::Step"
+                          },
+                          "parameters": [
+                            "Player",
+                            "PhysicsCar",
+                            "Debug",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Physics2::LinearVelocityLength"
+                          },
+                          "parameters": [
+                            "Player",
+                            "Physics2",
+                            ">",
+                            "1000"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Physics2::LinearVelocityAngle"
+                          },
+                          "parameters": [
+                            "Player",
+                            "Physics2",
+                            "Player.Physics2::LinearVelocityAngle()",
+                            "1000"
+                          ]
+                        }
+                      ]
                     },
                     {
                       "type": "BuiltinCommonInstructions::Comment",
@@ -27675,13 +27313,12 @@
                   "parameters": [
                     "",
                     "Object",
-                    "Physics2",
                     "Angle",
                     "Length",
                     "OriginX",
                     "OriginY",
                     "ShapePainter",
-                    ""
+                    "ShapePainter"
                   ]
                 }
               ]
@@ -27692,15 +27329,16 @@
               "actions": [
                 {
                   "type": {
-                    "value": "Physics2::ApplyPolarForce"
+                    "value": "TopDownCar::PhysicsCar::ApplyPolarForce"
                   },
                   "parameters": [
                     "Object",
-                    "Physics2",
+                    "PhysicsCar",
                     "Angle",
                     "Length",
                     "OriginX",
-                    "OriginY"
+                    "OriginY",
+                    ""
                   ]
                 }
               ]
@@ -27714,8 +27352,8 @@
             },
             {
               "description": "",
-              "name": "Physics2",
-              "supplementaryInformation": "Physics2::Physics2Behavior",
+              "name": "PhysicsCar",
+              "supplementaryInformation": "TopDownCar::PhysicsCar",
               "type": "behavior"
             },
             {
@@ -27814,7 +27452,7 @@
                   "parameters": [
                     "LineLength",
                     "=",
-                    "Length * 60"
+                    "Length"
                   ]
                 },
                 {
@@ -27876,12 +27514,6 @@
               "description": "",
               "name": "Object",
               "type": "objectList"
-            },
-            {
-              "description": "",
-              "name": "Physics2",
-              "supplementaryInformation": "Physics2::Physics2Behavior",
-              "type": "behavior"
             },
             {
               "description": "",
@@ -28128,13 +27760,12 @@
                       "parameters": [
                         "Debug",
                         "Object",
-                        "Physics2",
                         "Object.Physics2::LinearVelocityAngle()",
-                        "Object.Physics2::LinearVelocity() / 100",
+                        "Object.Physics2::LinearVelocity()",
                         "Object.CenterX()",
                         "Object.CenterY()",
                         "Debug",
-                        ""
+                        "Debug"
                       ]
                     }
                   ]
@@ -28233,13 +27864,12 @@
                           "parameters": [
                             "Debug",
                             "Object",
-                            "Physics2",
                             "Object.Behavior::LinearVelocityAngleAt(RearWheelX, RearWheelY)",
-                            "Object.Behavior::LinearVelocityAt(RearWheelX, RearWheelY) / 100",
+                            "Object.Behavior::LinearVelocityAt(RearWheelX, RearWheelY)",
                             "RearWheelX",
                             "RearWheelY",
                             "Debug",
-                            ""
+                            "Debug"
                           ]
                         },
                         {
@@ -28249,13 +27879,12 @@
                           "parameters": [
                             "Debug",
                             "Object",
-                            "Physics2",
                             "Object.Behavior::LinearVelocityAngleAt(FrontWheelX, FrontWheelY)",
-                            "Object.Behavior::LinearVelocityAt(FrontWheelX, FrontWheelY) / 100",
+                            "Object.Behavior::LinearVelocityAt(FrontWheelX, FrontWheelY)",
                             "FrontWheelX",
                             "FrontWheelY",
                             "Debug",
-                            ""
+                            "Debug"
                           ]
                         }
                       ]
@@ -28298,7 +27927,7 @@
                               "parameters": [
                                 "Force",
                                 "=",
-                                "Acceleration"
+                                "Acceleration * Object.Physics2::Mass()"
                               ]
                             }
                           ]
@@ -28324,7 +27953,7 @@
                               "parameters": [
                                 "Force",
                                 "=",
-                                "-Acceleration"
+                                "-Acceleration * Object.Physics2::Mass()"
                               ]
                             }
                           ]
@@ -28358,7 +27987,7 @@
                               "parameters": [
                                 "",
                                 "Object",
-                                "Physics2",
+                                "Behavior",
                                 "FrontWheelAngle",
                                 "Force",
                                 "FrontWheelX",
@@ -28739,9 +28368,9 @@
                       "parameters": [
                         "",
                         "Object",
-                        "Physics2",
+                        "Behavior",
                         "WheelAngle + 90",
-                        "-SlippingRatio * Object.Behavior::LinearVelocityAt(WheelX, WheelY) * sin(ToRad(Object.Behavior::LinearVelocityAngleAt(WheelX, WheelY) - WheelAngle)) / TimeDelta() * Object.Behavior::Inertia() / Object.Width() * 2 / Object.Width() * 2 / 200",
+                        "-SlippingRatio * Object.Behavior::LinearVelocityAt(WheelX, WheelY) * sin(ToRad(Object.Behavior::LinearVelocityAngleAt(WheelX, WheelY) - WheelAngle)) / TimeDelta() * Object.Behavior::Inertia() / Object.Width() * 2 / Object.Width() * 2 / 2",
                         "WheelX",
                         "WheelY",
                         "Debug",
@@ -28988,7 +28617,8 @@
               "objectGroups": []
             },
             {
-              "fullName": "",
+              "description": "Return the momentum of inertia (in kg ⋅ pixel²)",
+              "fullName": "Momentum of inertia",
               "functionType": "Expression",
               "name": "Inertia",
               "private": true,
@@ -28998,7 +28628,7 @@
                   "type": "BuiltinCommonInstructions::JsCode",
                   "inlineCode": [
                     "",
-                    "// TODO Remove this function when the Inertia expression is fixed in the engine.",
+                    "// TODO Remove this function when the engine uses pixels instead of meters.",
                     "",
                     "const object = objects[0];",
                     "const behavior = object.getBehavior(eventsFunctionContext.getBehaviorName(\"Behavior\"));",
@@ -29010,7 +28640,7 @@
                     "}",
                     "// Wake up the object",
                     "physics2._body.SetAwake(true);",
-                    "// scaleX or scale Y don't matter as they can't be different or it breaks any physics law.",
+                    "// scaleX or scaleY doesn't matter as they can't be different or it breaks any physics law.",
                     "eventsFunctionContext.returnValue = physics2._body.GetInertia() * physics2._sharedData.scaleX * physics2._sharedData.scaleX;"
                   ],
                   "parameterObjects": "Object",
@@ -29021,6 +28651,136 @@
               "expressionType": {
                 "type": "expression"
               },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "Apply a polar force",
+              "functionType": "Action",
+              "name": "ApplyPolarForce",
+              "private": true,
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "",
+                    "// TODO Remove this function when the engine uses pixels instead of meters.",
+                    "",
+                    "const object = objects[0];",
+                    "const behavior = object.getBehavior(eventsFunctionContext.getBehaviorName(\"Behavior\"));",
+                    "const physics2 = object.getBehavior(behavior._getPhysics2());",
+                    "const angle = gdjs.toRad(eventsFunctionContext.getArgument(\"Angle\"));",
+                    "// scaleX or scaleY doesn't matter as they can't be different or it breaks any physics law.",
+                    "const length = eventsFunctionContext.getArgument(\"Length\") * physics2._sharedData.invScaleX;",
+                    "const originX = eventsFunctionContext.getArgument(\"OriginX\") * physics2._sharedData.invScaleX;",
+                    "const originY = eventsFunctionContext.getArgument(\"OriginY\") * physics2._sharedData.invScaleX;",
+                    "",
+                    "// If there is no body, set a new one",
+                    "if (physics2._body === null) {",
+                    "  if (!physics2.createBody()) return;",
+                    "}",
+                    "",
+                    "// Wake up the object",
+                    "physics2._body.SetAwake(true);",
+                    "",
+                    "// Apply the force",
+                    "physics2._body.ApplyForce(",
+                    "  physics2.b2Vec2(length * Math.cos(angle), length * Math.sin(angle)),",
+                    "  physics2.b2Vec2Sec(originX, originY),",
+                    "  false",
+                    ");"
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "type": "behavior"
+                },
+                {
+                  "description": "",
+                  "name": "Angle",
+                  "type": "expression"
+                },
+                {
+                  "description": "Length (in kg ⋅ pixels ⋅ s^−2)",
+                  "name": "Length",
+                  "type": "expression"
+                },
+                {
+                  "description": "",
+                  "name": "OriginX",
+                  "type": "expression"
+                },
+                {
+                  "description": "",
+                  "name": "OriginY",
+                  "type": "expression"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "doStepPreEvents",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "1",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TopDownCar::PhysicsCar::ApplyPolarForce"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
               "parameters": [
                 {
                   "description": "Object",
@@ -29050,7 +28810,7 @@
               "name": "Physics2"
             },
             {
-              "value": "4",
+              "value": "500",
               "type": "Number",
               "unit": "PixelAcceleration",
               "label": "",
@@ -29060,7 +28820,7 @@
               "name": "Acceleration"
             },
             {
-              "value": "0.0001",
+              "value": "0.5",
               "type": "Number",
               "unit": "Dimensionless",
               "label": "",
