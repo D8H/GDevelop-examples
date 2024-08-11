@@ -1464,7 +1464,8 @@
               "Direction": 0,
               "IsRightPressed": false,
               "IsLeftPressed": false,
-              "DirectionSpeed": 8
+              "DirectionSpeed": 8,
+              "SteeringSpeed": 120
             }
           ],
           "content": {
@@ -27555,6 +27556,56 @@
             {
               "fullName": "",
               "functionType": "Action",
+              "name": "onCreated",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Physics2::LinearDamping"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Physics2",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Physics2::AngularDamping"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Physics2",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "Action",
               "name": "Step",
               "sentence": "",
               "events": [
@@ -27589,7 +27640,7 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "TopDownCar::PhysicsCar::PropertyDirection"
+                            "value": "TopDownCar::PhysicsCar::PropertySteeringAngle"
                           },
                           "parameters": [
                             "Object",
@@ -27602,13 +27653,13 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "TopDownCar::PhysicsCar::SetPropertyDirection"
+                            "value": "TopDownCar::PhysicsCar::SetPropertySteeringAngle"
                           },
                           "parameters": [
                             "Object",
                             "Behavior",
                             "=",
-                            "min(0, Direction + DirectionSpeed * TimeDelta())"
+                            "min(0, SteeringAngle + SteeringSpeed * TimeDelta())"
                           ]
                         }
                       ]
@@ -27618,7 +27669,7 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "TopDownCar::PhysicsCar::PropertyDirection"
+                            "value": "TopDownCar::PhysicsCar::PropertySteeringAngle"
                           },
                           "parameters": [
                             "Object",
@@ -27631,13 +27682,13 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "TopDownCar::PhysicsCar::SetPropertyDirection"
+                            "value": "TopDownCar::PhysicsCar::SetPropertySteeringAngle"
                           },
                           "parameters": [
                             "Object",
                             "Behavior",
                             "=",
-                            "max(0, Direction - DirectionSpeed * TimeDelta())"
+                            "max(0, SteeringAngle - SteeringSpeed * TimeDelta())"
                           ]
                         }
                       ]
@@ -27660,13 +27711,13 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "TopDownCar::PhysicsCar::SetPropertyDirection"
+                        "value": "TopDownCar::PhysicsCar::SetPropertySteeringAngle"
                       },
                       "parameters": [
                         "Object",
                         "Behavior",
                         "=",
-                        "min(1, Direction + DirectionSpeed * TimeDelta())"
+                        "min(SteeringAngleMax, SteeringAngle + SteeringSpeed * TimeDelta())"
                       ]
                     }
                   ]
@@ -27687,13 +27738,13 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "TopDownCar::PhysicsCar::SetPropertyDirection"
+                        "value": "TopDownCar::PhysicsCar::SetPropertySteeringAngle"
                       },
                       "parameters": [
                         "Object",
                         "Behavior",
                         "=",
-                        "max(-1, Direction - DirectionSpeed * TimeDelta())"
+                        "max(-SteeringAngleMax, SteeringAngle - SteeringSpeed * TimeDelta())"
                       ]
                     }
                   ]
@@ -27801,7 +27852,7 @@
                       "parameters": [
                         "FrontWheelAngle",
                         "=",
-                        "Object.Angle() + Direction * 30"
+                        "Object.Angle() + SteeringAngle"
                       ]
                     },
                     {
@@ -28370,7 +28421,7 @@
                         "Object",
                         "Behavior",
                         "WheelAngle + 90",
-                        "-SlippingRatio * Object.Behavior::LinearVelocityAt(WheelX, WheelY) * sin(ToRad(Object.Behavior::LinearVelocityAngleAt(WheelX, WheelY) - WheelAngle)) / TimeDelta() * Object.Behavior::Inertia() / Object.Width() * 2 / Object.Width() * 2 / 2",
+                        "-WheelGripRatio * Object.Behavior::LinearVelocityAt(WheelX, WheelY) * sin(ToRad(Object.Behavior::LinearVelocityAngleAt(WheelX, WheelY) - WheelAngle)) / TimeDelta() * Object.Behavior::Inertia() / Object.Width() * 2 / Object.Width() * 2 / 2",
                         "WheelX",
                         "WheelY",
                         "Debug",
@@ -28813,9 +28864,9 @@
               "value": "500",
               "type": "Number",
               "unit": "PixelAcceleration",
-              "label": "",
+              "label": "Engine acceleration",
               "description": "",
-              "group": "",
+              "group": "Speed",
               "extraInformation": [],
               "name": "Acceleration"
             },
@@ -28823,22 +28874,42 @@
               "value": "0.5",
               "type": "Number",
               "unit": "Dimensionless",
-              "label": "",
-              "description": "",
-              "group": "",
+              "label": "Wheel grip ratio (from 0 to 1)",
+              "description": "A ratio of 0 is like driving on ice.",
+              "group": "Steering",
               "extraInformation": [],
-              "name": "SlippingRatio"
+              "name": "WheelGripRatio"
+            },
+            {
+              "value": "120",
+              "type": "Number",
+              "unit": "AngularSpeed",
+              "label": "Steering speed",
+              "description": "",
+              "group": "Steering",
+              "extraInformation": [],
+              "name": "SteeringSpeed"
+            },
+            {
+              "value": "30",
+              "type": "Number",
+              "unit": "DegreeAngle",
+              "label": "Maximum steering angle",
+              "description": "",
+              "group": "Steering",
+              "extraInformation": [],
+              "name": "SteeringAngleMax"
             },
             {
               "value": "0",
               "type": "Number",
-              "unit": "Dimensionless",
-              "label": "",
+              "unit": "DegreeAngle",
+              "label": "Steering angle",
               "description": "",
-              "group": "",
+              "group": "Steering",
               "extraInformation": [],
               "hidden": true,
-              "name": "Direction"
+              "name": "SteeringAngle"
             },
             {
               "value": "",
@@ -28859,15 +28930,6 @@
               "extraInformation": [],
               "hidden": true,
               "name": "IsLeftPressed"
-            },
-            {
-              "value": "1",
-              "type": "Number",
-              "label": "",
-              "description": "",
-              "group": "",
-              "extraInformation": [],
-              "name": "DirectionSpeed"
             },
             {
               "value": "",
