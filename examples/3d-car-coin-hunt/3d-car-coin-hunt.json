@@ -28170,7 +28170,7 @@
                       "parameters": [
                         "FrontWheelAngle",
                         "=",
-                        "(Object.Angle() + Direction * 30)"
+                        "Object.Angle() + Direction * 30"
                       ]
                     },
                     {
@@ -28380,18 +28380,6 @@
                       ]
                     },
                     {
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "Front wheels slipping"
-                    },
-                    {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [],
                       "actions": [
@@ -28415,16 +28403,14 @@
                         },
                         {
                           "type": {
-                            "value": "TopDownCar::AddForce"
+                            "value": "TopDownCar::PhysicsCar::ApplyWheelForces"
                           },
                           "parameters": [
-                            "",
                             "Object",
-                            "Physics2",
-                            "FrontWheelAngle + 90",
-                            "-SlippingRatio * Object.Behavior::LinearVelocityAt(FrontWheelX, FrontWheelY) * sin(ToRad(Object.Behavior::LinearVelocityAngleAt(FrontWheelX, FrontWheelY) - FrontWheelAngle)) / TimeDelta() * Object.Physics2::Inertia() / Object.Width() * 2 / Object.Width() * 2 * 50",
+                            "Behavior",
                             "FrontWheelX",
                             "FrontWheelY",
+                            "FrontWheelAngle",
                             "Debug",
                             ""
                           ]
@@ -28432,18 +28418,6 @@
                       ]
                     },
                     {
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "Rear wheels slipping"
-                    },
-                    {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [],
                       "actions": [
@@ -28467,16 +28441,14 @@
                         },
                         {
                           "type": {
-                            "value": "TopDownCar::AddForce"
+                            "value": "TopDownCar::PhysicsCar::ApplyWheelForces"
                           },
                           "parameters": [
-                            "",
                             "Object",
-                            "Physics2",
-                            "Object.Angle() + 90",
-                            "- SlippingRatio * Object.Behavior::LinearVelocityAt(RearWheelX, RearWheelY) * sin(ToRad(Object.Behavior::LinearVelocityAngleAt(RearWheelX, RearWheelY) - Object.Angle())) / TimeDelta() * Object.Physics2::Inertia() / Object.Width() * 2 / Object.Width() * 2 * 50",
+                            "Behavior",
                             "RearWheelX",
                             "RearWheelY",
+                            "Object.Angle()",
                             "Debug",
                             ""
                           ]
@@ -28738,9 +28710,88 @@
               "objectGroups": []
             },
             {
+              "fullName": "Apply wheel forces",
+              "functionType": "Action",
+              "name": "ApplyWheelForces",
+              "private": true,
+              "sentence": "Apply forces on the wheel at _PARAM2_ ; _PARAM3_ and _PARAM4_° of _PARAM0_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "When the car don't slip, there is no motion orthogonally to wheels direction.\nA factor ensures that the force applied to the car remove the linear velocity part that is orthogonally to wheels direction."
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TopDownCar::AddForce"
+                      },
+                      "parameters": [
+                        "",
+                        "Object",
+                        "Physics2",
+                        "WheelAngle + 90",
+                        "-SlippingRatio * Object.Behavior::LinearVelocityAt(WheelX, WheelY) * sin(ToRad(Object.Behavior::LinearVelocityAngleAt(WheelX, WheelY) - WheelAngle)) / TimeDelta() * Object.Behavior::Inertia() / Object.Width() * 2 / Object.Width() * 2 / 200",
+                        "WheelX",
+                        "WheelY",
+                        "Debug",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "type": "behavior"
+                },
+                {
+                  "description": "Wheel X",
+                  "name": "WheelX",
+                  "type": "expression"
+                },
+                {
+                  "description": "Wheel Y",
+                  "name": "WheelY",
+                  "type": "expression"
+                },
+                {
+                  "description": "Wheel angle",
+                  "name": "WheelAngle",
+                  "type": "expression"
+                },
+                {
+                  "description": "",
+                  "name": "Debug",
+                  "supplementaryInformation": "PrimitiveDrawing::Drawer",
+                  "type": "objectList"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
               "fullName": "",
               "functionType": "Expression",
               "name": "LinearVelocityXAt",
+              "private": true,
               "sentence": "",
               "events": [
                 {
@@ -28790,6 +28841,7 @@
               "fullName": "",
               "functionType": "Expression",
               "name": "LinearVelocityYAt",
+              "private": true,
               "sentence": "",
               "events": [
                 {
@@ -28839,6 +28891,7 @@
               "fullName": "",
               "functionType": "Expression",
               "name": "LinearVelocityAt",
+              "private": true,
               "sentence": "",
               "events": [
                 {
@@ -28888,6 +28941,7 @@
               "fullName": "",
               "functionType": "Expression",
               "name": "LinearVelocityAngleAt",
+              "private": true,
               "sentence": "",
               "events": [
                 {
@@ -28929,6 +28983,55 @@
                   "description": "",
                   "name": "PositionY",
                   "type": "expression"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "Expression",
+              "name": "Inertia",
+              "private": true,
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "",
+                    "// TODO Remove this function when the Inertia expression is fixed in the engine.",
+                    "",
+                    "const object = objects[0];",
+                    "const behavior = object.getBehavior(eventsFunctionContext.getBehaviorName(\"Behavior\"));",
+                    "const physics2 = object.getBehavior(behavior._getPhysics2());",
+                    "",
+                    "// If there is no body, set a new one",
+                    "if (physics2._body === null) {",
+                    "    if (!physics2.createBody()) return 0;",
+                    "}",
+                    "// Wake up the object",
+                    "physics2._body.SetAwake(true);",
+                    "// scaleX or scale Y don't matter as they can't be different or it breaks any physics law.",
+                    "eventsFunctionContext.returnValue = physics2._body.GetInertia() * physics2._sharedData.scaleX * physics2._sharedData.scaleX;"
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "type": "behavior"
                 }
               ],
               "objectGroups": []
