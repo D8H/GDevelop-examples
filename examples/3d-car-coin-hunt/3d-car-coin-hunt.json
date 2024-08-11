@@ -1449,7 +1449,7 @@
               "density": 1,
               "friction": 2,
               "restitution": 0.5,
-              "linearDamping": 0,
+              "linearDamping": 0.1,
               "angularDamping": 0,
               "gravityScale": 0,
               "layers": 1,
@@ -2158,6 +2158,35 @@
             "textG": 0,
             "textR": 0
           },
+          "comment": "TODO Remove\nThis is just to be able to draw the forces on screen."
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "TopDownCar::PhysicsCar::Step"
+              },
+              "parameters": [
+                "Player",
+                "PhysicsCar",
+                "Debug",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
           "comment": "Game Set Up and controls for mobile."
         },
         {
@@ -2482,36 +2511,6 @@
                       ]
                     },
                     {
-                      "disabled": true,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsDirectionPushed4Way"
-                          },
-                          "parameters": [
-                            "PedalJoystick",
-                            "\"Down\"",
-                            ""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "Player",
-                            "Force",
-                            "=",
-                            "-4 * PedalJoystick.StickForce()"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "disabled": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -2528,13 +2527,39 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "SetNumberObjectVariable"
+                            "value": "TopDownCar::PhysicsCar::SimulateUp"
                           },
                           "parameters": [
                             "Player",
-                            "Force",
-                            "=",
-                            "6 * PedalJoystick.StickForce()"
+                            "PhysicsCar",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsDirectionPushed4Way"
+                          },
+                          "parameters": [
+                            "PedalJoystick",
+                            "\"Down\"",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "TopDownCar::PhysicsCar::SimulateDown"
+                          },
+                          "parameters": [
+                            "Player",
+                            "PhysicsCar",
+                            ""
                           ]
                         }
                       ]
@@ -2592,35 +2617,6 @@
                       ]
                     },
                     {
-                      "disabled": true,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsDirectionPushed4Way"
-                          },
-                          "parameters": [
-                            "SteeringJoystick",
-                            "\"Right\"",
-                            ""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Physics2::ApplyTorque"
-                          },
-                          "parameters": [
-                            "Player",
-                            "Physics2",
-                            "SteeringJoystick.StickForce()"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "disabled": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -2637,28 +2633,13 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "Physics2::ApplyTorque"
-                          },
-                          "parameters": [
-                            "Player",
-                            "Physics2",
-                            "-SteeringJoystick.StickForce()"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "TopDownCar::PhysicsCar::Step"
+                            "value": "TopDownCar::PhysicsCar::SetSteeringAngle"
                           },
                           "parameters": [
                             "Player",
                             "PhysicsCar",
-                            "Debug",
+                            "=",
+                            "-SteeringJoystick.StickForce() * Player.PhysicsCar::SteeringAngleMax()",
                             ""
                           ]
                         }
@@ -2669,26 +2650,26 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "Physics2::LinearVelocityLength"
+                            "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsDirectionPushed4Way"
                           },
                           "parameters": [
-                            "Player",
-                            "Physics2",
-                            ">",
-                            "1000"
+                            "SteeringJoystick",
+                            "\"Right\"",
+                            ""
                           ]
                         }
                       ],
                       "actions": [
                         {
                           "type": {
-                            "value": "Physics2::LinearVelocityAngle"
+                            "value": "TopDownCar::PhysicsCar::SetSteeringAngle"
                           },
                           "parameters": [
                             "Player",
-                            "Physics2",
-                            "Player.Physics2::LinearVelocityAngle()",
-                            "1000"
+                            "PhysicsCar",
+                            "=",
+                            "SteeringJoystick.StickForce() * Player.PhysicsCar::SteeringAngleMax()",
+                            ""
                           ]
                         }
                       ]
@@ -2703,10 +2684,33 @@
                         "textG": 0,
                         "textR": 0
                       },
+                      "comment": ""
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": ""
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
                       "comment": "If on/off road, increase/decrease linear damping."
                     },
                     {
-                      "disabled": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [],
                       "actions": [
@@ -2718,39 +2722,86 @@
                             "Player",
                             "Physics2",
                             "=",
-                            "9"
+                            "0.5"
                           ]
-                        }
-                      ]
-                    },
-                    {
-                      "disabled": true,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
+                        },
                         {
                           "type": {
-                            "value": "CollisionNP"
+                            "value": "SetNumberVariable"
                           },
                           "parameters": [
-                            "Player",
-                            "Road",
-                            "",
-                            "",
-                            ""
+                            "GripFactor",
+                            "=",
+                            "0.25"
                           ]
                         }
                       ],
-                      "actions": [
+                      "events": [
                         {
-                          "type": {
-                            "value": "Physics2::LinearDamping"
-                          },
-                          "parameters": [
-                            "Player",
-                            "Physics2",
-                            "=",
-                            "4"
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "CollisionNP"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Road",
+                                "",
+                                "",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Physics2::LinearDamping"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Physics2",
+                                "=",
+                                "0.1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "GripFactor",
+                                "=",
+                                "1"
+                              ]
+                            }
                           ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "TopDownCar::PhysicsCar::SetWheelGripRatio"
+                              },
+                              "parameters": [
+                                "Player",
+                                "PhysicsCar",
+                                "=",
+                                "GripFactor * Tween::Ease(\"easeInOutCubic\", 1, 0.1, abs(sin(ToRad(AngleDifference(Player.Physics2::LinearVelocityAngle(), Player.Angle() + Player.PhysicsCar::SteeringAngle())))))",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "variables": [
+                        {
+                          "folded": true,
+                          "name": "GripFactor",
+                          "type": "number",
+                          "value": 0
                         }
                       ]
                     }
@@ -3424,6 +3475,23 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "BestTimeText",
+                "Text",
+                "=",
+                "\"Grip: \" + ToString(Player.PhysicsCar::WheelGripRatio())"
+              ]
+            }
+          ]
         }
       ],
       "layers": [
@@ -27281,18 +27349,22 @@
     },
     {
       "author": "",
-      "category": "",
+      "category": "Movement",
       "extensionNamespace": "",
-      "fullName": "",
+      "fullName": "Top-down car",
       "helpPath": "",
-      "iconUrl": "",
+      "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0ibWRpLWNhci1iYWNrIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTYsMTFMNyw3SDE3TDE4LDExTTE4LjkyLDZDMTguNzEsNS40IDE4LjE0LDUgMTcuNSw1SDYuNUM1Ljg2LDUgNS4yOSw1LjQgNS4wOCw2TDMsMTJWMjBBMSwxIDAgMCwwIDQsMjFINUExLDEgMCAwLDAgNiwyMFYxOEgxOFYyMEExLDEgMCAwLDAgMTksMjFIMjBBMSwxIDAgMCwwIDIxLDIwVjEyTDE4LjkyLDZNNywxNkg1VjE0SDdWMTZNMTksMTZIMTdWMTRIMTlWMTZNMTQsMTZIMTBWMTRIMTRWMTZaIiAvPjwvc3ZnPg==",
       "name": "TopDownCar",
-      "previewIconUrl": "",
-      "shortDescription": "",
-      "version": "",
-      "description": "",
-      "tags": [],
-      "authorIds": [],
+      "previewIconUrl": "https://asset-resources.gdevelop.io/public-resources/Icons/b4a3bb68575adbecb4418e0397ef8c05913e1f0757dfd111de7e6a4ff31eb149_car-back.svg",
+      "shortDescription": "Simulate car motion.",
+      "version": "0.1.0",
+      "description": "Simulate car motion with the Physics 2 behavior.",
+      "tags": [
+        "race"
+      ],
+      "authorIds": [
+        "IWykYNRvhCZBN3vEgKEbBPOR3Oc2"
+      ],
       "dependencies": [],
       "globalVariables": [],
       "sceneVariables": [],
@@ -27301,6 +27373,7 @@
           "fullName": "Add force with debug",
           "functionType": "Action",
           "name": "AddForce",
+          "private": true,
           "sentence": "",
           "events": [
             {
@@ -27390,6 +27463,7 @@
           "fullName": "Draw force",
           "functionType": "Action",
           "name": "DrawForce",
+          "private": true,
           "sentence": "",
           "events": [
             {
@@ -27548,7 +27622,7 @@
       ],
       "eventsBasedBehaviors": [
         {
-          "description": "",
+          "description": "Simulate car motion.",
           "fullName": "Physics car",
           "name": "PhysicsCar",
           "objectType": "",
@@ -27563,17 +27637,6 @@
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": [
-                    {
-                      "type": {
-                        "value": "Physics2::LinearDamping"
-                      },
-                      "parameters": [
-                        "Object",
-                        "Physics2",
-                        "=",
-                        "0"
-                      ]
-                    },
                     {
                       "type": {
                         "value": "Physics2::AngularDamping"
@@ -28015,20 +28078,11 @@
                           "actions": [
                             {
                               "type": {
-                                "value": "PrimitiveDrawing::FillColor"
-                              },
-                              "parameters": [
-                                "Debug",
-                                "\"42;167;0\""
-                              ]
-                            },
-                            {
-                              "type": {
                                 "value": "PrimitiveDrawing::OutlineColor"
                               },
                               "parameters": [
                                 "Debug",
-                                "\"42;167;0\""
+                                "\"0;68;167\""
                               ]
                             },
                             {
@@ -28065,15 +28119,6 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "PrimitiveDrawing::FillColor"
-                          },
-                          "parameters": [
-                            "Debug",
-                            "\"255;183;0\""
-                          ]
-                        },
-                        {
-                          "type": {
                             "value": "PrimitiveDrawing::OutlineColor"
                           },
                           "parameters": [
@@ -28101,15 +28146,6 @@
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [],
                       "actions": [
-                        {
-                          "type": {
-                            "value": "PrimitiveDrawing::FillColor"
-                          },
-                          "parameters": [
-                            "Debug",
-                            "\"255;0;0\""
-                          ]
-                        },
                         {
                           "type": {
                             "value": "PrimitiveDrawing::OutlineColor"
@@ -28166,6 +28202,35 @@
                       "name": "RearWheelY",
                       "type": "number",
                       "value": 0
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Physics2::LinearVelocityLength"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Physics2",
+                        ">",
+                        "SpeedMax"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Physics2::LinearVelocityAngle"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Physics2",
+                        "Object.Physics2::LinearVelocityAngle()",
+                        "SpeedMax"
+                      ]
                     }
                   ]
                 },
@@ -28846,6 +28911,329 @@
                 }
               ],
               "objectGroups": []
+            },
+            {
+              "description": "the wheel grip ratio (from 0 to 1) of the object. A ratio of 0 is like driving on ice.",
+              "fullName": "Wheel grip ratio (from 0 to 1)",
+              "functionType": "ExpressionAndCondition",
+              "group": "Physics car steering configuration",
+              "name": "WheelGripRatio",
+              "sentence": "the wheel grip ratio (from 0 to 1)",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnNumber"
+                      },
+                      "parameters": [
+                        "WheelGripRatio"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "ActionWithOperator",
+              "getterName": "WheelGripRatio",
+              "name": "SetWheelGripRatio",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TopDownCar::PhysicsCar::SetPropertyWheelGripRatio"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "Value"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "the maximum speed of the object.",
+              "fullName": "Maximum speed",
+              "functionType": "ExpressionAndCondition",
+              "group": "Physics car speed configuration",
+              "name": "SpeedMax",
+              "sentence": "the maximum speed",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnNumber"
+                      },
+                      "parameters": [
+                        "SpeedMax"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "ActionWithOperator",
+              "getterName": "SpeedMax",
+              "name": "SetSpeedMax",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TopDownCar::PhysicsCar::SetPropertySpeedMax"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "Value"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "the steering angle of the object.",
+              "fullName": "Steering angle",
+              "functionType": "ExpressionAndCondition",
+              "name": "SteeringAngle",
+              "sentence": "the steering angle",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnNumber"
+                      },
+                      "parameters": [
+                        "SteeringAngle"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "ActionWithOperator",
+              "getterName": "SteeringAngle",
+              "name": "SetSteeringAngle",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TopDownCar::PhysicsCar::SetPropertySteeringAngle"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "Value"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "the maximum steering angle of the object.",
+              "fullName": "Maximum steering angle",
+              "functionType": "ExpressionAndCondition",
+              "group": "Physics car steering configuration",
+              "name": "SteeringAngleMax",
+              "sentence": "the maximum steering angle",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnNumber"
+                      },
+                      "parameters": [
+                        "SteeringAngleMax"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "ActionWithOperator",
+              "getterName": "SteeringAngleMax",
+              "name": "SetSteeringAngleMax",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TopDownCar::PhysicsCar::SetPropertySteeringAngleMax"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "Value"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
             }
           ],
           "propertyDescriptors": [
@@ -28869,6 +29257,16 @@
               "group": "Speed",
               "extraInformation": [],
               "name": "Acceleration"
+            },
+            {
+              "value": "800",
+              "type": "Number",
+              "unit": "PixelSpeed",
+              "label": "Maximum speed",
+              "description": "",
+              "group": "Speed",
+              "extraInformation": [],
+              "name": "SpeedMax"
             },
             {
               "value": "0.5",
