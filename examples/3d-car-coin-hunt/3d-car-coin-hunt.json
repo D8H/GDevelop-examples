@@ -652,7 +652,7 @@
       },
       "objectsGroups": [
         {
-          "name": "Hazards",
+          "name": "Obstacle",
           "objects": [
             {
               "name": "SuvLuxury"
@@ -1432,6 +1432,14 @@
           ],
           "effects": [],
           "behaviors": [
+            {
+              "name": "AdvancedWheelGrip",
+              "type": "AdvancedWheelGrip::AdvancedWheelGrip",
+              "PhysicsCar": "PhysicsCar",
+              "Physics2": "Physics2",
+              "ShakeModel3D": "ShakeModel3D",
+              "GripFactor": 1
+            },
             {
               "name": "Physics2",
               "type": "Physics2::Physics2Behavior",
@@ -2271,7 +2279,7 @@
             },
             {
               "type": {
-                "value": "LireFichierExp"
+                "value": "ReadNumberFromStorage"
               },
               "parameters": [
                 "\"HighScore\"",
@@ -2483,7 +2491,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "name": "SedanPlayer controls",
+                  "name": "Player controls",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
@@ -2646,32 +2654,9 @@
                       ]
                     },
                     {
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "If on/off road, increase/decrease linear damping."
-                    },
-                    {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberVariable"
-                          },
-                          "parameters": [
-                            "GripFactor",
-                            "=",
-                            "0.25"
-                          ]
-                        }
-                      ],
+                      "actions": [],
                       "events": [
                         {
                           "type": "BuiltinCommonInstructions::Standard",
@@ -2699,16 +2684,6 @@
                                 "True",
                                 ""
                               ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetNumberVariable"
-                              },
-                              "parameters": [
-                                "GripFactor",
-                                "=",
-                                "1"
-                              ]
                             }
                           ]
                         },
@@ -2724,46 +2699,17 @@
                                 "True",
                                 ""
                               ]
-                            },
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::Once"
-                              },
-                              "parameters": []
                             }
                           ],
                           "actions": [
                             {
                               "type": {
-                                "value": "Physics2::LinearDamping"
+                                "value": "AdvancedWheelGrip::AdvancedWheelGrip::SetSurface"
                               },
                               "parameters": [
                                 "Player",
-                                "Physics2",
-                                "=",
-                                "0.1"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "TopDownCar::PhysicsCar::SetSpeedMax"
-                              },
-                              "parameters": [
-                                "Player",
-                                "PhysicsCar",
-                                "=",
-                                "700",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ShakeObject3D::ShakeModel3D::StopShaking"
-                              },
-                              "parameters": [
-                                "Player",
-                                "ShakeModel3D",
-                                "0.5",
+                                "AdvancedWheelGrip",
+                                "\"Asphalt\"",
                                 ""
                               ]
                             }
@@ -2781,76 +2727,17 @@
                                 "False",
                                 ""
                               ]
-                            },
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::Once"
-                              },
-                              "parameters": []
                             }
                           ],
                           "actions": [
                             {
                               "type": {
-                                "value": "Physics2::LinearDamping"
+                                "value": "AdvancedWheelGrip::AdvancedWheelGrip::SetSurface"
                               },
                               "parameters": [
                                 "Player",
-                                "Physics2",
-                                "=",
-                                "0.5"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "TopDownCar::PhysicsCar::SetSpeedMax"
-                              },
-                              "parameters": [
-                                "Player",
-                                "PhysicsCar",
-                                "=",
-                                "350",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ShakeObject3D::ShakeModel3D::StartShaking"
-                              },
-                              "parameters": [
-                                "Player",
-                                "ShakeModel3D",
-                                "0",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ShakeObject3D::ShakeModel3D::SetFrequency"
-                              },
-                              "parameters": [
-                                "Player",
-                                "ShakeModel3D",
-                                "=",
-                                "0.01 * Player.Physics2::LinearVelocity()",
-                                ""
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "TopDownCar::PhysicsCar::SetWheelGripRatio"
-                              },
-                              "parameters": [
-                                "Player",
-                                "PhysicsCar",
-                                "=",
-                                "GripFactor * Tween::Ease(\"easeInOutCubic\", 1, 0.1, abs(sin(ToRad(AngleDifference(Player.Physics2::LinearVelocityAngle(), Player.Angle() + Player.PhysicsCar::SteeringAngle())))))",
+                                "AdvancedWheelGrip",
+                                "\"Grass\"",
                                 ""
                               ]
                             }
@@ -2858,12 +2745,6 @@
                         }
                       ],
                       "variables": [
-                        {
-                          "folded": true,
-                          "name": "GripFactor",
-                          "type": "number",
-                          "value": 0
-                        },
                         {
                           "folded": true,
                           "name": "IsOnTheRoad",
@@ -3514,7 +3395,7 @@
                   "parameters": [
                     "Player",
                     "Physics2",
-                    "Hazards",
+                    "Obstacle",
                     ""
                   ]
                 },
@@ -3702,6 +3583,10 @@
         }
       ],
       "behaviorsSharedData": [
+        {
+          "name": "AdvancedWheelGrip",
+          "type": "AdvancedWheelGrip::AdvancedWheelGrip"
+        },
         {
           "name": "Anchor",
           "type": "AnchorBehavior::AnchorBehavior"
@@ -32142,6 +32027,443 @@
               "extraInformation": [],
               "hidden": true,
               "name": "AccelerationStickValue"
+            }
+          ],
+          "sharedPropertyDescriptors": []
+        }
+      ],
+      "eventsBasedObjects": []
+    },
+    {
+      "author": "",
+      "category": "",
+      "extensionNamespace": "",
+      "fullName": "",
+      "helpPath": "",
+      "iconUrl": "",
+      "name": "AdvancedWheelGrip",
+      "previewIconUrl": "",
+      "shortDescription": "",
+      "version": "",
+      "description": "",
+      "tags": [],
+      "authorIds": [],
+      "dependencies": [],
+      "globalVariables": [],
+      "sceneVariables": [],
+      "eventsFunctions": [],
+      "eventsBasedBehaviors": [
+        {
+          "description": "",
+          "fullName": "",
+          "name": "AdvancedWheelGrip",
+          "objectType": "",
+          "eventsFunctions": [
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "doStepPreEvents",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Save the initial propertie values to be able to set back right values whensitching of surface.\nThis is not done in onCreated because every required behaviors may not be initialized before this one."
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AdvancedWheelGrip::AdvancedWheelGrip::PropertySpeedMax"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AdvancedWheelGrip::AdvancedWheelGrip::SetPropertySpeedMax"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "Object.PhysicsCar::SpeedMax()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AdvancedWheelGrip::AdvancedWheelGrip::SetPropertyLinearDampling"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "Object.Physics2::LinearDamping()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TopDownCar::PhysicsCar::SetWheelGripRatio"
+                      },
+                      "parameters": [
+                        "Object",
+                        "PhysicsCar",
+                        "=",
+                        "GripFactor * Tween::Ease(\"easeInOutCubic\", 1, MaxSpeedGripRatio, abs(sin(ToRad(AngleDifference(Object.Physics2::LinearVelocityAngle(), Object.Angle() + Object.PhysicsCar::SteeringAngle())))))",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "AdvancedWheelGrip::AdvancedWheelGrip",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "Adapt grip to surface",
+              "functionType": "Action",
+              "name": "SetSurface",
+              "sentence": "Adapt _PARAM0_ grip to _PARAM2_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CompareArgumentAsString"
+                      },
+                      "parameters": [
+                        "\"Value\"",
+                        "!=",
+                        "Surface"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AdvancedWheelGrip::AdvancedWheelGrip::SetPropertySurface"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "Value"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CompareArgumentAsString"
+                          },
+                          "parameters": [
+                            "\"Value\"",
+                            "=",
+                            "\"Asphalt\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AdvancedWheelGrip::AdvancedWheelGrip::SetPropertyGripFactor"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Behavior",
+                            "=",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Physics2::LinearDamping"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Physics2",
+                            "=",
+                            "LinearDampling"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "TopDownCar::PhysicsCar::SetSpeedMax"
+                          },
+                          "parameters": [
+                            "Object",
+                            "PhysicsCar",
+                            "=",
+                            "SpeedMax",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ShakeObject3D::ShakeModel3D::StopShaking"
+                          },
+                          "parameters": [
+                            "Object",
+                            "ShakeModel3D",
+                            "0.5",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CompareArgumentAsString"
+                          },
+                          "parameters": [
+                            "\"Value\"",
+                            "=",
+                            "\"Grass\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AdvancedWheelGrip::AdvancedWheelGrip::SetPropertyGripFactor"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Behavior",
+                            "=",
+                            "GrassGripRatioFactor"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Physics2::LinearDamping"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Physics2",
+                            "=",
+                            "LinearDampling * GrassLinearDamplingFactor"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "TopDownCar::PhysicsCar::SetSpeedMax"
+                          },
+                          "parameters": [
+                            "Object",
+                            "PhysicsCar",
+                            "=",
+                            "SpeedMax * GrassSpeedMaxFactor",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ShakeObject3D::ShakeModel3D::StartShaking"
+                          },
+                          "parameters": [
+                            "Object",
+                            "ShakeModel3D",
+                            "0",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ShakeObject3D::ShakeModel3D::SetFrequency"
+                          },
+                          "parameters": [
+                            "Object",
+                            "ShakeModel3D",
+                            "=",
+                            "0.01 * Object.Physics2::LinearVelocity()",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "AdvancedWheelGrip::AdvancedWheelGrip",
+                  "type": "behavior"
+                },
+                {
+                  "description": "Surface",
+                  "name": "Value",
+                  "supplementaryInformation": "[\"Asphalt\",\"Grass\"]",
+                  "type": "stringWithSelector"
+                }
+              ],
+              "objectGroups": []
+            }
+          ],
+          "propertyDescriptors": [
+            {
+              "value": "",
+              "type": "Behavior",
+              "label": "Physics car",
+              "description": "",
+              "group": "",
+              "extraInformation": [
+                "TopDownCar::PhysicsCar"
+              ],
+              "name": "PhysicsCar"
+            },
+            {
+              "value": "",
+              "type": "Behavior",
+              "label": "Physics Engine 2.0",
+              "description": "",
+              "group": "",
+              "extraInformation": [
+                "Physics2::Physics2Behavior"
+              ],
+              "name": "Physics2"
+            },
+            {
+              "value": "",
+              "type": "Behavior",
+              "label": "3D shake",
+              "description": "",
+              "group": "",
+              "extraInformation": [
+                "ShakeObject3D::ShakeModel3D"
+              ],
+              "name": "ShakeModel3D"
+            },
+            {
+              "value": "0.1",
+              "type": "Number",
+              "unit": "Dimensionless",
+              "label": "Grip ratio at maximum speed",
+              "description": "",
+              "group": "Asphalt",
+              "extraInformation": [],
+              "name": "MaxSpeedGripRatio"
+            },
+            {
+              "value": "0.5",
+              "type": "Number",
+              "unit": "Dimensionless",
+              "label": "Maximum speed factor on grass",
+              "description": "",
+              "group": "Grass",
+              "extraInformation": [],
+              "name": "GrassSpeedMaxFactor"
+            },
+            {
+              "value": "0.25",
+              "type": "Number",
+              "unit": "Dimensionless",
+              "label": "Grip ratio factor on grass",
+              "description": "",
+              "group": "Grass",
+              "extraInformation": [],
+              "name": "GrassGripRatioFactor"
+            },
+            {
+              "value": "5",
+              "type": "Number",
+              "unit": "Dimensionless",
+              "label": "Grip linear dampling factor on grass",
+              "description": "",
+              "group": "Grass",
+              "extraInformation": [],
+              "name": "GrassLinearDamplingFactor"
+            },
+            {
+              "value": "Asphalt",
+              "type": "Choice",
+              "label": "",
+              "description": "",
+              "group": "",
+              "extraInformation": [
+                "Asphalt",
+                "Grass"
+              ],
+              "hidden": true,
+              "name": "Surface"
+            },
+            {
+              "value": "1",
+              "type": "Number",
+              "unit": "Dimensionless",
+              "label": "",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": true,
+              "name": "GripFactor"
+            },
+            {
+              "value": "0",
+              "type": "Number",
+              "unit": "PixelSpeed",
+              "label": "",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": true,
+              "name": "SpeedMax"
+            },
+            {
+              "value": "0",
+              "type": "Number",
+              "label": "",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": true,
+              "name": "LinearDampling"
             }
           ],
           "sharedPropertyDescriptors": []
