@@ -2283,9 +2283,11 @@
                 {
                   "type": {
                     "inverted": true,
-                    "value": "SystemInfo::IsMobile"
+                    "value": "SystemInfo::HasTouchScreen"
                   },
-                  "parameters": []
+                  "parameters": [
+                    ""
+                  ]
                 }
               ],
               "actions": [
@@ -2314,9 +2316,11 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "SystemInfo::IsMobile"
+                    "value": "SystemInfo::HasTouchScreen"
                   },
-                  "parameters": []
+                  "parameters": [
+                    ""
+                  ]
                 }
               ],
               "actions": [
