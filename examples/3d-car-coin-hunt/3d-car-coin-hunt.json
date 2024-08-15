@@ -34802,10 +34802,11 @@
               "objectGroups": []
             },
             {
-              "fullName": "Draw debug",
+              "description": "Draw forces applying on the car for debug purpose.",
+              "fullName": "Draw forces for debug",
               "functionType": "Action",
               "name": "DrawDebug",
-              "sentence": "",
+              "sentence": "Draw forces of car _PARAM0_ on _PARAM2_",
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
