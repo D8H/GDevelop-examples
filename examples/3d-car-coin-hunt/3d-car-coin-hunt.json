@@ -588,15 +588,6 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "Cross.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Cross.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
         "file": "assets/Particle.png",
         "kind": "image",
         "metadata": "",
@@ -1503,6 +1494,26 @@
               "NoiseTime": 5.00000000000364,
               "Object3D": "Object3D",
               "IsStartingAtCreation": false
+            },
+            {
+              "name": "ThirdPersonCamera",
+              "type": "ThirdPersonCamera::ThirdPersonCamera",
+              "Object3D": "Object3D",
+              "RotationHalfwayDuration": 0.125,
+              "TranslationZHalfwayDuration": 0.125,
+              "Distance": 800,
+              "LateralOffset": 0,
+              "AheadOffset": 200,
+              "OffsetZ": 0,
+              "RotationAngleOffset": 0,
+              "ElevationAngleOffset": 80,
+              "FollowFreeAreaZMax": 0,
+              "FollowFreeAreaZMin": 0,
+              "RotationLogSpeed": 2.0247e-320,
+              "TranslationZLogSpeed": 2.0247e-320,
+              "IsCalledManually": false,
+              "CameraZ": 0,
+              "LocalOffsetY": 200
             }
           ],
           "content": {
@@ -1917,41 +1928,6 @@
           }
         },
         {
-          "assetStoreId": "",
-          "name": "CameraTarget",
-          "type": "Scene3D::Cube3DObject",
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "content": {
-            "width": 30,
-            "height": 30,
-            "depth": 74,
-            "enableTextureTransparency": false,
-            "facesOrientation": "Y",
-            "frontFaceResourceName": "Cross.png",
-            "backFaceResourceName": "",
-            "backFaceUpThroughWhichAxisRotation": "X",
-            "leftFaceResourceName": "",
-            "rightFaceResourceName": "",
-            "topFaceResourceName": "",
-            "bottomFaceResourceName": "",
-            "frontFaceVisible": true,
-            "backFaceVisible": false,
-            "leftFaceVisible": false,
-            "rightFaceVisible": false,
-            "topFaceVisible": false,
-            "bottomFaceVisible": false,
-            "frontFaceResourceRepeat": false,
-            "backFaceResourceRepeat": false,
-            "leftFaceResourceRepeat": false,
-            "rightFaceResourceRepeat": false,
-            "topFaceResourceRepeat": false,
-            "bottomFaceResourceRepeat": false,
-            "materialType": "Basic"
-          }
-        },
-        {
           "areaMaxX": 64,
           "areaMaxY": 64,
           "areaMaxZ": 64,
@@ -2180,9 +2156,6 @@
           },
           {
             "objectName": "Coin"
-          },
-          {
-            "objectName": "CameraTarget"
           },
           {
             "objectName": "Debug"
@@ -2849,85 +2822,14 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "name": "Particles, car rev volume, and camera controls",
+          "name": "Particles and car rev volume",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "DepartScene"
-                  },
-                  "parameters": [
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "CameraTarget",
-                    "0",
-                    "0",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Cache"
-                  },
-                  "parameters": [
-                    "CameraTarget"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "CameraAngle",
-                    "=",
-                    "lerp(CameraAngle, Player.Angle(), TimeDelta() * 4)"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "MettreAutour"
-                  },
-                  "parameters": [
-                    "CameraTarget",
-                    "Player",
-                    "200",
-                    "CameraAngle"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ThirdPersonCamera::LookFromDistanceAtObject3D"
-                  },
-                  "parameters": [
-                    "",
-                    "CameraTarget",
-                    "Object3D",
-                    "800",
-                    "CameraAngle + 90",
-                    "80",
-                    "",
-                    ""
-                  ]
-                },
                 {
                   "type": {
                     "value": "SetAngle"
@@ -3632,6 +3534,10 @@
         {
           "name": "Text",
           "type": "TextContainerCapability::TextContainerBehavior"
+        },
+        {
+          "name": "ThirdPersonCamera",
+          "type": "ThirdPersonCamera::ThirdPersonCamera"
         }
       ]
     },
@@ -11274,7 +11180,7 @@
       "name": "ThirdPersonCamera",
       "previewIconUrl": "https://asset-resources.gdevelop.io/public-resources/Icons/Line Hero Pack/Master/SVG/Virtual Reality/94e95d2c318e1f3dc7151a351024e13c574e1e44669c6696aa107d60230073f6_Virtual Reality_3d_vision_eye_vr.svg",
       "shortDescription": "Move the camera  to look at an object from a given distance.",
-      "version": "1.2.1",
+      "version": "1.3.0",
       "description": [
         "Move the camera  to look at an object from a given distance with a rotation and an elevation angles.",
         "",
@@ -11646,6 +11552,188 @@
             }
           ],
           "objectGroups": []
+        },
+        {
+          "fullName": "",
+          "functionType": "Expression",
+          "name": "RotatedX",
+          "private": true,
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "TODO Optimize"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Angle",
+                    "=",
+                    "AngleBetweenPositions(0, 0, X, Y)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Length",
+                    "=",
+                    "DistanceBetweenPositions(0, 0, X, Y)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetReturnNumber"
+                  },
+                  "parameters": [
+                    "XFromAngleAndDistance(Angle + RotationAngle, Length)"
+                  ]
+                }
+              ],
+              "variables": [
+                {
+                  "folded": true,
+                  "name": "Angle",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "folded": true,
+                  "name": "Length",
+                  "type": "number",
+                  "value": 0
+                }
+              ]
+            }
+          ],
+          "expressionType": {
+            "type": "expression"
+          },
+          "parameters": [
+            {
+              "description": "Rotation angle",
+              "name": "RotationAngle",
+              "supplementaryInformation": "Tank::Tank",
+              "type": "expression"
+            },
+            {
+              "description": "",
+              "name": "X",
+              "type": "expression"
+            },
+            {
+              "description": "",
+              "name": "Y",
+              "type": "expression"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "fullName": "",
+          "functionType": "Expression",
+          "name": "RotatedY",
+          "private": true,
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "TODO Optimize"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Angle",
+                    "=",
+                    "AngleBetweenPositions(0, 0, X, Y)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Length",
+                    "=",
+                    "DistanceBetweenPositions(0, 0, X, Y)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetReturnNumber"
+                  },
+                  "parameters": [
+                    "YFromAngleAndDistance(Angle + RotationAngle, Length)"
+                  ]
+                }
+              ],
+              "variables": [
+                {
+                  "folded": true,
+                  "name": "Angle",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "folded": true,
+                  "name": "Length",
+                  "type": "number",
+                  "value": 0
+                }
+              ]
+            }
+          ],
+          "expressionType": {
+            "type": "expression"
+          },
+          "parameters": [
+            {
+              "description": "Rotation angle",
+              "name": "RotationAngle",
+              "supplementaryInformation": "Tank::Tank",
+              "type": "expression"
+            },
+            {
+              "description": "",
+              "name": "X",
+              "type": "expression"
+            },
+            {
+              "description": "",
+              "name": "Y",
+              "type": "expression"
+            }
+          ],
+          "objectGroups": []
         }
       ],
       "eventsBasedBehaviors": [
@@ -11941,19 +12029,37 @@
                       "actions": [
                         {
                           "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "CameraAngle",
+                            "=",
+                            "Object.Angle() + 90 + (AngleDifference(CameraAngle(Object.Layer(), 0), (Object.Angle() + 90))) * exp(TimeDelta() * Object.Behavior::PropertyRotationLogSpeed()) + RotationAngleOffset"
+                          ]
+                        },
+                        {
+                          "type": {
                             "value": "ThirdPersonCamera::LookFromDistanceAtPosition3D"
                           },
                           "parameters": [
                             "",
-                            "Object.X() + OffsetX",
-                            "Object.Y() + OffsetY",
+                            "Object.X() + ThirdPersonCamera::RotatedX(CameraAngle, LocalOffsetX, -LocalOffsetY)",
+                            "Object.Y() + ThirdPersonCamera::RotatedY(CameraAngle, LocalOffsetX, -LocalOffsetY)",
                             "CameraZ + OffsetZ",
                             "Distance",
-                            "Object.Angle() + 90 + (AngleDifference(CameraAngle(Object.Layer(), 0), (Object.Angle() + 90))) * exp(TimeDelta() * Object.Behavior::PropertyRotationLogSpeed()) + RotationAngleOffset",
+                            "CameraAngle",
                             "Object.Object3D::RotationY() + ElevationAngleOffset",
                             "",
                             ""
                           ]
+                        }
+                      ],
+                      "variables": [
+                        {
+                          "folded": true,
+                          "name": "CameraAngle",
+                          "type": "number",
+                          "value": 0
                         }
                       ]
                     }
@@ -12528,7 +12634,7 @@
                         "value": "SetReturnNumber"
                       },
                       "parameters": [
-                        "OffsetX"
+                        "LocalOffsetX"
                       ]
                     }
                   ]
@@ -12565,7 +12671,7 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "ThirdPersonCamera::ThirdPersonCamera::SetPropertyOffsetX"
+                        "value": "ThirdPersonCamera::ThirdPersonCamera::SetPropertyLocalOffsetX"
                       },
                       "parameters": [
                         "Object",
@@ -12609,7 +12715,7 @@
                         "value": "SetReturnNumber"
                       },
                       "parameters": [
-                        "OffsetY"
+                        "LocalOffsetY"
                       ]
                     }
                   ]
@@ -12646,7 +12752,7 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "ThirdPersonCamera::ThirdPersonCamera::SetPropertyOffsetY"
+                        "value": "ThirdPersonCamera::ThirdPersonCamera::SetPropertyLocalOffsetY"
                       },
                       "parameters": [
                         "Object",
@@ -12963,21 +13069,21 @@
               "value": "0",
               "type": "Number",
               "unit": "Pixel",
-              "label": "X offset",
+              "label": "Lateral distance offset",
               "description": "",
               "group": "Position",
               "extraInformation": [],
-              "name": "OffsetX"
+              "name": "LocalOffsetX"
             },
             {
               "value": "0",
               "type": "Number",
               "unit": "Pixel",
-              "label": "Y offset",
+              "label": "Ahead distance offset",
               "description": "",
               "group": "Position",
               "extraInformation": [],
-              "name": "OffsetY"
+              "name": "LocalOffsetY"
             },
             {
               "value": "0",
@@ -35659,8 +35765,8 @@
       "eventsFunctions": [],
       "eventsBasedBehaviors": [
         {
-          "description": "",
-          "fullName": "",
+          "description": "Simulate tire heat and surface changes.",
+          "fullName": "Advanced wheel grip",
           "name": "AdvancedWheelGrip",
           "objectType": "",
           "eventsFunctions": [
