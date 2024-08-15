@@ -1515,7 +1515,8 @@
               "TranslationZLogSpeed": 2.0247e-320,
               "IsCalledManually": false,
               "CameraZ": 0,
-              "LocalOffsetY": 200
+              "LocalOffsetY": 200,
+              "LocalOffsetX": 0
             }
           ],
           "content": {
@@ -11545,18 +11546,6 @@
           "sentence": "",
           "events": [
             {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "TODO Optimize"
-            },
-            {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [
@@ -11565,9 +11554,9 @@
                     "value": "SetNumberVariable"
                   },
                   "parameters": [
-                    "Angle",
+                    "Cos",
                     "=",
-                    "AngleBetweenPositions(0, 0, X, Y)"
+                    "cos(ToRad(RotationAngle))"
                   ]
                 },
                 {
@@ -11575,9 +11564,9 @@
                     "value": "SetNumberVariable"
                   },
                   "parameters": [
-                    "Length",
+                    "Sin",
                     "=",
-                    "DistanceBetweenPositions(0, 0, X, Y)"
+                    "sin(ToRad(RotationAngle))"
                   ]
                 },
                 {
@@ -11585,20 +11574,20 @@
                     "value": "SetReturnNumber"
                   },
                   "parameters": [
-                    "XFromAngleAndDistance(Angle + RotationAngle, Length)"
+                    "Cos * X - Sin * Y"
                   ]
                 }
               ],
               "variables": [
                 {
                   "folded": true,
-                  "name": "Angle",
+                  "name": "Cos",
                   "type": "number",
                   "value": 0
                 },
                 {
                   "folded": true,
-                  "name": "Length",
+                  "name": "Sin",
                   "type": "number",
                   "value": 0
                 }
@@ -11636,18 +11625,6 @@
           "sentence": "",
           "events": [
             {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "TODO Optimize"
-            },
-            {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [
@@ -11656,9 +11633,9 @@
                     "value": "SetNumberVariable"
                   },
                   "parameters": [
-                    "Angle",
+                    "Cos",
                     "=",
-                    "AngleBetweenPositions(0, 0, X, Y)"
+                    "cos(ToRad(RotationAngle))"
                   ]
                 },
                 {
@@ -11666,9 +11643,9 @@
                     "value": "SetNumberVariable"
                   },
                   "parameters": [
-                    "Length",
+                    "Sin",
                     "=",
-                    "DistanceBetweenPositions(0, 0, X, Y)"
+                    "sin(ToRad(RotationAngle))"
                   ]
                 },
                 {
@@ -11676,20 +11653,20 @@
                     "value": "SetReturnNumber"
                   },
                   "parameters": [
-                    "YFromAngleAndDistance(Angle + RotationAngle, Length)"
+                    "Sin * X + Cos * Y"
                   ]
                 }
               ],
               "variables": [
                 {
                   "folded": true,
-                  "name": "Angle",
+                  "name": "Cos",
                   "type": "number",
                   "value": 0
                 },
                 {
                   "folded": true,
-                  "name": "Length",
+                  "name": "Sin",
                   "type": "number",
                   "value": 0
                 }
@@ -12076,8 +12053,8 @@
                           },
                           "parameters": [
                             "",
-                            "Object.X() + ThirdPersonCamera::RotatedX(CameraAngle, LocalOffsetX, -LocalOffsetY)",
-                            "Object.Y() + ThirdPersonCamera::RotatedY(CameraAngle, LocalOffsetX, -LocalOffsetY)",
+                            "Object.X() + ThirdPersonCamera::RotatedX(CameraAngle, OffsetX, -OffsetY)",
+                            "Object.Y() + ThirdPersonCamera::RotatedY(CameraAngle, OffsetX, -OffsetY)",
                             "CameraZ + OffsetZ",
                             "Distance",
                             "CameraAngle",
@@ -12667,7 +12644,7 @@
                         "value": "SetReturnNumber"
                       },
                       "parameters": [
-                        "LocalOffsetX"
+                        "OffsetX"
                       ]
                     }
                   ]
@@ -12704,7 +12681,7 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "ThirdPersonCamera::ThirdPersonCamera::SetPropertyLocalOffsetX"
+                        "value": "ThirdPersonCamera::ThirdPersonCamera::SetPropertyOffsetX"
                       },
                       "parameters": [
                         "Object",
@@ -12748,7 +12725,7 @@
                         "value": "SetReturnNumber"
                       },
                       "parameters": [
-                        "LocalOffsetY"
+                        "OffsetY"
                       ]
                     }
                   ]
@@ -12785,7 +12762,7 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "ThirdPersonCamera::ThirdPersonCamera::SetPropertyLocalOffsetY"
+                        "value": "ThirdPersonCamera::ThirdPersonCamera::SetPropertyOffsetY"
                       },
                       "parameters": [
                         "Object",
@@ -13106,7 +13083,7 @@
               "description": "",
               "group": "Position",
               "extraInformation": [],
-              "name": "LocalOffsetX"
+              "name": "OffsetX"
             },
             {
               "value": "0",
@@ -13116,7 +13093,7 @@
               "description": "",
               "group": "Position",
               "extraInformation": [],
-              "name": "LocalOffsetY"
+              "name": "OffsetY"
             },
             {
               "value": "0",
