@@ -1429,7 +1429,8 @@
               "PhysicsCar": "PhysicsCar",
               "Physics2": "Physics2",
               "ShakeModel3D": "ShakeModel3D",
-              "GripFactor": 1
+              "GripFactor": 1,
+              "GripRatioMin": 0.075
             },
             {
               "name": "Physics2",
@@ -1456,7 +1457,7 @@
             },
             {
               "name": "PhysicsCar",
-              "type": "TopDownCar::PhysicsCar",
+              "type": "PhysicsCar::PhysicsCar",
               "Physics2": "Physics2",
               "Acceleration": 700,
               "SlippingRatio": 0.5,
@@ -1469,7 +1470,8 @@
               "FrontWheelsPosition": 0.8,
               "RearWheelsPosition": 0.8,
               "SteeringAngleMax": 27,
-              "SteeringBackSpeed": 300
+              "SteeringBackSpeed": 300,
+              "WheelGripRatio": 0.5
             },
             {
               "name": "ShakeModel3D",
@@ -2181,7 +2183,7 @@
           "actions": [
             {
               "type": {
-                "value": "TopDownCar::PhysicsCar::Step"
+                "value": "PhysicsCar::PhysicsCar::Step"
               },
               "parameters": [
                 "Player",
@@ -2489,7 +2491,7 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "TopDownCar::PhysicsCar::SimulateDownKey"
+                            "value": "PhysicsCar::PhysicsCar::SimulateDownKey"
                           },
                           "parameters": [
                             "Player",
@@ -2515,7 +2517,7 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "TopDownCar::PhysicsCar::SimulateUpKey"
+                            "value": "PhysicsCar::PhysicsCar::SimulateUpKey"
                           },
                           "parameters": [
                             "Player",
@@ -2541,7 +2543,7 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "TopDownCar::PhysicsCar::SimulateLeftKey"
+                            "value": "PhysicsCar::PhysicsCar::SimulateLeftKey"
                           },
                           "parameters": [
                             "Player",
@@ -2567,7 +2569,7 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "TopDownCar::PhysicsCar::SimulateRightKey"
+                            "value": "PhysicsCar::PhysicsCar::SimulateRightKey"
                           },
                           "parameters": [
                             "Player",
@@ -2614,7 +2616,7 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "TopDownCar::PhysicsCar::SimulateAccelerationStick"
+                            "value": "PhysicsCar::PhysicsCar::SimulateAccelerationStick"
                           },
                           "parameters": [
                             "Player",
@@ -2644,7 +2646,7 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "TopDownCar::PhysicsCar::SimulateSteeringStick"
+                            "value": "PhysicsCar::PhysicsCar::SimulateSteeringStick"
                           },
                           "parameters": [
                             "Player",
@@ -2671,7 +2673,7 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "TopDownCar::PhysicsCar::SimulateAccelerationStick"
+                            "value": "PhysicsCar::PhysicsCar::SimulateAccelerationStick"
                           },
                           "parameters": [
                             "Player",
@@ -2698,7 +2700,7 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "TopDownCar::PhysicsCar::SimulateSteeringStick"
+                            "value": "PhysicsCar::PhysicsCar::SimulateSteeringStick"
                           },
                           "parameters": [
                             "Player",
@@ -3516,7 +3518,7 @@
         },
         {
           "name": "PhysicsCar",
-          "type": "TopDownCar::PhysicsCar"
+          "type": "PhysicsCar::PhysicsCar"
         },
         {
           "name": "Resizable",
@@ -11818,6 +11820,55 @@
                   "conditions": [
                     {
                       "type": {
+                        "value": "ThirdPersonCamera::ThirdPersonCamera::PropertyHasJustBeenCreated"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ThirdPersonCamera::ThirdPersonCamera::SetPropertyHasJustBeenCreated"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetCameraAngle"
+                      },
+                      "parameters": [
+                        "",
+                        "=",
+                        "Object.Angle() + 90",
+                        "Object.Layer()",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ThirdPersonCamera::ThirdPersonCamera::SetPropertyCameraZ"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "Object.Object3D::CenterZ()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
                         "inverted": true,
                         "value": "ThirdPersonCamera::ThirdPersonCamera::PropertyIsCalledManually"
                       },
@@ -13177,6 +13228,16 @@
               "extraInformation": [],
               "hidden": true,
               "name": "CameraZ"
+            },
+            {
+              "value": "true",
+              "type": "Boolean",
+              "label": "",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": true,
+              "name": "HasJustBeenCreated"
             }
           ],
           "sharedPropertyDescriptors": []
@@ -33207,14 +33268,14 @@
       "author": "",
       "category": "Movement",
       "extensionNamespace": "",
-      "fullName": "Top-down car",
+      "fullName": "Physics car",
       "helpPath": "",
       "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0ibWRpLWNhci1iYWNrIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTYsMTFMNyw3SDE3TDE4LDExTTE4LjkyLDZDMTguNzEsNS40IDE4LjE0LDUgMTcuNSw1SDYuNUM1Ljg2LDUgNS4yOSw1LjQgNS4wOCw2TDMsMTJWMjBBMSwxIDAgMCwwIDQsMjFINUExLDEgMCAwLDAgNiwyMFYxOEgxOFYyMEExLDEgMCAwLDAgMTksMjFIMjBBMSwxIDAgMCwwIDIxLDIwVjEyTDE4LjkyLDZNNywxNkg1VjE0SDdWMTZNMTksMTZIMTdWMTRIMTlWMTZNMTQsMTZIMTBWMTRIMTRWMTZaIiAvPjwvc3ZnPg==",
-      "name": "TopDownCar",
+      "name": "PhysicsCar",
       "previewIconUrl": "https://asset-resources.gdevelop.io/public-resources/Icons/b4a3bb68575adbecb4418e0397ef8c05913e1f0757dfd111de7e6a4ff31eb149_car-back.svg",
-      "shortDescription": "Simulate car motion.",
+      "shortDescription": "Simulate car motion with drifting.",
       "version": "0.1.0",
-      "description": "Simulate car motion with the Physics 2 behavior.",
+      "description": "Simulate drifting car motion with the Physics 2 behavior.",
       "tags": [
         "race"
       ],
@@ -33238,7 +33299,7 @@
               "actions": [
                 {
                   "type": {
-                    "value": "TopDownCar::DrawForce"
+                    "value": "PhysicsCar::DrawForce"
                   },
                   "parameters": [
                     "",
@@ -33259,7 +33320,7 @@
               "actions": [
                 {
                   "type": {
-                    "value": "TopDownCar::PhysicsCar::ApplyPolarForce"
+                    "value": "PhysicsCar::PhysicsCar::ApplyPolarForce"
                   },
                   "parameters": [
                     "Object",
@@ -33283,7 +33344,7 @@
             {
               "description": "",
               "name": "PhysicsCar",
-              "supplementaryInformation": "TopDownCar::PhysicsCar",
+              "supplementaryInformation": "PhysicsCar::PhysicsCar",
               "type": "behavior"
             },
             {
@@ -33516,7 +33577,7 @@
                 {
                   "description": "Behavior",
                   "name": "Behavior",
-                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "supplementaryInformation": "PhysicsCar::PhysicsCar",
                   "type": "behavior"
                 }
               ],
@@ -33537,7 +33598,7 @@
                 {
                   "description": "Behavior",
                   "name": "Behavior",
-                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "supplementaryInformation": "PhysicsCar::PhysicsCar",
                   "type": "behavior"
                 }
               ],
@@ -33563,7 +33624,7 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "TopDownCar::PhysicsCar::PropertyIsLeftPressed"
+                            "value": "PhysicsCar::PhysicsCar::PropertyIsLeftPressed"
                           },
                           "parameters": [
                             "Object",
@@ -33574,7 +33635,7 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "TopDownCar::PhysicsCar::SetPropertySteeringStickValue"
+                            "value": "PhysicsCar::PhysicsCar::SetPropertySteeringStickValue"
                           },
                           "parameters": [
                             "Object",
@@ -33590,7 +33651,7 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "TopDownCar::PhysicsCar::PropertyIsRightPressed"
+                            "value": "PhysicsCar::PhysicsCar::PropertyIsRightPressed"
                           },
                           "parameters": [
                             "Object",
@@ -33601,7 +33662,7 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "TopDownCar::PhysicsCar::SetPropertySteeringStickValue"
+                            "value": "PhysicsCar::PhysicsCar::SetPropertySteeringStickValue"
                           },
                           "parameters": [
                             "Object",
@@ -33617,7 +33678,7 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "TopDownCar::PhysicsCar::PropertySteeringStickValue"
+                            "value": "PhysicsCar::PhysicsCar::PropertySteeringStickValue"
                           },
                           "parameters": [
                             "Object",
@@ -33634,7 +33695,7 @@
                           "conditions": [
                             {
                               "type": {
-                                "value": "TopDownCar::PhysicsCar::PropertySteeringAngle"
+                                "value": "PhysicsCar::PhysicsCar::PropertySteeringAngle"
                               },
                               "parameters": [
                                 "Object",
@@ -33647,7 +33708,7 @@
                           "actions": [
                             {
                               "type": {
-                                "value": "TopDownCar::PhysicsCar::SetPropertySteeringAngle"
+                                "value": "PhysicsCar::PhysicsCar::SetPropertySteeringAngle"
                               },
                               "parameters": [
                                 "Object",
@@ -33663,7 +33724,7 @@
                           "conditions": [
                             {
                               "type": {
-                                "value": "TopDownCar::PhysicsCar::PropertySteeringAngle"
+                                "value": "PhysicsCar::PhysicsCar::PropertySteeringAngle"
                               },
                               "parameters": [
                                 "Object",
@@ -33676,7 +33737,7 @@
                           "actions": [
                             {
                               "type": {
-                                "value": "TopDownCar::PhysicsCar::SetPropertySteeringAngle"
+                                "value": "PhysicsCar::PhysicsCar::SetPropertySteeringAngle"
                               },
                               "parameters": [
                                 "Object",
@@ -33694,7 +33755,7 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "TopDownCar::PhysicsCar::PropertySteeringStickValue"
+                            "value": "PhysicsCar::PhysicsCar::PropertySteeringStickValue"
                           },
                           "parameters": [
                             "Object",
@@ -33711,7 +33772,7 @@
                           "conditions": [
                             {
                               "type": {
-                                "value": "TopDownCar::PhysicsCar::PropertySteeringAngle"
+                                "value": "PhysicsCar::PhysicsCar::PropertySteeringAngle"
                               },
                               "parameters": [
                                 "Object",
@@ -33724,7 +33785,7 @@
                           "actions": [
                             {
                               "type": {
-                                "value": "TopDownCar::PhysicsCar::SetPropertySteeringAngle"
+                                "value": "PhysicsCar::PhysicsCar::SetPropertySteeringAngle"
                               },
                               "parameters": [
                                 "Object",
@@ -33740,7 +33801,7 @@
                           "conditions": [
                             {
                               "type": {
-                                "value": "TopDownCar::PhysicsCar::PropertySteeringAngle"
+                                "value": "PhysicsCar::PhysicsCar::PropertySteeringAngle"
                               },
                               "parameters": [
                                 "Object",
@@ -33753,7 +33814,7 @@
                           "actions": [
                             {
                               "type": {
-                                "value": "TopDownCar::PhysicsCar::SetPropertySteeringAngle"
+                                "value": "PhysicsCar::PhysicsCar::SetPropertySteeringAngle"
                               },
                               "parameters": [
                                 "Object",
@@ -33771,7 +33832,7 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "TopDownCar::PhysicsCar::PropertySteeringStickValue"
+                            "value": "PhysicsCar::PhysicsCar::PropertySteeringStickValue"
                           },
                           "parameters": [
                             "Object",
@@ -33788,7 +33849,7 @@
                           "conditions": [
                             {
                               "type": {
-                                "value": "TopDownCar::PhysicsCar::PropertySteeringAngle"
+                                "value": "PhysicsCar::PhysicsCar::PropertySteeringAngle"
                               },
                               "parameters": [
                                 "Object",
@@ -33801,7 +33862,7 @@
                           "actions": [
                             {
                               "type": {
-                                "value": "TopDownCar::PhysicsCar::SetPropertySteeringAngle"
+                                "value": "PhysicsCar::PhysicsCar::SetPropertySteeringAngle"
                               },
                               "parameters": [
                                 "Object",
@@ -33817,7 +33878,7 @@
                           "conditions": [
                             {
                               "type": {
-                                "value": "TopDownCar::PhysicsCar::PropertySteeringAngle"
+                                "value": "PhysicsCar::PhysicsCar::PropertySteeringAngle"
                               },
                               "parameters": [
                                 "Object",
@@ -33830,7 +33891,7 @@
                           "actions": [
                             {
                               "type": {
-                                "value": "TopDownCar::PhysicsCar::SetPropertySteeringAngle"
+                                "value": "PhysicsCar::PhysicsCar::SetPropertySteeringAngle"
                               },
                               "parameters": [
                                 "Object",
@@ -33903,7 +33964,7 @@
                     },
                     {
                       "type": {
-                        "value": "TopDownCar::DrawForce"
+                        "value": "PhysicsCar::DrawForce"
                       },
                       "parameters": [
                         "Debug",
@@ -34007,7 +34068,7 @@
                         },
                         {
                           "type": {
-                            "value": "TopDownCar::DrawForce"
+                            "value": "PhysicsCar::DrawForce"
                           },
                           "parameters": [
                             "Debug",
@@ -34022,7 +34083,7 @@
                         },
                         {
                           "type": {
-                            "value": "TopDownCar::DrawForce"
+                            "value": "PhysicsCar::DrawForce"
                           },
                           "parameters": [
                             "Debug",
@@ -34054,7 +34115,7 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "TopDownCar::PhysicsCar::PropertyIsUpPressed"
+                            "value": "PhysicsCar::PhysicsCar::PropertyIsUpPressed"
                           },
                           "parameters": [
                             "Object",
@@ -34065,7 +34126,7 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "TopDownCar::PhysicsCar::SetPropertyAccelerationStickValue"
+                            "value": "PhysicsCar::PhysicsCar::SetPropertyAccelerationStickValue"
                           },
                           "parameters": [
                             "Object",
@@ -34081,7 +34142,7 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "TopDownCar::PhysicsCar::PropertyIsDownPressed"
+                            "value": "PhysicsCar::PhysicsCar::PropertyIsDownPressed"
                           },
                           "parameters": [
                             "Object",
@@ -34092,7 +34153,7 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "TopDownCar::PhysicsCar::SetPropertyAccelerationStickValue"
+                            "value": "PhysicsCar::PhysicsCar::SetPropertyAccelerationStickValue"
                           },
                           "parameters": [
                             "Object",
@@ -34118,7 +34179,7 @@
                         },
                         {
                           "type": {
-                            "value": "TopDownCar::AddForce"
+                            "value": "PhysicsCar::AddForce"
                           },
                           "parameters": [
                             "",
@@ -34144,7 +34205,7 @@
                         "textG": 0,
                         "textR": 0
                       },
-                      "comment": "Wheels grip"
+                      "comment": "Wheels grip\nOnly 2 wheels are simulated instead of 4 to simplify calculus."
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -34161,7 +34222,7 @@
                         },
                         {
                           "type": {
-                            "value": "TopDownCar::PhysicsCar::ApplyWheelForces"
+                            "value": "PhysicsCar::PhysicsCar::ApplyWheelForces"
                           },
                           "parameters": [
                             "Object",
@@ -34190,7 +34251,7 @@
                         },
                         {
                           "type": {
-                            "value": "TopDownCar::PhysicsCar::ApplyWheelForces"
+                            "value": "PhysicsCar::PhysicsCar::ApplyWheelForces"
                           },
                           "parameters": [
                             "Object",
@@ -34273,7 +34334,7 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "TopDownCar::PhysicsCar::SetPropertyIsLeftPressed"
+                        "value": "PhysicsCar::PhysicsCar::SetPropertyIsLeftPressed"
                       },
                       "parameters": [
                         "Object",
@@ -34283,7 +34344,7 @@
                     },
                     {
                       "type": {
-                        "value": "TopDownCar::PhysicsCar::SetPropertyIsRightPressed"
+                        "value": "PhysicsCar::PhysicsCar::SetPropertyIsRightPressed"
                       },
                       "parameters": [
                         "Object",
@@ -34293,7 +34354,7 @@
                     },
                     {
                       "type": {
-                        "value": "TopDownCar::PhysicsCar::SetPropertyIsUpPressed"
+                        "value": "PhysicsCar::PhysicsCar::SetPropertyIsUpPressed"
                       },
                       "parameters": [
                         "Object",
@@ -34303,7 +34364,7 @@
                     },
                     {
                       "type": {
-                        "value": "TopDownCar::PhysicsCar::SetPropertyIsDownPressed"
+                        "value": "PhysicsCar::PhysicsCar::SetPropertyIsDownPressed"
                       },
                       "parameters": [
                         "Object",
@@ -34313,7 +34374,7 @@
                     },
                     {
                       "type": {
-                        "value": "TopDownCar::PhysicsCar::SetPropertyAccelerationStickValue"
+                        "value": "PhysicsCar::PhysicsCar::SetPropertyAccelerationStickValue"
                       },
                       "parameters": [
                         "Object",
@@ -34324,7 +34385,7 @@
                     },
                     {
                       "type": {
-                        "value": "TopDownCar::PhysicsCar::SetPropertySteeringStickValue"
+                        "value": "PhysicsCar::PhysicsCar::SetPropertySteeringStickValue"
                       },
                       "parameters": [
                         "Object",
@@ -34345,7 +34406,7 @@
                 {
                   "description": "Behavior",
                   "name": "Behavior",
-                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "supplementaryInformation": "PhysicsCar::PhysicsCar",
                   "type": "behavior"
                 },
                 {
@@ -34370,7 +34431,7 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "TopDownCar::PhysicsCar::SetPropertyIsRightPressed"
+                        "value": "PhysicsCar::PhysicsCar::SetPropertyIsRightPressed"
                       },
                       "parameters": [
                         "Object",
@@ -34390,7 +34451,7 @@
                 {
                   "description": "Behavior",
                   "name": "Behavior",
-                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "supplementaryInformation": "PhysicsCar::PhysicsCar",
                   "type": "behavior"
                 }
               ],
@@ -34409,7 +34470,7 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "TopDownCar::PhysicsCar::SetPropertyIsLeftPressed"
+                        "value": "PhysicsCar::PhysicsCar::SetPropertyIsLeftPressed"
                       },
                       "parameters": [
                         "Object",
@@ -34429,7 +34490,7 @@
                 {
                   "description": "Behavior",
                   "name": "Behavior",
-                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "supplementaryInformation": "PhysicsCar::PhysicsCar",
                   "type": "behavior"
                 }
               ],
@@ -34448,7 +34509,7 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "TopDownCar::PhysicsCar::SetPropertyIsUpPressed"
+                        "value": "PhysicsCar::PhysicsCar::SetPropertyIsUpPressed"
                       },
                       "parameters": [
                         "Object",
@@ -34468,7 +34529,7 @@
                 {
                   "description": "Behavior",
                   "name": "Behavior",
-                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "supplementaryInformation": "PhysicsCar::PhysicsCar",
                   "type": "behavior"
                 }
               ],
@@ -34487,7 +34548,7 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "TopDownCar::PhysicsCar::SetPropertyIsDownPressed"
+                        "value": "PhysicsCar::PhysicsCar::SetPropertyIsDownPressed"
                       },
                       "parameters": [
                         "Object",
@@ -34507,7 +34568,7 @@
                 {
                   "description": "Behavior",
                   "name": "Behavior",
-                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "supplementaryInformation": "PhysicsCar::PhysicsCar",
                   "type": "behavior"
                 }
               ],
@@ -34526,7 +34587,7 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "TopDownCar::PhysicsCar::SetPropertySteeringStickValue"
+                        "value": "PhysicsCar::PhysicsCar::SetPropertySteeringStickValue"
                       },
                       "parameters": [
                         "Object",
@@ -34547,7 +34608,7 @@
                 {
                   "description": "Behavior",
                   "name": "Behavior",
-                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "supplementaryInformation": "PhysicsCar::PhysicsCar",
                   "type": "behavior"
                 },
                 {
@@ -34571,7 +34632,7 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "TopDownCar::PhysicsCar::SetPropertyAccelerationStickValue"
+                        "value": "PhysicsCar::PhysicsCar::SetPropertyAccelerationStickValue"
                       },
                       "parameters": [
                         "Object",
@@ -34592,7 +34653,7 @@
                 {
                   "description": "Behavior",
                   "name": "Behavior",
-                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "supplementaryInformation": "PhysicsCar::PhysicsCar",
                   "type": "behavior"
                 },
                 {
@@ -34620,7 +34681,7 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "When the car don't slip, there is no motion orthogonally to wheels direction.\nA factor ensures that the force applied to the car remove the linear velocity part that is orthogonally to wheels direction."
+                  "comment": "When cars don't slip (WheelGripRatio = 1), there is no motion orthogonally to wheels direction.\n\nSo, we project the velocity orthogonally to the wheel to find the velocity to fight:\nVelocity * sin(VelocityAngle - WheelAngle)\n\nNow, we have the velocity that we want to fight, but we need to apply a force to the object.\nSo, we need find how much force must be applied to have the velocity change we want.\n\nConsidering that:\n- there are only 1 wheel at the front and 1 wheel at the back\n- the wheels are considered to be in the same direction as the car (even if the front one car actually turn)\n\nWe have:\nAngularAcceleration = Force * Distance / Inertia\nAcceleration = AngularAcceleration * Distance\nVelocityDelta = Acceleration * TimeDelta\n\nWhich results to:\nVelocityDelta = Force / Inertia * Distance * TimeDelta\n\nWe find the force to apply to fight the velocity:\nForce = VelocityDelta * Inertia / (Distance * TimeDelta)\n\nFinally, there is a division by 2 because the car has 2 wheels and they probably fight the same velocity.\nTo check the equilibrium, you can set the WheelGripRatio around 2. The velocity will go back and forth and either converge (<2) or diverge (>2)."
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -34628,19 +34689,37 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "TopDownCar::AddForce"
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "DistanceSquared",
+                        "=",
+                        "(WheelX - Object.Physics2::MassCenterX()) * (WheelX - Object.Physics2::MassCenterX()) + (WheelY - Object.Physics2::MassCenterY()) * (WheelY - Object.CenterY())"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PhysicsCar::AddForce"
                       },
                       "parameters": [
                         "",
                         "Object",
                         "Behavior",
                         "WheelAngle + 90",
-                        "-WheelGripRatio * Object.Behavior::LinearVelocityAt(WheelX, WheelY) * sin(ToRad(Object.Behavior::LinearVelocityAngleAt(WheelX, WheelY) - WheelAngle)) / TimeDelta() * Object.Behavior::Inertia() / Object.Width() * 2 / Object.Width() * 2 / 2",
+                        "-WheelGripRatio * Object.Behavior::LinearVelocityAt(WheelX, WheelY) * sin(ToRad(Object.Behavior::LinearVelocityAngleAt(WheelX, WheelY) - WheelAngle)) * Object.Behavior::Inertia() / (DistanceSquared * TimeDelta()) / 2",
                         "WheelX",
                         "WheelY",
                         "Debug",
                         ""
                       ]
+                    }
+                  ],
+                  "variables": [
+                    {
+                      "folded": true,
+                      "name": "DistanceSquared",
+                      "type": "number",
+                      "value": 0
                     }
                   ]
                 }
@@ -34654,7 +34733,7 @@
                 {
                   "description": "Behavior",
                   "name": "Behavior",
-                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "supplementaryInformation": "PhysicsCar::PhysicsCar",
                   "type": "behavior"
                 },
                 {
@@ -34715,7 +34794,7 @@
                 {
                   "description": "Behavior",
                   "name": "Behavior",
-                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "supplementaryInformation": "PhysicsCar::PhysicsCar",
                   "type": "behavior"
                 },
                 {
@@ -34765,7 +34844,7 @@
                 {
                   "description": "Behavior",
                   "name": "Behavior",
-                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "supplementaryInformation": "PhysicsCar::PhysicsCar",
                   "type": "behavior"
                 },
                 {
@@ -34815,7 +34894,7 @@
                 {
                   "description": "Behavior",
                   "name": "Behavior",
-                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "supplementaryInformation": "PhysicsCar::PhysicsCar",
                   "type": "behavior"
                 },
                 {
@@ -34865,7 +34944,7 @@
                 {
                   "description": "Behavior",
                   "name": "Behavior",
-                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "supplementaryInformation": "PhysicsCar::PhysicsCar",
                   "type": "behavior"
                 },
                 {
@@ -34924,7 +35003,7 @@
                 {
                   "description": "Behavior",
                   "name": "Behavior",
-                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "supplementaryInformation": "PhysicsCar::PhysicsCar",
                   "type": "behavior"
                 }
               ],
@@ -34980,7 +35059,7 @@
                 {
                   "description": "Behavior",
                   "name": "Behavior",
-                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "supplementaryInformation": "PhysicsCar::PhysicsCar",
                   "type": "behavior"
                 },
                 {
@@ -35040,7 +35119,7 @@
                 {
                   "description": "Behavior",
                   "name": "Behavior",
-                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "supplementaryInformation": "PhysicsCar::PhysicsCar",
                   "type": "behavior"
                 }
               ],
@@ -35059,7 +35138,7 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "TopDownCar::PhysicsCar::SetPropertySteeringAngle"
+                        "value": "PhysicsCar::PhysicsCar::SetPropertySteeringAngle"
                       },
                       "parameters": [
                         "Object",
@@ -35080,7 +35159,7 @@
                 {
                   "description": "Behavior",
                   "name": "Behavior",
-                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "supplementaryInformation": "PhysicsCar::PhysicsCar",
                   "type": "behavior"
                 }
               ],
@@ -35121,7 +35200,7 @@
                 {
                   "description": "Behavior",
                   "name": "Behavior",
-                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "supplementaryInformation": "PhysicsCar::PhysicsCar",
                   "type": "behavior"
                 }
               ],
@@ -35140,7 +35219,7 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "TopDownCar::PhysicsCar::SetPropertyAcceleration"
+                        "value": "PhysicsCar::PhysicsCar::SetPropertyAcceleration"
                       },
                       "parameters": [
                         "Object",
@@ -35161,7 +35240,7 @@
                 {
                   "description": "Behavior",
                   "name": "Behavior",
-                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "supplementaryInformation": "PhysicsCar::PhysicsCar",
                   "type": "behavior"
                 }
               ],
@@ -35202,7 +35281,7 @@
                 {
                   "description": "Behavior",
                   "name": "Behavior",
-                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "supplementaryInformation": "PhysicsCar::PhysicsCar",
                   "type": "behavior"
                 }
               ],
@@ -35221,7 +35300,7 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "TopDownCar::PhysicsCar::SetPropertySpeedMax"
+                        "value": "PhysicsCar::PhysicsCar::SetPropertySpeedMax"
                       },
                       "parameters": [
                         "Object",
@@ -35242,7 +35321,7 @@
                 {
                   "description": "Behavior",
                   "name": "Behavior",
-                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "supplementaryInformation": "PhysicsCar::PhysicsCar",
                   "type": "behavior"
                 }
               ],
@@ -35283,7 +35362,7 @@
                 {
                   "description": "Behavior",
                   "name": "Behavior",
-                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "supplementaryInformation": "PhysicsCar::PhysicsCar",
                   "type": "behavior"
                 }
               ],
@@ -35302,7 +35381,7 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "TopDownCar::PhysicsCar::SetPropertyWheelGripRatio"
+                        "value": "PhysicsCar::PhysicsCar::SetPropertyWheelGripRatio"
                       },
                       "parameters": [
                         "Object",
@@ -35323,7 +35402,7 @@
                 {
                   "description": "Behavior",
                   "name": "Behavior",
-                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "supplementaryInformation": "PhysicsCar::PhysicsCar",
                   "type": "behavior"
                 }
               ],
@@ -35364,7 +35443,7 @@
                 {
                   "description": "Behavior",
                   "name": "Behavior",
-                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "supplementaryInformation": "PhysicsCar::PhysicsCar",
                   "type": "behavior"
                 }
               ],
@@ -35383,7 +35462,7 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "TopDownCar::PhysicsCar::SetPropertySteeringAngleMax"
+                        "value": "PhysicsCar::PhysicsCar::SetPropertySteeringAngleMax"
                       },
                       "parameters": [
                         "Object",
@@ -35404,7 +35483,7 @@
                 {
                   "description": "Behavior",
                   "name": "Behavior",
-                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "supplementaryInformation": "PhysicsCar::PhysicsCar",
                   "type": "behavior"
                 }
               ],
@@ -35445,7 +35524,7 @@
                 {
                   "description": "Behavior",
                   "name": "Behavior",
-                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "supplementaryInformation": "PhysicsCar::PhysicsCar",
                   "type": "behavior"
                 }
               ],
@@ -35464,7 +35543,7 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "TopDownCar::PhysicsCar::SetPropertySteeringSpeed"
+                        "value": "PhysicsCar::PhysicsCar::SetPropertySteeringSpeed"
                       },
                       "parameters": [
                         "Object",
@@ -35485,7 +35564,7 @@
                 {
                   "description": "Behavior",
                   "name": "Behavior",
-                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "supplementaryInformation": "PhysicsCar::PhysicsCar",
                   "type": "behavior"
                 }
               ],
@@ -35526,7 +35605,7 @@
                 {
                   "description": "Behavior",
                   "name": "Behavior",
-                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "supplementaryInformation": "PhysicsCar::PhysicsCar",
                   "type": "behavior"
                 }
               ],
@@ -35545,7 +35624,7 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "TopDownCar::PhysicsCar::SetPropertySteeringBackSpeed"
+                        "value": "PhysicsCar::PhysicsCar::SetPropertySteeringBackSpeed"
                       },
                       "parameters": [
                         "Object",
@@ -35566,7 +35645,7 @@
                 {
                   "description": "Behavior",
                   "name": "Behavior",
-                  "supplementaryInformation": "TopDownCar::PhysicsCar",
+                  "supplementaryInformation": "PhysicsCar::PhysicsCar",
                   "type": "behavior"
                 }
               ],
@@ -35834,13 +35913,13 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "TopDownCar::PhysicsCar::SetWheelGripRatio"
+                        "value": "PhysicsCar::PhysicsCar::SetWheelGripRatio"
                       },
                       "parameters": [
                         "Object",
                         "PhysicsCar",
                         "=",
-                        "GripFactor * Tween::Ease(\"easeInOutCubic\", 1, MaxSpeedGripRatio, abs(sin(ToRad(AngleDifference(Object.Physics2::LinearVelocityAngle(), Object.Angle() + Object.PhysicsCar::SteeringAngle())))))",
+                        "GripFactor * Tween::Ease(\"easeInOutCubic\", GripRatioMax, GripRatioMin, abs(sin(ToRad(AngleDifference(Object.Physics2::LinearVelocityAngle(), Object.Angle() + Object.PhysicsCar::SteeringAngle())))))",
                         ""
                       ]
                     }
@@ -35935,7 +36014,7 @@
                         },
                         {
                           "type": {
-                            "value": "TopDownCar::PhysicsCar::SetSpeedMax"
+                            "value": "PhysicsCar::PhysicsCar::SetSpeedMax"
                           },
                           "parameters": [
                             "Object",
@@ -35997,7 +36076,7 @@
                         },
                         {
                           "type": {
-                            "value": "TopDownCar::PhysicsCar::SetSpeedMax"
+                            "value": "PhysicsCar::PhysicsCar::SetSpeedMax"
                           },
                           "parameters": [
                             "Object",
@@ -36065,7 +36144,7 @@
               "description": "",
               "group": "",
               "extraInformation": [
-                "TopDownCar::PhysicsCar"
+                "PhysicsCar::PhysicsCar"
               ],
               "name": "PhysicsCar"
             },
@@ -36092,14 +36171,24 @@
               "name": "ShakeModel3D"
             },
             {
-              "value": "0.1",
+              "value": "0.075",
               "type": "Number",
               "unit": "Dimensionless",
               "label": "Grip ratio at maximum speed",
               "description": "",
               "group": "Asphalt",
               "extraInformation": [],
-              "name": "MaxSpeedGripRatio"
+              "name": "GripRatioMin"
+            },
+            {
+              "value": "0.5",
+              "type": "Number",
+              "unit": "Dimensionless",
+              "label": "Grip ratio at low speed",
+              "description": "",
+              "group": "Asphalt",
+              "extraInformation": [],
+              "name": "GripRatioMax"
             },
             {
               "value": "0.5",
@@ -36936,12 +37025,12 @@
         {
           "angle": 0,
           "customSize": false,
-          "height": 79.5918367346939,
+          "height": 159.1836734693878,
           "keepRatio": true,
           "layer": "",
           "name": "Player",
           "persistentUuid": "894bdbd1-6dc0-474b-ae8a-1ced5a9cc957",
-          "width": 150,
+          "width": 300,
           "x": -992,
           "y": 288,
           "zOrder": 26,
