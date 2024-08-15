@@ -2055,18 +2055,18 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "fillOpacity": 255,
+          "fillOpacity": 64,
           "outlineSize": 1,
           "outlineOpacity": 255,
           "fillColor": {
-            "b": 239,
+            "b": 0,
             "g": 0,
-            "r": 255
+            "r": 0
           },
           "outlineColor": {
-            "b": 239,
+            "b": 0,
             "g": 0,
-            "r": 255
+            "r": 0
           },
           "absoluteCoordinates": false,
           "clearBetweenFrames": true,
@@ -2165,35 +2165,6 @@
         ]
       },
       "events": [
-        {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "TODO Remove\nThis is just to be able to draw the forces on screen."
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "PhysicsCar::PhysicsCar::Step"
-              },
-              "parameters": [
-                "Player",
-                "PhysicsCar",
-                "Debug",
-                ""
-              ]
-            }
-          ]
-        },
         {
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
@@ -3326,6 +3297,17 @@
                 "Text",
                 "=",
                 "\"Grip: \" + ToString(Player.PhysicsCar::WheelGripRatio())"
+              ]
+            },
+            {
+              "type": {
+                "value": "PhysicsCar::PhysicsCar::DrawDebug"
+              },
+              "parameters": [
+                "Player",
+                "PhysicsCar",
+                "Debug",
+                ""
               ]
             }
           ]
@@ -33299,27 +33281,6 @@
               "actions": [
                 {
                   "type": {
-                    "value": "PhysicsCar::DrawForce"
-                  },
-                  "parameters": [
-                    "",
-                    "Object",
-                    "Angle",
-                    "Length",
-                    "OriginX",
-                    "OriginY",
-                    "ShapePainter",
-                    "ShapePainter"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
                     "value": "PhysicsCar::PhysicsCar::ApplyPolarForce"
                   },
                   "parameters": [
@@ -33346,166 +33307,6 @@
               "name": "PhysicsCar",
               "supplementaryInformation": "PhysicsCar::PhysicsCar",
               "type": "behavior"
-            },
-            {
-              "description": "",
-              "name": "Angle",
-              "type": "expression"
-            },
-            {
-              "description": "",
-              "name": "Length",
-              "type": "expression"
-            },
-            {
-              "description": "",
-              "name": "OriginX",
-              "type": "expression"
-            },
-            {
-              "description": "",
-              "name": "OriginY",
-              "type": "expression"
-            },
-            {
-              "description": "",
-              "name": "ShapePainter",
-              "supplementaryInformation": "PrimitiveDrawing::Drawer",
-              "type": "objectList"
-            }
-          ],
-          "objectGroups": []
-        },
-        {
-          "fullName": "Draw force",
-          "functionType": "Action",
-          "name": "DrawForce",
-          "private": true,
-          "sentence": "",
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "DeltaAngle",
-                    "=",
-                    "AngleBetweenPositions(Object.CenterX(), Object.CenterY(), OriginX, OriginY) - Object.Angle()"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "DeltaLength",
-                    "=",
-                    "DistanceBetweenPositions(Object.CenterX(), Object.CenterY(), OriginX, OriginY)"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "LineX",
-                    "=",
-                    "XFromAngleAndDistance(DeltaAngle, DeltaLength)"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "LineY",
-                    "=",
-                    "YFromAngleAndDistance(DeltaAngle, DeltaLength)"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "LineAngle",
-                    "=",
-                    "Angle - Object.Angle()"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "LineLength",
-                    "=",
-                    "Length"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "PrimitiveDrawing::LineV2"
-                  },
-                  "parameters": [
-                    "ShapePainter",
-                    "LineX",
-                    "LineY",
-                    "LineX + XFromAngleAndDistance(LineAngle, LineLength)",
-                    "LineY + YFromAngleAndDistance(LineAngle, LineLength)",
-                    "2"
-                  ]
-                }
-              ],
-              "variables": [
-                {
-                  "folded": true,
-                  "name": "LineX",
-                  "type": "number",
-                  "value": 0
-                },
-                {
-                  "folded": true,
-                  "name": "LineY",
-                  "type": "number",
-                  "value": 0
-                },
-                {
-                  "folded": true,
-                  "name": "LineAngle",
-                  "type": "number",
-                  "value": 0
-                },
-                {
-                  "folded": true,
-                  "name": "LineLength",
-                  "type": "number",
-                  "value": 0
-                },
-                {
-                  "folded": true,
-                  "name": "DeltaAngle",
-                  "type": "number",
-                  "value": 0
-                },
-                {
-                  "folded": true,
-                  "name": "DeltaLength",
-                  "type": "number",
-                  "value": 0
-                }
-              ]
-            }
-          ],
-          "parameters": [
-            {
-              "description": "",
-              "name": "Object",
-              "type": "objectList"
             },
             {
               "description": "",
@@ -33588,28 +33389,32 @@
               "functionType": "Action",
               "name": "doStepPreEvents",
               "sentence": "",
-              "events": [],
-              "parameters": [
-                {
-                  "description": "Object",
-                  "name": "Object",
-                  "type": "object"
-                },
-                {
-                  "description": "Behavior",
-                  "name": "Behavior",
-                  "supplementaryInformation": "PhysicsCar::PhysicsCar",
-                  "type": "behavior"
-                }
-              ],
-              "objectGroups": []
-            },
-            {
-              "fullName": "",
-              "functionType": "Action",
-              "name": "Step",
-              "sentence": "",
               "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "PhysicsCar::PhysicsCar::PropertyIsDebug"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ObjectVariableClearChildren"
+                      },
+                      "parameters": [
+                        "Object",
+                        "_PhysicsCarExtension.Forces"
+                      ]
+                    }
+                  ]
+                },
                 {
                   "colorB": 228,
                   "colorG": 176,
@@ -33908,78 +33713,6 @@
                   "parameters": []
                 },
                 {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Draw Velocity"
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "PrimitiveDrawing::FillColor"
-                      },
-                      "parameters": [
-                        "Debug",
-                        "\"99;99;99\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PrimitiveDrawing::OutlineColor"
-                      },
-                      "parameters": [
-                        "Debug",
-                        "\"0;0;0\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PrimitiveDrawing::Rectangle"
-                      },
-                      "parameters": [
-                        "Debug",
-                        "-Object.Width() / 2",
-                        "-Object.Height() / 2",
-                        "Object.Width() / 2",
-                        "Object.Height() / 2"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PrimitiveDrawing::OutlineColor"
-                      },
-                      "parameters": [
-                        "Debug",
-                        "\"126;211;33\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PhysicsCar::DrawForce"
-                      },
-                      "parameters": [
-                        "Debug",
-                        "Object",
-                        "Object.Physics2::LinearVelocityAngle()",
-                        "Object.Physics2::LinearVelocity()",
-                        "Object.CenterX()",
-                        "Object.CenterY()",
-                        "Debug",
-                        "Debug"
-                      ]
-                    }
-                  ]
-                },
-                {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": [
@@ -34035,69 +33768,6 @@
                     }
                   ],
                   "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "PrimitiveDrawing::FillColor"
-                          },
-                          "parameters": [
-                            "Debug",
-                            "\"99;99;99\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "PrimitiveDrawing::OutlineColor"
-                          },
-                          "parameters": [
-                            "Debug",
-                            "\"0;0;0\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "PrimitiveDrawing::OutlineColor"
-                          },
-                          "parameters": [
-                            "Debug",
-                            "\"126;211;33\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "PhysicsCar::DrawForce"
-                          },
-                          "parameters": [
-                            "Debug",
-                            "Object",
-                            "Object.Behavior::LinearVelocityAngleAt(RearWheelX, RearWheelY)",
-                            "Object.Behavior::LinearVelocityAt(RearWheelX, RearWheelY)",
-                            "RearWheelX",
-                            "RearWheelY",
-                            "Debug",
-                            "Debug"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "PhysicsCar::DrawForce"
-                          },
-                          "parameters": [
-                            "Debug",
-                            "Object",
-                            "Object.Behavior::LinearVelocityAngleAt(FrontWheelX, FrontWheelY)",
-                            "Object.Behavior::LinearVelocityAt(FrontWheelX, FrontWheelY)",
-                            "FrontWheelX",
-                            "FrontWheelY",
-                            "Debug",
-                            "Debug"
-                          ]
-                        }
-                      ]
-                    },
                     {
                       "type": "BuiltinCommonInstructions::Comment",
                       "color": {
@@ -34170,27 +33840,16 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "PrimitiveDrawing::OutlineColor"
+                            "value": "PhysicsCar::PhysicsCar::ApplyPolarForce"
                           },
                           "parameters": [
-                            "Debug",
-                            "\"0;68;167\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "PhysicsCar::AddForce"
-                          },
-                          "parameters": [
-                            "",
                             "Object",
                             "Behavior",
                             "FrontWheelAngle",
                             "AccelerationStickValue * Acceleration * Object.Physics2::Mass()",
                             "FrontWheelX",
                             "FrontWheelY",
-                            "Debug",
-                            ""
+                            "FrontWheelY"
                           ]
                         }
                       ]
@@ -34213,15 +33872,6 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "PrimitiveDrawing::OutlineColor"
-                          },
-                          "parameters": [
-                            "Debug",
-                            "\"255;183;0\""
-                          ]
-                        },
-                        {
-                          "type": {
                             "value": "PhysicsCar::PhysicsCar::ApplyWheelForces"
                           },
                           "parameters": [
@@ -34232,21 +33882,6 @@
                             "FrontWheelAngle",
                             "Debug",
                             ""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "PrimitiveDrawing::OutlineColor"
-                          },
-                          "parameters": [
-                            "Debug",
-                            "\"255;0;0\""
                           ]
                         },
                         {
@@ -34393,6 +34028,16 @@
                         "=",
                         "0"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "PhysicsCar::PhysicsCar::SetPropertyIsDebug"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        ""
+                      ]
                     }
                   ]
                 }
@@ -34408,12 +34053,6 @@
                   "name": "Behavior",
                   "supplementaryInformation": "PhysicsCar::PhysicsCar",
                   "type": "behavior"
-                },
-                {
-                  "description": "",
-                  "name": "Debug",
-                  "supplementaryInformation": "PrimitiveDrawing::Drawer",
-                  "type": "objectList"
                 }
               ],
               "objectGroups": []
@@ -34699,18 +34338,16 @@
                     },
                     {
                       "type": {
-                        "value": "PhysicsCar::AddForce"
+                        "value": "PhysicsCar::PhysicsCar::ApplyPolarForce"
                       },
                       "parameters": [
-                        "",
                         "Object",
                         "Behavior",
                         "WheelAngle + 90",
                         "-WheelGripRatio * Object.Behavior::LinearVelocityAt(WheelX, WheelY) * sin(ToRad(Object.Behavior::LinearVelocityAngleAt(WheelX, WheelY) - WheelAngle)) * Object.Behavior::Inertia() / (DistanceSquared * TimeDelta()) / 2",
                         "WheelX",
                         "WheelY",
-                        "Debug",
-                        ""
+                        "WheelY"
                       ]
                     }
                   ],
@@ -34750,12 +34387,6 @@
                   "description": "Wheel angle",
                   "name": "WheelAngle",
                   "type": "expression"
-                },
-                {
-                  "description": "",
-                  "name": "Debug",
-                  "supplementaryInformation": "PrimitiveDrawing::Drawer",
-                  "type": "objectList"
                 }
               ],
               "objectGroups": []
@@ -35017,6 +34648,91 @@
               "sentence": "",
               "events": [
                 {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "PhysicsCar::PhysicsCar::PropertyIsDebug"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior"
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "Index",
+                            "=",
+                            "Object.VariableChildCount(_PhysicsCarExtension.Forces)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "Object",
+                            "_PhysicsCarExtension.Forces[Index].Angle",
+                            "=",
+                            "Angle"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "Object",
+                            "_PhysicsCarExtension.Forces[Index].Length",
+                            "=",
+                            "Length"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "Object",
+                            "_PhysicsCarExtension.Forces[Index].OriginX",
+                            "=",
+                            "OriginX"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "Object",
+                            "_PhysicsCarExtension.Forces[Index].OriginY",
+                            "=",
+                            "OriginY"
+                          ]
+                        }
+                      ],
+                      "variables": [
+                        {
+                          "folded": true,
+                          "name": "Index",
+                          "type": "number",
+                          "value": 0
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
                   "type": "BuiltinCommonInstructions::JsCode",
                   "inlineCode": [
                     "// TODO Remove this function when the engine uses pixels instead of meters.",
@@ -35081,6 +34797,217 @@
                   "description": "",
                   "name": "OriginY",
                   "type": "expression"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "Draw debug",
+              "functionType": "Action",
+              "name": "DrawDebug",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PhysicsCar::PhysicsCar::SetPropertyIsDebug"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PrimitiveDrawing::Rectangle"
+                      },
+                      "parameters": [
+                        "ShapePainter",
+                        "-Object.Width() / 2",
+                        "-Object.Height() / 2",
+                        "Object.Width() / 2",
+                        "Object.Height() / 2"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Repeat",
+                      "repeatExpression": "Object.VariableChildCount(_PhysicsCarExtension.Forces)",
+                      "conditions": [],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "DeltaAngle",
+                                "=",
+                                "AngleBetweenPositions(Object.CenterX(), Object.CenterY(), Object.Variable(_PhysicsCarExtension.Forces[Index].OriginX), Object.Variable(_PhysicsCarExtension.Forces[Index].OriginY)) - Object.Angle()"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "DeltaLength",
+                                "=",
+                                "DistanceBetweenPositions(Object.CenterX(), Object.CenterY(), Object.Variable(_PhysicsCarExtension.Forces[Index].OriginX), Object.Variable(_PhysicsCarExtension.Forces[Index].OriginY))"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "LineX",
+                                "=",
+                                "XFromAngleAndDistance(DeltaAngle, DeltaLength)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "LineY",
+                                "=",
+                                "YFromAngleAndDistance(DeltaAngle, DeltaLength)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "LineAngle",
+                                "=",
+                                "Object.Variable(_PhysicsCarExtension.Forces[Index].Angle) - Object.Angle()"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "LineLength",
+                                "=",
+                                "Object.Variable(_PhysicsCarExtension.Forces[Index].Length)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PrimitiveDrawing::LineV2"
+                              },
+                              "parameters": [
+                                "ShapePainter",
+                                "LineX",
+                                "LineY",
+                                "LineX + XFromAngleAndDistance(LineAngle, LineLength)",
+                                "LineY + YFromAngleAndDistance(LineAngle, LineLength)",
+                                "2"
+                              ]
+                            }
+                          ],
+                          "variables": [
+                            {
+                              "folded": true,
+                              "name": "LineX",
+                              "type": "number",
+                              "value": 0
+                            },
+                            {
+                              "folded": true,
+                              "name": "LineY",
+                              "type": "number",
+                              "value": 0
+                            },
+                            {
+                              "folded": true,
+                              "name": "LineAngle",
+                              "type": "number",
+                              "value": 0
+                            },
+                            {
+                              "folded": true,
+                              "name": "LineLength",
+                              "type": "number",
+                              "value": 0
+                            },
+                            {
+                              "folded": true,
+                              "name": "DeltaAngle",
+                              "type": "number",
+                              "value": 0
+                            },
+                            {
+                              "folded": true,
+                              "name": "DeltaLength",
+                              "type": "number",
+                              "value": 0
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "Index",
+                                "+",
+                                "1"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "variables": [
+                    {
+                      "name": "Index",
+                      "type": "number",
+                      "value": 0
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "PhysicsCar::PhysicsCar",
+                  "type": "behavior"
+                },
+                {
+                  "description": "",
+                  "name": "ShapePainter",
+                  "supplementaryInformation": "PrimitiveDrawing::Drawer",
+                  "type": "objectList"
                 }
               ],
               "objectGroups": []
@@ -35817,6 +35744,16 @@
               "extraInformation": [],
               "hidden": true,
               "name": "SteeringStickValue"
+            },
+            {
+              "value": "",
+              "type": "Boolean",
+              "label": "",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": true,
+              "name": "IsDebug"
             }
           ],
           "sharedPropertyDescriptors": []
