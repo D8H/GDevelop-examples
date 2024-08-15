@@ -845,22 +845,6 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "Debug",
-          "name": "Debug",
-          "persistentUuid": "24cc9dba-a895-4da3-937e-e98c37fc8c52",
-          "width": 0,
-          "x": 116,
-          "y": 319,
-          "zOrder": 44,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
         }
       ],
       "objects": [
@@ -2049,30 +2033,6 @@
               "effects": []
             }
           ]
-        },
-        {
-          "assetStoreId": "",
-          "name": "Debug",
-          "type": "PrimitiveDrawing::Drawer",
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "fillOpacity": 64,
-          "outlineSize": 1,
-          "outlineOpacity": 255,
-          "fillColor": {
-            "b": 0,
-            "g": 0,
-            "r": 0
-          },
-          "outlineColor": {
-            "b": 0,
-            "g": 0,
-            "r": 0
-          },
-          "absoluteCoordinates": false,
-          "clearBetweenFrames": true,
-          "antialiasing": "none"
         }
       ],
       "objectsFolderStructure": {
@@ -2160,9 +2120,6 @@
           },
           {
             "objectName": "Coin"
-          },
-          {
-            "objectName": "Debug"
           }
         ]
       },
@@ -3289,34 +3246,6 @@
             }
           ],
           "parameters": []
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "BestTimeText",
-                "Text",
-                "=",
-                "\"Grip: \" + ToString(Player.PhysicsCar::WheelGripRatio())"
-              ]
-            },
-            {
-              "type": {
-                "value": "PhysicsCar::PhysicsCar::DrawDebug"
-              },
-              "parameters": [
-                "Player",
-                "PhysicsCar",
-                "Debug",
-                ""
-              ]
-            }
-          ]
         }
       ],
       "layers": [
