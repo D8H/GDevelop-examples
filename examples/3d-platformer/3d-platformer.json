@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 236,
+    "build": 238,
     "major": 5,
     "minor": 5,
     "revision": 0
@@ -87,7 +87,10 @@
     "categories": [
       "platformer"
     ],
-    "playableDevices": [],
+    "playableDevices": [
+      "mobile",
+      "mobile"
+    ],
     "extensionProperties": [],
     "platforms": [
       {
@@ -423,7 +426,7 @@
         "gridColor": 0,
         "gridAlpha": 0.05,
         "snap": true,
-        "zoomFactor": 0.12710233719928174,
+        "zoomFactor": 1.134371579716224,
         "windowMask": false
       },
       "objectsGroups": [
@@ -560,57 +563,6 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "Barrel",
-          "persistentUuid": "2cef6f36-0ca9-4b8b-81a4-bb5901681733",
-          "width": 0,
-          "x": 900,
-          "y": 375,
-          "z": -180,
-          "zOrder": 28,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 500,
-          "height": 20,
-          "layer": "",
-          "name": "Barrel",
-          "persistentUuid": "3c97c22a-3bc1-44a8-9c49-5fd2d81fe6ea",
-          "width": 500,
-          "x": 900,
-          "y": 250,
-          "z": -130,
-          "zOrder": 29,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 500,
-          "height": 20,
-          "layer": "",
-          "name": "Barrel",
-          "persistentUuid": "4da57a53-8507-4c83-b0b8-c651f313af2d",
-          "width": 500,
-          "x": 900,
-          "y": 375,
-          "z": -130,
-          "zOrder": 29,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
           "name": "PipeEnd",
           "persistentUuid": "5f362863-6b43-44b6-9220-5b85b7117c02",
           "width": 0,
@@ -624,15 +576,17 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 1,
           "keepRatio": true,
           "layer": "",
           "name": "Steam",
           "persistentUuid": "cbadbbbc-f752-4546-b037-03a530d60679",
-          "width": 0,
+          "width": 1,
           "x": 1650,
           "y": 159,
+          "z": 150,
           "zOrder": 31,
           "numberProperties": [],
           "stringProperties": [],
@@ -674,15 +628,17 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 1,
           "keepRatio": true,
           "layer": "",
           "name": "Steam",
           "persistentUuid": "e835cfe7-2d56-42b3-8ec5-94c8344f5515",
-          "width": 0,
+          "width": 1,
           "x": 1650,
           "y": 450,
+          "z": 150,
           "zOrder": 31,
           "numberProperties": [],
           "stringProperties": [],
@@ -725,16 +681,17 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "depth": 177.3785487186397,
+          "height": 163.12184165371835,
           "keepRatio": true,
           "layer": "",
           "name": "Planet8",
           "persistentUuid": "cb1a7725-9f63-4888-888f-26fef85314e2",
-          "width": 0,
-          "x": -907,
-          "y": 302,
-          "z": 450,
+          "width": 177.13465365248734,
+          "x": -795,
+          "y": 374,
+          "z": 483,
           "zOrder": 33,
           "numberProperties": [],
           "stringProperties": [],
@@ -742,15 +699,16 @@
         },
         {
           "angle": 180,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "depth": 155.24537982115194,
+          "height": 215.94182455689239,
           "keepRatio": true,
           "layer": "",
           "name": "Character",
           "persistentUuid": "baf7a395-c52a-43a5-9e62-a75aa0e9009b",
-          "width": 0,
-          "x": -174,
-          "y": 1770,
+          "width": 81.56863073197232,
+          "x": -899,
+          "y": 1842,
           "zOrder": 34,
           "numberProperties": [],
           "stringProperties": [],
@@ -850,9 +808,9 @@
           "name": "BottomMovingPlatform",
           "persistentUuid": "4e5fdb4a-410d-4d10-b5ff-052561f14732",
           "width": 0,
-          "x": -1085,
-          "y": 665,
-          "z": 50,
+          "x": -1194,
+          "y": 672,
+          "z": 138,
           "zOrder": 37,
           "numberProperties": [],
           "stringProperties": [],
@@ -867,9 +825,9 @@
           "name": "TopMovingPlatform",
           "persistentUuid": "4ea2c76e-ef1a-4427-a8b1-cde4ccca6533",
           "width": 0,
-          "x": -1085,
-          "y": 685,
-          "z": 350,
+          "x": -999,
+          "y": 677,
+          "z": 298,
           "zOrder": 38,
           "numberProperties": [],
           "stringProperties": [],
@@ -887,57 +845,6 @@
           "x": -1053,
           "y": 1347,
           "zOrder": 27,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 90,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Barrel",
-          "persistentUuid": "02e5d864-8259-41e3-b4b2-46de2b839cff",
-          "width": 0,
-          "x": -1075,
-          "y": 1425,
-          "z": -180,
-          "zOrder": 28,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 90,
-          "customSize": true,
-          "depth": 500,
-          "height": 20,
-          "layer": "",
-          "name": "Barrel",
-          "persistentUuid": "d54e6a23-f327-4850-b338-95a30530c862",
-          "width": 500,
-          "x": -990,
-          "y": 1360,
-          "z": -130,
-          "zOrder": 29,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 90,
-          "customSize": true,
-          "depth": 500,
-          "height": 20,
-          "layer": "",
-          "name": "Barrel",
-          "persistentUuid": "e471fc32-7fc0-405d-aa9e-ec7247bc9cda",
-          "width": 500,
-          "x": -1140,
-          "y": 1360,
-          "z": -130,
-          "zOrder": 29,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -977,57 +884,6 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Barrel",
-          "persistentUuid": "f4ad2530-b872-47b6-b9ea-3d37c8bd3cfe",
-          "width": 0,
-          "x": -650,
-          "y": 1900,
-          "z": -180,
-          "zOrder": 28,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 500,
-          "height": 20,
-          "layer": "",
-          "name": "Barrel",
-          "persistentUuid": "cbbff89d-eb04-4b23-8db4-453c3408f4e7",
-          "width": 500,
-          "x": -650,
-          "y": 1800,
-          "z": -130,
-          "zOrder": 29,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 500,
-          "height": 20,
-          "layer": "",
-          "name": "Barrel",
-          "persistentUuid": "1722d81d-daa3-46b4-91c1-ab1b0469a196",
-          "width": 500,
-          "x": -650,
-          "y": 1900,
-          "z": -130,
-          "zOrder": 29,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
           "customSize": true,
           "depth": 300,
           "height": 600,
@@ -1044,7 +900,7 @@
           "initialVariables": []
         },
         {
-          "angle": 0,
+          "angle": 155.20679016044323,
           "customSize": false,
           "height": 0,
           "keepRatio": true,
@@ -1052,8 +908,8 @@
           "name": "Crab",
           "persistentUuid": "ca860cf7-c443-45f0-8293-ededab112f0b",
           "width": 0,
-          "x": -1100,
-          "y": 1678,
+          "x": -1248,
+          "y": 1625,
           "zOrder": 39,
           "numberProperties": [],
           "stringProperties": [],
@@ -1070,6 +926,7 @@
           "width": 0,
           "x": 350,
           "y": 250,
+          "z": 47,
           "zOrder": 40,
           "numberProperties": [],
           "stringProperties": [],
@@ -1086,6 +943,7 @@
           "width": 0,
           "x": 350,
           "y": 350,
+          "z": 47,
           "zOrder": 40,
           "numberProperties": [],
           "stringProperties": [],
@@ -1102,6 +960,7 @@
           "width": 0,
           "x": 350,
           "y": 450,
+          "z": 50,
           "zOrder": 40,
           "numberProperties": [],
           "stringProperties": [],
@@ -1118,6 +977,7 @@
           "width": 0,
           "x": 350,
           "y": 150,
+          "z": 47,
           "zOrder": 40,
           "numberProperties": [],
           "stringProperties": [],
@@ -1134,7 +994,7 @@
           "width": 0,
           "x": 350,
           "y": 200,
-          "z": 100,
+          "z": 147,
           "zOrder": 40,
           "numberProperties": [],
           "stringProperties": [],
@@ -1151,7 +1011,7 @@
           "width": 0,
           "x": 350,
           "y": 300,
-          "z": 100,
+          "z": 147,
           "zOrder": 40,
           "numberProperties": [],
           "stringProperties": [],
@@ -1168,7 +1028,7 @@
           "width": 0,
           "x": 350,
           "y": 400,
-          "z": 100,
+          "z": 147,
           "zOrder": 40,
           "numberProperties": [],
           "stringProperties": [],
@@ -1185,7 +1045,7 @@
           "width": 0,
           "x": 350,
           "y": 350,
-          "z": 200,
+          "z": 247,
           "zOrder": 40,
           "numberProperties": [],
           "stringProperties": [],
@@ -1202,7 +1062,7 @@
           "width": 0,
           "x": 350,
           "y": 250,
-          "z": 200,
+          "z": 247,
           "zOrder": 40,
           "numberProperties": [],
           "stringProperties": [],
@@ -1219,7 +1079,7 @@
           "width": 0,
           "x": 350,
           "y": 300,
-          "z": 300,
+          "z": 347,
           "zOrder": 40,
           "numberProperties": [],
           "stringProperties": [],
@@ -1312,13 +1172,13 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
+          "customSize": true,
+          "depth": 52,
+          "height": 52,
           "layer": "",
           "name": "Coin",
           "persistentUuid": "c9968870-b2f2-473f-ab91-b62865080dba",
-          "width": 0,
+          "width": 14,
           "x": -1093,
           "y": 1826,
           "z": 25,
@@ -1329,30 +1189,13 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Coin",
-          "persistentUuid": "36b82f70-1335-4fff-a0a8-e93604917536",
-          "width": 0,
-          "x": -1093,
-          "y": 1824,
-          "z": 225,
-          "zOrder": 45,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
+          "customSize": true,
+          "depth": 52,
+          "height": 52,
           "layer": "",
           "name": "Coin",
           "persistentUuid": "0daa19e0-1adf-4b29-b9a5-893f00556f30",
-          "width": 0,
+          "width": 14,
           "x": -1093,
           "y": 1824,
           "z": 325,
@@ -1482,16 +1325,16 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
+          "customSize": true,
+          "depth": 52,
+          "height": 52,
           "layer": "",
           "name": "Coin",
-          "persistentUuid": "0737f244-ddef-42e7-8e0b-55472227e294",
-          "width": 0,
+          "persistentUuid": "4211ff01-2dcc-4652-9b35-1f8256eaf009",
+          "width": 14,
           "x": -1093,
           "y": 1826,
-          "z": 425,
+          "z": 125,
           "zOrder": 45,
           "numberProperties": [],
           "stringProperties": [],
@@ -1499,16 +1342,16 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
+          "customSize": true,
+          "depth": 52,
+          "height": 52,
           "layer": "",
           "name": "Coin",
-          "persistentUuid": "4211ff01-2dcc-4652-9b35-1f8256eaf009",
-          "width": 0,
+          "persistentUuid": "c6c26e18-06b1-4820-8183-89fae6589ac9",
+          "width": 14,
           "x": -1093,
           "y": 1826,
-          "z": 125,
+          "z": 225,
           "zOrder": 45,
           "numberProperties": [],
           "stringProperties": [],
@@ -1723,7 +1566,7 @@
               "name": "Physics3D",
               "type": "Physics3D::Physics3DBehavior",
               "Object3D": "Object3D",
-              "bodyType": "Kinematic",
+              "bodyType": "Dynamic",
               "bullet": false,
               "fixedRotation": true,
               "shape": "Capsule",
@@ -2916,60 +2759,6 @@
           }
         },
         {
-          "assetStoreId": "65b3c9ffc9be3d0ff65860e3c2317ccf59af8ae599efab853c54a419122b0144",
-          "name": "Barrel",
-          "type": "Scene3D::Model3DObject",
-          "variables": [],
-          "effects": [],
-          "behaviors": [
-            {
-              "name": "Physics3D",
-              "type": "Physics3D::Physics3DBehavior",
-              "object3D": "Object3D",
-              "bodyType": "Static",
-              "bullet": false,
-              "fixedRotation": false,
-              "shape": "Cylinder",
-              "shapeOrientation": "Y",
-              "shapeDimensionA": 0,
-              "shapeDimensionB": 0,
-              "shapeDimensionC": 0,
-              "density": 1,
-              "friction": 0.3,
-              "restitution": 0.1,
-              "linearDamping": 0.1,
-              "angularDamping": 0.1,
-              "gravityScale": 1,
-              "layers": 17,
-              "masks": 17,
-              "shapeOffsetX": 0,
-              "shapeOffsetY": 0,
-              "shapeOffsetZ": 0,
-              "massCenterOffsetX": 0,
-              "massCenterOffsetY": 0,
-              "massCenterOffsetZ": 0,
-              "massOverride": 0
-            }
-          ],
-          "content": {
-            "centerLocation": "ObjectCenter",
-            "crossfadeDuration": 0,
-            "depth": 500,
-            "height": 150,
-            "isCastingShadow": true,
-            "isReceivingShadow": true,
-            "keepAspectRatio": false,
-            "materialType": "StandardWithoutMetalness",
-            "modelResourceName": "Barrel.glb",
-            "originLocation": "ModelOrigin",
-            "rotationX": 0,
-            "rotationY": 0,
-            "rotationZ": 0,
-            "width": 500,
-            "animations": []
-          }
-        },
-        {
           "assetStoreId": "a34ff247d96aee44f7c15114965d8f3cf14b30ec3aec426c7697c1c980486073",
           "name": "PipeEnd",
           "type": "Scene3D::Model3DObject",
@@ -3061,7 +2850,7 @@
             "Duration": 1000000,
             "Flow": 50,
             "LifespanMax": 1,
-            "SpayConeAngle": 10,
+            "SpayConeAngle": 30,
             "RotationY": -90,
             "EndScale": 12,
             "StartSpeedMin": 800,
@@ -3774,6 +3563,199 @@
               }
             }
           }
+        },
+        {
+          "assetStoreId": "7f724eed4de900004f1edcbf2bad9f651868cf2448150a49fe6c27d3a1846b33",
+          "name": "Character2",
+          "type": "Scene3D::Model3DObject",
+          "variables": [
+            {
+              "name": "PlayerId",
+              "type": "number",
+              "value": 0
+            }
+          ],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "AdvancedJump3D",
+              "type": "AdvancedJump3D::AdvancedJump3D",
+              "PhysicsCharacter3D": "PhysicsCharacter3D",
+              "CoyoteTimeFrameDuration": 0.25,
+              "CanCoyoteJump": false,
+              "WasInTheAir": false,
+              "AirJumpCountMaximum": 1,
+              "AreFloorJumpCountedAsAirJump": false,
+              "AirJumpCount": 0,
+              "WasJumpKeyReleased": false
+            },
+            {
+              "name": "Physics3D",
+              "type": "Physics3D::Physics3DBehavior",
+              "Object3D": "Object3D",
+              "bodyType": "Dynamic",
+              "bullet": false,
+              "fixedRotation": true,
+              "shape": "Capsule",
+              "shapeOrientation": "Z",
+              "shapeDimensionA": 25,
+              "shapeDimensionB": 100,
+              "shapeDimensionC": 0,
+              "shapeOffsetX": 0,
+              "shapeOffsetY": 0,
+              "shapeOffsetZ": 0,
+              "density": 1,
+              "friction": 1,
+              "restitution": 0,
+              "linearDamping": 0,
+              "angularDamping": 0,
+              "gravityScale": 1,
+              "layers": 17,
+              "masks": 17,
+              "massCenterOffsetX": 0,
+              "massCenterOffsetY": 0,
+              "massCenterOffsetZ": 0,
+              "massOverride": 0
+            },
+            {
+              "name": "PhysicsCharacter3D",
+              "type": "Physics3D::PhysicsCharacter3D",
+              "physics3D": "Physics3D",
+              "jumpHeight": 250,
+              "jumpSustainTime": 0.2,
+              "gravity": 1000,
+              "fallingSpeedMax": 900,
+              "forwardAcceleration": 1200,
+              "forwardDeceleration": 1200,
+              "forwardSpeedMax": 600,
+              "sidewaysAcceleration": 800,
+              "sidewaysDeceleration": 800,
+              "sidewaysSpeedMax": 400,
+              "slopeMaxAngle": 44,
+              "shouldBindObjectAndForwardAngle": false,
+              "stairHeightMax": 20,
+              "canBePushed": false
+            },
+            {
+              "name": "PhysicsCharacter3DAnimator",
+              "type": "PhysicsCharacter3DAnimator::PhysicsCharacter3DAnimator",
+              "PhysicsCharacter3D": "PhysicsCharacter3D",
+              "Animation": "Animation",
+              "IdleAnimationName": "Idle",
+              "RunAnimationName": "Run",
+              "JumpAnimationName": "Jump",
+              "FallAnimationName": "Fall",
+              "OldAngle": 0
+            },
+            {
+              "name": "Respawn3D",
+              "type": "Respawn3D::Respawn3D",
+              "Object3D": "Object3D",
+              "PhysicsCharacter3D": "PhysicsCharacter3D",
+              "SafeX": 2.143215748954e-312,
+              "SafeY": 2.14321576912e-312,
+              "SafeZ": 2.14321576912e-312
+            },
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            },
+            {
+              "name": "Tween3D",
+              "type": "Tween3D::Tween3D",
+              "Object3D": "Object3D",
+              "Scale": "Scale",
+              "Tween": "Tween"
+            }
+          ],
+          "content": {
+            "centerLocation": "ModelOrigin",
+            "crossfadeDuration": 0.5,
+            "depth": 144,
+            "height": 144,
+            "isCastingShadow": true,
+            "isReceivingShadow": true,
+            "keepAspectRatio": true,
+            "materialType": "StandardWithoutMetalness",
+            "modelResourceName": "Bunny.glb",
+            "originLocation": "ModelOrigin",
+            "rotationX": 90,
+            "rotationY": 0,
+            "rotationZ": 90,
+            "width": 144,
+            "animations": [
+              {
+                "loop": true,
+                "name": "Idle",
+                "source": "Idle"
+              },
+              {
+                "loop": true,
+                "name": "Walk",
+                "source": "Walk"
+              },
+              {
+                "loop": true,
+                "name": "Run",
+                "source": "Run"
+              },
+              {
+                "loop": false,
+                "name": "Duck",
+                "source": "Duck"
+              },
+              {
+                "loop": false,
+                "name": "Jump",
+                "source": "Jump"
+              },
+              {
+                "loop": false,
+                "name": "Punch",
+                "source": "Punch"
+              },
+              {
+                "loop": false,
+                "name": "Death",
+                "source": "Death"
+              },
+              {
+                "loop": true,
+                "name": "JumpIdle",
+                "source": "Jump_Idle"
+              },
+              {
+                "loop": false,
+                "name": "JumpLand",
+                "source": "Jump_Land"
+              },
+              {
+                "loop": false,
+                "name": "HitReact",
+                "source": "HitReact"
+              },
+              {
+                "loop": false,
+                "name": "Wave",
+                "source": "Wave"
+              },
+              {
+                "loop": false,
+                "name": "Weapon",
+                "source": "Weapon"
+              },
+              {
+                "loop": false,
+                "name": "Yes",
+                "source": "Yes"
+              },
+              {
+                "loop": false,
+                "name": "No",
+                "source": "No"
+              }
+            ]
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -3826,15 +3808,15 @@
                 "objectName": "BridgeSmall"
               },
               {
-                "objectName": "Barrel"
-              },
-              {
                 "objectName": "Fence"
               }
             ]
           },
           {
             "objectName": "Character"
+          },
+          {
+            "objectName": "Character2"
           },
           {
             "objectName": "SmokeEmitter"
@@ -5143,6 +5125,252 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Test",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "\"r\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Character",
+                    "Physics3D",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "\"t\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Character",
+                    "Physics3D",
+                    "yes"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "\"f\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Character",
+                    "PhysicsCharacter3D",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "\"g\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Character",
+                    "PhysicsCharacter3D",
+                    "yes"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "\"h\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Character",
+                    "PhysicsCharacter3D",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Character",
+                    "PhysicsCharacter3D",
+                    "yes"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "\"j\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Character",
+                    "PhysicsCharacter3D",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Character",
+                    "PhysicsCharacter3D",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Physics3D::Collision"
+              },
+              "parameters": [
+                "Character",
+                "Physics3D",
+                "TopMovingPlatform",
+                "Physics3D",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "DebuggerTools::ConsoleLog"
+              },
+              "parameters": [
+                "\"Top\"",
+                "\"info\"",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Physics3D::Collision"
+              },
+              "parameters": [
+                "Character",
+                "Physics3D",
+                "BottomMovingPlatform",
+                "Physics3D",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "DebuggerTools::ConsoleLog"
+              },
+              "parameters": [
+                "\"Bottom\"",
+                "\"info\"",
+                ""
+              ]
+            }
+          ]
         }
       ],
       "layers": [
@@ -5150,9 +5378,9 @@
           "ambientLightColorB": 196608,
           "ambientLightColorG": 0,
           "ambientLightColorR": 8126128,
-          "camera3DFarPlaneDistance": 10000,
+          "camera3DFarPlaneDistance": 20000,
           "camera3DFieldOfView": 45,
-          "camera3DNearPlaneDistance": 0.1,
+          "camera3DNearPlaneDistance": 100,
           "cameraType": "perspective",
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
@@ -5177,16 +5405,16 @@
               "effectType": "Scene3D::DirectionalLight",
               "name": "DirectionalLight",
               "doubleParameters": {
-                "distanceFromCamera": 1500,
+                "distanceFromCamera": 4000,
                 "elevation": 60,
-                "frustumSize": 4000,
+                "frustumSize": 8000,
                 "intensity": 0.75,
                 "minimumShadowBias": 0.0008,
                 "rotation": 30
               },
               "stringParameters": {
                 "color": "255;255;255",
-                "shadowQuality": "medium",
+                "shadowQuality": "high",
                 "top": "Z+"
               },
               "booleanParameters": {

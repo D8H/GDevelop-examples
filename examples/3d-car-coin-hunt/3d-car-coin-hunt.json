@@ -1,7 +1,7 @@
 {
   "firstLayout": "Menu",
   "gdVersion": {
-    "build": 237,
+    "build": 238,
     "major": 5,
     "minor": 5,
     "revision": 0
@@ -654,6 +654,72 @@
         "origin": {
           "identifier": "https://asset-resources.gdevelop.io/staging/public-resources/Menu buttons/928c3ea4db1da835c9f8cc5b7089a47228350209d2ff489e1484c31e5ce41b3d_Yellow Button_Pressed.png",
           "name": "Yellow Button_Pressed.png"
+        }
+      },
+      {
+        "file": "assets/Femal Casual 2.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "Femal Casual 2.glb",
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/3D Animated Characters/47e5b2e823e06394b2ab56b1eae5acfedc4c103410e820ff6e3f34ea70af698f_Femal Casual 2.glb",
+          "name": "Femal Casual 2.glb"
+        }
+      },
+      {
+        "file": "assets/Male Casual Hoodie.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "Male Casual Hoodie.glb",
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/3D Animated Characters/951214272d62e445cce5eeaed57d59d6c3ae1ceb7a23b80fe832513d06acae40_Male Casual Hoodie.glb",
+          "name": "Male Casual Hoodie.glb"
+        }
+      },
+      {
+        "file": "assets/Male Casual 2.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "Male Casual 2.glb",
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/3D Animated Characters/6d3ad6067c1c4ca2445dbc962dc038f8af6c932ec71f9c57c719a86d10fe585d_Male Casual 2.glb",
+          "name": "Male Casual 2.glb"
+        }
+      },
+      {
+        "file": "assets/Male Beach.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "Male Beach.glb",
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/3D Animated Characters/e592dffd5907d2c691fb31e2f15150d2e6cd182b5c66e1c37e0387d7e0210a8c_Male Beach.glb",
+          "name": "Male Beach.glb"
+        }
+      },
+      {
+        "file": "assets/Femal Suit.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "Femal Suit.glb",
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/3D Animated Characters/a256fd353714d533ba88eac8851671fd2f3eeefad45c22dbf41391d1538f8f6e_Femal Suit.glb",
+          "name": "Femal Suit.glb"
+        }
+      },
+      {
+        "file": "assets/Light Curved.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "Light Curved.glb",
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/3D City Kit (Roads)/904bfb0e9a2a387d9bd9c2e5c44c9fe3f48f77b6e5d3c4318ab1baade06b7666_Light Curved.glb",
+          "name": "Light Curved.glb"
         }
       }
     ],
@@ -2946,6 +3012,761 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "54b38ee3a7082557b70bfd9a5c139b4ed7327c9f1fd846c861b8d45970a2b127",
+          "name": "Femal_Casual_2",
+          "type": "Scene3D::Model3DObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "centerLocation": "ModelOrigin",
+            "crossfadeDuration": 0.10000000149011612,
+            "depth": 55.56123654074936,
+            "height": 49.503431776492015,
+            "isCastingShadow": true,
+            "isReceivingShadow": true,
+            "keepAspectRatio": true,
+            "materialType": "StandardWithoutMetalness",
+            "modelResourceName": "Femal Casual 2.glb",
+            "originLocation": "ModelOrigin",
+            "rotationX": 90,
+            "rotationY": 0,
+            "rotationZ": 90,
+            "width": 11.108269937960916,
+            "animations": [
+              {
+                "loop": true,
+                "name": "Idle",
+                "source": "Idle"
+              },
+              {
+                "loop": true,
+                "name": "Walk",
+                "source": "Walk"
+              },
+              {
+                "loop": true,
+                "name": "Run",
+                "source": "Run"
+              },
+              {
+                "loop": false,
+                "name": "Death",
+                "source": "Death"
+              },
+              {
+                "loop": false,
+                "name": "GunShoot",
+                "source": "Gun_Shoot"
+              },
+              {
+                "loop": false,
+                "name": "HitRecieve2",
+                "source": "HitRecieve_2"
+              },
+              {
+                "loop": false,
+                "name": "HitRecieve",
+                "source": "HitRecieve"
+              },
+              {
+                "loop": true,
+                "name": "IdleGun",
+                "source": "Idle_Gun"
+              },
+              {
+                "loop": true,
+                "name": "IdleGunPointing",
+                "source": "Idle_Gun_Pointing"
+              },
+              {
+                "loop": false,
+                "name": "IdleGunShoot",
+                "source": "Idle_Gun_Shoot"
+              },
+              {
+                "loop": true,
+                "name": "IdleNeutral",
+                "source": "Idle_Neutral"
+              },
+              {
+                "loop": true,
+                "name": "IdleSword",
+                "source": "Idle_Sword"
+              },
+              {
+                "loop": false,
+                "name": "Interact",
+                "source": "Interact"
+              },
+              {
+                "loop": false,
+                "name": "KickLeft",
+                "source": "Kick_Left"
+              },
+              {
+                "loop": false,
+                "name": "KickRight",
+                "source": "Kick_Right"
+              },
+              {
+                "loop": false,
+                "name": "PunchLeft",
+                "source": "Punch_Left"
+              },
+              {
+                "loop": false,
+                "name": "PunchRight",
+                "source": "Punch_Right"
+              },
+              {
+                "loop": false,
+                "name": "Roll",
+                "source": "Roll"
+              },
+              {
+                "loop": true,
+                "name": "RunBack",
+                "source": "Run_Back"
+              },
+              {
+                "loop": true,
+                "name": "RunLeft",
+                "source": "Run_Left"
+              },
+              {
+                "loop": true,
+                "name": "RunRight",
+                "source": "Run_Right"
+              },
+              {
+                "loop": false,
+                "name": "RunShoot",
+                "source": "Run_Shoot"
+              },
+              {
+                "loop": false,
+                "name": "SwordSlash",
+                "source": "Sword_Slash"
+              },
+              {
+                "loop": false,
+                "name": "Wave",
+                "source": "Wave"
+              }
+            ]
+          }
+        },
+        {
+          "assetStoreId": "7d426858a8ae8cffff217817aeacee364e3ab902e1fd1f8fd6501f1ee7764a1e",
+          "name": "Male_Casual_Hoodie",
+          "type": "Scene3D::Model3DObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "centerLocation": "ModelOrigin",
+            "crossfadeDuration": 0.10000000149011612,
+            "depth": 56.11087213859398,
+            "height": 50.26399964343806,
+            "isCastingShadow": true,
+            "isReceivingShadow": true,
+            "keepAspectRatio": true,
+            "materialType": "StandardWithoutMetalness",
+            "modelResourceName": "Male Casual Hoodie.glb",
+            "originLocation": "ModelOrigin",
+            "rotationX": 90,
+            "rotationY": 0,
+            "rotationZ": 90,
+            "width": 11.33477757708838,
+            "animations": [
+              {
+                "loop": true,
+                "name": "Idle",
+                "source": "Idle"
+              },
+              {
+                "loop": true,
+                "name": "Run",
+                "source": "Run"
+              },
+              {
+                "loop": true,
+                "name": "Walk",
+                "source": "Walk"
+              },
+              {
+                "loop": false,
+                "name": "Death",
+                "source": "Death"
+              },
+              {
+                "loop": false,
+                "name": "GunShoot",
+                "source": "Gun_Shoot"
+              },
+              {
+                "loop": false,
+                "name": "HitRecieve2",
+                "source": "HitRecieve_2"
+              },
+              {
+                "loop": false,
+                "name": "HitRecieve",
+                "source": "HitRecieve"
+              },
+              {
+                "loop": true,
+                "name": "IdleGun",
+                "source": "Idle_Gun"
+              },
+              {
+                "loop": true,
+                "name": "IdleGunPointing",
+                "source": "Idle_Gun_Pointing"
+              },
+              {
+                "loop": false,
+                "name": "IdleGunShoot",
+                "source": "Idle_Gun_Shoot"
+              },
+              {
+                "loop": true,
+                "name": "IdleNeutral",
+                "source": "Idle_Neutral"
+              },
+              {
+                "loop": true,
+                "name": "IdleSword",
+                "source": "Idle_Sword"
+              },
+              {
+                "loop": false,
+                "name": "Interact",
+                "source": "Interact"
+              },
+              {
+                "loop": false,
+                "name": "KickLeft",
+                "source": "Kick_Left"
+              },
+              {
+                "loop": false,
+                "name": "KickRight",
+                "source": "Kick_Right"
+              },
+              {
+                "loop": false,
+                "name": "PunchLeft",
+                "source": "Punch_Left"
+              },
+              {
+                "loop": false,
+                "name": "PunchRight",
+                "source": "Punch_Right"
+              },
+              {
+                "loop": false,
+                "name": "Roll",
+                "source": "Roll"
+              },
+              {
+                "loop": true,
+                "name": "RunBack",
+                "source": "Run_Back"
+              },
+              {
+                "loop": true,
+                "name": "RunLeft",
+                "source": "Run_Left"
+              },
+              {
+                "loop": true,
+                "name": "RunRight",
+                "source": "Run_Right"
+              },
+              {
+                "loop": false,
+                "name": "RunShoot",
+                "source": "Run_Shoot"
+              },
+              {
+                "loop": false,
+                "name": "SwordSlash",
+                "source": "Sword_Slash"
+              },
+              {
+                "loop": false,
+                "name": "Wave",
+                "source": "Wave"
+              }
+            ]
+          }
+        },
+        {
+          "assetStoreId": "ae38399c26ba63498c27ca42e0b1f5d42c029914b48e39fabb07d253d44230be",
+          "name": "Male_Casual_2",
+          "type": "Scene3D::Model3DObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "centerLocation": "ModelOrigin",
+            "crossfadeDuration": 0.10000000149011612,
+            "depth": 55.739286441894905,
+            "height": 50.26399964343806,
+            "isCastingShadow": true,
+            "isReceivingShadow": true,
+            "keepAspectRatio": true,
+            "materialType": "StandardWithoutMetalness",
+            "modelResourceName": "Male Casual 2.glb",
+            "originLocation": "ModelOrigin",
+            "rotationX": 90,
+            "rotationY": 0,
+            "rotationZ": 90,
+            "width": 13.640797523693202,
+            "animations": [
+              {
+                "loop": true,
+                "name": "Walk",
+                "source": "Walk"
+              },
+              {
+                "loop": true,
+                "name": "Idle",
+                "source": "Idle"
+              },
+              {
+                "loop": true,
+                "name": "Run",
+                "source": "Run"
+              },
+              {
+                "loop": false,
+                "name": "Death",
+                "source": "Death"
+              },
+              {
+                "loop": false,
+                "name": "GunShoot",
+                "source": "Gun_Shoot"
+              },
+              {
+                "loop": false,
+                "name": "HitRecieve2",
+                "source": "HitRecieve_2"
+              },
+              {
+                "loop": false,
+                "name": "HitRecieve",
+                "source": "HitRecieve"
+              },
+              {
+                "loop": true,
+                "name": "IdleGun",
+                "source": "Idle_Gun"
+              },
+              {
+                "loop": true,
+                "name": "IdleGunPointing",
+                "source": "Idle_Gun_Pointing"
+              },
+              {
+                "loop": false,
+                "name": "IdleGunShoot",
+                "source": "Idle_Gun_Shoot"
+              },
+              {
+                "loop": true,
+                "name": "IdleNeutral",
+                "source": "Idle_Neutral"
+              },
+              {
+                "loop": true,
+                "name": "IdleSword",
+                "source": "Idle_Sword"
+              },
+              {
+                "loop": false,
+                "name": "Interact",
+                "source": "Interact"
+              },
+              {
+                "loop": false,
+                "name": "KickLeft",
+                "source": "Kick_Left"
+              },
+              {
+                "loop": false,
+                "name": "KickRight",
+                "source": "Kick_Right"
+              },
+              {
+                "loop": false,
+                "name": "PunchLeft",
+                "source": "Punch_Left"
+              },
+              {
+                "loop": false,
+                "name": "PunchRight",
+                "source": "Punch_Right"
+              },
+              {
+                "loop": false,
+                "name": "Roll",
+                "source": "Roll"
+              },
+              {
+                "loop": true,
+                "name": "RunBack",
+                "source": "Run_Back"
+              },
+              {
+                "loop": true,
+                "name": "RunLeft",
+                "source": "Run_Left"
+              },
+              {
+                "loop": true,
+                "name": "RunRight",
+                "source": "Run_Right"
+              },
+              {
+                "loop": false,
+                "name": "RunShoot",
+                "source": "Run_Shoot"
+              },
+              {
+                "loop": false,
+                "name": "SwordSlash",
+                "source": "Sword_Slash"
+              },
+              {
+                "loop": false,
+                "name": "Wave",
+                "source": "Wave"
+              }
+            ]
+          }
+        },
+        {
+          "assetStoreId": "7191ad1c1693c6c856f90f9541bdb8e881cef033bb3e1bbab1700110536fbba5",
+          "name": "Male_Beach",
+          "type": "Scene3D::Model3DObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "centerLocation": "ModelOrigin",
+            "crossfadeDuration": 0.10000000149011612,
+            "depth": 56.49196959578484,
+            "height": 50.26399964343806,
+            "isCastingShadow": true,
+            "isReceivingShadow": true,
+            "keepAspectRatio": true,
+            "materialType": "StandardWithoutMetalness",
+            "modelResourceName": "Male Beach.glb",
+            "originLocation": "ModelOrigin",
+            "rotationX": 90,
+            "rotationY": 0,
+            "rotationZ": 90,
+            "width": 11.221126306788019,
+            "animations": [
+              {
+                "loop": true,
+                "name": "Run",
+                "source": "Run"
+              },
+              {
+                "loop": true,
+                "name": "Idle",
+                "source": "Idle"
+              },
+              {
+                "loop": true,
+                "name": "Walk",
+                "source": "Walk"
+              },
+              {
+                "loop": false,
+                "name": "Death",
+                "source": "Death"
+              },
+              {
+                "loop": false,
+                "name": "GunShoot",
+                "source": "Gun_Shoot"
+              },
+              {
+                "loop": false,
+                "name": "HitRecieve2",
+                "source": "HitRecieve_2"
+              },
+              {
+                "loop": false,
+                "name": "HitRecieve",
+                "source": "HitRecieve"
+              },
+              {
+                "loop": true,
+                "name": "IdleGun",
+                "source": "Idle_Gun"
+              },
+              {
+                "loop": true,
+                "name": "IdleGunPointing",
+                "source": "Idle_Gun_Pointing"
+              },
+              {
+                "loop": false,
+                "name": "IdleGunShoot",
+                "source": "Idle_Gun_Shoot"
+              },
+              {
+                "loop": true,
+                "name": "IdleNeutral",
+                "source": "Idle_Neutral"
+              },
+              {
+                "loop": true,
+                "name": "IdleSword",
+                "source": "Idle_Sword"
+              },
+              {
+                "loop": false,
+                "name": "Interact",
+                "source": "Interact"
+              },
+              {
+                "loop": false,
+                "name": "KickLeft",
+                "source": "Kick_Left"
+              },
+              {
+                "loop": false,
+                "name": "KickRight",
+                "source": "Kick_Right"
+              },
+              {
+                "loop": false,
+                "name": "PunchLeft",
+                "source": "Punch_Left"
+              },
+              {
+                "loop": false,
+                "name": "PunchRight",
+                "source": "Punch_Right"
+              },
+              {
+                "loop": false,
+                "name": "Roll",
+                "source": "Roll"
+              },
+              {
+                "loop": true,
+                "name": "RunBack",
+                "source": "Run_Back"
+              },
+              {
+                "loop": true,
+                "name": "RunLeft",
+                "source": "Run_Left"
+              },
+              {
+                "loop": true,
+                "name": "RunRight",
+                "source": "Run_Right"
+              },
+              {
+                "loop": false,
+                "name": "RunShoot",
+                "source": "Run_Shoot"
+              },
+              {
+                "loop": false,
+                "name": "SwordSlash",
+                "source": "Sword_Slash"
+              },
+              {
+                "loop": false,
+                "name": "Wave",
+                "source": "Wave"
+              }
+            ]
+          }
+        },
+        {
+          "assetStoreId": "cf0a90bb28175943907f4cbdc1419346341c974111848fddf8f6a9a3f46cfa71",
+          "name": "Femal_Suit",
+          "type": "Scene3D::Model3DObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "centerLocation": "ModelOrigin",
+            "crossfadeDuration": 0.10000000149011612,
+            "depth": 55.35542402573315,
+            "height": 49.477346405756045,
+            "isCastingShadow": true,
+            "isReceivingShadow": true,
+            "keepAspectRatio": true,
+            "materialType": "StandardWithoutMetalness",
+            "modelResourceName": "Femal Suit.glb",
+            "originLocation": "ModelOrigin",
+            "rotationX": 90,
+            "rotationY": 0,
+            "rotationZ": 90,
+            "width": 11.13705695962701,
+            "animations": [
+              {
+                "loop": true,
+                "name": "Idle",
+                "source": "Idle"
+              },
+              {
+                "loop": true,
+                "name": "Walk",
+                "source": "Walk"
+              },
+              {
+                "loop": true,
+                "name": "Run",
+                "source": "Run"
+              },
+              {
+                "loop": false,
+                "name": "Death",
+                "source": "Death"
+              },
+              {
+                "loop": false,
+                "name": "GunShoot",
+                "source": "Gun_Shoot"
+              },
+              {
+                "loop": false,
+                "name": "HitRecieve2",
+                "source": "HitRecieve_2"
+              },
+              {
+                "loop": false,
+                "name": "HitRecieve",
+                "source": "HitRecieve"
+              },
+              {
+                "loop": true,
+                "name": "IdleGun",
+                "source": "Idle_Gun"
+              },
+              {
+                "loop": true,
+                "name": "IdleGunPointing",
+                "source": "Idle_Gun_Pointing"
+              },
+              {
+                "loop": false,
+                "name": "IdleGunShoot",
+                "source": "Idle_Gun_Shoot"
+              },
+              {
+                "loop": true,
+                "name": "IdleNeutral",
+                "source": "Idle_Neutral"
+              },
+              {
+                "loop": true,
+                "name": "IdleSword",
+                "source": "Idle_Sword"
+              },
+              {
+                "loop": false,
+                "name": "Interact",
+                "source": "Interact"
+              },
+              {
+                "loop": false,
+                "name": "KickLeft",
+                "source": "Kick_Left"
+              },
+              {
+                "loop": false,
+                "name": "KickRight",
+                "source": "Kick_Right"
+              },
+              {
+                "loop": false,
+                "name": "PunchLeft",
+                "source": "Punch_Left"
+              },
+              {
+                "loop": false,
+                "name": "PunchRight",
+                "source": "Punch_Right"
+              },
+              {
+                "loop": false,
+                "name": "Roll",
+                "source": "Roll"
+              },
+              {
+                "loop": true,
+                "name": "RunBack",
+                "source": "Run_Back"
+              },
+              {
+                "loop": true,
+                "name": "RunLeft",
+                "source": "Run_Left"
+              },
+              {
+                "loop": true,
+                "name": "RunRight",
+                "source": "Run_Right"
+              },
+              {
+                "loop": false,
+                "name": "RunShoot",
+                "source": "Run_Shoot"
+              },
+              {
+                "loop": false,
+                "name": "SwordSlash",
+                "source": "Sword_Slash"
+              },
+              {
+                "loop": false,
+                "name": "Wave",
+                "source": "Wave"
+              }
+            ]
+          }
+        },
+        {
+          "assetStoreId": "b75fc78fd2345d4ee146457a47f7f713a069201e73eebb478ff72b56ee64c44a",
+          "name": "Light_Curved",
+          "type": "Scene3D::Model3DObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "centerLocation": "ObjectCenter",
+            "crossfadeDuration": 0.10000000149011612,
+            "depth": 101,
+            "height": 101,
+            "isCastingShadow": true,
+            "isReceivingShadow": true,
+            "keepAspectRatio": true,
+            "materialType": "StandardWithoutMetalness",
+            "modelResourceName": "Light Curved.glb",
+            "originLocation": "TopLeft",
+            "rotationX": 90,
+            "rotationY": 0,
+            "rotationZ": 0,
+            "width": 101,
+            "animations": []
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -2955,6 +3776,24 @@
             "folderName": "Background",
             "quickCustomizationVisibility": "hidden",
             "children": [
+              {
+                "objectName": "Male_Casual_Hoodie"
+              },
+              {
+                "objectName": "Femal_Casual_2"
+              },
+              {
+                "objectName": "Male_Casual_2"
+              },
+              {
+                "objectName": "Male_Beach"
+              },
+              {
+                "objectName": "Femal_Suit"
+              },
+              {
+                "objectName": "Light_Curved"
+              },
               {
                 "objectName": "Sky"
               }
@@ -43462,7 +44301,7 @@
       "name": "Level1",
       "instances": [
         {
-          "angle": 0,
+          "angle": 270,
           "customSize": false,
           "height": 159.1836734693878,
           "keepRatio": true,
@@ -43470,8 +44309,8 @@
           "name": "Player",
           "persistentUuid": "894bdbd1-6dc0-474b-ae8a-1ced5a9cc957",
           "width": 300,
-          "x": -1407,
-          "y": 268,
+          "x": -1649,
+          "y": 1204,
           "z": 10,
           "zOrder": 26,
           "numberProperties": [],
@@ -43556,24 +44395,7 @@
           "rotationY": 90,
           "width": 0,
           "x": -1664,
-          "y": 1120,
-          "z": 21,
-          "zOrder": 27,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "Coin",
-          "persistentUuid": "4e80ac91-a9c6-421d-84fb-da675ade03ca",
-          "rotationY": 90,
-          "width": 0,
-          "x": -1661,
-          "y": 1309,
+          "y": 984,
           "z": 21,
           "zOrder": 27,
           "numberProperties": [],
@@ -43760,7 +44582,7 @@
           "rotationY": 90,
           "width": 0,
           "x": -1664,
-          "y": 1216,
+          "y": 1080,
           "z": 21,
           "zOrder": 27,
           "numberProperties": [],
@@ -44758,7 +45580,7 @@
           "persistentUuid": "f97d31b2-91e4-4d98-8ec8-894830e52c4f",
           "width": 896,
           "x": -2176,
-          "y": 1152,
+          "y": 1151,
           "zOrder": 42,
           "numberProperties": [],
           "stringProperties": [],
@@ -44909,8 +45731,8 @@
           "name": "CommonTree",
           "persistentUuid": "52d896d4-1113-4367-94bf-9398965ca670",
           "width": 0,
-          "x": -989,
-          "y": 765,
+          "x": -987,
+          "y": 1077,
           "zOrder": 46,
           "numberProperties": [],
           "stringProperties": [],
@@ -44932,15 +45754,15 @@
           "initialVariables": []
         },
         {
-          "angle": 274,
+          "angle": -139.31772484463008,
           "customSize": false,
           "height": 0,
           "layer": "",
           "name": "CommonTree",
           "persistentUuid": "79f0c61e-6546-421b-bdb9-fef257734726",
           "width": 0,
-          "x": -1057,
-          "y": 1403,
+          "x": -1298,
+          "y": 1021,
           "zOrder": 46,
           "numberProperties": [],
           "stringProperties": [],
@@ -46815,7 +47637,7 @@
           "name": "Van",
           "persistentUuid": "7902e61e-184e-4054-b623-832507695fb4",
           "width": 0,
-          "x": -2262,
+          "x": -2301,
           "y": 578,
           "z": 4,
           "zOrder": 37,
@@ -46831,7 +47653,7 @@
           "name": "SuvLuxury",
           "persistentUuid": "d7618275-6fb6-4bee-a5a8-2a6f5d9cec01",
           "width": 0,
-          "x": -2390,
+          "x": -2554,
           "y": 578,
           "z": 4,
           "zOrder": 39,
@@ -47193,15 +48015,15 @@
           "initialVariables": []
         },
         {
-          "angle": 0,
+          "angle": -27.022948389125418,
           "customSize": false,
           "height": 0,
           "layer": "",
           "name": "SuvLuxury",
           "persistentUuid": "fdeae199-6038-4af9-8471-6983634af29b",
           "width": 0,
-          "x": -2454,
-          "y": 791,
+          "x": -1718,
+          "y": 290,
           "z": 4,
           "zOrder": 28,
           "numberProperties": [],
@@ -47216,8 +48038,8 @@
           "name": "SuvLuxury",
           "persistentUuid": "8e164f83-fe1e-4c63-8b3d-e66a756aba3a",
           "width": 0,
-          "x": -2294,
-          "y": 791,
+          "x": -2083,
+          "y": 772,
           "z": 4,
           "zOrder": 28,
           "numberProperties": [],
@@ -47232,8 +48054,8 @@
           "name": "Van",
           "persistentUuid": "83bfb37d-c6d0-41a9-bdd2-5b502ea7aa54",
           "width": 0,
-          "x": -2040,
-          "y": 791,
+          "x": -1966,
+          "y": 774,
           "z": 4,
           "zOrder": 38,
           "numberProperties": [],
@@ -47345,8 +48167,8 @@
           "name": "LargeBuildingA",
           "persistentUuid": "9ce2bf00-9b32-4171-80ca-71a06e71cfac",
           "width": 0,
-          "x": -2176,
-          "y": 1344,
+          "x": -2048,
+          "y": 1216,
           "zOrder": 50,
           "numberProperties": [],
           "stringProperties": [],
@@ -47401,22 +48223,6 @@
           "initialVariables": []
         },
         {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "LargeBuildingA",
-          "persistentUuid": "ab602015-5ee4-4443-a192-e53617874fde",
-          "width": 0,
-          "x": -2112,
-          "y": 1024,
-          "zOrder": 48,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
           "angle": 180,
           "customSize": false,
           "height": 0,
@@ -47457,7 +48263,7 @@
           "name": "LargeBuildingA",
           "persistentUuid": "f002dcb6-7734-44ff-9c11-03d80f21656d",
           "width": 0,
-          "x": -2496,
+          "x": -2368,
           "y": 1152,
           "zOrder": 48,
           "numberProperties": [],
@@ -47522,7 +48328,7 @@
           "persistentUuid": "000a2c81-8cdc-4da1-88ed-9afb39fe3d8f",
           "width": 0,
           "x": -2176,
-          "y": 1728,
+          "y": 1600,
           "zOrder": 50,
           "numberProperties": [],
           "stringProperties": [],
@@ -47986,6 +48792,199 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 100.41071959966611,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Femal_Casual_2",
+          "persistentUuid": "927ac9fe-11dd-4f11-8059-3142375e6ab4",
+          "width": 0,
+          "x": -1894,
+          "y": 398,
+          "z": 7,
+          "zOrder": 51,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": -55.42899016291547,
+          "customSize": false,
+          "height": 128.9948930178302,
+          "layer": "",
+          "name": "Male_Casual_Hoodie",
+          "persistentUuid": "7c5cfe2e-7b1f-4ec7-839a-a8fdf5754e47",
+          "width": 29.088978818029585,
+          "x": -1897,
+          "y": 434,
+          "z": 8,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 85.46394647172649,
+          "customSize": false,
+          "height": 11.221126306788015,
+          "layer": "",
+          "name": "Male_Beach",
+          "persistentUuid": "203c361d-d96e-41f2-b204-47fd1fbfeb1a",
+          "width": 11.221126306788019,
+          "x": -1879,
+          "y": 743,
+          "z": 8,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 295,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Femal_Suit",
+          "persistentUuid": "a7e38211-e224-473f-a3b2-d3052b92a2c5",
+          "width": 0,
+          "x": -1899,
+          "y": -262,
+          "zOrder": 52,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Male_Casual_2",
+          "persistentUuid": "df18621a-9aee-49b7-a194-7fea798d6c02",
+          "width": 0,
+          "x": -2231,
+          "y": 526,
+          "zOrder": 53,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": -66.33742914795937,
+          "customSize": false,
+          "height": 49.47734640575604,
+          "layer": "",
+          "name": "Femal_Suit",
+          "persistentUuid": "82c4fe36-d6a2-46de-9acc-448cffa32663",
+          "width": 11.13705695962701,
+          "x": -1559,
+          "y": 503,
+          "z": 8,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 96.98808048884607,
+          "customSize": false,
+          "height": 50.26399964343806,
+          "layer": "",
+          "name": "Male_Casual_2",
+          "persistentUuid": "8a6d8d53-cb73-4cbe-93dd-bdc70143bf63",
+          "width": 13.640797523693202,
+          "x": -1897,
+          "y": 1112,
+          "z": 8,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 90,
+          "customSize": false,
+          "height": 33.66666954663822,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Light_Curved",
+          "persistentUuid": "22c13414-0aec-4208-897c-6640885ad52e",
+          "width": 7.481482121475156,
+          "x": -1498,
+          "y": 549,
+          "zOrder": 54,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": -90,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Light_Curved",
+          "persistentUuid": "90c360c4-d00a-46dd-a427-dfa71c436b69",
+          "width": 0,
+          "x": -1953,
+          "y": 442,
+          "zOrder": 54,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 180,
+          "customSize": false,
+          "height": 33.66666954663822,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Light_Curved",
+          "persistentUuid": "14abe11b-2048-4a15-b3e5-dfdf573de8b3",
+          "width": 7.481482121475156,
+          "x": -1987,
+          "y": 917,
+          "zOrder": 54,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 90,
+          "customSize": false,
+          "height": 33.66666954663822,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Light_Curved",
+          "persistentUuid": "976a961a-f91c-4bd0-8277-1369bebd9e86",
+          "width": 7.481482121475156,
+          "x": -1497,
+          "y": 831,
+          "zOrder": 54,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 180,
+          "customSize": false,
+          "height": 33.66666954663822,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Light_Curved",
+          "persistentUuid": "02e0c178-54e0-45ba-b724-b41b7909d554",
+          "width": 7.481482121475156,
+          "x": -1224,
+          "y": 539,
+          "zOrder": 54,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "editionSettings": {
@@ -47998,7 +48997,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.2817259932079715,
+        "zoomFactor": 0.27253598967730885,
         "windowMask": false
       }
     },
