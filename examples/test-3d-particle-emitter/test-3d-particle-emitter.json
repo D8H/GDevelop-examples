@@ -157,6 +157,22 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "RedFlame",
+          "persistentUuid": "56a81529-f28c-4604-93a6-788a9fd96fc2",
+          "width": 0,
+          "x": 357,
+          "y": 235,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -5529,7 +5545,7 @@
       "name": "ParticleEmitter3D",
       "previewIconUrl": "https://asset-resources.gdevelop.io/public-resources/Icons/f2e5a34bf465f781866677762d385d6c8e9e8d203383f2df9a3b7e0fad6a2cb5_fire.svg",
       "shortDescription": "Display a large number of particles in 3D to create visual effects in a 3D game.",
-      "version": "3.0.1",
+      "version": "3.1.0",
       "description": [
         "3D particle emitters let you create and display many small particles to simulate visual effects in your game — like fire, explosions, smoke, or dust.",
         "",
