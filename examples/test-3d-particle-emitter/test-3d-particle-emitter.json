@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 257,
+    "build": 259,
     "major": 5,
     "minor": 6,
     "revision": 0
@@ -689,6 +689,91 @@
           "variables": [],
           "effects": [],
           "behaviors": []
+        },
+        {
+          "assetStoreId": "351f05a136c91ee1d9d6ff4f9cfbc4d40b3744d7c7ea74212b4853862d52d974",
+          "name": "RedFlame2",
+          "type": "ParticleEmitter3D::ParticleEmitter3D",
+          "variant": "",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "EndColor": "128;0;0",
+            "StartColor": "160;80;40",
+            "StartOpacity": 204,
+            "SpayConeAngle": 1,
+            "StartSizeMin": 128,
+            "StartSizeMax": 128,
+            "EndScale": 0.375,
+            "Flow": 100,
+            "LifespanMin": 0.5,
+            "LifespanMax": 0.5,
+            "Duration": 123456,
+            "StartSpeedMin": 300,
+            "StartSpeedMax": 600,
+            "ShouldAutodestruct": true,
+            "StartRotationZMin": 0,
+            "StartRotationZMax": 20,
+            "StartAngularVelocityMin": 90,
+            "StartAngularVelocityMax": 90
+          },
+          "childrenContent": {
+            "Particle": {
+              "adaptCollisionMaskAutomatically": true,
+              "updateIfNotVisible": false,
+              "animations": [
+                {
+                  "name": "Image",
+                  "useMultipleDirections": false,
+                  "directions": [
+                    {
+                      "looping": false,
+                      "timeBetweenFrames": 0.08,
+                      "sprites": [
+                        {
+                          "hasCustomCollisionMask": true,
+                          "image": "Square",
+                          "points": [],
+                          "originPoint": {
+                            "name": "origine",
+                            "x": 0,
+                            "y": 0
+                          },
+                          "centerPoint": {
+                            "automatic": true,
+                            "name": "centre",
+                            "x": 0,
+                            "y": 0
+                          },
+                          "customCollisionMask": [
+                            [
+                              {
+                                "x": 0,
+                                "y": 0
+                              },
+                              {
+                                "x": 64,
+                                "y": 0
+                              },
+                              {
+                                "x": 64,
+                                "y": 66
+                              },
+                              {
+                                "x": 0,
+                                "y": 66
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -696,6 +781,9 @@
         "children": [
           {
             "objectName": "RedFlame"
+          },
+          {
+            "objectName": "RedFlame2"
           },
           {
             "objectName": "RedFlameTrail"
@@ -1095,6 +1183,7 @@
     {
       "author": "",
       "category": "Camera",
+      "dimension": "",
       "extensionNamespace": "",
       "fullName": "Third person camera",
       "gdevelopVersion": ">=5.5.222",
@@ -4230,6 +4319,7 @@
     {
       "author": "PANDAKO-GitHub",
       "category": "Input",
+      "dimension": "",
       "extensionNamespace": "",
       "fullName": "Mouse Pointer Lock",
       "gdevelopVersion": ">=5.5.222",
@@ -5729,6 +5819,7 @@
     {
       "author": "",
       "category": "Visual effect",
+      "dimension": "",
       "extensionNamespace": "",
       "fullName": "3D particle emitter",
       "gdevelopVersion": ">=5.5.222",
@@ -5974,7 +6065,7 @@
                 "     */",
                 "    setRenderMode(renderMode) {",
                 "        switch (renderMode) {",
-                "            case \"BillBoard\":",
+                "            case \"Billboard\":",
                 "                this.particleSystem.renderMode = RenderMode.BillBoard;",
                 "                this.particleSystem.startRotation = new IntervalValue(0, 0);",
                 "                break;",
@@ -6101,8 +6192,8 @@
                 "        if (startRotation.angleZ) {",
                 "            startRotation.angleZ.a = gdjs.toRad(startRotationZMin);",
                 "        }",
-                "        else if (startRotationZ.a !== undefined) {",
-                "            startRotationZ.a = gdjs.toRad(startRotationZMin);",
+                "        else if (startRotation.a !== undefined) {",
+                "            startRotation.a = -gdjs.toRad(startRotationZMin);",
                 "        }",
                 "    }",
                 "",
@@ -6111,11 +6202,12 @@
                 "     */",
                 "    setStartRotationZMax(startRotationZMax) {",
                 "        const startRotation = this.particleSystem.startRotation;",
+                "            console.log(startRotation);",
                 "        if (startRotation.angleZ) {",
                 "            startRotation.angleZ.b = gdjs.toRad(startRotationZMax);",
                 "        }",
-                "        else if (startRotationZ.b !== undefined) {",
-                "            startRotationZ.b = gdjs.toRad(startRotationZMax);",
+                "        else if (startRotation.b !== undefined) {",
+                "            startRotation.b = -gdjs.toRad(startRotationZMax);",
                 "        }",
                 "    }",
                 "",
@@ -6123,22 +6215,22 @@
                 "     * @param angularVelocityMin {number}",
                 "     */",
                 "    setStartAngularVelocityMin(angularVelocityMin) {",
-                "        const angularVelocity = this.rotation3DOverLife.angularVelocity;",
-                "        if (angularVelocity.a == undefined) {",
+                "        const angularVelocity = this.rotationOverLife.angularVelocity;",
+                "        if (angularVelocity.a === undefined) {",
                 "            return;",
                 "        }",
-                "        angularVelocityX.a = gdjs.toRad(angularVelocityMin);",
+                "        angularVelocity.a = -gdjs.toRad(angularVelocityMin);",
                 "    }",
                 "",
                 "    /**",
                 "     * @param angularVelocityMax {number}",
                 "     */",
                 "    setStartAngularVelocityMax(angularVelocityMax) {",
-                "        const angularVelocity = this.rotation3DOverLife.angularVelocity;",
-                "        if (angularVelocity.b == undefined) {",
+                "        const angularVelocity = this.rotationOverLife.angularVelocity;",
+                "        if (angularVelocity.b === undefined) {",
                 "            return;",
                 "        }",
-                "        angularVelocity.b = gdjs.toRad(angularVelocityMax);",
+                "        angularVelocity.b = -gdjs.toRad(angularVelocityMax);",
                 "    }",
                 "",
                 "    /**",
@@ -18115,6 +18207,7 @@
     {
       "author": "@4ian, Tristan Rhodes (https://victrisgames.itch.io/)",
       "category": "Movement",
+      "dimension": "",
       "extensionNamespace": "",
       "fullName": "Ellipse movement",
       "gdevelopVersion": ">=5.5.222",
