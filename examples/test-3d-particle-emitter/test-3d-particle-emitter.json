@@ -183,6 +183,22 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "ModelParticle2",
+          "persistentUuid": "612d9d0e-c033-434c-a883-88ede7e7a616",
+          "width": 0,
+          "x": 354,
+          "y": 291,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -546,14 +562,20 @@
             "RenderMode": "Model",
             "Model3D": "Stone Large F.glb",
             "Blending": "Normal",
-            "StartRotationXMin": 90,
-            "StartRotationXMax": 90,
+            "StartRotationXMin": 45,
+            "StartRotationXMax": 45,
             "StartRotationZMin": 0,
             "StartRotationZMax": 0,
-            "StartAngularVelocityMin": 90,
-            "StartAngularVelocityMax": 90,
-            "StartAngularVelocityRatioXMin": 1,
-            "StartAngularVelocityRatioXMax": 1
+            "StartAngularVelocityMin": 0,
+            "StartAngularVelocityMax": 0,
+            "StartAngularVelocityRatioXMin": 0,
+            "StartAngularVelocityRatioXMax": 0,
+            "StartAngularVelocityRatioZMin": 0,
+            "StartAngularVelocityRatioZMax": 0,
+            "StartAngularVelocityRatioYMin": 0,
+            "StartAngularVelocityRatioYMax": 1,
+            "StartRotationYMin": 0,
+            "StartRotationYMax": 0
           },
           "childrenContent": {
             "Particle": {
@@ -774,6 +796,85 @@
               ]
             }
           }
+        },
+        {
+          "assetStoreId": "351f05a136c91ee1d9d6ff4f9cfbc4d40b3744d7c7ea74212b4853862d52d974",
+          "name": "ModelParticle2",
+          "type": "ParticleEmitter3D::ParticleEmitter3D",
+          "variant": "",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "EndColor": "255;97;0",
+            "StartColor": "0;131;255",
+            "StartOpacity": 204,
+            "SpayConeAngle": 30,
+            "StartSizeMin": 48,
+            "StartSizeMax": 48,
+            "EndScale": 0.375,
+            "Flow": 10,
+            "LifespanMin": 0.5,
+            "LifespanMax": 0.5,
+            "Duration": 123456,
+            "StartSpeedMin": 300,
+            "StartSpeedMax": 600,
+            "ShouldAutodestruct": true,
+            "RenderMode": "Model",
+            "Model3D": "Stone Large F.glb",
+            "Blending": "Normal",
+            "StartRotationXMin": 0,
+            "StartRotationXMax": 0,
+            "StartRotationZMin": 0,
+            "StartRotationZMax": 0,
+            "StartAngularVelocityMin": 0,
+            "StartAngularVelocityMax": 0,
+            "StartAngularVelocityRatioXMin": 0,
+            "StartAngularVelocityRatioXMax": 0,
+            "StartAngularVelocityRatioZMin": 0,
+            "StartAngularVelocityRatioZMax": 0,
+            "StartAngularVelocityRatioYMin": 0,
+            "StartAngularVelocityRatioYMax": 1,
+            "StartRotationYMin": 0,
+            "StartRotationYMax": 0
+          },
+          "childrenContent": {
+            "Particle": {
+              "adaptCollisionMaskAutomatically": true,
+              "updateIfNotVisible": false,
+              "animations": [
+                {
+                  "name": "Image",
+                  "useMultipleDirections": false,
+                  "directions": [
+                    {
+                      "looping": false,
+                      "timeBetweenFrames": 0.08,
+                      "sprites": [
+                        {
+                          "hasCustomCollisionMask": false,
+                          "image": "LightGlow.png",
+                          "points": [],
+                          "originPoint": {
+                            "name": "origine",
+                            "x": 0,
+                            "y": 0
+                          },
+                          "centerPoint": {
+                            "automatic": true,
+                            "name": "centre",
+                            "x": 0,
+                            "y": 0
+                          },
+                          "customCollisionMask": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -796,6 +897,9 @@
           },
           {
             "objectName": "ModelParticle"
+          },
+          {
+            "objectName": "ModelParticle2"
           },
           {
             "objectName": "NewParticlesEmitter"
@@ -6170,7 +6274,7 @@
                 "        if (!startRotationY) {",
                 "            return;",
                 "        }",
-                "        startRotationY.a = gdjs.toRad(startRotationYMin);",
+                "        startRotationY.a = -gdjs.toRad(startRotationYMin);",
                 "    }",
                 "",
                 "    /**",
@@ -6181,7 +6285,7 @@
                 "        if (!startRotationY) {",
                 "            return;",
                 "        }",
-                "        startRotationY.b = gdjs.toRad(startRotationYMax);",
+                "        startRotationY.b = -gdjs.toRad(startRotationYMax);",
                 "    }",
                 "",
                 "    /**",
@@ -6202,7 +6306,6 @@
                 "     */",
                 "    setStartRotationZMax(startRotationZMax) {",
                 "        const startRotation = this.particleSystem.startRotation;",
-                "            console.log(startRotation);",
                 "        if (startRotation.angleZ) {",
                 "            startRotation.angleZ.b = gdjs.toRad(startRotationZMax);",
                 "        }",
@@ -6263,7 +6366,7 @@
                 "        if (!angularVelocityY) {",
                 "            return;",
                 "        }",
-                "        angularVelocityY.a = gdjs.toRad(angularVelocityYMin);",
+                "        angularVelocityY.a = -gdjs.toRad(angularVelocityYMin);",
                 "    }",
                 "",
                 "    /**",
@@ -6274,7 +6377,7 @@
                 "        if (!angularVelocityY) {",
                 "            return;",
                 "        }",
-                "        angularVelocityY.b = gdjs.toRad(angularVelocityYMax);",
+                "        angularVelocityY.b = -gdjs.toRad(angularVelocityYMax);",
                 "    }",
                 "",
                 "    /**",
@@ -6283,8 +6386,9 @@
                 "    setStartAngularVelocityZMin(angularVelocityZMin) {",
                 "        const angularVelocityZ = this.rotation3DOverLife.angularVelocity.angleZ;",
                 "        if (!angularVelocityZ) {",
-                "            angularVelocityZ.a = gdjs.toRad(angularVelocityZMin);",
+                "            return;",
                 "        }",
+                "        angularVelocityZ.a = -gdjs.toRad(angularVelocityZMin);",
                 "    }",
                 "",
                 "    /**",
@@ -6293,8 +6397,9 @@
                 "    setStartAngularVelocityZMax(angularVelocityZMax) {",
                 "        const angularVelocityZ = this.rotation3DOverLife.angularVelocity.angleZ;",
                 "        if (!angularVelocityZ) {",
-                "            angularVelocityZ.b = gdjs.toRad(angularVelocityZMax);",
+                "            return;",
                 "        }",
+                "        angularVelocityZ.b = -gdjs.toRad(angularVelocityZMax);",
                 "    }",
                 "",
                 "    /**",
@@ -7723,7 +7828,8 @@
                 "            }",
                 "            else {",
                 "                this.angularVelocity.genValue(this.tempQuat, particle.age / particle.life);",
-                "                this.tempQuat.slerpQuaternions(IdentityQuaternion, this.tempQuat, delta);",
+                "                // Fix the rotation",
+                "                this.tempQuat.slerp(IdentityQuaternion, 1 - delta);",
                 "                particle.rotation.multiply(this.tempQuat);",
                 "            }",
                 "        }",
@@ -13376,7 +13482,7 @@
                     "particleSystem.addBehavior(applyForce);",
                     "const widthOverLength = new WidthOverLength(new PiecewiseBezier([[new Bezier(1, 2 / 3, 1 / 3, 0), 0]]));",
                     "particleSystem.addBehavior(widthOverLength);",
-                    "const rotation3DOverLife = new Rotation3DOverLife(new EulerGenerator(new IntervalValue(0, 0), new IntervalValue(0, 0), new IntervalValue(0,0)))",
+                    "const rotation3DOverLife = new Rotation3DOverLife(new EulerGenerator(new IntervalValue(0, 0), new IntervalValue(0, 0), new IntervalValue(0,0), \"ZYX\"))",
                     "particleSystem.addBehavior(rotation3DOverLife);",
                     "const rotationOverLife = new RotationOverLife(new IntervalValue(0, 0));",
                     "particleSystem.addBehavior(rotationOverLife);",
