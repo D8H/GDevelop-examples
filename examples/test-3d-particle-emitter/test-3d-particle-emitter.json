@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 259,
+    "build": 262,
     "major": 5,
     "minor": 6,
     "revision": 0
@@ -539,6 +539,7 @@
         {
           "assetStoreId": "351f05a136c91ee1d9d6ff4f9cfbc4d40b3744d7c7ea74212b4853862d52d974",
           "name": "ModelParticle",
+          "persistentUuid": "f71594dd-45d2-4c8e-97ab-9d46beee79df",
           "type": "ParticleEmitter3D::ParticleEmitter3D",
           "variant": "",
           "variables": [],
@@ -618,6 +619,7 @@
         {
           "assetStoreId": "a9e985f725ddbb625aabc7d95dfd252912ad6dca5d60b9cf62d9d4dd8d9a0326",
           "name": "Stone_Large_F",
+          "persistentUuid": "b1a08144-677d-46c1-a677-249e8d63b4e4",
           "type": "Scene3D::Model3DObject",
           "variables": [],
           "effects": [],
@@ -1954,6 +1956,37 @@
           "objectGroups": []
         }
       ],
+      "eventsFunctionsFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "functionName": "DefineHelperClasses"
+          },
+          {
+            "functionName": "LookFromDistanceAtPosition"
+          },
+          {
+            "functionName": "LookFromDistanceAtObject"
+          },
+          {
+            "functionName": "LookFromDistanceAtPosition3D"
+          },
+          {
+            "folderName": "Layers and cameras",
+            "children": [
+              {
+                "functionName": "LookFromDistanceAtObject3D"
+              }
+            ]
+          },
+          {
+            "functionName": "RotatedX"
+          },
+          {
+            "functionName": "RotatedY"
+          }
+        ]
+      },
       "eventsBasedBehaviors": [
         {
           "description": "Smoothly follow an object at a distance.",
@@ -3018,6 +3051,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "RotationHalfwayDuration",
+              "group": "Third person camera configuration",
               "name": "SetRotationHalfwayDuration",
               "sentence": "",
               "events": [
@@ -3120,6 +3154,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "ElevationHalfwayDuration",
+              "group": "Third person camera configuration",
               "name": "SetElevationHalfwayDuration",
               "sentence": "",
               "events": [
@@ -3222,6 +3257,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "TranslationZHalfwayDuration",
+              "group": "Third person camera configuration",
               "name": "SetTranslationZHalfwayDuration",
               "sentence": "",
               "events": [
@@ -3408,6 +3444,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "FollowFreeAreaZMax",
+              "group": "Third person camera configuration",
               "name": "SetFollowFreeAreaZMax",
               "sentence": "",
               "events": [
@@ -3488,6 +3525,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "FollowFreeAreaZMin",
+              "group": "Third person camera configuration",
               "name": "SetFollowFreeAreaZMin",
               "sentence": "",
               "events": [
@@ -3568,6 +3606,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "Distance",
+              "group": "Third person camera configuration",
               "name": "SetDistance",
               "sentence": "",
               "events": [
@@ -3648,6 +3687,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "OffsetX",
+              "group": "Third person camera configuration",
               "name": "SetOffsetX",
               "sentence": "",
               "events": [
@@ -3728,6 +3768,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "OffsetY",
+              "group": "Third person camera configuration",
               "name": "SetOffsetY",
               "sentence": "",
               "events": [
@@ -3808,6 +3849,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "OffsetZ",
+              "group": "Third person camera configuration",
               "name": "SetOffsetZ",
               "sentence": "",
               "events": [
@@ -3888,6 +3930,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "RotationAngleOffset",
+              "group": "Third person camera configuration",
               "name": "SetRotationAngleOffset",
               "sentence": "",
               "events": [
@@ -3968,6 +4011,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "ElevationAngleOffset",
+              "group": "Third person camera configuration",
               "name": "SetElevationAngleOffset",
               "sentence": "",
               "events": [
@@ -4048,6 +4092,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "TargetedRotationAngle",
+              "group": "Third person camera configuration",
               "name": "SetTargetedRotationAngle",
               "sentence": "",
               "events": [
@@ -4094,6 +4139,129 @@
               "objectGroups": []
             }
           ],
+          "eventsFunctionsFolderStructure": {
+            "folderName": "__ROOT",
+            "children": [
+              {
+                "functionName": "onCreated"
+              },
+              {
+                "functionName": "doStepPreEvents"
+              },
+              {
+                "functionName": "MoveCameraCloser"
+              },
+              {
+                "functionName": "DoMoveCameraCloser"
+              },
+              {
+                "functionName": "Slerp"
+              },
+              {
+                "functionName": "MoveToObject"
+              },
+              {
+                "functionName": "UpdateLocalBasis"
+              },
+              {
+                "functionName": "JumpToTargetedRotation"
+              },
+              {
+                "functionName": "RotationAngle"
+              },
+              {
+                "functionName": "SetCameraRotation"
+              },
+              {
+                "folderName": "Third person camera configuration",
+                "children": [
+                  {
+                    "functionName": "RotationHalfwayDuration"
+                  },
+                  {
+                    "functionName": "SetRotationHalfwayDuration"
+                  },
+                  {
+                    "functionName": "ElevationHalfwayDuration"
+                  },
+                  {
+                    "functionName": "SetElevationHalfwayDuration"
+                  },
+                  {
+                    "functionName": "TranslationZHalfwayDuration"
+                  },
+                  {
+                    "functionName": "SetTranslationZHalfwayDuration"
+                  },
+                  {
+                    "functionName": "FollowFreeAreaZMax"
+                  },
+                  {
+                    "functionName": "SetFollowFreeAreaZMax"
+                  },
+                  {
+                    "functionName": "FollowFreeAreaZMin"
+                  },
+                  {
+                    "functionName": "SetFollowFreeAreaZMin"
+                  },
+                  {
+                    "functionName": "Distance"
+                  },
+                  {
+                    "functionName": "SetDistance"
+                  },
+                  {
+                    "functionName": "OffsetX"
+                  },
+                  {
+                    "functionName": "SetOffsetX"
+                  },
+                  {
+                    "functionName": "OffsetY"
+                  },
+                  {
+                    "functionName": "SetOffsetY"
+                  },
+                  {
+                    "functionName": "OffsetZ"
+                  },
+                  {
+                    "functionName": "SetOffsetZ"
+                  },
+                  {
+                    "functionName": "RotationAngleOffset"
+                  },
+                  {
+                    "functionName": "SetRotationAngleOffset"
+                  },
+                  {
+                    "functionName": "ElevationAngleOffset"
+                  },
+                  {
+                    "functionName": "SetElevationAngleOffset"
+                  },
+                  {
+                    "functionName": "TargetedRotationAngle"
+                  },
+                  {
+                    "functionName": "SetTargetedRotationAngle"
+                  }
+                ]
+              },
+              {
+                "folderName": "Private",
+                "children": [
+                  {
+                    "functionName": "FreeAreaZMin"
+                  },
+                  {
+                    "functionName": "FreeAreaZMax"
+                  }
+                ]
+              }
+            ]
+          },
           "propertyDescriptors": [
             {
               "value": "",
@@ -5201,6 +5369,59 @@
           "objectGroups": []
         }
       ],
+      "eventsFunctionsFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "functionName": "onFirstSceneLoaded"
+          },
+          {
+            "functionName": "onScenePostEvents"
+          },
+          {
+            "functionName": "RequestPointerLock"
+          },
+          {
+            "functionName": "ExitPointerLock"
+          },
+          {
+            "functionName": "isPointerLocked"
+          },
+          {
+            "functionName": "isPointerActuallyLocked"
+          },
+          {
+            "functionName": "isEmulatingPointerLock"
+          },
+          {
+            "functionName": "IsMoving"
+          },
+          {
+            "functionName": "MovementX"
+          },
+          {
+            "functionName": "SetMovementX"
+          },
+          {
+            "functionName": "MovementY"
+          },
+          {
+            "functionName": "SetMovementY"
+          },
+          {
+            "functionName": "TouchX"
+          },
+          {
+            "functionName": "TouchY"
+          },
+          {
+            "functionName": "TouchSpeedFactor"
+          },
+          {
+            "functionName": "SetTouchSpeedFactor"
+          }
+        ]
+      },
       "eventsBasedBehaviors": [
         {
           "description": "Control camera rotations with a mouse.",
@@ -5481,6 +5702,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "HorizontalSpeed",
+              "group": "First person camera mouse mapper configuration",
               "name": "SetHorizontalSpeed",
               "sentence": "",
               "events": [
@@ -5561,6 +5783,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "VerticalSpeed",
+              "group": "First person camera mouse mapper configuration",
               "name": "SetVerticalSpeed",
               "sentence": "",
               "events": [
@@ -5641,6 +5864,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "VerticalAngleMin",
+              "group": "First person camera mouse mapper configuration",
               "name": "SetVerticalAngleMin",
               "sentence": "",
               "events": [
@@ -5721,6 +5945,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "VerticalAngleMax",
+              "group": "First person camera mouse mapper configuration",
               "name": "SetVerticalAngleMax",
               "sentence": "",
               "events": [
@@ -5801,6 +6026,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "OffsetZ",
+              "group": "First person camera mouse mapper configuration",
               "name": "SetOffsetZ",
               "sentence": "",
               "events": [
@@ -5837,6 +6063,57 @@
               "objectGroups": []
             }
           ],
+          "eventsFunctionsFolderStructure": {
+            "folderName": "__ROOT",
+            "children": [
+              {
+                "functionName": "doStepPreEvents"
+              },
+              {
+                "folderName": "Layers and cameras",
+                "children": [
+                  {
+                    "functionName": "LookFromObjectEyes"
+                  }
+                ]
+              },
+              {
+                "folderName": "First person camera mouse mapper configuration",
+                "children": [
+                  {
+                    "functionName": "HorizontalSpeed"
+                  },
+                  {
+                    "functionName": "SetHorizontalSpeed"
+                  },
+                  {
+                    "functionName": "VerticalSpeed"
+                  },
+                  {
+                    "functionName": "SetVerticalSpeed"
+                  },
+                  {
+                    "functionName": "VerticalAngleMin"
+                  },
+                  {
+                    "functionName": "SetVerticalAngleMin"
+                  },
+                  {
+                    "functionName": "VerticalAngleMax"
+                  },
+                  {
+                    "functionName": "SetVerticalAngleMax"
+                  },
+                  {
+                    "functionName": "OffsetZ"
+                  },
+                  {
+                    "functionName": "SetOffsetZ"
+                  }
+                ]
+              }
+            ]
+          },
           "propertyDescriptors": [
             {
               "value": "",
@@ -5985,7 +6262,9 @@
             {
               "type": "BuiltinCommonInstructions::JsCode",
               "inlineCode": [
+                "//@ts-ignore",
                 "if (gdjs.__particleEmmiter3DExtension) {",
+                "    //@ts-ignore",
                 "    return;",
                 "}",
                 "",
@@ -6033,15 +6312,15 @@
                 "class ParticleEmitterHelper extends THREE.Object3D {",
                 "    /** @type {gdjs.CustomRuntimeObject3D} */",
                 "    object;",
-                "    /** @type {THREE.LineSegments} */",
+                "    /** @type {THREE.LineSegments<THREE.BufferGeometry, THREE.LineBasicMaterial>} */",
                 "    cone;",
-                "    /** @type {THREE.LineSegments} */",
+                "    /** @type {THREE.LineSegments<THREE.BufferGeometry, THREE.LineBasicMaterial>} */",
                 "    centerLine;",
-                "    /** @type {THREE.Mesh} */",
+                "    /** @type {THREE.Mesh<THREE.BoxGeometry, THREE.MeshBasicMaterial>} */",
                 "    originBox;",
                 "",
                 "\t/**",
-                "     * @param gdjs.CustomRuntimeObject3D object",
+                "     * @param {gdjs.CustomRuntimeObject3D} object",
                 "\t */",
                 "    constructor(object) {",
                 "        super();",
@@ -6087,24 +6366,35 @@
                 "        this.add(this.originBox);",
                 "        this.update();",
                 "",
+                "        //@ts-ignore",
                 "        this.originBox.gdjsRuntimeObject = object;",
                 "    }",
                 "",
                 "    dispose() {",
                 "        this.cone.geometry.dispose();",
+                "        //@ts-ignore",
                 "        this.cone.material.dispose();",
                 "        this.centerLine.geometry.dispose();",
+                "        //@ts-ignore",
                 "        this.centerLine.material.dispose();",
                 "        this.originBox.geometry.dispose();",
+                "        //@ts-ignore",
                 "        this.originBox.material.dispose();",
                 "    }",
                 "",
                 "    update() {",
-                "        const coneWidth = coneLength * Math.sin(gdjs.toRad(this.object._getSpayConeAngle()));",
-                "        const coneHeight = coneLength * Math.cos(gdjs.toRad(this.object._getSpayConeAngle()));",
+                "        /** @type {number} */",
+                "        //@ts-ignore",
+                "        const sprayConeAngle = this.object._getSpayConeAngle();",
+                "        const coneWidth = coneLength * Math.sin(gdjs.toRad(sprayConeAngle));",
+                "        const coneHeight = coneLength * Math.cos(gdjs.toRad(sprayConeAngle));",
                 "        this.cone.scale.set(coneWidth, coneWidth, coneHeight);",
-                "        const startColor = gdjs.rgbOrHexStringToNumber(this.object._getStartColor())",
-                "        const endColor = gdjs.rgbOrHexStringToNumber(this.object._getEndColor());",
+                "        const startColor = gdjs.rgbOrHexStringToNumber(",
+                "            //@ts-ignore",
+                "            this.object._getStartColor())",
+                "        const endColor = gdjs.rgbOrHexStringToNumber(",
+                "            //@ts-ignore",
+                "            this.object._getEndColor());",
                 "        this.cone.material.color.set(endColor);",
                 "        this.centerLine.material.color.set(startColor);",
                 "        this.originBox.material.color.set(startColor);",
@@ -6123,7 +6413,7 @@
                 "};",
                 "",
                 "/**",
-                " * @param {string} integerOpacity",
+                " * @param {number} integerOpacity",
                 " * @param {THREE.Vector4} threeColor",
                 " */",
                 "const setThreeOpacity = (integerOpacity, threeColor = new THREE.Vector4()) => {",
@@ -6165,7 +6455,7 @@
                 "    }",
                 "",
                 "    /**",
-                "     * @param renderMode {'Billboard' | 'Trail'}",
+                "     * @param renderMode {'BillBoard' | 'Trail' | 'Model'}",
                 "     */",
                 "    setRenderMode(renderMode) {",
                 "        switch (renderMode) {",
@@ -6210,8 +6500,10 @@
                 "        /** @type {THREE.Material | null} */",
                 "        let material = null;",
                 "        threeObject.traverse(function (object) {",
+                "            //@ts-ignore",
                 "            if (object.isMesh) {",
                 "                /** @type {THREE.Mesh} */",
+                "                //@ts-ignore",
                 "                const mesh = object;",
                 "                geometries.push(mesh.geometry);",
                 "                material = Array.isArray(mesh.material) ? mesh.material[0] : mesh.material;",
@@ -6567,7 +6859,7 @@
                 "    }",
                 "",
                 "    /**",
-                "     * @param blending {string}",
+                "     * @param blendingString {string}",
                 "     */",
                 "    setBlending(blendingString) {",
                 "        const blending =",
@@ -13263,6 +13555,17 @@
           "objectGroups": []
         }
       ],
+      "eventsFunctionsFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "functionName": "DefineHelperClasses"
+          },
+          {
+            "functionName": "onScenePreEvents"
+          }
+        ]
+      },
       "eventsBasedBehaviors": [],
       "eventsBasedObjects": [
         {
@@ -13393,22 +13696,28 @@
                     "    ConeEmitter,",
                     "    RenderMode,",
                     "    EulerGenerator,",
+                    "    //@ts-ignore",
                     "} = gdjs.__particleEmmiter3DExtension;",
                     "",
                     "/** @type {gdjs.CustomRuntimeObject} */",
+                    "//@ts-ignore",
                     "const object = objects[0];",
                     "// Force the size of the object because it doesn't contain any instance.",
+                    "//@ts-ignore",
                     "object._innerArea = {",
                     "      min: [-16, -16, -16],",
                     "      max: [16, 16, 16],",
                     "    };",
                     "const hitbox = new gdjs.Polygon();",
                     "hitbox.vertices = [[-16, -16], [16, -16], [16, 16], [-16, 16]];",
+                    "//@ts-ignore",
                     "object._untransformedHitBoxes = [hitbox];",
-                    "object._unrotatedAABB.min[0] = -16;",
-                    "object._unrotatedAABB.min[1] = -16;",
-                    "object._unrotatedAABB.max[0] = 16;",
-                    "object._unrotatedAABB.max[1] = 16;",
+                    "//@ts-ignore",
+                    "const unrotatedAABB = object._unrotatedAABB;",
+                    "unrotatedAABB.min[0] = -16;",
+                    "unrotatedAABB.min[1] = -16;",
+                    "unrotatedAABB.max[0] = 16;",
+                    "unrotatedAABB.max[1] = 16;",
                     "object._updateUntransformedHitBoxes = () => {};",
                     "",
                     "// Here runtimeScene is the gdjs.CustomRuntimeObjectInstanceContainer inside the custom object.",
@@ -13418,6 +13727,7 @@
                     "const texture = game.getImageManager().getThreeTexture('');",
                     "",
                     "// Set the blending here because changes are not applied after the emitter creation.",
+                    "//@ts-ignore",
                     "const blendingString = object._getBlending();",
                     "const blending =",
                     "    blendingString === \"Additive\" ? THREE.AdditiveBlending :",
@@ -13489,12 +13799,15 @@
                     "",
                     "particleSystem.emitter.name = object.getName() + object.getNameId();",
                     "",
+                    "//@ts-ignore",
                     "object.__particleEmitterAdapter = new ParticleEmitterAdapter(particleSystem, colorOverLife, sizeOverLife, applyForce, widthOverLength, rotation3DOverLife, rotationOverLife);",
+                    "//@ts-ignore",
                     "object.__particleSystem = particleSystem;",
                     "",
                     "// This is a hack that may break in future releases.",
                     "// Replace the group that would hold children objects by the emmiter.",
                     "const layer = object.getInstanceContainer().getLayer(object.getLayer());",
+                    "//@ts-ignore",
                     "const group = object.getRenderer()._threeGroup;",
                     "layer.getRenderer().remove3DRendererObject(group);",
                     "particleSystem.emitter.position.copy(group.position);",
@@ -13517,8 +13830,11 @@
                     "",
                     "",
                     "// See doStepPostEvents",
+                    "//@ts-ignore",
                     "gameScene.__particleEmmiter3DExtension = gameScene.__particleEmmiter3DExtension || {};",
+                    "//@ts-ignore",
                     "gameScene.__particleEmmiter3DExtension.emittersCount = gameScene.__particleEmmiter3DExtension.emittersCount || 0;",
+                    "//@ts-ignore",
                     "gameScene.__particleEmmiter3DExtension.emittersCount++;",
                     "",
                     ""
@@ -14367,6 +14683,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "Z",
+              "group": "Position",
               "name": "SetZ",
               "private": true,
               "sentence": "",
@@ -14439,6 +14756,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "RotationX",
+              "group": "Angle",
               "name": "SetRotationX",
               "private": true,
               "sentence": "",
@@ -14522,6 +14840,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "RotationY",
+              "group": "Angle",
               "name": "SetRotationY",
               "private": true,
               "sentence": "",
@@ -14604,6 +14923,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "StartColor",
+              "group": "3D particle emitter color configuration",
               "name": "SetStartColor",
               "sentence": "",
               "events": [
@@ -14686,6 +15006,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "EndColor",
+              "group": "3D particle emitter color configuration",
               "name": "SetEndColor",
               "sentence": "",
               "events": [
@@ -14768,6 +15089,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "StartOpacity",
+              "group": "3D particle emitter color configuration",
               "name": "SetStartOpacity",
               "sentence": "",
               "events": [
@@ -14850,6 +15172,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "EndOpacity",
+              "group": "3D particle emitter color configuration",
               "name": "SetEndOpacity",
               "sentence": "",
               "events": [
@@ -14932,6 +15255,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "Flow",
+              "group": "3D particle emitter configuration",
               "name": "SetFlow",
               "sentence": "",
               "events": [
@@ -15015,6 +15339,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "StartSizeMin",
+              "group": "3D particle emitter configuration",
               "name": "SetStartSizeMin",
               "sentence": "",
               "events": [
@@ -15097,6 +15422,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "StartSizeMax",
+              "group": "3D particle emitter configuration",
               "name": "SetStartSizeMax",
               "sentence": "",
               "events": [
@@ -15180,6 +15506,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "EndScale",
+              "group": "3D particle emitter configuration",
               "name": "SetEndScale",
               "sentence": "",
               "events": [
@@ -15263,6 +15590,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "StartSpeedMin",
+              "group": "3D particle emitter speed configuration",
               "name": "SetStartSpeedMin",
               "sentence": "",
               "events": [
@@ -15345,6 +15673,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "StartSpeedMax",
+              "group": "3D particle emitter speed configuration",
               "name": "SetStartSpeedMax",
               "sentence": "",
               "events": [
@@ -15427,6 +15756,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "LifespanMin",
+              "group": "3D particle emitter configuration",
               "name": "SetLifespanMin",
               "sentence": "",
               "events": [
@@ -15510,6 +15840,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "LifespanMax",
+              "group": "3D particle emitter configuration",
               "name": "SetLifespanMax",
               "sentence": "",
               "events": [
@@ -15593,6 +15924,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "Duration",
+              "group": "3D particle emitter configuration",
               "name": "SetDuration",
               "sentence": "",
               "events": [
@@ -15814,6 +16146,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "SpayConeAngle",
+              "group": "3D particle emitter configuration",
               "name": "SetSpayConeAngle",
               "sentence": "",
               "events": [
@@ -15898,6 +16231,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "Blending",
+              "group": "3D particle emitter color configuration",
               "name": "SetBlending",
               "private": true,
               "sentence": "",
@@ -15983,6 +16317,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "GravityTop",
+              "group": "3D particle emitter speed configuration",
               "name": "SetGravityTop",
               "sentence": "",
               "events": [
@@ -16066,6 +16401,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "Gravity",
+              "group": "3D particle emitter speed configuration",
               "name": "SetGravity",
               "sentence": "",
               "events": [
@@ -16274,6 +16610,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "TrailStartLengthMin",
+              "group": "3D particle emitter trail configuration",
               "name": "SetTrailStartLengthMin",
               "sentence": "",
               "events": [
@@ -16356,6 +16693,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "TrailStartLengthMax",
+              "group": "3D particle emitter trail configuration",
               "name": "SetTrailStartLengthMax",
               "sentence": "",
               "events": [
@@ -16574,6 +16912,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "TrailEndWidthRatio",
+              "group": "3D particle emitter trail configuration",
               "name": "SetTrailEndWidthRatio",
               "sentence": "",
               "events": [
@@ -16658,6 +16997,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "RenderMode",
+              "group": "3D particle emitter configuration",
               "name": "SetRenderMode",
               "private": true,
               "sentence": "",
@@ -17020,6 +17360,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "Model3D",
+              "group": "3D particle emitter model configuration",
               "name": "SetModel3D",
               "private": true,
               "sentence": "",
@@ -17105,6 +17446,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "StartRotationXMin",
+              "group": "3D particle emitter model configuration",
               "name": "SetStartRotationXMin",
               "sentence": "",
               "events": [
@@ -17187,6 +17529,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "StartRotationXMax",
+              "group": "3D particle emitter model configuration",
               "name": "SetStartRotationXMax",
               "sentence": "",
               "events": [
@@ -17269,6 +17612,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "StartRotationYMin",
+              "group": "3D particle emitter model configuration",
               "name": "SetStartRotationYMin",
               "sentence": "",
               "events": [
@@ -17351,6 +17695,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "StartRotationYMax",
+              "group": "3D particle emitter model configuration",
               "name": "SetStartRotationYMax",
               "sentence": "",
               "events": [
@@ -17433,6 +17778,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "StartRotationZMin",
+              "group": "3D particle emitter model configuration",
               "name": "SetStartRotationZMin",
               "sentence": "",
               "events": [
@@ -17515,6 +17861,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "StartRotationZMax",
+              "group": "3D particle emitter model configuration",
               "name": "SetStartRotationZMax",
               "sentence": "",
               "events": [
@@ -17597,6 +17944,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "StartAngularVelocityMin",
+              "group": "3D particle emitter rotation configuration",
               "name": "SetStartAngularVelocityMin",
               "sentence": "",
               "events": [
@@ -17684,6 +18032,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "StartAngularVelocityMax",
+              "group": "3D particle emitter rotation configuration",
               "name": "SetStartAngularVelocityMax",
               "sentence": "",
               "events": [
@@ -17732,6 +18081,300 @@
               "objectGroups": []
             }
           ],
+          "eventsFunctionsFolderStructure": {
+            "folderName": "__ROOT",
+            "children": [
+              {
+                "functionName": "onCreated"
+              },
+              {
+                "functionName": "onDestroy"
+              },
+              {
+                "functionName": "onHotReloading"
+              },
+              {
+                "functionName": "UpdateFromProperties"
+              },
+              {
+                "functionName": "UpdateHelper"
+              },
+              {
+                "functionName": "UpdateImage"
+              },
+              {
+                "functionName": "doStepPostEvents"
+              },
+              {
+                "functionName": "RegisterInLayer"
+              },
+              {
+                "functionName": "Delete"
+              },
+              {
+                "functionName": "HasEnded"
+              },
+              {
+                "functionName": "Restart"
+              },
+              {
+                "folderName": "Position",
+                "children": [
+                  {
+                    "functionName": "Z"
+                  },
+                  {
+                    "functionName": "SetZ"
+                  }
+                ]
+              },
+              {
+                "folderName": "Angle",
+                "children": [
+                  {
+                    "functionName": "RotationX"
+                  },
+                  {
+                    "functionName": "SetRotationX"
+                  },
+                  {
+                    "functionName": "RotationY"
+                  },
+                  {
+                    "functionName": "SetRotationY"
+                  }
+                ]
+              },
+              {
+                "folderName": "3D particle emitter color configuration",
+                "children": [
+                  {
+                    "functionName": "StartColor"
+                  },
+                  {
+                    "functionName": "SetStartColor"
+                  },
+                  {
+                    "functionName": "EndColor"
+                  },
+                  {
+                    "functionName": "SetEndColor"
+                  },
+                  {
+                    "functionName": "StartOpacity"
+                  },
+                  {
+                    "functionName": "SetStartOpacity"
+                  },
+                  {
+                    "functionName": "EndOpacity"
+                  },
+                  {
+                    "functionName": "SetEndOpacity"
+                  },
+                  {
+                    "functionName": "Blending"
+                  },
+                  {
+                    "functionName": "SetBlending"
+                  }
+                ]
+              },
+              {
+                "folderName": "3D particle emitter configuration",
+                "children": [
+                  {
+                    "functionName": "Flow"
+                  },
+                  {
+                    "functionName": "SetFlow"
+                  },
+                  {
+                    "functionName": "StartSizeMin"
+                  },
+                  {
+                    "functionName": "SetStartSizeMin"
+                  },
+                  {
+                    "functionName": "StartSizeMax"
+                  },
+                  {
+                    "functionName": "SetStartSizeMax"
+                  },
+                  {
+                    "functionName": "EndScale"
+                  },
+                  {
+                    "functionName": "SetEndScale"
+                  },
+                  {
+                    "functionName": "LifespanMin"
+                  },
+                  {
+                    "functionName": "SetLifespanMin"
+                  },
+                  {
+                    "functionName": "LifespanMax"
+                  },
+                  {
+                    "functionName": "SetLifespanMax"
+                  },
+                  {
+                    "functionName": "Duration"
+                  },
+                  {
+                    "functionName": "SetDuration"
+                  },
+                  {
+                    "functionName": "SpayConeAngle"
+                  },
+                  {
+                    "functionName": "SetSpayConeAngle"
+                  },
+                  {
+                    "functionName": "ShouldAutodestruct"
+                  },
+                  {
+                    "functionName": "SetShouldAutodestruct"
+                  },
+                  {
+                    "functionName": "RenderMode"
+                  },
+                  {
+                    "functionName": "SetRenderMode"
+                  }
+                ]
+              },
+              {
+                "folderName": "3D particle emitter speed configuration",
+                "children": [
+                  {
+                    "functionName": "StartSpeedMin"
+                  },
+                  {
+                    "functionName": "SetStartSpeedMin"
+                  },
+                  {
+                    "functionName": "StartSpeedMax"
+                  },
+                  {
+                    "functionName": "SetStartSpeedMax"
+                  },
+                  {
+                    "functionName": "AreParticlesRelative"
+                  },
+                  {
+                    "functionName": "SetAreParticlesRelative"
+                  },
+                  {
+                    "functionName": "GravityTop"
+                  },
+                  {
+                    "functionName": "SetGravityTop"
+                  },
+                  {
+                    "functionName": "Gravity"
+                  },
+                  {
+                    "functionName": "SetGravity"
+                  }
+                ]
+              },
+              {
+                "folderName": "3D particle emitter trail configuration",
+                "children": [
+                  {
+                    "functionName": "TrailStartLengthMin"
+                  },
+                  {
+                    "functionName": "SetTrailStartLengthMin"
+                  },
+                  {
+                    "functionName": "TrailStartLengthMax"
+                  },
+                  {
+                    "functionName": "SetTrailStartLengthMax"
+                  },
+                  {
+                    "functionName": "IsTrailFollowingLocalOrigin"
+                  },
+                  {
+                    "functionName": "SetIsTrailFollowingLocalOrigin"
+                  },
+                  {
+                    "functionName": "TrailEndWidthRatio"
+                  },
+                  {
+                    "functionName": "SetTrailEndWidthRatio"
+                  }
+                ]
+              },
+              {
+                "folderName": "3D particle emitter model configuration",
+                "children": [
+                  {
+                    "functionName": "Model3D"
+                  },
+                  {
+                    "functionName": "SetModel3D"
+                  },
+                  {
+                    "functionName": "StartRotationXMin"
+                  },
+                  {
+                    "functionName": "SetStartRotationXMin"
+                  },
+                  {
+                    "functionName": "StartRotationXMax"
+                  },
+                  {
+                    "functionName": "SetStartRotationXMax"
+                  },
+                  {
+                    "functionName": "StartRotationYMin"
+                  },
+                  {
+                    "functionName": "SetStartRotationYMin"
+                  },
+                  {
+                    "functionName": "StartRotationYMax"
+                  },
+                  {
+                    "functionName": "SetStartRotationYMax"
+                  },
+                  {
+                    "functionName": "StartRotationZMin"
+                  },
+                  {
+                    "functionName": "SetStartRotationZMin"
+                  },
+                  {
+                    "functionName": "StartRotationZMax"
+                  },
+                  {
+                    "functionName": "SetStartRotationZMax"
+                  }
+                ]
+              },
+              {
+                "folderName": "3D particle emitter rotation configuration",
+                "children": [
+                  {
+                    "functionName": "StartAngularVelocityMin"
+                  },
+                  {
+                    "functionName": "SetStartAngularVelocityMin"
+                  },
+                  {
+                    "functionName": "StartAngularVelocityMax"
+                  },
+                  {
+                    "functionName": "SetStartAngularVelocityMax"
+                  }
+                ]
+              }
+            ]
+          },
           "propertyDescriptors": [
             {
               "value": "255;0;0",
@@ -18361,6 +19004,9 @@
       "globalVariables": [],
       "sceneVariables": [],
       "eventsFunctions": [],
+      "eventsFunctionsFolderStructure": {
+        "folderName": "__ROOT"
+      },
       "eventsBasedBehaviors": [
         {
           "description": "Move objects on ellipses or smoothly back and forth in one direction.",
@@ -19621,6 +20267,78 @@
               "objectGroups": []
             }
           ],
+          "eventsFunctionsFolderStructure": {
+            "folderName": "__ROOT",
+            "children": [
+              {
+                "functionName": "onCreated"
+              },
+              {
+                "functionName": "doStepPreEvents"
+              },
+              {
+                "functionName": "doStepPostEvents"
+              },
+              {
+                "functionName": "ToggleTurningLeft"
+              },
+              {
+                "functionName": "SetTurningLeft"
+              },
+              {
+                "functionName": "IsTurningLeft"
+              },
+              {
+                "functionName": "MovementAngle"
+              },
+              {
+                "folderName": "Configuration",
+                "children": [
+                  {
+                    "functionName": "LoopDuration"
+                  },
+                  {
+                    "functionName": "RadiusX"
+                  },
+                  {
+                    "functionName": "RadiusY"
+                  },
+                  {
+                    "functionName": "CenterX"
+                  },
+                  {
+                    "functionName": "CenterY"
+                  }
+                ]
+              },
+              {
+                "folderName": "Elliptical movement configuration",
+                "children": [
+                  {
+                    "functionName": "SetRadiusX"
+                  },
+                  {
+                    "functionName": "SetRadiusY"
+                  },
+                  {
+                    "functionName": "SetLoopDuration"
+                  }
+                ]
+              },
+              {
+                "functionName": "SetMovementAngle"
+              },
+              {
+                "functionName": "DeltaX"
+              },
+              {
+                "functionName": "DeltaY"
+              },
+              {
+                "functionName": "DirectionAngle"
+              }
+            ]
+          },
           "propertyDescriptors": [
             {
               "value": "100",
