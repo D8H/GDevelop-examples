@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 262,
+    "build": 279,
     "major": 5,
     "minor": 6,
     "revision": 0
@@ -18,6 +18,7 @@
     "scaleMode": "linear",
     "sizeOnStartupMode": "adaptWidth",
     "templateSlug": "",
+    "useDeprecatedZeroAsDefaultStringVariable": true,
     "version": "1.0.0",
     "name": "test-3d-particle-emitter",
     "description": "",
@@ -53,7 +54,6 @@
     "authorUsernames": [],
     "categories": [],
     "playableDevices": [
-      "mobile",
       "mobile"
     ],
     "extensionProperties": [],
@@ -112,6 +112,7 @@
       "mangledName": "Untitled_32scene",
       "name": "Untitled scene",
       "r": 0,
+      "renderer3DWorldScale": 100,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
       "title": "",
@@ -137,16 +138,19 @@
       "variables": [
         {
           "name": "CameraElevationAngle",
+          "persistentUuid": "a32f9f6f-4980-474c-94ab-ac03e9da30f7",
           "type": "number",
           "value": 0
         },
         {
           "name": "CameraRotationAngle",
+          "persistentUuid": "22c21d8a-8f1f-4b5e-99c0-799b2a2971ca",
           "type": "number",
           "value": 0
         },
         {
           "name": "IsPaused",
+          "persistentUuid": "95e3d5dd-1db0-499f-872c-2caf68b2c07e",
           "type": "boolean",
           "value": false
         }
@@ -1991,8 +1995,11 @@
         {
           "description": "Smoothly follow an object at a distance.",
           "fullName": "Third person camera",
+          "helpPath": "",
+          "iconUrl": "",
           "name": "ThirdPersonCamera",
           "objectType": "",
+          "previewIconUrl": "",
           "quickCustomizationVisibility": "hidden",
           "eventsFunctions": [
             {
@@ -5426,8 +5433,11 @@
         {
           "description": "Control camera rotations with a mouse.",
           "fullName": "First person camera mouse mapper",
+          "helpPath": "",
+          "iconUrl": "",
           "name": "FirstPersonPointerMapper",
           "objectType": "",
+          "previewIconUrl": "",
           "eventsFunctions": [
             {
               "fullName": "",
@@ -6200,7 +6210,7 @@
     {
       "author": "",
       "category": "Visual effect",
-      "dimension": "",
+      "dimension": "3D",
       "extensionNamespace": "",
       "fullName": "3D particle emitter",
       "gdevelopVersion": ">=5.5.222",
@@ -6209,7 +6219,7 @@
       "name": "ParticleEmitter3D",
       "previewIconUrl": "https://asset-resources.gdevelop.io/public-resources/Icons/f2e5a34bf465f781866677762d385d6c8e9e8d203383f2df9a3b7e0fad6a2cb5_fire.svg",
       "shortDescription": "Display a large number of particles in 3D to create visual effects in a 3D game.",
-      "version": "3.1.0",
+      "version": "3.2.0",
       "description": [
         "3D particle emitters let you create and display many small particles to simulate visual effects in your game — like fire, explosions, smoke, or dust.",
         "",
@@ -6427,6 +6437,7 @@
                 "    geometrySize = 1;",
                 "",
                 "    /**",
+                "     * @param inverseWorldScale {number}",
                 "     * @param particleSystem {ParticleSystem}",
                 "     * @param colorOverLife {ColorOverLife}",
                 "     * @param sizeOverLife {SizeOverLife}",
@@ -6437,6 +6448,7 @@
                 "     * @param rotationOverLife {RotationOverLife}",
                 "     */",
                 "    constructor(",
+                "        inverseWorldScale,",
                 "        particleSystem,",
                 "        colorOverLife,",
                 "        sizeOverLife,",
@@ -6445,6 +6457,7 @@
                 "        rotation3DOverLife,",
                 "        rotationOverLife,",
                 "    ) {",
+                "        this.inverseWorldScale = inverseWorldScale;",
                 "        this.particleSystem = particleSystem;",
                 "        this.colorOverLife = colorOverLife;",
                 "        this.sizeOverLife = sizeOverLife;",
@@ -6702,7 +6715,7 @@
                 "        if (!startLength) {",
                 "            return;",
                 "        }",
-                "        startLength.a = startLengthMin;",
+                "        startLength.a = startLengthMin * this.inverseWorldScale;",
                 "    }",
                 "",
                 "    /**",
@@ -6713,7 +6726,7 @@
                 "        if (!startLength) {",
                 "            return;",
                 "        }",
-                "        startLength.b = startLengthMax;",
+                "        startLength.b = startLengthMax * this.inverseWorldScale;",
                 "    }",
                 "",
                 "    /**",
@@ -6803,14 +6816,14 @@
                 "     * @param startSpeedMin {number}",
                 "     */",
                 "    setStartSpeedMin(startSpeedMin) {",
-                "        this.particleSystem.startSpeed.a = startSpeedMin;",
+                "        this.particleSystem.startSpeed.a = startSpeedMin * this.inverseWorldScale;",
                 "    }",
                 "",
                 "    /**",
                 "     * @param startSpeedMax {number}",
                 "     */",
                 "    setStartSpeedMax(startSpeedMax) {",
-                "        this.particleSystem.startSpeed.b = startSpeedMax;",
+                "        this.particleSystem.startSpeed.b = startSpeedMax * this.inverseWorldScale;",
                 "    }",
                 "",
                 "    /**",
@@ -6877,7 +6890,7 @@
                 "     * @param gravity {number}",
                 "     */",
                 "    setGravity(gravity) {",
-                "        this.applyForce.magnitude.value = gravity;",
+                "        this.applyForce.magnitude.value = gravity * this.inverseWorldScale;",
                 "    }",
                 "",
                 "    /**",
@@ -13579,9 +13592,12 @@
           "defaultName": "ParticleEmitter",
           "description": "Display a large number of particles to create visual effects.",
           "fullName": "3D particle emitter",
+          "helpPath": "",
+          "iconUrl": "",
           "is3D": true,
           "isUsingLegacyInstancesRenderer": true,
           "name": "ParticleEmitter3D",
+          "previewIconUrl": "",
           "objects": [
             {
               "adaptCollisionMaskAutomatically": true,
@@ -13799,8 +13815,9 @@
                     "",
                     "particleSystem.emitter.name = object.getName() + object.getNameId();",
                     "",
+                    "const inverseWorldScale = gameScene.getRenderer3DInverseWorldScale ? gameScene.getRenderer3DInverseWorldScale() : 1;",
                     "//@ts-ignore",
-                    "object.__particleEmitterAdapter = new ParticleEmitterAdapter(particleSystem, colorOverLife, sizeOverLife, applyForce, widthOverLength, rotation3DOverLife, rotationOverLife);",
+                    "object.__particleEmitterAdapter = new ParticleEmitterAdapter(inverseWorldScale, particleSystem, colorOverLife, sizeOverLife, applyForce, widthOverLength, rotation3DOverLife, rotationOverLife);",
                     "//@ts-ignore",
                     "object.__particleSystem = particleSystem;",
                     "",
@@ -14521,7 +14538,8 @@
                     "    layer.__particleEmmiter3DExtension = layer.__particleEmmiter3DExtension || {};",
                     "    if (!layer.__particleEmmiter3DExtension.batchSystem) {",
                     "        const batchSystem = new gdjs.__particleEmmiter3DExtension.BatchedRenderer();",
-                    "        batchSystem.scale.y *= -1;",
+                    "        const worldScale = gameScene.getRenderer3DWorldScale ? gameScene.getRenderer3DWorldScale() : 1;",
+                    "        batchSystem.scale.set(worldScale, -worldScale, worldScale);",
                     "        const threeScene = layer.getRenderer().getThreeScene();",
                     "        if (threeScene) {",
                     "            threeScene.add(batchSystem);",
@@ -19011,8 +19029,11 @@
         {
           "description": "Move objects on ellipses or smoothly back and forth in one direction.",
           "fullName": "Ellipse movement",
+          "helpPath": "",
+          "iconUrl": "",
           "name": "EllipseMovement",
           "objectType": "",
+          "previewIconUrl": "",
           "eventsFunctions": [
             {
               "fullName": "",
