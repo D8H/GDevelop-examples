@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 280,
+    "build": 281,
     "major": 5,
     "minor": 6,
     "revision": 0
@@ -210,7 +210,7 @@
         "zoomFactor": 0.546875,
         "windowMask": false,
         "selectedLayer": "",
-        "gameEditorMode": "instances-editor"
+        "gameEditorMode": "embedded-game"
       },
       "objectsGroups": [
         {
@@ -302,7 +302,9 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "content": {}
+          "content": {
+            "InitialValue": 3
+          }
         },
         {
           "assetStoreId": "",
@@ -313,7 +315,9 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "content": {}
+          "content": {
+            "InitialValue": 3
+          }
         },
         {
           "assetStoreId": "0d3f4843e5ebb7af30fd80adf19a1c5a14164c1283f344991dc2aa14067a1262",
@@ -5732,8 +5736,8 @@
           "areaMinY": 0,
           "areaMinZ": 0,
           "defaultName": "",
-          "description": "",
-          "fullName": "",
+          "description": "A bar of any kind.",
+          "fullName": "Resource bar",
           "helpPath": "",
           "iconUrl": "",
           "isInnerAreaFollowingParentSize": true,
@@ -5751,13 +5755,13 @@
               "effects": [],
               "behaviors": [
                 {
+                  "name": "Anchor",
+                  "type": "AnchorBehavior::AnchorBehavior",
                   "bottomEdgeAnchor": 2,
                   "leftEdgeAnchor": 1,
-                  "name": "Anchor",
                   "relativeToOriginalWindowSize": true,
                   "rightEdgeAnchor": 2,
                   "topEdgeAnchor": 1,
-                  "type": "AnchorBehavior::AnchorBehavior",
                   "useLegacyBottomAndRightAnchors": false
                 }
               ],
@@ -5782,13 +5786,13 @@
               "effects": [],
               "behaviors": [
                 {
+                  "name": "Anchor",
+                  "type": "AnchorBehavior::AnchorBehavior",
                   "bottomEdgeAnchor": 2,
                   "leftEdgeAnchor": 1,
-                  "name": "Anchor",
                   "relativeToOriginalWindowSize": true,
                   "rightEdgeAnchor": 2,
                   "topEdgeAnchor": 1,
-                  "type": "AnchorBehavior::AnchorBehavior",
                   "useLegacyBottomAndRightAnchors": false
                 }
               ],
@@ -6204,23 +6208,10 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "ResourceBar::ResourceBar::SetValue"
+                        "value": "ResourceBar::ResourceBar::UpdateProperties"
                       },
                       "parameters": [
                         "Object",
-                        "=",
-                        "InitialValue",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ResourceBar::ResourceBar::SetMaxValue"
-                      },
-                      "parameters": [
-                        "Object",
-                        "=",
-                        "MaxValue",
                         ""
                       ]
                     }
@@ -6242,6 +6233,39 @@
               "functionType": "Action",
               "name": "onHotReloading",
               "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ResourceBar::ResourceBar::UpdateProperties"
+                      },
+                      "parameters": [
+                        "Object",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "ResourceBar::ResourceBar",
+                  "type": "object"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "Update properties",
+              "functionType": "Action",
+              "name": "UpdateProperties",
+              "private": true,
+              "sentence": "Update properties of _PARAM0_",
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -6291,6 +6315,9 @@
               },
               {
                 "functionName": "onHotReloading"
+              },
+              {
+                "functionName": "UpdateProperties"
               },
               {
                 "folderName": "Resource bar",
@@ -6367,13 +6394,13 @@
                   "effects": [],
                   "behaviors": [
                     {
+                      "name": "Anchor",
+                      "type": "AnchorBehavior::AnchorBehavior",
                       "bottomEdgeAnchor": 2,
                       "leftEdgeAnchor": 1,
-                      "name": "Anchor",
                       "relativeToOriginalWindowSize": true,
                       "rightEdgeAnchor": 2,
                       "topEdgeAnchor": 1,
-                      "type": "AnchorBehavior::AnchorBehavior",
                       "useLegacyBottomAndRightAnchors": false
                     }
                   ],
@@ -6398,13 +6425,13 @@
                   "effects": [],
                   "behaviors": [
                     {
+                      "name": "Anchor",
+                      "type": "AnchorBehavior::AnchorBehavior",
                       "bottomEdgeAnchor": 2,
                       "leftEdgeAnchor": 1,
-                      "name": "Anchor",
                       "relativeToOriginalWindowSize": true,
                       "rightEdgeAnchor": 2,
                       "topEdgeAnchor": 1,
-                      "type": "AnchorBehavior::AnchorBehavior",
                       "useLegacyBottomAndRightAnchors": false
                     }
                   ],
@@ -6515,13 +6542,13 @@
                   "effects": [],
                   "behaviors": [
                     {
+                      "name": "Anchor",
+                      "type": "AnchorBehavior::AnchorBehavior",
                       "bottomEdgeAnchor": 2,
                       "leftEdgeAnchor": 1,
-                      "name": "Anchor",
                       "relativeToOriginalWindowSize": true,
                       "rightEdgeAnchor": 2,
                       "topEdgeAnchor": 1,
-                      "type": "AnchorBehavior::AnchorBehavior",
                       "useLegacyBottomAndRightAnchors": false
                     }
                   ],
@@ -6546,13 +6573,13 @@
                   "effects": [],
                   "behaviors": [
                     {
+                      "name": "Anchor",
+                      "type": "AnchorBehavior::AnchorBehavior",
                       "bottomEdgeAnchor": 2,
                       "leftEdgeAnchor": 1,
-                      "name": "Anchor",
                       "relativeToOriginalWindowSize": true,
                       "rightEdgeAnchor": 2,
                       "topEdgeAnchor": 1,
-                      "type": "AnchorBehavior::AnchorBehavior",
                       "useLegacyBottomAndRightAnchors": false
                     }
                   ],
