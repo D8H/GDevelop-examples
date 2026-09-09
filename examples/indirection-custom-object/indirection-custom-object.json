@@ -17,7 +17,7 @@
     "pixelsRounding": false,
     "projectUuid": "1b4a4865-e306-4abc-b178-f7d30d50127d",
     "scaleMode": "linear",
-    "sizeOnStartupMode": "adaptWidth",
+    "sizeOnStartupMode": "",
     "templateSlug": "",
     "version": "1.0.0",
     "name": "indirection-custom-object",
@@ -186,15 +186,15 @@
   "variables": [],
   "layouts": [
     {
-      "b": 0,
+      "b": 37,
       "disableInputWhenNotFocused": true,
       "mangledName": "Untitled_32scene",
       "name": "Untitled scene",
-      "r": 0,
+      "r": 37,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
       "title": "",
-      "v": 0,
+      "v": 37,
       "uiSettings": {
         "grid": false,
         "gridType": "rectangular",
@@ -207,10 +207,10 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.546875,
+        "zoomFactor": 1,
         "windowMask": false,
         "selectedLayer": "",
-        "gameEditorMode": "embedded-game"
+        "gameEditorMode": "instances-editor"
       },
       "objectsGroups": [
         {
@@ -229,15 +229,16 @@
       "instances": [
         {
           "angle": 0,
-          "customSize": false,
-          "height": 42,
+          "customSize": true,
+          "depth": 77.14285714285714,
+          "height": 40.982142857142854,
           "keepRatio": true,
           "layer": "",
           "name": "ContinuousRedBar",
           "persistentUuid": "03f15681-d30a-4fce-aafe-a8a13d119b00",
-          "width": 655,
-          "x": 356,
-          "y": 150,
+          "width": 270,
+          "x": 238,
+          "y": 98,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -252,8 +253,8 @@
           "name": "TiledRedBar",
           "persistentUuid": "4aa30252-407b-4e5b-923e-42abd1a0aaa8",
           "width": 476,
-          "x": 357,
-          "y": 272,
+          "x": 238,
+          "y": 175,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -268,8 +269,8 @@
           "name": "DecButton",
           "persistentUuid": "b79da338-09c7-403a-a4e5-c01cf4b32055",
           "width": 96,
-          "x": 162,
-          "y": 247,
+          "x": 267,
+          "y": 284,
           "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
@@ -284,8 +285,8 @@
           "name": "IncButton",
           "persistentUuid": "8537ac51-bf72-4bea-9e5c-c8c5771d96bc",
           "width": 96,
-          "x": 163,
-          "y": 120,
+          "x": 382,
+          "y": 284,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -335,7 +336,7 @@
             "BottomPadding": 32,
             "TopPadding": 16,
             "HoveredFadeOutDuration": 0.25,
-            "LabelText": "-"
+            "LabelText": "−"
           }
         },
         {
@@ -514,10 +515,6 @@
         {
           "name": "Resizable",
           "type": "ResizableCapability::ResizableBehavior"
-        },
-        {
-          "name": "Scale",
-          "type": "ScalableCapability::ScalableBehavior"
         }
       ]
     }
