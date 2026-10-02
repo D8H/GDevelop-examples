@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 279,
+    "build": 283,
     "major": 5,
     "minor": 6,
     "revision": 0
@@ -16,20 +16,48 @@
     "pixelsRounding": false,
     "projectUuid": "c22f1e92-e6e8-4f6f-8bd4-198ea843e708",
     "scaleMode": "linear",
-    "sizeOnStartupMode": "adaptWidth",
+    "sizeOnStartupMode": "",
     "templateSlug": "",
     "useDeprecatedZeroAsDefaultStringVariable": true,
     "version": "1.0.0",
     "name": "test-3d-particle-emitter",
     "description": "",
     "author": "",
-    "windowWidth": 800,
-    "windowHeight": 600,
+    "windowWidth": 1280,
+    "windowHeight": 1024,
     "latestCompilationDirectory": "",
     "maxFPS": 60,
     "minFPS": 20,
     "verticalSync": false,
-    "platformSpecificAssets": {},
+    "platformSpecificAssets": {
+      "android-icon-144": "",
+      "android-icon-192": "",
+      "android-icon-36": "",
+      "android-icon-48": "",
+      "android-icon-72": "",
+      "android-icon-96": "",
+      "android-windowSplashScreenAnimatedIcon": "",
+      "desktop-icon-512": "",
+      "ios-icon-100": "",
+      "ios-icon-1024": "",
+      "ios-icon-114": "",
+      "ios-icon-120": "",
+      "ios-icon-144": "",
+      "ios-icon-152": "",
+      "ios-icon-167": "",
+      "ios-icon-180": "",
+      "ios-icon-20": "",
+      "ios-icon-29": "",
+      "ios-icon-40": "",
+      "ios-icon-50": "",
+      "ios-icon-57": "",
+      "ios-icon-58": "",
+      "ios-icon-60": "",
+      "ios-icon-72": "",
+      "ios-icon-76": "",
+      "ios-icon-80": "",
+      "ios-icon-87": ""
+    },
     "loadingScreen": {
       "backgroundColor": 0,
       "backgroundFadeInDuration": 0.2,
@@ -96,6 +124,39 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/3D Nature/Rock/7ba588863619e94a67de8ca214c3c0741a168022ac5a00f5618329f5907ed80c_Stone Large F.glb",
           "name": "Stone Large F.glb"
         }
+      },
+      {
+        "file": "assets/Frog.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "Frog.glb",
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Standing/c8ec849f39a3fc6cf66904e52047ff6ad5e9cb8963834207f056169fa4e39c0a_Frog.glb",
+          "name": "Frog.glb"
+        }
+      },
+      {
+        "file": "assets/Chopstick Fancy.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "Chopstick Fancy.glb",
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/3D Food/Prop/876d075c2aa78f33a57eec50320c1b64fa1e51f84e874023f867fae0edaa5ecc_Chopstick Fancy.glb",
+          "name": "Chopstick Fancy.glb"
+        }
+      },
+      {
+        "file": "assets/Heart Full.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "Heart Full.glb",
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/3D Platformer Pack/c9960d7283100d500c708cfeb1fb675f80660d52f62d2ea15a6fd0a3846b01e3_Heart Full.glb",
+          "name": "Heart Full.glb"
+        }
       }
     ]
   },
@@ -129,7 +190,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.875,
+        "zoomFactor": 0.69372388875238,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -162,43 +223,11 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "ModelParticle",
-          "persistentUuid": "5418ba40-6889-4c5f-9fda-5e10111b1b24",
+          "name": "HeartParticle",
+          "persistentUuid": "d3077802-d44c-47b6-8a5a-23b20878e086",
           "width": 0,
-          "x": 444,
-          "y": 295,
-          "zOrder": 8,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Stone_Large_F",
-          "persistentUuid": "f1a3b46c-0fd0-4f9d-ae02-bb8e25534dac",
-          "width": 0,
-          "x": 444,
-          "y": 196,
-          "zOrder": 9,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "ModelParticle2",
-          "persistentUuid": "612d9d0e-c033-434c-a883-88ede7e7a616",
-          "width": 0,
-          "x": 354,
-          "y": 291,
+          "x": 640,
+          "y": 512,
           "zOrder": 10,
           "numberProperties": [],
           "stringProperties": [],
@@ -533,6 +562,7 @@
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
           "name": "NewSprite",
+          "persistentUuid": "c09c618d-62fe-47be-9764-7b9bcbc0d8ed",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -550,12 +580,12 @@
           "effects": [],
           "behaviors": [],
           "content": {
-            "EndColor": "255;97;0",
-            "StartColor": "0;131;255",
+            "EndColor": "255;223;204",
+            "StartColor": "198;227;255",
             "StartOpacity": 204,
             "SpayConeAngle": 30,
-            "StartSizeMin": 48,
-            "StartSizeMax": 48,
+            "StartSizeMin": 12,
+            "StartSizeMax": 12,
             "EndScale": 0.375,
             "Flow": 10,
             "LifespanMin": 0.5,
@@ -565,22 +595,23 @@
             "StartSpeedMax": 600,
             "ShouldAutodestruct": true,
             "RenderMode": "Model",
-            "Model3D": "Stone Large F.glb",
+            "Model3D": "Frog.glb",
             "Blending": "Normal",
             "StartRotationXMin": 45,
             "StartRotationXMax": 45,
             "StartRotationZMin": 0,
             "StartRotationZMax": 0,
-            "StartAngularVelocityMin": 0,
-            "StartAngularVelocityMax": 0,
+            "StartAngularVelocityMin": 3600,
+            "StartAngularVelocityMax": 3600,
             "StartAngularVelocityRatioXMin": 0,
             "StartAngularVelocityRatioXMax": 0,
-            "StartAngularVelocityRatioZMin": 0,
-            "StartAngularVelocityRatioZMax": 0,
+            "StartAngularVelocityRatioZMin": 1,
+            "StartAngularVelocityRatioZMax": 1,
             "StartAngularVelocityRatioYMin": 0,
-            "StartAngularVelocityRatioYMax": 1,
-            "StartRotationYMin": 0,
-            "StartRotationYMax": 0
+            "StartAngularVelocityRatioYMax": 0,
+            "StartRotationYMin": 45,
+            "StartRotationYMax": 45,
+            "TrailStartLengthMin": 120
           },
           "childrenContent": {
             "Particle": {
@@ -649,6 +680,7 @@
         {
           "assetStoreId": "",
           "name": "New3DModel",
+          "persistentUuid": "5ae0e47f-f3ec-4131-9fe1-d41d70ffc78d",
           "type": "Scene3D::Model3DObject",
           "variables": [],
           "effects": [],
@@ -805,29 +837,30 @@
         },
         {
           "assetStoreId": "351f05a136c91ee1d9d6ff4f9cfbc4d40b3744d7c7ea74212b4853862d52d974",
-          "name": "ModelParticle2",
+          "name": "StickParticle",
+          "persistentUuid": "772e1bd0-43e7-483e-aa10-1ff1b9e64942",
           "type": "ParticleEmitter3D::ParticleEmitter3D",
           "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
           "content": {
-            "EndColor": "255;97;0",
-            "StartColor": "0;131;255",
+            "EndColor": "255;231;217",
+            "StartColor": "213;235;255",
             "StartOpacity": 204,
-            "SpayConeAngle": 30,
-            "StartSizeMin": 48,
-            "StartSizeMax": 48,
-            "EndScale": 0.375,
-            "Flow": 10,
-            "LifespanMin": 0.5,
-            "LifespanMax": 0.5,
+            "SpayConeAngle": 45,
+            "StartSizeMin": 20,
+            "StartSizeMax": 20,
+            "EndScale": 1,
+            "Flow": 200,
+            "LifespanMin": 2,
+            "LifespanMax": 2,
             "Duration": 123456,
             "StartSpeedMin": 300,
-            "StartSpeedMax": 600,
+            "StartSpeedMax": 300,
             "ShouldAutodestruct": true,
             "RenderMode": "Model",
-            "Model3D": "Stone Large F.glb",
+            "Model3D": "Chopstick Fancy.glb",
             "Blending": "Normal",
             "StartRotationXMin": 0,
             "StartRotationXMax": 0,
@@ -840,9 +873,519 @@
             "StartAngularVelocityRatioZMin": 0,
             "StartAngularVelocityRatioZMax": 0,
             "StartAngularVelocityRatioYMin": 0,
-            "StartAngularVelocityRatioYMax": 1,
+            "StartAngularVelocityRatioYMax": 0,
             "StartRotationYMin": 0,
-            "StartRotationYMax": 0
+            "StartRotationYMax": 0,
+            "GravityTop": "Z+",
+            "Gravity": 500,
+            "EndOpacity": 0
+          },
+          "childrenContent": {
+            "Particle": {
+              "adaptCollisionMaskAutomatically": true,
+              "updateIfNotVisible": false,
+              "animations": [
+                {
+                  "name": "Image",
+                  "useMultipleDirections": false,
+                  "directions": [
+                    {
+                      "looping": false,
+                      "timeBetweenFrames": 0.08,
+                      "sprites": [
+                        {
+                          "hasCustomCollisionMask": false,
+                          "image": "LightGlow.png",
+                          "points": [],
+                          "originPoint": {
+                            "name": "origine",
+                            "x": 0,
+                            "y": 0
+                          },
+                          "centerPoint": {
+                            "automatic": true,
+                            "name": "centre",
+                            "x": 0,
+                            "y": 0
+                          },
+                          "customCollisionMask": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "New3DModel2",
+          "persistentUuid": "a453182d-bbd5-4c1c-9d6c-77bb5843a484",
+          "type": "Scene3D::Model3DObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "centerLocation": "CenteredOnZ",
+            "crossfadeDuration": 0.10000000149011612,
+            "depth": 100,
+            "height": 100,
+            "isCastingShadow": true,
+            "isReceivingShadow": true,
+            "keepAspectRatio": true,
+            "materialType": "StandardWithoutMetalness",
+            "modelResourceName": "",
+            "originLocation": "ModelOrigin",
+            "rotationX": 90,
+            "rotationY": 0,
+            "rotationZ": 90,
+            "width": 100,
+            "animations": []
+          }
+        },
+        {
+          "assetStoreId": "44bee5474ce59a940ffd6c47301767901584dd499564565cce33de77128d1028",
+          "name": "Frog",
+          "persistentUuid": "ccf2f744-8ac9-421f-ab9d-df0ff95f0af7",
+          "type": "Scene3D::Model3DObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "centerLocation": "CenteredOnZ",
+            "crossfadeDuration": 0.10000000149011612,
+            "depth": 139,
+            "height": 139,
+            "isCastingShadow": true,
+            "isReceivingShadow": true,
+            "keepAspectRatio": true,
+            "materialType": "StandardWithoutMetalness",
+            "modelResourceName": "Frog.glb",
+            "originLocation": "ModelOrigin",
+            "rotationX": 90,
+            "rotationY": 0,
+            "rotationZ": 90,
+            "width": 139,
+            "animations": [
+              {
+                "loop": true,
+                "name": "Idle",
+                "source": "Idle"
+              },
+              {
+                "loop": true,
+                "name": "Walk",
+                "source": "Walk"
+              },
+              {
+                "loop": true,
+                "name": "Run",
+                "source": "Run"
+              },
+              {
+                "loop": false,
+                "name": "Duck",
+                "source": "Duck"
+              },
+              {
+                "loop": false,
+                "name": "Jump",
+                "source": "Jump"
+              },
+              {
+                "loop": false,
+                "name": "Punch",
+                "source": "Punch"
+              },
+              {
+                "loop": false,
+                "name": "Death",
+                "source": "Death"
+              },
+              {
+                "loop": true,
+                "name": "JumpIdle",
+                "source": "Jump_Idle"
+              },
+              {
+                "loop": false,
+                "name": "JumpLand",
+                "source": "Jump_Land"
+              },
+              {
+                "loop": false,
+                "name": "HitReact",
+                "source": "HitReact"
+              },
+              {
+                "loop": false,
+                "name": "Wave",
+                "source": "Wave"
+              },
+              {
+                "loop": false,
+                "name": "Weapon",
+                "source": "Weapon"
+              },
+              {
+                "loop": false,
+                "name": "Yes",
+                "source": "Yes"
+              },
+              {
+                "loop": false,
+                "name": "No",
+                "source": "No"
+              }
+            ]
+          }
+        },
+        {
+          "assetStoreId": "351f05a136c91ee1d9d6ff4f9cfbc4d40b3744d7c7ea74212b4853862d52d974",
+          "name": "ModelParticle3",
+          "persistentUuid": "ce25e7cf-d1c4-4be2-992b-772ef4430cac",
+          "type": "ParticleEmitter3D::ParticleEmitter3D",
+          "variant": "",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "EndColor": "255;231;217",
+            "StartColor": "213;235;255",
+            "StartOpacity": 204,
+            "SpayConeAngle": 0.0001,
+            "StartSizeMin": 20,
+            "StartSizeMax": 20,
+            "EndScale": 1,
+            "Flow": 3,
+            "LifespanMin": 2,
+            "LifespanMax": 2,
+            "Duration": 123456,
+            "StartSpeedMin": 300,
+            "StartSpeedMax": 300,
+            "ShouldAutodestruct": true,
+            "RenderMode": "Model",
+            "Model3D": "Frog.glb",
+            "Blending": "Normal",
+            "StartRotationXMin": 0,
+            "StartRotationXMax": 0,
+            "StartRotationZMin": 0,
+            "StartRotationZMax": 0,
+            "StartAngularVelocityMin": 0,
+            "StartAngularVelocityMax": 0,
+            "StartAngularVelocityRatioXMin": 0,
+            "StartAngularVelocityRatioXMax": 0,
+            "StartAngularVelocityRatioZMin": 0,
+            "StartAngularVelocityRatioZMax": 0,
+            "StartAngularVelocityRatioYMin": 0,
+            "StartAngularVelocityRatioYMax": 0,
+            "StartRotationYMin": 0,
+            "StartRotationYMax": 0,
+            "GravityTop": "Z+",
+            "Gravity": 0,
+            "EndOpacity": 0
+          },
+          "childrenContent": {
+            "Particle": {
+              "adaptCollisionMaskAutomatically": true,
+              "updateIfNotVisible": false,
+              "animations": [
+                {
+                  "name": "Image",
+                  "useMultipleDirections": false,
+                  "directions": [
+                    {
+                      "looping": false,
+                      "timeBetweenFrames": 0.08,
+                      "sprites": [
+                        {
+                          "hasCustomCollisionMask": false,
+                          "image": "LightGlow.png",
+                          "points": [],
+                          "originPoint": {
+                            "name": "origine",
+                            "x": 0,
+                            "y": 0
+                          },
+                          "centerPoint": {
+                            "automatic": true,
+                            "name": "centre",
+                            "x": 0,
+                            "y": 0
+                          },
+                          "customCollisionMask": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "assetStoreId": "351f05a136c91ee1d9d6ff4f9cfbc4d40b3744d7c7ea74212b4853862d52d974",
+          "name": "ModelParticle4",
+          "persistentUuid": "7a552db8-21c0-4bdc-a3c1-d0631325d3d1",
+          "type": "ParticleEmitter3D::ParticleEmitter3D",
+          "variant": "",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "EndColor": "255;231;217",
+            "StartColor": "213;235;255",
+            "StartOpacity": 204,
+            "SpayConeAngle": 45,
+            "StartSizeMin": 20,
+            "StartSizeMax": 20,
+            "EndScale": 1,
+            "Flow": 100,
+            "LifespanMin": 4,
+            "LifespanMax": 4,
+            "Duration": 123456,
+            "StartSpeedMin": 100,
+            "StartSpeedMax": 100,
+            "ShouldAutodestruct": true,
+            "RenderMode": "Model",
+            "Model3D": "Frog.glb",
+            "Blending": "Normal",
+            "StartRotationXMin": 0,
+            "StartRotationXMax": 0,
+            "StartRotationZMin": 0,
+            "StartRotationZMax": 0,
+            "StartAngularVelocityMin": 360,
+            "StartAngularVelocityMax": 360,
+            "StartAngularVelocityRatioXMin": 1,
+            "StartAngularVelocityRatioXMax": 1,
+            "StartAngularVelocityRatioZMin": 0,
+            "StartAngularVelocityRatioZMax": 0,
+            "StartAngularVelocityRatioYMin": 0,
+            "StartAngularVelocityRatioYMax": 0,
+            "StartRotationYMin": 0,
+            "StartRotationYMax": 0,
+            "GravityTop": "Z+",
+            "Gravity": 0,
+            "EndOpacity": 0
+          },
+          "childrenContent": {
+            "Particle": {
+              "adaptCollisionMaskAutomatically": true,
+              "updateIfNotVisible": false,
+              "animations": [
+                {
+                  "name": "Image",
+                  "useMultipleDirections": false,
+                  "directions": [
+                    {
+                      "looping": false,
+                      "timeBetweenFrames": 0.08,
+                      "sprites": [
+                        {
+                          "hasCustomCollisionMask": false,
+                          "image": "LightGlow.png",
+                          "points": [],
+                          "originPoint": {
+                            "name": "origine",
+                            "x": 0,
+                            "y": 0
+                          },
+                          "centerPoint": {
+                            "automatic": true,
+                            "name": "centre",
+                            "x": 0,
+                            "y": 0
+                          },
+                          "customCollisionMask": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "assetStoreId": "351f05a136c91ee1d9d6ff4f9cfbc4d40b3744d7c7ea74212b4853862d52d974",
+          "name": "ModelParticle5",
+          "persistentUuid": "4b0a0523-705c-4c29-a3e1-c9e12cbc7bc1",
+          "type": "ParticleEmitter3D::ParticleEmitter3D",
+          "variant": "",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "EndColor": "255;231;217",
+            "StartColor": "213;235;255",
+            "StartOpacity": 204,
+            "SpayConeAngle": 0.0001,
+            "StartSizeMin": 20,
+            "StartSizeMax": 20,
+            "EndScale": 1,
+            "Flow": 1,
+            "LifespanMin": 2,
+            "LifespanMax": 2,
+            "Duration": 123456,
+            "StartSpeedMin": 300,
+            "StartSpeedMax": 300,
+            "ShouldAutodestruct": true,
+            "RenderMode": "Model",
+            "Model3D": "Frog.glb",
+            "Blending": "Normal",
+            "StartRotationXMin": 0,
+            "StartRotationXMax": 0,
+            "StartRotationZMin": 0,
+            "StartRotationZMax": 0,
+            "StartAngularVelocityMin": 0,
+            "StartAngularVelocityMax": 0,
+            "StartAngularVelocityRatioXMin": 0,
+            "StartAngularVelocityRatioXMax": 0,
+            "StartAngularVelocityRatioZMin": 0,
+            "StartAngularVelocityRatioZMax": 0,
+            "StartAngularVelocityRatioYMin": 0,
+            "StartAngularVelocityRatioYMax": 0,
+            "StartRotationYMin": 0,
+            "StartRotationYMax": 0,
+            "GravityTop": "Z+",
+            "Gravity": 0,
+            "EndOpacity": 0
+          },
+          "childrenContent": {
+            "Particle": {
+              "adaptCollisionMaskAutomatically": true,
+              "updateIfNotVisible": false,
+              "animations": [
+                {
+                  "name": "Image",
+                  "useMultipleDirections": false,
+                  "directions": [
+                    {
+                      "looping": false,
+                      "timeBetweenFrames": 0.08,
+                      "sprites": [
+                        {
+                          "hasCustomCollisionMask": false,
+                          "image": "LightGlow.png",
+                          "points": [],
+                          "originPoint": {
+                            "name": "origine",
+                            "x": 0,
+                            "y": 0
+                          },
+                          "centerPoint": {
+                            "automatic": true,
+                            "name": "centre",
+                            "x": 0,
+                            "y": 0
+                          },
+                          "customCollisionMask": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "assetStoreId": "eeeb0aae33f0af3db9b7f32be88569788bdf2906b6a347450adfd2e62d9a2a9b",
+          "name": "Chopstick_Fancy",
+          "persistentUuid": "fe25ff04-7cf4-4b2c-b920-22e71255e70d",
+          "type": "Scene3D::Model3DObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "centerLocation": "CenteredOnZ",
+            "crossfadeDuration": 0.10000000149011612,
+            "depth": 20,
+            "height": 20,
+            "isCastingShadow": true,
+            "isReceivingShadow": true,
+            "keepAspectRatio": true,
+            "materialType": "StandardWithoutMetalness",
+            "modelResourceName": "Chopstick Fancy.glb",
+            "originLocation": "ModelOrigin",
+            "rotationX": 90,
+            "rotationY": 0,
+            "rotationZ": 0,
+            "width": 20,
+            "animations": []
+          }
+        },
+        {
+          "assetStoreId": "1b80314425c7a2188b9dc14aa4ee9479e9dc2a04a8ea3b918e3304cccce7eff3",
+          "name": "Heart_Full",
+          "persistentUuid": "39f6f76b-e8ba-46ca-a79d-8bb1831100f1",
+          "type": "Scene3D::Model3DObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "centerLocation": "CenteredOnZ",
+            "crossfadeDuration": 0.10000000149011612,
+            "depth": 39,
+            "height": 39,
+            "isCastingShadow": true,
+            "isReceivingShadow": true,
+            "keepAspectRatio": true,
+            "materialType": "StandardWithoutMetalness",
+            "modelResourceName": "Heart Full.glb",
+            "originLocation": "ModelOrigin",
+            "rotationX": 90,
+            "rotationY": 0,
+            "rotationZ": 90,
+            "width": 39,
+            "animations": []
+          }
+        },
+        {
+          "assetStoreId": "351f05a136c91ee1d9d6ff4f9cfbc4d40b3744d7c7ea74212b4853862d52d974",
+          "name": "HeartParticle",
+          "persistentUuid": "47c3228e-c257-4fe2-8a67-2ae7f686f389",
+          "type": "ParticleEmitter3D::ParticleEmitter3D",
+          "variant": "",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "EndColor": "255;255;255",
+            "StartColor": "255;255;255",
+            "StartOpacity": 204,
+            "SpayConeAngle": 45,
+            "StartSizeMin": 20,
+            "StartSizeMax": 20,
+            "EndScale": 1,
+            "Flow": 100,
+            "LifespanMin": 2,
+            "LifespanMax": 2,
+            "Duration": 123456,
+            "StartSpeedMin": 300,
+            "StartSpeedMax": 300,
+            "ShouldAutodestruct": true,
+            "RenderMode": "Model",
+            "Model3D": "Heart Full.glb",
+            "Blending": "Normal",
+            "StartRotationXMin": 0,
+            "StartRotationXMax": 0,
+            "StartRotationZMin": 0,
+            "StartRotationZMax": 0,
+            "StartAngularVelocityMin": 1440,
+            "StartAngularVelocityMax": 1440,
+            "StartAngularVelocityRatioXMin": 0,
+            "StartAngularVelocityRatioXMax": 0,
+            "StartAngularVelocityRatioZMin": 1,
+            "StartAngularVelocityRatioZMax": 1,
+            "StartAngularVelocityRatioYMin": 0,
+            "StartAngularVelocityRatioYMax": 0,
+            "StartRotationYMin": 90,
+            "StartRotationYMax": 90,
+            "GravityTop": "Z+",
+            "Gravity": 400,
+            "EndOpacity": 0
           },
           "childrenContent": {
             "Particle": {
@@ -905,13 +1448,37 @@
             "objectName": "ModelParticle"
           },
           {
-            "objectName": "ModelParticle2"
+            "objectName": "StickParticle"
+          },
+          {
+            "objectName": "Chopstick_Fancy"
+          },
+          {
+            "objectName": "HeartParticle"
+          },
+          {
+            "objectName": "Heart_Full"
+          },
+          {
+            "objectName": "ModelParticle3"
+          },
+          {
+            "objectName": "ModelParticle5"
+          },
+          {
+            "objectName": "ModelParticle4"
+          },
+          {
+            "objectName": "Frog"
           },
           {
             "objectName": "NewParticlesEmitter"
           },
           {
             "objectName": "Stone_Large_F"
+          },
+          {
+            "objectName": "New3DModel2"
           },
           {
             "objectName": "NewSprite"
@@ -6221,9 +6788,11 @@
       "shortDescription": "Display a large number of particles in 3D to create visual effects in a 3D game.",
       "version": "3.2.0",
       "description": [
-        "3D particle emitters let you create and display many small particles to simulate visual effects in your game — like fire, explosions, smoke, or dust.",
+        "3D particle emitters let you create and display many small particles to simulate visual effects in your game — like fire, explosions, smoke, dust, magic, rain or snow.",
         "",
         "The parameters of the object can be configured in multiple different ways to create a specific desired effect. GDevelop will give a set of a pre-configured 3D particle emitters that you should try first.",
+        "",
+        "Particles are emitted along the local Z axis of the emitter: upward by default. Rotate the instance to aim the emission (for instance a rotation of 180° on the X axis emits downward, 90° on the Y axis emits toward X). The size of the instance has no effect: particles are emitted from a single point, or from a disc when the \"Emission zone radius\" property is set (useful for rain or snow falling over a whole area).",
         "",
         "Use these 3D particle emitters in 3D games. For 2D games or particles that appear on a game's 2D user interface, use the 2D particle emitter object instead."
       ],
@@ -6238,7 +6807,10 @@
         "fire",
         "smoke",
         "splash",
-        "light"
+        "light",
+        "rain",
+        "snow",
+        "weather"
       ],
       "authorIds": [
         "IWykYNRvhCZBN3vEgKEbBPOR3Oc2"
@@ -6326,6 +6898,8 @@
                 "    cone;",
                 "    /** @type {THREE.LineSegments<THREE.BufferGeometry, THREE.LineBasicMaterial>} */",
                 "    centerLine;",
+                "    /** @type {THREE.LineSegments<THREE.BufferGeometry, THREE.LineBasicMaterial>} */",
+                "    zoneCircle;",
                 "    /** @type {THREE.Mesh<THREE.BoxGeometry, THREE.MeshBasicMaterial>} */",
                 "    originBox;",
                 "",
@@ -6369,6 +6943,23 @@
                 "        );",
                 "        this.add(this.centerLine);",
                 "",
+                "        const zoneCircleGeometry = new THREE.BufferGeometry();",
+                "        const zoneCirclePositions = [];",
+                "        for (let i = 0, j = 1, l = 32; i < l; i++ , j++) {",
+                "            const p1 = (i / l) * Math.PI * 2;",
+                "            const p2 = (j / l) * Math.PI * 2;",
+                "            zoneCirclePositions.push(",
+                "                Math.cos(p1), Math.sin(p1), 0,",
+                "                Math.cos(p2), Math.sin(p2), 0",
+                "            );",
+                "        }",
+                "        zoneCircleGeometry.setAttribute('position', new THREE.Float32BufferAttribute(zoneCirclePositions, 3));",
+                "        this.zoneCircle = new THREE.LineSegments(",
+                "            zoneCircleGeometry,",
+                "            new THREE.LineBasicMaterial({ fog: false, toneMapped: false })",
+                "        );",
+                "        this.add(this.zoneCircle);",
+                "",
                 "        this.originBox = new THREE.Mesh(",
                 "            new THREE.BoxGeometry(16, 16, 16),",
                 "            new THREE.MeshBasicMaterial({ fog: false, toneMapped: false })",
@@ -6387,6 +6978,8 @@
                 "        this.centerLine.geometry.dispose();",
                 "        //@ts-ignore",
                 "        this.centerLine.material.dispose();",
+                "        this.zoneCircle.geometry.dispose();",
+                "        this.zoneCircle.material.dispose();",
                 "        this.originBox.geometry.dispose();",
                 "        //@ts-ignore",
                 "        this.originBox.material.dispose();",
@@ -6399,6 +6992,12 @@
                 "        const coneWidth = coneLength * Math.sin(gdjs.toRad(sprayConeAngle));",
                 "        const coneHeight = coneLength * Math.cos(gdjs.toRad(sprayConeAngle));",
                 "        this.cone.scale.set(coneWidth, coneWidth, coneHeight);",
+                "        //@ts-ignore",
+                "        const zoneRadius = this.object._getZoneRadius();",
+                "        this.zoneCircle.visible = zoneRadius > 0;",
+                "        if (zoneRadius > 0) {",
+                "            this.zoneCircle.scale.set(zoneRadius, zoneRadius, 1);",
+                "        }",
                 "        const startColor = gdjs.rgbOrHexStringToNumber(",
                 "            //@ts-ignore",
                 "            this.object._getStartColor())",
@@ -6459,6 +7058,8 @@
                 "    ) {",
                 "        this.inverseWorldScale = inverseWorldScale;",
                 "        this.particleSystem = particleSystem;",
+                "        this.sprayConeAngle = 0;",
+                "        this.zoneRadius = 0;",
                 "        this.colorOverLife = colorOverLife;",
                 "        this.sizeOverLife = sizeOverLife;",
                 "        this.applyForce = applyForce;",
@@ -6468,7 +7069,7 @@
                 "    }",
                 "",
                 "    /**",
-                "     * @param renderMode {'BillBoard' | 'Trail' | 'Model'}",
+                "     * @param renderMode {'Billboard' | 'Trail' | 'Model'}",
                 "     */",
                 "    setRenderMode(renderMode) {",
                 "        switch (renderMode) {",
@@ -6528,25 +7129,28 @@
                 "        this.particleSystem.material = material;",
                 "",
                 "        let geometry;",
-                "        if (geometries.length > 1) {",
-                "            geometry = mergedGeometries.get(resourceName);",
-                "            if (!geometry) {",
-                "                geometry = mergeGeometries(geometries);",
-                "                mergedGeometries.set(resourceName, geometry);",
+                "        geometry = mergedGeometries.get(resourceName);",
+                "        if (!geometry) {",
+                "            geometry = mergeGeometries(geometries);",
+                "            // Make Z+ as the top",
+                "            for (let index = 0; index < geometry.attributes.position.count; index++) {",
+                "                const x = geometry.attributes.position.getX(index);",
+                "                const y = geometry.attributes.position.getY(index);",
+                "                const z = geometry.attributes.position.getZ(index);",
+                "                geometry.attributes.position.setX(index, z);",
+                "                geometry.attributes.position.setY(index, x);",
+                "                geometry.attributes.position.setZ(index, y);",
                 "            }",
-                "        }",
-                "        else {",
-                "            geometry = geometries[0];",
-                "        }",
-                "        this.particleSystem.instancingGeometry = geometry;",
-                "        if (!geometry.boundingBox) {",
+                "            geometry.attributes.position.needsUpdate = true;",
                 "            geometry.computeBoundingBox();",
+                "            mergedGeometries.set(resourceName, geometry);",
                 "        }",
                 "        this.geometrySize = Math.max(",
                 "            geometry.boundingBox.max.x - geometry.boundingBox.min.x,",
                 "            geometry.boundingBox.max.y - geometry.boundingBox.min.y,",
                 "            geometry.boundingBox.max.z - geometry.boundingBox.min.z",
                 "        );",
+                "        this.particleSystem.instancingGeometry = geometry;",
                 "    }",
                 "",
                 "    /**",
@@ -6790,14 +7394,14 @@
                 "     * @param startMinSize {number}",
                 "     */",
                 "    setStartMinSize(startMinSize) {",
-                "        this.particleSystem.startSize.a = startMinSize;// / this.geometrySize;",
+                "        this.particleSystem.startSize.a = startMinSize / this.geometrySize;",
                 "    }",
                 "",
                 "    /**",
                 "     * @param startMaxSize {number}",
                 "     */",
                 "    setStartMaxSize(startMaxSize) {",
-                "        this.particleSystem.startSize.b = startMaxSize;// / this.geometrySize;",
+                "        this.particleSystem.startSize.b = startMaxSize / this.geometrySize;",
                 "    }",
                 "",
                 "    /**",
@@ -6858,16 +7462,32 @@
                 "     * @param sprayConeAngle {number}",
                 "     */",
                 "    setSprayConeAngle(sprayConeAngle) {",
-                "        if (0 < sprayConeAngle && sprayConeAngle <= 180) {",
-                "            if (!this.particleSystem.emitterShape.angle) {",
+                "        this.sprayConeAngle = sprayConeAngle;",
+                "        this.updateEmitterShape();",
+                "    }",
+                "",
+                "    /**",
+                "     * @param zoneRadius {number}",
+                "     */",
+                "    setZoneRadius(zoneRadius) {",
+                "        this.zoneRadius = zoneRadius;",
+                "        this.updateEmitterShape();",
+                "    }",
+                "",
+                "    updateEmitterShape() {",
+                "        const zoneRadius = Math.max(0, this.zoneRadius) * this.inverseWorldScale;",
+                "        // Without a zone, a spray angle of 0 emits in every direction from a point.",
+                "        // With a zone, it emits straight from every point of the disc.",
+                "        const isCone = this.sprayConeAngle <= 180 && (0 < this.sprayConeAngle || 0 < zoneRadius);",
+                "        if (isCone) {",
+                "            if (this.particleSystem.emitterShape.type !== 'cone') {",
                 "                this.particleSystem.emitterShape = new ConeEmitter({ radius: 0.1, angle: Math.PI / 8 });",
                 "            }",
-                "            this.particleSystem.emitterShape.angle = sprayConeAngle * Math.PI / 180;",
+                "            this.particleSystem.emitterShape.angle = Math.max(0, this.sprayConeAngle) * Math.PI / 180;",
+                "            this.particleSystem.emitterShape.radius = zoneRadius || 0.1;",
                 "        }",
-                "        else {",
-                "            if (this.particleSystem.emitterShape.angle) {",
-                "                this.particleSystem.emitterShape = new PointEmitter();",
-                "            }",
+                "        else if (this.particleSystem.emitterShape.type !== 'point') {",
+                "            this.particleSystem.emitterShape = new PointEmitter();",
                 "        }",
                 "    }",
                 "",
@@ -6909,6 +7529,64 @@
                 "        }",
                 "    }",
                 "}",
+                "",
+                "/**",
+                " * Rotate the particle to follow its velocity.",
+                " */",
+                "class Rotation3DByDirection {",
+                "    constructor() {",
+                "        this.type = 'Rotation3DByDirection';",
+                "        this.tempMatrix = new THREE.Matrix4();",
+                "        this.tempVelocity = new THREE.Vector3();",
+                "        this.tempVelocityUnit = new THREE.Vector3();",
+                "        this.tempQuaternion = new THREE.Quaternion();",
+                "    }",
+                "    initialize(particle) {",
+                "        const rotation = particle.rotation;",
+                "        if (rotation instanceof THREE.Quaternion) {",
+                "            // I don't know why, but particles start with a non identity rotation.",
+                "            // So, I set (-1, 0, 0) instead of (1, 0, 0) to conpensate for this.",
+                "            if (particle.previousVelocityUnit) {",
+                "                particle.previousVelocityUnit.set(-1, 0, 0);",
+                "            }",
+                "            else {",
+                "                particle.previousVelocityUnit = new THREE.Vector3(-1, 0, 0);",
+                "            }",
+                "        }",
+                "    }",
+                "    update(particle, delta) {",
+                "        const rotation = particle.rotation;",
+                "        if (rotation instanceof THREE.Quaternion) {",
+                "            /** @type {THREE.Vector3} */",
+                "            const velocity = particle.velocity;",
+                "            ",
+                "            this.tempVelocityUnit.copy(velocity).normalize();",
+                "            if (this.tempVelocityUnit.equals(particle.previousVelocityUnit)) {",
+                "                return;",
+                "            }",
+                "            this.tempQuaternion.setFromUnitVectors(",
+                "                particle.previousVelocityUnit,",
+                "                this.tempVelocityUnit);",
+                "            rotation.premultiply(this.tempQuaternion);",
+                "",
+                "            particle.previousVelocityUnit.copy(this.tempVelocityUnit);",
+                "        }",
+                "    }",
+                "    toJSON() {",
+                "        return {",
+                "            type: this.type,",
+                "        };",
+                "    }",
+                "    static fromJSON(json) {",
+                "        return new Rotation3DByDirection();",
+                "    }",
+                "    frameUpdate(delta) { }",
+                "    clone() {",
+                "        return new Rotation3DByDirection();",
+                "    }",
+                "    reset() { }",
+                "}",
+                "",
                 "",
                 "",
                 "",
@@ -13614,11 +14292,15 @@
                 "registerShaderChunks();",
                 "loadPlugin(MeshSurfaceEmitterPlugin);",
                 "",
+                "UP_VEC3.set(0, 0, 1);",
+                "",
                 "gdjs.__particleEmmiter3DExtension = {",
                 "    ParticleEmitter3DRenderer,",
                 "    ParticleEmitterAdapter,",
                 "    ParticleEmitterHelper,",
+                "    Rotation3DByDirection,",
                 "",
+                "    // Library classes",
                 "    ApplyCollision,",
                 "    ApplyForce,",
                 "    ApplySequences,",
@@ -13745,7 +14427,7 @@
           "areaMinZ": 0,
           "assetStoreTag": "3d particles",
           "defaultName": "ParticleEmitter",
-          "description": "Display a large number of particles to create visual effects.",
+          "description": "Display a large number of particles to create visual effects (fire, explosions, smoke, magic, rain, snow...). Particles are emitted along the emitter's local Z axis (upward by default): rotate the instance to aim them (180° on the X axis emits downward). The instance size has no effect: use the \"Emission zone radius\" property to emit from a whole area.",
           "fullName": "3D particle emitter",
           "helpPath": "",
           "iconUrl": "",
@@ -13849,6 +14531,7 @@
                     "    ParticleEmitterAdapter,",
                     "    ParticleEmitter3DRenderer,",
                     "    ParticleEmitterHelper,",
+                    "    Rotation3DByDirection,",
                     "",
                     "    ParticleSystem,",
                     "    IntervalValue,",
@@ -13965,6 +14648,7 @@
                     "particleSystem.addBehavior(widthOverLength);",
                     "const rotation3DOverLife = new Rotation3DOverLife(new EulerGenerator(new IntervalValue(0, 0), new IntervalValue(0, 0), new IntervalValue(0,0), \"ZYX\"))",
                     "particleSystem.addBehavior(rotation3DOverLife);",
+                    "particleSystem.addBehavior(new Rotation3DByDirection());",
                     "const rotationOverLife = new RotationOverLife(new IntervalValue(0, 0));",
                     "particleSystem.addBehavior(rotationOverLife);",
                     "",
@@ -14343,6 +15027,17 @@
                     },
                     {
                       "type": {
+                        "value": "ParticleEmitter3D::ParticleEmitter3D::SetZoneRadius"
+                      },
+                      "parameters": [
+                        "Object",
+                        "=",
+                        "Object.ZoneRadius()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "ParticleEmitter3D::ParticleEmitter3D::SetGravity"
                       },
                       "parameters": [
@@ -14370,7 +15065,7 @@
                       "parameters": [
                         "Object",
                         "=",
-                        "StartAngularVelocityMax",
+                        "StartAngularVelocityMin",
                         ""
                       ]
                     },
@@ -14381,7 +15076,7 @@
                       "parameters": [
                         "Object",
                         "=",
-                        "StartAngularVelocityMin",
+                        "StartAngularVelocityMax",
                         ""
                       ]
                     }
@@ -16280,12 +16975,12 @@
               "objectGroups": []
             },
             {
-              "description": "the spay cone angle of the object.",
-              "fullName": "Spay cone angle",
+              "description": "the spray cone angle of the object.",
+              "fullName": "Spray cone angle",
               "functionType": "ExpressionAndCondition",
               "group": "3D particle emitter configuration",
               "name": "SpayConeAngle",
-              "sentence": "the spay cone angle",
+              "sentence": "the spray cone angle",
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -16346,6 +17041,90 @@
                     "const sprayConeAngle = eventsFunctionContext.getArgument(\"Value\");\r",
                     "\r",
                     "object.__particleEmitterAdapter.setSprayConeAngle(sprayConeAngle);\r",
+                    ""
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "ParticleEmitter3D::ParticleEmitter3D",
+                  "type": "object"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "the emission zone radius of the object: particles are emitted from a disc of this radius (0 emits from a single point).",
+              "fullName": "Emission zone radius",
+              "functionType": "ExpressionAndCondition",
+              "group": "3D particle emitter configuration",
+              "name": "ZoneRadius",
+              "sentence": "the emission zone radius",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnNumber"
+                      },
+                      "parameters": [
+                        "ZoneRadius"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "ParticleEmitter3D::ParticleEmitter3D",
+                  "type": "object"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "ActionWithOperator",
+              "getterName": "ZoneRadius",
+              "group": "3D particle emitter configuration",
+              "name": "SetZoneRadius",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "ZoneRadius",
+                        "=",
+                        "Value"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const object = objects[0];\r",
+                    "const zoneRadius = eventsFunctionContext.getArgument(\"Value\");\r",
+                    "\r",
+                    "object.__particleEmitterAdapter.setZoneRadius(zoneRadius);\r",
                     ""
                   ],
                   "parameterObjects": "Object",
@@ -18405,6 +19184,12 @@
                     "functionName": "SetSpayConeAngle"
                   },
                   {
+                    "functionName": "ZoneRadius"
+                  },
+                  {
+                    "functionName": "SetZoneRadius"
+                  },
+                  {
                     "functionName": "ShouldAutodestruct"
                   },
                   {
@@ -18614,6 +19399,7 @@
               "type": "Number",
               "unit": "PixelSpeed",
               "label": "Start min speed",
+              "description": "Initial speed of the particles, in the emission direction (the local Z axis of the emitter).",
               "group": "Speed",
               "name": "StartSpeedMin"
             },
@@ -18644,12 +19430,14 @@
               "type": "Number",
               "unit": "Second",
               "label": "Emission duration",
+              "description": "0 emits forever.",
               "name": "Duration"
             },
             {
               "value": "",
               "type": "Boolean",
               "label": "Particles move with the emitter",
+              "description": "When checked, the particles already emitted follow the emitter when it moves or rotates. Leave it unchecked for rain, snow or smoke that must stay where it was emitted while the emitter follows the camera or a character.",
               "group": "Speed",
               "name": "AreParticlesRelative"
             },
@@ -18657,14 +19445,25 @@
               "value": "30",
               "type": "Number",
               "unit": "DegreeAngle",
-              "label": "Spay cone angle",
+              "label": "Spray cone angle",
+              "description": "Spread of the particles around the emission direction, which is the local Z axis of the emitter (upward by default, rotate the instance to aim it). 0 or more than 180 emits in every direction, unless an emission zone radius is set: then 0 emits straight.",
               "group": "Position",
               "name": "SpayConeAngle"
+            },
+            {
+              "value": "0",
+              "type": "Number",
+              "unit": "Pixel",
+              "label": "Emission zone radius",
+              "description": "Particles are emitted from a disc of this radius, perpendicular to the emission direction. 0 emits from a single point. Use a large radius (like 1000) for rain or snow falling over a whole area.",
+              "group": "Position",
+              "name": "ZoneRadius"
             },
             {
               "value": "Additive",
               "type": "Choice",
               "label": "Blending",
+              "description": "Additive makes particles glow (fire, magic, energy). Use Normal for rain, snow, smoke or dust. Only applied when the object is created.",
               "group": "Color",
               "choices": [
                 {
@@ -18694,6 +19493,7 @@
               "value": "Y-",
               "type": "Choice",
               "label": "Gravity top",
+              "description": "Z+: gravity pulls particles down along the Z axis (the usual choice in 3D games). Y-: gravity pulls particles toward Y+.",
               "group": "Speed",
               "choices": [
                 {
@@ -18712,6 +19512,7 @@
               "type": "Number",
               "unit": "PixelAcceleration",
               "label": "Gravity",
+              "description": "Acceleration pulling the particles in the direction given by the gravity top. 0 disables gravity.",
               "group": "Speed",
               "name": "Gravity"
             },
@@ -18719,6 +19520,7 @@
               "value": "true",
               "type": "Boolean",
               "label": "Delete when emission ends",
+              "description": "Delete the object once the emission duration is over and every particle disappeared. Uncheck it and set the emission duration to 0 for a continuous effect like fire, rain or snow.",
               "name": "ShouldAutodestruct"
             },
             {
@@ -18760,8 +19562,9 @@
             {
               "value": "120",
               "type": "Number",
-              "unit": "Pixel",
+              "unit": "Dimensionless",
               "label": "Start min length",
+              "description": "Number of past positions kept to draw the trail, one per frame: the visible length is this number multiplied by the distance traveled by the particle each frame.",
               "group": "Trail",
               "advanced": true,
               "name": "TrailStartLengthMin"
@@ -18769,8 +19572,9 @@
             {
               "value": "120",
               "type": "Number",
-              "unit": "Pixel",
+              "unit": "Dimensionless",
               "label": "Start max length",
+              "description": "Number of past positions kept to draw the trail, one per frame: the visible length is this number multiplied by the distance traveled by the particle each frame.",
               "group": "Trail",
               "advanced": true,
               "name": "TrailStartLengthMax"
@@ -18779,6 +19583,7 @@
               "value": "Billboard",
               "type": "Choice",
               "label": "Render mode",
+              "description": "\"Image facing the camera\" draws each particle as an image. \"Image following a trail\" stretches the image along the path of each particle (sparks, rain streaks).",
               "choices": [
                 {
                   "label": "Image facing the camera",
@@ -19050,6 +19855,9 @@
                 "children": [
                   {
                     "propertyName": "SpayConeAngle"
+                  },
+                  {
+                    "propertyName": "ZoneRadius"
                   },
                   {
                     "propertyName": "Z"
@@ -20665,6 +21473,2122 @@
         }
       ],
       "eventsBasedObjects": []
+    },
+    {
+      "author": "",
+      "category": "Game mechanic",
+      "dimension": "",
+      "extensionNamespace": "",
+      "fullName": "3D height map",
+      "gdevelopVersion": ">=5.5.222",
+      "helpPath": "/extensions/height-map3d/details",
+      "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0ibWRpLXRlcnJhaW4iIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTQsNkwxMC4yNSwxMUwxMy4xLDE0LjhMMTEuNSwxNkM5LjgxLDEzLjc1IDcsMTAgNywxMEwxLDE4SDIzTDE0LDZaIiAvPjwvc3ZnPg==",
+      "name": "HeightMap3D",
+      "previewIconUrl": "https://asset-resources.gdevelop.io/public-resources/Icons/10e0a26c0d500830dfe23b94138beb0ef61607ba62bca05a5aa5c849777f1b06_terrain.svg",
+      "shortDescription": "A terrain with hills where 3D physics objects can stand.",
+      "version": "1.0.3",
+      "description": [
+        "A terrain with hills where objects with the 3D physics behavior can stand.",
+        "",
+        "A terrain can be built from:",
+        "- an image file",
+        "- noise function ([open the project online](https://editor.gdevelop.io/?project=example://3d-endless-terrain))",
+        ""
+      ],
+      "origin": {
+        "identifier": "HeightMap3D",
+        "name": "gdevelop-extension-store"
+      },
+      "tags": [
+        "3d",
+        "field",
+        "physics"
+      ],
+      "authorIds": [
+        "IWykYNRvhCZBN3vEgKEbBPOR3Oc2"
+      ],
+      "dependencies": [],
+      "globalVariables": [],
+      "sceneVariables": [],
+      "eventsFunctions": [
+        {
+          "description": "Define helper classes JavaScript code.",
+          "fullName": "Define helper classes",
+          "functionType": "Action",
+          "name": "DefineHelperClasses",
+          "private": true,
+          "sentence": "Define helper classes JavaScript code",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "if (gdjs.__heightMap3DExtension) {",
+                "    return;",
+                "}",
+                "",
+                "const defaultWidth = 64;",
+                "const defaultHeight = 64;",
+                "const defaultDepth = 64;",
+                "",
+                "class HeightMap {",
+                "    /** @type {gdjs.CustomRuntimeObject3D} */",
+                "    object;",
+                "    /** @type {THREE.Mesh} */",
+                "    mesh;",
+                "",
+                "    /** @type {THREE.TypedArray} */",
+                "    vertices;",
+                "",
+                "    /** @type {integer} */",
+                "    dimX;",
+                "    /** @type {integer} */",
+                "    dimY;",
+                "",
+                "    hasChangedThisFrame = false;",
+                "    isDirty = false;",
+                "",
+                "    /**",
+                "     * @param object {gdjs.CustomRuntimeObject}",
+                "     * @param dimX {integer}",
+                "     * @param dimY {integer}",
+                "     * @param color {string}",
+                "     * @param wireframe {boolean}",
+                "     */",
+                "    constructor(object, dimX, dimY, color, wireframe) {",
+                "        this.object = object;",
+                "        this.dimX = dimX;",
+                "        this.dimY = dimY;",
+                "",
+                "        this.rebuildPlane();",
+                "        this.setColor(color);",
+                "        this.setWireframe(wireframe);",
+                "    }",
+                "",
+                "    /**",
+                "     * @param dimX {integer}",
+                "     * @param dimY {integer}",
+                "     */",
+                "    clearAndResize(dimX, dimY) {",
+                "        this.dimX = dimX;",
+                "        this.dimY = dimY;",
+                "        this.rebuildPlane();",
+                "    }",
+                "",
+                "    rebuildPlane() {",
+                "        const material = this.mesh ? this.mesh.material : new THREE.MeshStandardMaterial();",
+                "        if (this.mesh) {",
+                "            this.mesh.removeFromParent();",
+                "        }",
+                "        const geometry = new THREE.PlaneGeometry(64, 64, this.dimX - 1, this.dimY - 1);",
+                "        this.vertices = geometry.attributes.position.array;",
+                "        this.mesh = new THREE.Mesh(geometry, material);",
+                "        this.mesh.rotation.order = 'ZYX';",
+                "        this.mesh.position.x = defaultWidth / 2;",
+                "        this.mesh.position.y = defaultHeight / 2;",
+                "        this.mesh.scale.y = -1;",
+                "        this.object.get3DRendererObject().add(this.mesh);",
+                "        this.hasChangedThisFrame = true;",
+                "    }",
+                "",
+                "    forceUpdate() {",
+                "        if (this.isDirty) {",
+                "            this.isDirty = false;",
+                "            this.mesh.geometry.attributes.position.needsUpdate = true;",
+                "            this.mesh.geometry.computeVertexNormals();",
+                "        }",
+                "    }",
+                "",
+                "    updateIfNeeded() {",
+                "        if (this.isDirty && !this.object.isHidden()) {",
+                "            this.isDirty = false;",
+                "            this.mesh.geometry.attributes.position.needsUpdate = true;",
+                "            this.mesh.geometry.computeVertexNormals();",
+                "        }",
+                "        this.hasChangedThisFrame = false;",
+                "    }",
+                "",
+                "    setAsDirty() {",
+                "        this.hasChangedThisFrame = true;",
+                "        this.isDirty = true;",
+                "    }",
+                "",
+                "    /**",
+                "     * @param indexX {integer}",
+                "     * @param indexY {integer}",
+                "     * @param value {float} a value between 0 and 1",
+                "     */",
+                "    setGridValue(indexX, indexY, value) {",
+                "        this.vertices[this.getVerticeZIndex(indexX, indexY)] =",
+                "            defaultDepth * gdjs.evtTools.common.clamp(0, 1, value);",
+                "        this.setAsDirty();",
+                "    }",
+                "",
+                "    /**",
+                "     * @param indexX {integer}",
+                "     * @param indexY {integer}",
+                "     * @returns {float} a value between 0 and 1",
+                "     */",
+                "    getGridValue(indexX, indexY) {",
+                "        return this.vertices[this.getVerticeZIndex(indexX, indexY)] / defaultDepth;",
+                "    }",
+                "",
+                "    /**",
+                "     * @param indexX {integer}",
+                "     * @param indexY {integer}",
+                "     * @returns {integer}",
+                "     */",
+                "    getVerticeZIndex(indexX, indexY) {",
+                "        return 2 + 3 * (indexX + indexY * this.dimX);",
+                "    }",
+                "",
+                "    /**",
+                "     * @param pointX {float} position in the scene",
+                "     * @param pointY {float} position in the scene",
+                "     * @return {float} the Z coordinate of the field point",
+                "     */",
+                "    getFieldZ(pointX, pointY) {",
+                "        const objectX = this.object.getX();",
+                "        const objectY = this.object.getY();",
+                "        const objectWidth = this.object.getWidth();",
+                "        const objectHeight = this.object.getHeight();",
+                "        if (pointX < objectX || pointX > objectX + objectWidth ||",
+                "            pointY < objectY || pointY > objectY + objectHeight) {",
+                "            return 0;",
+                "        }",
+                "        const x = (this.dimX - 1) * (pointX - objectX) / objectWidth;",
+                "        const y = (this.dimY - 1) * (pointY - objectY) / objectHeight;",
+                "        const integerPartX = Math.floor(x);",
+                "        const integerPartY = Math.floor(y);",
+                "        const floatPartX = x - integerPartX;",
+                "        const floatPartY = y - integerPartY;",
+                "        const bottomLeft = this.getGridValue(integerPartX, integerPartY + 1);",
+                "        const topRight = this.getGridValue(integerPartX + 1, integerPartY);",
+                "        let fieldValue = 0;",
+                "        if (floatPartX + floatPartY > 1) {",
+                "            // Bottom right triangle",
+                "            const bottomRight = this.getGridValue(integerPartX + 1, integerPartY + 1);",
+                "            fieldValue = (floatPartX + floatPartY - 1) * bottomRight +",
+                "                (1 - floatPartX) * bottomLeft + (1 - floatPartY) * topRight;",
+                "        }",
+                "        else {",
+                "            // Top left triangle",
+                "            const topLeft = this.getGridValue(integerPartX, integerPartY);",
+                "            fieldValue = (1 - floatPartX - floatPartY) * topLeft +",
+                "                floatPartX * topRight + floatPartY * bottomLeft;",
+                "        }",
+                "        return this.object.getZ() + fieldValue * this.object.getDepth();",
+                "    }",
+                "",
+                "    /**",
+                "     * @param texture {PIXI.Texture}",
+                "     * @param offsetX {integer}",
+                "     * @param offsetY {integer}",
+                "     */",
+                "    loadHeightMapFromTexture(texture, offsetX, offsetY) {",
+                "        const imageData = getImageData(texture, offsetX, offsetY, this.dimX, this.dimY);",
+                "        const size = this.dimX * this.dimY;",
+                "        const colorRange = 0xffff;",
+                "        const colorScale = defaultDepth / colorRange;",
+                "",
+                "        for (",
+                "            let verticeIndex = 0, colorIndex = 0;",
+                "            verticeIndex < 3 * size;",
+                "            verticeIndex += 3, colorIndex += 4) {",
+                "            // Read red and green channel to workaround canvas being 8 bits.",
+                "            // Users need to convert their 16 bits grayscale images into 8 bits RGB.",
+                "            const color = 256 * imageData.data[colorIndex] + imageData.data[colorIndex + 1];",
+                "            this.vertices[verticeIndex + 2] = color * colorScale;",
+                "        }",
+                "        this.setAsDirty(true);",
+                "    }",
+                "",
+                "    /**",
+                "     * @param color {string}",
+                "     */",
+                "    setColor(color) {",
+                "        /** @type {THREE.MeshStandardMaterial} */",
+                "        const material = this.mesh.material;",
+                "        material.color.set(gdjs.rgbOrHexStringToNumber(color));",
+                "    }",
+                "",
+                "    /**",
+                "     * @param wireframe {boolean}",
+                "     */",
+                "    setWireframe(wireframe) {",
+                "        /** @type {THREE.MeshStandardMaterial} */",
+                "        const material = this.mesh.material;",
+                "        material.wireframe = wireframe;",
+                "    }",
+                "}",
+                "",
+                "/**",
+                " * @implements {gdjs.Physics3DRuntimeBehavior.BodyUpdater}",
+                " */",
+                "class PhysicsHeightMap {",
+                "    /** @type {gdjs.Physics3DRuntimeBehavior} */",
+                "    physics;",
+                "    /** @type {HeightMap} */",
+                "    heightMap;",
+                "",
+                "    /**",
+                "     * @param physics {gdjs.Physics3DRuntimeBehavior}",
+                "     * @param heightMap {HeightMap}",
+                "     */",
+                "    constructor(physics, heightMap) {",
+                "        this.physics = physics;",
+                "        this.heightMap = heightMap;",
+                "",
+                "        this.physicsBodyUpdater = physics.bodyUpdater;",
+                "        physics.bodyUpdater = this;",
+                "        // Calling `recreateBody` directly doesn't work.",
+                "        this.heightMap.hasChangedThisFrame = true;",
+                "    }",
+                "",
+                "    updateIfNeeded() {",
+                "        if (this.heightMap.hasChangedThisFrame) {",
+                "            this.physics.recreateBody();",
+                "        }",
+                "    }",
+                "",
+                "    /**",
+                "     * @returns {Jolt.Body | null}",
+                "     */",
+                "    createAndAddBody() {",
+                "        const { physics } = this;",
+                "        const { _sharedData } = physics;",
+                "        const { dimX, dimY, vertices, object } = this.heightMap;",
+                "",
+                "        const shapeSettings = new Jolt.HeightFieldShapeSettings();",
+                "        const width = object.getWidth() * _sharedData.worldInvScale;",
+                "        const height = object.getHeight() * _sharedData.worldInvScale;",
+                "        const depth = object.getDepth() * _sharedData.worldInvScale;",
+                "        shapeSettings.mOffset.Set(-width / 2, -depth / 2, -height / 2);",
+                "        shapeSettings.mScale.Set(",
+                "            width / (dimX - 1),",
+                "            object.getDepth() / defaultDepth,",
+                "            height / (dimY - 1),",
+                "        );",
+                "        shapeSettings.mSampleCount = dimX;",
+                "        const totalSize = dimX * dimY;",
+                "        shapeSettings.mHeightSamples.resize(totalSize);",
+                "        const heightSamples = new Float32Array(",
+                "            Jolt.HEAPF32.buffer,",
+                "            Jolt.getPointer(shapeSettings.mHeightSamples.data()),",
+                "            totalSize);",
+                "        for (let index = 0; index < heightSamples.length; index++) {",
+                "            heightSamples[index] = vertices[2 + 3 * index] * _sharedData.worldInvScale;",
+                "            // TODO Handle holes",
+                "            // Jolt.HeightFieldShapeConstantValues.prototype.cNoCollisionValue;",
+                "        }",
+                "        const shape = shapeSettings.Create().Get();",
+                "        Jolt.destroy(shapeSettings);",
+                "        const scaledShape = shape.ScaleShape(_sharedData.getVec3(1, 1, -1)).Get();",
+                "",
+                "        const position = physics._getPhysicsPosition(_sharedData.getRVec3(0, 0, 0));",
+                "        const rotation = this._getPhysicsRotation(_sharedData.getQuat(0, 0, 0, 1));",
+                "",
+                "        const creationSettings = new Jolt.BodyCreationSettings(",
+                "            scaledShape, position, rotation, Jolt.EMotionType_Static, physics.getBodyLayer());",
+                "        const body = _sharedData.bodyInterface.CreateBody(creationSettings);",
+                "        Jolt.destroy(creationSettings);",
+                "        _sharedData.bodyInterface.AddBody(",
+                "            body.GetID(),",
+                "            Jolt.EActivation_Activate",
+                "        );",
+                "        return body;",
+                "    }",
+                "",
+                "    /**",
+                "     * @param result {Jolt.Quat}",
+                "     */",
+                "    _getPhysicsRotation(result) {",
+                "        const threeObject = this.heightMap.object.get3DRendererObject();",
+                "        // TODO Use a static variable for the quaternion.",
+                "        // It's not great to use the object rotation directly.",
+                "        threeObject.rotation.x += Math.PI / 2;",
+                "        result.Set(",
+                "            threeObject.quaternion.x,",
+                "            threeObject.quaternion.y,",
+                "            threeObject.quaternion.z,",
+                "            threeObject.quaternion.w",
+                "        );",
+                "        threeObject.rotation.x -= Math.PI / 2;",
+                "        return result;",
+                "    }",
+                "",
+                "    updateObjectFromBody() {",
+                "        const { physics } = this;",
+                "        const { _body } = physics;",
+                "        // Copy transform from body to the GD object.",
+                "        // The body is null when the behavior was either deactivated or the object deleted.",
+                "        // It would be useless to try to recreate it as updateBodyFromObject already does it.",
+                "        // If the body is null, we just don't do anything",
+                "        // (but still run the physics simulation - this is independent).",
+                "        if (_body !== null && _body.IsActive()) {",
+                "            physics._moveObjectToPhysicsPosition(_body.GetPosition());",
+                "            this._moveObjectToPhysicsRotation(_body.GetRotation());",
+                "        }",
+                "    }",
+                "",
+                "    /**",
+                "     * @param physicsRotation {Jolt.Quad}",
+                "     */",
+                "    _moveObjectToPhysicsRotation(physicsRotation) {",
+                "        const { object } = this.heightMap;",
+                "",
+                "        const threeObject = object.get3DRendererObject();",
+                "        threeObject.quaternion.x = physicsRotation.GetX();",
+                "        threeObject.quaternion.y = physicsRotation.GetY();",
+                "        threeObject.quaternion.z = physicsRotation.GetZ();",
+                "        threeObject.quaternion.w = physicsRotation.GetW();",
+                "        // TODO Avoid this instantiation",
+                "        const euler = new THREE.Euler(0, 0, 0, 'ZYX');",
+                "        euler.setFromQuaternion(threeObject.quaternion);",
+                "        object.setRotationX(gdjs.toDegrees(euler.x) - 90);",
+                "        object.setRotationY(gdjs.toDegrees(euler.y));",
+                "        object.setAngle(gdjs.toDegrees(euler.z));",
+                "    }",
+                "",
+                "    updateBodyFromObject() {",
+                "        const { object } = this.heightMap;",
+                "        const { physics } = this;",
+                "        const { _sharedData } = physics;",
+                "        if (physics._body === null) {",
+                "            if (!physics._createBody()) return;",
+                "        }",
+                "        const body = physics._body;",
+                "",
+                "        if (",
+                "            physics._objectOldX !== object.getX() ||",
+                "            physics._objectOldY !== object.getY() ||",
+                "            physics._objectOldZ !== object.getZ() ||",
+                "            physics._objectOldRotationX !== object.getRotationX() ||",
+                "            physics._objectOldRotationY !== object.getRotationY() ||",
+                "            physics._objectOldRotationZ !== object.getAngle()",
+                "        ) {",
+                "            _sharedData.bodyInterface.SetPositionAndRotationWhenChanged(",
+                "                body.GetID(),",
+                "                physics._getPhysicsPosition(_sharedData.getRVec3(0, 0, 0)),",
+                "                this._getPhysicsRotation(_sharedData.getQuat(0, 0, 0, 1)),",
+                "                Jolt.EActivation_Activate",
+                "            );",
+                "        }",
+                "    }",
+                "",
+                "    recreateShape() {",
+                "        this.physicsBodyUpdater.recreateShape();",
+                "    }",
+                "",
+                "    destroyBody() {",
+                "        this.physicsBodyUpdater.destroyBody();",
+                "    }",
+                "}",
+                "",
+                "/**",
+                " * @param texture {PIXI.Texture}",
+                " * @param offsetX {integer}",
+                " * @param offsetY {integer}",
+                " * @param width {integer}",
+                " * @param height {integer}",
+                " */",
+                "function getImageData(texture, offsetX, offsetY, width, height) {",
+                "    const canvas = document.createElement('canvas');",
+                "    const context = canvas.getContext('2d');",
+                "    /** @type {PIXI.Rectangle} */",
+                "    const crop = texture._frame.clone();",
+                "",
+                "    crop.x += offsetX;",
+                "    crop.y += offsetY;",
+                "    crop.width = Math.min(crop.width, width);",
+                "    crop.height = Math.min(crop.height, height);",
+                "",
+                "    // TODO Should the resolution be taken into account?",
+                "    // /** @type {number} */",
+                "    // const resolution = texture.baseTexture.resolution;",
+                "    // crop.x *= resolution;",
+                "    // crop.y *= resolution;",
+                "    // crop.width *= resolution;",
+                "    // crop.height *= resolution;",
+                "",
+                "    canvas.width = width;",
+                "    canvas.height = height;",
+                "",
+                "    context.save();",
+                "    context.globalCompositeOperation = 'copy';",
+                "    context.drawImage(",
+                "        texture.baseTexture.getDrawableSource(),",
+                "        crop.x,",
+                "        crop.y,",
+                "        crop.width,",
+                "        crop.height,",
+                "        0,",
+                "        0,",
+                "        crop.width,",
+                "        crop.height",
+                "    );",
+                "    context.restore();",
+                "",
+                "    return context.getImageData(0, 0, width, height);",
+                "}",
+                "",
+                "gdjs.__heightMap3DExtension = {",
+                "    HeightMap,",
+                "    PhysicsHeightMap,",
+                "};",
+                ""
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": true
+            }
+          ],
+          "parameters": [],
+          "objectGroups": []
+        },
+        {
+          "description": "Check if the events are running for the editor.",
+          "fullName": "Editor is running",
+          "functionType": "Condition",
+          "name": "IsInGameEdition",
+          "private": true,
+          "sentence": "Events are running for the editor",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "const game = runtimeScene.getGame();\r",
+                "eventsFunctionContext.returnValue = game.isInGameEdition && game.isInGameEdition();"
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ],
+          "parameters": [],
+          "objectGroups": []
+        }
+      ],
+      "eventsFunctionsFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "functionName": "DefineHelperClasses"
+          },
+          {
+            "functionName": "IsInGameEdition"
+          }
+        ]
+      },
+      "eventsBasedBehaviors": [
+        {
+          "description": "A terrain with hills where 3D physics objects can stand.",
+          "fullName": "3D physics height map",
+          "helpPath": "",
+          "iconUrl": "",
+          "name": "PhysicsHeightMap3D",
+          "objectType": "HeightMap3D::HeightMap3D",
+          "previewIconUrl": "",
+          "eventsFunctions": [
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "onCreated",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "HeightMap3D::DefineHelperClasses"
+                      },
+                      "parameters": [
+                        "",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "HeightMap3D::IsInGameEdition"
+                      },
+                      "parameters": [
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::JsCode",
+                      "inlineCode": [
+                        "/** @type {gdjs.CustomRuntimeObject} */\r",
+                        "const object = objects[0];\r",
+                        "\r",
+                        "const physics = object.getBehavior(eventsFunctionContext.getBehaviorName(\"Physics3D\"));\r",
+                        "\r",
+                        "object.__heightMap3DExtension.physicsHeightMap = new gdjs.__heightMap3DExtension.PhysicsHeightMap(physics, object.__heightMap3DExtension.heightMap);\r",
+                        ""
+                      ],
+                      "parameterObjects": "Object",
+                      "useStrict": true,
+                      "eventsSheetExpanded": true
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "HeightMap3D::HeightMap3D",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "HeightMap3D::PhysicsHeightMap3D",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "doStepPostEvents",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "HeightMap3D::IsInGameEdition"
+                      },
+                      "parameters": [
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::JsCode",
+                      "inlineCode": [
+                        "/** @type {gdjs.CustomRuntimeObject} */\r",
+                        "const object = objects[0];\r",
+                        "\r",
+                        "object.__heightMap3DExtension.physicsHeightMap.updateIfNeeded();\r",
+                        ""
+                      ],
+                      "parameterObjects": "Object",
+                      "useStrict": true,
+                      "eventsSheetExpanded": true
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "HeightMap3D::HeightMap3D",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "HeightMap3D::PhysicsHeightMap3D",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            }
+          ],
+          "eventsFunctionsFolderStructure": {
+            "folderName": "__ROOT",
+            "children": [
+              {
+                "functionName": "onCreated"
+              },
+              {
+                "functionName": "doStepPostEvents"
+              }
+            ]
+          },
+          "propertyDescriptors": [
+            {
+              "value": "",
+              "type": "Behavior",
+              "label": "3D physics engine",
+              "extraInformation": [
+                "Physics3D::Physics3DBehavior"
+              ],
+              "choices": [],
+              "name": "Physics3D"
+            }
+          ],
+          "propertiesFolderStructure": {
+            "folderName": "__ROOT",
+            "children": [
+              {
+                "propertyName": "Physics3D"
+              }
+            ]
+          }
+        }
+      ],
+      "eventsBasedObjects": [
+        {
+          "areaMaxX": 64,
+          "areaMaxY": 64,
+          "areaMaxZ": 64,
+          "areaMinX": 0,
+          "areaMinY": 0,
+          "areaMinZ": 0,
+          "defaultName": "",
+          "description": "A terrain with hills in 3D.",
+          "fullName": "3D height map",
+          "helpPath": "",
+          "iconUrl": "",
+          "is3D": true,
+          "isUsingLegacyInstancesRenderer": true,
+          "name": "HeightMap3D",
+          "previewIconUrl": "",
+          "objects": [
+            {
+              "assetStoreId": "",
+              "name": "Placeholder",
+              "type": "Scene3D::Cube3DObject",
+              "variables": [],
+              "effects": [],
+              "behaviors": [],
+              "content": {
+                "width": 64,
+                "height": 64,
+                "depth": 64,
+                "enableTextureTransparency": false,
+                "facesOrientation": "Y",
+                "frontFaceResourceName": "",
+                "backFaceResourceName": "",
+                "backFaceUpThroughWhichAxisRotation": "X",
+                "leftFaceResourceName": "",
+                "rightFaceResourceName": "",
+                "topFaceResourceName": "",
+                "bottomFaceResourceName": "",
+                "frontFaceVisible": true,
+                "backFaceVisible": true,
+                "leftFaceVisible": true,
+                "rightFaceVisible": true,
+                "topFaceVisible": true,
+                "bottomFaceVisible": true,
+                "frontFaceResourceRepeat": false,
+                "backFaceResourceRepeat": false,
+                "leftFaceResourceRepeat": false,
+                "rightFaceResourceRepeat": false,
+                "topFaceResourceRepeat": false,
+                "bottomFaceResourceRepeat": false,
+                "materialType": "Basic",
+                "tint": "255;255;255"
+              }
+            }
+          ],
+          "objectsFolderStructure": {
+            "folderName": "__ROOT",
+            "children": [
+              {
+                "objectName": "Placeholder"
+              }
+            ]
+          },
+          "objectsGroups": [],
+          "layers": [
+            {
+              "ambientLightColorB": 200,
+              "ambientLightColorG": 200,
+              "ambientLightColorR": 200,
+              "camera2DPlaneMaxDrawingDistance": 5000,
+              "camera3DFarPlaneDistance": 10000,
+              "camera3DFieldOfView": 45,
+              "camera3DNearPlaneDistance": 3,
+              "cameraType": "",
+              "followBaseLayerCamera": false,
+              "isLightingLayer": false,
+              "isLocked": false,
+              "name": "",
+              "renderingType": "",
+              "visibility": true,
+              "cameras": [
+                {
+                  "defaultSize": true,
+                  "defaultViewport": true,
+                  "height": 0,
+                  "viewportBottom": 1,
+                  "viewportLeft": 0,
+                  "viewportRight": 1,
+                  "viewportTop": 0,
+                  "width": 0
+                }
+              ],
+              "effects": []
+            }
+          ],
+          "instances": [
+            {
+              "angle": 0,
+              "customSize": true,
+              "depth": 64,
+              "height": 64,
+              "keepRatio": true,
+              "layer": "",
+              "name": "Placeholder",
+              "persistentUuid": "fc9b8b2b-f491-40ae-a136-ad0a5165a09d",
+              "width": 64,
+              "x": 0,
+              "y": 0,
+              "zOrder": 1,
+              "numberProperties": [],
+              "stringProperties": [],
+              "initialVariables": []
+            }
+          ],
+          "editionSettings": {},
+          "eventsFunctions": [
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "onCreated",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "HeightMap3D::DefineHelperClasses"
+                      },
+                      "parameters": [
+                        "",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "StringVariable"
+                          },
+                          "parameters": [
+                            "HeightMapImage",
+                            "!=",
+                            "\"\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "HeightMap3D::IsInGameEdition"
+                          },
+                          "parameters": [
+                            "",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Hide"
+                      },
+                      "parameters": [
+                        "Placeholder"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "/** @type {gdjs.CustomRuntimeObject} */\r",
+                    "const object = objects[0];\r",
+                    "const dimX = object._getGridDimensionX();\r",
+                    "const dimY = object._getGridDimensionY();\r",
+                    "const color = object._getColor();\r",
+                    "const wireframe = object._getWireframe();\r",
+                    "object.__heightMap3DExtension = {\r",
+                    "    heightMap: new gdjs.__heightMap3DExtension.HeightMap(object, dimX, dimY, color, wireframe)\r",
+                    "};"
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringVariable"
+                      },
+                      "parameters": [
+                        "HeightMapImage",
+                        "!=",
+                        "\"\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "HeightMap3D::HeightMap3D::SetHeightMapImage"
+                      },
+                      "parameters": [
+                        "Object",
+                        "HeightMapImage",
+                        "ImageOffsetX",
+                        "ImageOffsetY",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "HeightMap3D::HeightMap3D",
+                  "type": "object"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "doStepPostEvents",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "/** @type {gdjs.CustomRuntimeObject} */\r",
+                    "const object = objects[0];\r",
+                    "\r",
+                    "object.__heightMap3DExtension.heightMap.updateIfNeeded();\r",
+                    ""
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "HeightMap3D::HeightMap3D",
+                  "type": "object"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "onHotReloading",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "HeightMap3D::HeightMap3D::SetColor"
+                      },
+                      "parameters": [
+                        "Object",
+                        "=",
+                        "Color",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "Wireframe",
+                        "!=",
+                        "InitialColor"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "HeightMap3D::HeightMap3D::SetWireframe"
+                      },
+                      "parameters": [
+                        "Object",
+                        "no",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "Wireframe",
+                        "True",
+                        "InitialColor"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "HeightMap3D::HeightMap3D::SetWireframe"
+                      },
+                      "parameters": [
+                        "Object",
+                        "",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Or"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "GridDimensionX",
+                                "!=",
+                                "InitialGridDimensionX"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "GridDimensionY",
+                                "!=",
+                                "InitialGridDimensionY"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "HeightMap3D::HeightMap3D::ClearAndResize"
+                          },
+                          "parameters": [
+                            "Object",
+                            "GridDimensionX",
+                            "GridDimensionY",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "InitialGridDimensionX",
+                            "=",
+                            "GridDimensionX"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "InitialGridDimensionY",
+                            "=",
+                            "GridDimensionY"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanVariable"
+                          },
+                          "parameters": [
+                            "HasResized",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Or"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "StringVariable"
+                              },
+                              "parameters": [
+                                "HeightMapImage",
+                                "!=",
+                                "InitialHeightMapImage"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "ImageOffsetX",
+                                "!=",
+                                "InitialHeightMapImage"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "ImageOffsetY",
+                                "!=",
+                                "InitialHeightMapImage"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanVariable"
+                              },
+                              "parameters": [
+                                "HasResized",
+                                "True",
+                                "InitialHeightMapImage"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetStringVariable"
+                          },
+                          "parameters": [
+                            "InitialHeightMapImage",
+                            "=",
+                            "HeightMapImage"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "InitialImageOffsetX",
+                            "=",
+                            "ImageOffsetX"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "InitialImageOffsetY",
+                            "=",
+                            "ImageOffsetY"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "HeightMap3D::HeightMap3D::SetHeightMapImage"
+                          },
+                          "parameters": [
+                            "Object",
+                            "HeightMapImage",
+                            "ImageOffsetX",
+                            "ImageOffsetY",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "variables": [
+                    {
+                      "name": "HasResized",
+                      "type": "boolean",
+                      "value": false
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "HeightMap3D::HeightMap3D",
+                  "type": "object"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Load a height map from an image file.",
+              "fullName": "Load height map",
+              "functionType": "Action",
+              "name": "LoadFromImage",
+              "sentence": "Load the height map of _PARAM0_ from _PARAM1_ offseted by _PARAM2_ ; _PARAM3_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "/** @type {gdjs.CustomRuntimeObject} */",
+                    "const object = objects[0];",
+                    "",
+                    "const imageResourceName = eventsFunctionContext.getArgument(\"Image\");",
+                    "const offsetX = eventsFunctionContext.getArgument(\"OffsetX\");",
+                    "const offsetY = eventsFunctionContext.getArgument(\"OffsetY\");",
+                    "",
+                    "const texture = runtimeScene",
+                    "    .getGame()",
+                    "    .getImageManager()",
+                    "    .getPIXITexture(imageResourceName);",
+                    "object.__heightMap3DExtension.heightMap.loadHeightMapFromTexture(texture, offsetX, offsetY);",
+                    ""
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "HeightMap3D::HeightMap3D",
+                  "type": "object"
+                },
+                {
+                  "description": "Image",
+                  "name": "Image",
+                  "type": "imageResource"
+                },
+                {
+                  "description": "Image cropping offset on X",
+                  "name": "OffsetX",
+                  "type": "expression"
+                },
+                {
+                  "description": "Image cropping offset on Y",
+                  "name": "OffsetY",
+                  "type": "expression"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Set a height map from an image file.",
+              "fullName": "Height map image",
+              "functionType": "Action",
+              "name": "SetHeightMapImage",
+              "private": true,
+              "sentence": "Set the height map of _PARAM0_ from _PARAM1_ offseted by _PARAM2_ ; _PARAM3_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "HeightMapImage",
+                        "=",
+                        "HeightMapImage"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "ImageOffsetX",
+                        "=",
+                        "OffsetX"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "ImageOffsetY",
+                        "=",
+                        "OffsetY"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "/** @type {gdjs.CustomRuntimeObject} */",
+                    "const object = objects[0];",
+                    "",
+                    "const imageResourceName = eventsFunctionContext.getArgument(\"Image\");",
+                    "const offsetX = eventsFunctionContext.getArgument(\"OffsetX\");",
+                    "const offsetY = eventsFunctionContext.getArgument(\"OffsetY\");",
+                    "",
+                    "const texture = runtimeScene",
+                    "    .getGame()",
+                    "    .getImageManager()",
+                    "    .getPIXITexture(imageResourceName);",
+                    "object.__heightMap3DExtension.heightMap.loadHeightMapFromTexture(texture, offsetX, offsetY);",
+                    "",
+                    ""
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "HeightMap3D::HeightMap3D",
+                  "type": "object"
+                },
+                {
+                  "description": "Image",
+                  "name": "Image",
+                  "type": "string"
+                },
+                {
+                  "description": "Image cropping offset on X",
+                  "name": "OffsetX",
+                  "type": "expression"
+                },
+                {
+                  "description": "Image cropping offset on Y",
+                  "name": "OffsetY",
+                  "type": "expression"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Change the dimensions of the height map.",
+              "fullName": "Clear and resize",
+              "functionType": "Action",
+              "name": "ClearAndResize",
+              "private": true,
+              "sentence": "Clear and resize _PARAM0_ to _PARAM1_ ; _PARAM2_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "GridDimensionX",
+                        "=",
+                        "NewDimensionX"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "GridDimensionY",
+                        "=",
+                        "NewDimensionY"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "/** @type {gdjs.CustomRuntimeObject} */",
+                    "const object = objects[0];",
+                    "",
+                    "const dimensionX = eventsFunctionContext.getArgument(\"NewDimensionX\");",
+                    "const dimensionY = eventsFunctionContext.getArgument(\"NewDimensionY\");",
+                    "",
+                    "object.__heightMap3DExtension.heightMap.clearAndResize(dimensionX, dimensionY);",
+                    ""
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "HeightMap3D::HeightMap3D",
+                  "type": "object"
+                },
+                {
+                  "description": "Dimension X",
+                  "name": "NewDimensionX",
+                  "type": "expression"
+                },
+                {
+                  "description": "Dimension Y",
+                  "name": "NewDimensionY",
+                  "type": "expression"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Update the height map. This is done automatically at the  end of every frame, but it can be used manually to avoid a 1-frame delay.",
+              "fullName": "Update height map",
+              "functionType": "Action",
+              "name": "ForceUpdate",
+              "sentence": "Update the height map of _PARAM0_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "/** @type {gdjs.CustomRuntimeObject} */",
+                    "const object = objects[0];",
+                    "",
+                    "eventsFunctionContext.returnValue = object.__heightMap3DExtension.heightMap.forceUpdate();",
+                    ""
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "HeightMap3D::HeightMap3D",
+                  "type": "object"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "the field value at a grid index. The value is bewteen 0 and 1.",
+              "fullName": "Grid value",
+              "functionType": "ExpressionAndCondition",
+              "name": "GridValue",
+              "sentence": "the grid value at index _PARAM1_ ; _PARAM2_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "/** @type {gdjs.CustomRuntimeObject} */",
+                    "const object = objects[0];",
+                    "",
+                    "const indexX = eventsFunctionContext.getArgument(\"IndexX\");",
+                    "const indexY = eventsFunctionContext.getArgument(\"IndexY\");",
+                    "",
+                    "eventsFunctionContext.returnValue = object.__heightMap3DExtension.heightMap.getGridValue(indexX, indexY);",
+                    ""
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "HeightMap3D::HeightMap3D",
+                  "type": "object"
+                },
+                {
+                  "description": "X grid index",
+                  "name": "IndexX",
+                  "type": "expression"
+                },
+                {
+                  "description": "Y grid index",
+                  "name": "IndexY",
+                  "type": "expression"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "ActionWithOperator",
+              "getterName": "GridValue",
+              "name": "SetGridValue",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "/** @type {gdjs.CustomRuntimeObject} */",
+                    "const object = objects[0];",
+                    "",
+                    "const indexX = eventsFunctionContext.getArgument(\"IndexX\");",
+                    "const indexY = eventsFunctionContext.getArgument(\"IndexY\");",
+                    "const value = eventsFunctionContext.getArgument(\"Value\");",
+                    "",
+                    "object.__heightMap3DExtension.heightMap.setGridValue(indexX, indexY, value);",
+                    ""
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "HeightMap3D::HeightMap3D",
+                  "type": "object"
+                },
+                {
+                  "description": "X grid index",
+                  "name": "IndexX",
+                  "type": "expression"
+                },
+                {
+                  "description": "Y grid index",
+                  "name": "IndexY",
+                  "type": "expression"
+                },
+                {
+                  "description": "Field value",
+                  "name": "Value",
+                  "type": "expression"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "the number of points in the grid on X axis.",
+              "fullName": "Grid dimension X",
+              "functionType": "ExpressionAndCondition",
+              "name": "GridDimensionX",
+              "sentence": "the grid dimension on X axis",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnNumber"
+                      },
+                      "parameters": [
+                        "GridDimensionX"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "HeightMap3D::HeightMap3D",
+                  "type": "object"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "the number of points in the grid on Y axis.",
+              "fullName": "Grid dimension Y",
+              "functionType": "ExpressionAndCondition",
+              "name": "GridDimensionY",
+              "sentence": "the grid dimension on Y axis",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnNumber"
+                      },
+                      "parameters": [
+                        "GridDimensionY"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "HeightMap3D::HeightMap3D",
+                  "type": "object"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "the field Z for a given position in the scene.",
+              "fullName": "Field point Z",
+              "functionType": "ExpressionAndCondition",
+              "name": "FieldZ",
+              "sentence": "the field Z for position _PARAM1_ ; _PARAM2_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "/** @type {gdjs.CustomRuntimeObject} */",
+                    "const object = objects[0];",
+                    "",
+                    "const pointX = eventsFunctionContext.getArgument(\"PointX\");",
+                    "const pointY = eventsFunctionContext.getArgument(\"PointY\");",
+                    "",
+                    "eventsFunctionContext.returnValue = object.__heightMap3DExtension.heightMap.getFieldZ(pointX, pointY);"
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "HeightMap3D::HeightMap3D",
+                  "type": "object"
+                },
+                {
+                  "description": "X position in the scene",
+                  "name": "PointX",
+                  "type": "expression"
+                },
+                {
+                  "description": "Y position in the scene",
+                  "name": "PointY",
+                  "type": "expression"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "the color of the object.",
+              "fullName": "Color",
+              "functionType": "ExpressionAndCondition",
+              "group": "3D height map style configuration",
+              "name": "Color",
+              "private": true,
+              "sentence": "the color",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnString"
+                      },
+                      "parameters": [
+                        "Color"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "expressionType": {
+                "type": "color"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "HeightMap3D::HeightMap3D",
+                  "type": "object"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "ActionWithOperator",
+              "getterName": "Color",
+              "group": "3D height map style configuration",
+              "name": "SetColor",
+              "private": true,
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "Color",
+                        "=",
+                        "Value"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "/** @type {gdjs.CustomRuntimeObject} */",
+                    "const object = objects[0];",
+                    "",
+                    "const value = eventsFunctionContext.getArgument(\"Value\");",
+                    "",
+                    "object.__heightMap3DExtension.heightMap.setColor(value);",
+                    ""
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "HeightMap3D::HeightMap3D",
+                  "type": "object"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Check if wireframe.",
+              "fullName": "Wireframe",
+              "functionType": "Condition",
+              "group": "3D height map style configuration",
+              "name": "IsWireframe",
+              "private": true,
+              "sentence": "_PARAM0_ wireframe",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "Wireframe",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnBoolean"
+                      },
+                      "parameters": [
+                        "True"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "HeightMap3D::HeightMap3D",
+                  "type": "object"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Change if wireframe.",
+              "fullName": "Wireframe",
+              "functionType": "Action",
+              "group": "3D height map style configuration",
+              "name": "SetWireframe",
+              "private": true,
+              "sentence": "_PARAM0_ wireframe: _PARAM1_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "Value",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "Wireframe",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "Value",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "Wireframe",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "/** @type {gdjs.CustomRuntimeObject} */",
+                    "const object = objects[0];",
+                    "",
+                    "const value = eventsFunctionContext.getArgument(\"Value\");",
+                    "",
+                    "object.__heightMap3DExtension.heightMap.setWireframe(value);",
+                    ""
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "HeightMap3D::HeightMap3D",
+                  "type": "object"
+                },
+                {
+                  "defaultValue": "yes",
+                  "description": "Wireframe",
+                  "name": "Value",
+                  "optional": true,
+                  "type": "yesorno"
+                }
+              ],
+              "objectGroups": []
+            }
+          ],
+          "eventsFunctionsFolderStructure": {
+            "folderName": "__ROOT",
+            "children": [
+              {
+                "functionName": "onCreated"
+              },
+              {
+                "functionName": "doStepPostEvents"
+              },
+              {
+                "functionName": "onHotReloading"
+              },
+              {
+                "functionName": "LoadFromImage"
+              },
+              {
+                "functionName": "SetHeightMapImage"
+              },
+              {
+                "functionName": "ClearAndResize"
+              },
+              {
+                "functionName": "ForceUpdate"
+              },
+              {
+                "functionName": "GridValue"
+              },
+              {
+                "functionName": "SetGridValue"
+              },
+              {
+                "functionName": "GridDimensionX"
+              },
+              {
+                "functionName": "GridDimensionY"
+              },
+              {
+                "functionName": "FieldZ"
+              },
+              {
+                "folderName": "3D height map style configuration",
+                "children": [
+                  {
+                    "functionName": "Color"
+                  },
+                  {
+                    "functionName": "SetColor"
+                  },
+                  {
+                    "functionName": "IsWireframe"
+                  },
+                  {
+                    "functionName": "SetWireframe"
+                  }
+                ]
+              }
+            ]
+          },
+          "propertyDescriptors": [
+            {
+              "value": "65",
+              "type": "Number",
+              "label": "Grid dimension X",
+              "name": "GridDimensionX"
+            },
+            {
+              "value": "65",
+              "type": "Number",
+              "label": "",
+              "hidden": true,
+              "name": "InitialGridDimensionX"
+            },
+            {
+              "value": "65",
+              "type": "Number",
+              "label": "Grid dimension Y",
+              "name": "GridDimensionY"
+            },
+            {
+              "value": "65",
+              "type": "Number",
+              "label": "",
+              "hidden": true,
+              "name": "InitialGridDimensionY"
+            },
+            {
+              "value": "255;255;255",
+              "type": "Color",
+              "label": "Color",
+              "group": "Style",
+              "name": "Color"
+            },
+            {
+              "value": "",
+              "type": "Boolean",
+              "label": "Wireframe",
+              "group": "Style",
+              "name": "Wireframe"
+            },
+            {
+              "value": "",
+              "type": "Resource",
+              "label": "Height map (optional)",
+              "group": "Image",
+              "extraInformation": [
+                "image"
+              ],
+              "choices": [],
+              "name": "HeightMapImage"
+            },
+            {
+              "value": "",
+              "type": "Resource",
+              "label": "",
+              "extraInformation": [
+                "image"
+              ],
+              "choices": [],
+              "hidden": true,
+              "name": "InitialHeightMapImage"
+            },
+            {
+              "value": "0",
+              "type": "Number",
+              "unit": "Pixel",
+              "label": "Image offset X",
+              "group": "Image",
+              "name": "ImageOffsetX"
+            },
+            {
+              "value": "0",
+              "type": "Number",
+              "unit": "Pixel",
+              "label": "",
+              "hidden": true,
+              "name": "InitialImageOffsetX"
+            },
+            {
+              "value": "0",
+              "type": "Number",
+              "unit": "Pixel",
+              "label": "Image offset Y",
+              "group": "Image",
+              "name": "ImageOffsetY"
+            },
+            {
+              "value": "0",
+              "type": "Number",
+              "unit": "Pixel",
+              "label": "",
+              "hidden": true,
+              "name": "InitialImageOffsetY"
+            }
+          ],
+          "propertiesFolderStructure": {
+            "folderName": "__ROOT",
+            "children": [
+              {
+                "propertyName": "GridDimensionX"
+              },
+              {
+                "propertyName": "InitialGridDimensionX"
+              },
+              {
+                "propertyName": "GridDimensionY"
+              },
+              {
+                "propertyName": "InitialGridDimensionY"
+              },
+              {
+                "folderName": "Style",
+                "children": [
+                  {
+                    "propertyName": "Color"
+                  },
+                  {
+                    "propertyName": "Wireframe"
+                  }
+                ]
+              },
+              {
+                "folderName": "Image",
+                "children": [
+                  {
+                    "propertyName": "HeightMapImage"
+                  },
+                  {
+                    "propertyName": "ImageOffsetX"
+                  },
+                  {
+                    "propertyName": "ImageOffsetY"
+                  }
+                ]
+              },
+              {
+                "propertyName": "InitialHeightMapImage"
+              },
+              {
+                "propertyName": "InitialImageOffsetX"
+              },
+              {
+                "propertyName": "InitialImageOffsetY"
+              }
+            ]
+          },
+          "variants": []
+        }
+      ]
     }
   ],
   "externalLayouts": []
