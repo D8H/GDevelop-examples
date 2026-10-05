@@ -109,7 +109,7 @@
       {
         "file": "assets/Square.png",
         "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/Square.png\"}",
         "name": "Square",
         "smoothed": true,
         "userAdded": false
@@ -157,6 +157,45 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/3D Platformer Pack/c9960d7283100d500c708cfeb1fb675f80660d52f62d2ea15a6fd0a3846b01e3_Heart Full.glb",
           "name": "Heart Full.glb"
         }
+      },
+      {
+        "file": "IcoSphere.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "IcoSphere.glb",
+        "userAdded": false
+      },
+      {
+        "file": "assets/Image.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Image",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Image2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/Image2.png\"}",
+        "name": "Image2",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Image3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Image3",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Image4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Image4",
+        "smoothed": true,
+        "userAdded": false
       }
     ]
   },
@@ -168,16 +207,16 @@
   "variables": [],
   "layouts": [
     {
-      "b": 0,
+      "b": 223,
       "disableInputWhenNotFocused": true,
       "mangledName": "Untitled_32scene",
       "name": "Untitled scene",
-      "r": 0,
+      "r": 165,
       "renderer3DWorldScale": 100,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
       "title": "",
-      "v": 0,
+      "v": 189,
       "uiSettings": {
         "grid": false,
         "gridType": "rectangular",
@@ -223,12 +262,145 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "HeartParticle",
-          "persistentUuid": "d3077802-d44c-47b6-8a5a-23b20878e086",
+          "name": "SmokeParticle",
+          "persistentUuid": "6a9bbb08-3712-4ee6-bb00-c75d45732c39",
           "width": 0,
-          "x": 640,
-          "y": 512,
-          "zOrder": 10,
+          "x": 685,
+          "y": 672,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "SmokeSphereParticle",
+          "persistentUuid": "25f9a653-f7e8-46ea-bc4e-3e7b7b0629df",
+          "width": 0,
+          "x": 585,
+          "y": 238,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewParticleEmitter",
+          "persistentUuid": "c43a2cbd-5095-45ec-8068-af37c00f6e13",
+          "width": 0,
+          "x": 404,
+          "y": 688,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "FrogParticle5",
+          "persistentUuid": "79ba34d1-1231-4b0e-bb9a-efb0cfceb9fc",
+          "width": 0,
+          "x": 597,
+          "y": 478,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "FrogParticle5",
+          "persistentUuid": "4bdacb88-198a-49d3-9bed-553c7e830064",
+          "rotationY": 90,
+          "width": 0,
+          "x": 694,
+          "y": 476,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "FrogParticle5",
+          "persistentUuid": "f267582a-2eef-4952-9d39-03be79a745bc",
+          "rotationX": 90,
+          "width": 0,
+          "x": 598,
+          "y": 383,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "FrogParticle5",
+          "persistentUuid": "904ddc31-acf9-47f6-b184-279ac3cc3690",
+          "rotationX": -90,
+          "width": 0,
+          "x": 597,
+          "y": 594,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "FrogParticle5",
+          "persistentUuid": "3889f504-ebaa-4766-a54a-69c1ed89d558",
+          "rotationY": -90,
+          "width": 0,
+          "x": 493,
+          "y": 479,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "FrogParticle5",
+          "persistentUuid": "f25979bf-6a74-4e5d-8e06-632316af3ec7",
+          "rotationX": 180,
+          "width": 0,
+          "x": 599,
+          "y": 476,
+          "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -455,6 +627,7 @@
         {
           "assetStoreId": "351f05a136c91ee1d9d6ff4f9cfbc4d40b3744d7c7ea74212b4853862d52d974",
           "name": "Trail2",
+          "persistentUuid": "c8a273ea-d862-446e-bff1-1cfbffd0fb43",
           "type": "ParticleEmitter3D::ParticleEmitter3D",
           "variant": "",
           "variables": [],
@@ -601,17 +774,17 @@
             "StartRotationXMax": 45,
             "StartRotationZMin": 0,
             "StartRotationZMax": 0,
-            "StartAngularVelocityMin": 3600,
-            "StartAngularVelocityMax": 3600,
-            "StartAngularVelocityRatioXMin": 0,
-            "StartAngularVelocityRatioXMax": 0,
             "StartAngularVelocityRatioZMin": 1,
             "StartAngularVelocityRatioZMax": 1,
-            "StartAngularVelocityRatioYMin": 0,
-            "StartAngularVelocityRatioYMax": 0,
             "StartRotationYMin": 45,
             "StartRotationYMax": 45,
-            "TrailStartLengthMin": 120
+            "TrailStartLengthMin": 120,
+            "StartAngularVelocityZMin": 3600,
+            "StartAngularVelocityZMax": 3600,
+            "StartAngularVelocityXMax": 0,
+            "StartAngularVelocityYMin": 0,
+            "StartAngularVelocityXMin": 0,
+            "StartAngularVelocityYMax": 0
           },
           "childrenContent": {
             "Particle": {
@@ -775,8 +948,8 @@
             "ShouldAutodestruct": true,
             "StartRotationZMin": 0,
             "StartRotationZMax": 20,
-            "StartAngularVelocityMin": 90,
-            "StartAngularVelocityMax": 90
+            "StartAngularVelocityZMin": 90,
+            "StartAngularVelocityZMax": 90
           },
           "childrenContent": {
             "Particle": {
@@ -866,19 +1039,19 @@
             "StartRotationXMax": 0,
             "StartRotationZMin": 0,
             "StartRotationZMax": 0,
-            "StartAngularVelocityMin": 0,
-            "StartAngularVelocityMax": 0,
-            "StartAngularVelocityRatioXMin": 0,
-            "StartAngularVelocityRatioXMax": 0,
             "StartAngularVelocityRatioZMin": 0,
             "StartAngularVelocityRatioZMax": 0,
-            "StartAngularVelocityRatioYMin": 0,
-            "StartAngularVelocityRatioYMax": 0,
             "StartRotationYMin": 0,
             "StartRotationYMax": 0,
             "GravityTop": "Z+",
             "Gravity": 500,
-            "EndOpacity": 0
+            "EndOpacity": 0,
+            "StartAngularVelocityZMin": 0,
+            "StartAngularVelocityZMax": 0,
+            "StartAngularVelocityXMax": 0,
+            "StartAngularVelocityYMin": 0,
+            "StartAngularVelocityXMin": 0,
+            "StartAngularVelocityYMax": 0
           },
           "childrenContent": {
             "Particle": {
@@ -1072,19 +1245,19 @@
             "StartRotationXMax": 0,
             "StartRotationZMin": 0,
             "StartRotationZMax": 0,
-            "StartAngularVelocityMin": 0,
-            "StartAngularVelocityMax": 0,
-            "StartAngularVelocityRatioXMin": 0,
-            "StartAngularVelocityRatioXMax": 0,
             "StartAngularVelocityRatioZMin": 0,
             "StartAngularVelocityRatioZMax": 0,
-            "StartAngularVelocityRatioYMin": 0,
-            "StartAngularVelocityRatioYMax": 0,
             "StartRotationYMin": 0,
             "StartRotationYMax": 0,
             "GravityTop": "Z+",
             "Gravity": 0,
-            "EndOpacity": 0
+            "EndOpacity": 0,
+            "StartAngularVelocityZMin": 0,
+            "StartAngularVelocityZMax": 0,
+            "StartAngularVelocityXMax": 0,
+            "StartAngularVelocityYMin": 0,
+            "StartAngularVelocityXMin": 0,
+            "StartAngularVelocityYMax": 0
           },
           "childrenContent": {
             "Particle": {
@@ -1155,19 +1328,19 @@
             "StartRotationXMax": 0,
             "StartRotationZMin": 0,
             "StartRotationZMax": 0,
-            "StartAngularVelocityMin": 360,
-            "StartAngularVelocityMax": 360,
-            "StartAngularVelocityRatioXMin": 1,
-            "StartAngularVelocityRatioXMax": 1,
             "StartAngularVelocityRatioZMin": 0,
             "StartAngularVelocityRatioZMax": 0,
-            "StartAngularVelocityRatioYMin": 0,
-            "StartAngularVelocityRatioYMax": 0,
             "StartRotationYMin": 0,
             "StartRotationYMax": 0,
             "GravityTop": "Z+",
             "Gravity": 0,
-            "EndOpacity": 0
+            "EndOpacity": 0,
+            "StartAngularVelocityZMin": 360,
+            "StartAngularVelocityZMax": 360,
+            "StartAngularVelocityXMax": 1,
+            "StartAngularVelocityYMin": 0,
+            "StartAngularVelocityXMin": 1,
+            "StartAngularVelocityYMax": 0
           },
           "childrenContent": {
             "Particle": {
@@ -1209,7 +1382,7 @@
         },
         {
           "assetStoreId": "351f05a136c91ee1d9d6ff4f9cfbc4d40b3744d7c7ea74212b4853862d52d974",
-          "name": "ModelParticle5",
+          "name": "FrogParticle5",
           "persistentUuid": "4b0a0523-705c-4c29-a3e1-c9e12cbc7bc1",
           "type": "ParticleEmitter3D::ParticleEmitter3D",
           "variant": "",
@@ -1224,7 +1397,7 @@
             "StartSizeMin": 20,
             "StartSizeMax": 20,
             "EndScale": 1,
-            "Flow": 1,
+            "Flow": 10,
             "LifespanMin": 2,
             "LifespanMax": 2,
             "Duration": 123456,
@@ -1238,19 +1411,19 @@
             "StartRotationXMax": 0,
             "StartRotationZMin": 0,
             "StartRotationZMax": 0,
-            "StartAngularVelocityMin": 0,
-            "StartAngularVelocityMax": 0,
-            "StartAngularVelocityRatioXMin": 0,
-            "StartAngularVelocityRatioXMax": 0,
             "StartAngularVelocityRatioZMin": 0,
             "StartAngularVelocityRatioZMax": 0,
-            "StartAngularVelocityRatioYMin": 0,
-            "StartAngularVelocityRatioYMax": 0,
             "StartRotationYMin": 0,
             "StartRotationYMax": 0,
             "GravityTop": "Z+",
             "Gravity": 0,
-            "EndOpacity": 0
+            "EndOpacity": 0,
+            "StartAngularVelocityZMin": 0,
+            "StartAngularVelocityZMax": 0,
+            "StartAngularVelocityXMax": 0,
+            "StartAngularVelocityYMin": 0,
+            "StartAngularVelocityXMin": 0,
+            "StartAngularVelocityYMax": 0
           },
           "childrenContent": {
             "Particle": {
@@ -1373,19 +1546,19 @@
             "StartRotationXMax": 0,
             "StartRotationZMin": 0,
             "StartRotationZMax": 0,
-            "StartAngularVelocityMin": 1440,
-            "StartAngularVelocityMax": 1440,
-            "StartAngularVelocityRatioXMin": 0,
-            "StartAngularVelocityRatioXMax": 0,
             "StartAngularVelocityRatioZMin": 1,
             "StartAngularVelocityRatioZMax": 1,
-            "StartAngularVelocityRatioYMin": 0,
-            "StartAngularVelocityRatioYMax": 0,
             "StartRotationYMin": 90,
             "StartRotationYMax": 90,
             "GravityTop": "Z+",
             "Gravity": 400,
-            "EndOpacity": 0
+            "EndOpacity": 0,
+            "StartAngularVelocityZMin": 1440,
+            "StartAngularVelocityZMax": 1440,
+            "StartAngularVelocityXMax": 0,
+            "StartAngularVelocityYMin": 0,
+            "StartAngularVelocityXMin": 0,
+            "StartAngularVelocityYMax": 0
           },
           "childrenContent": {
             "Particle": {
@@ -1416,6 +1589,247 @@
                             "y": 0
                           },
                           "customCollisionMask": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "assetStoreId": "351f05a136c91ee1d9d6ff4f9cfbc4d40b3744d7c7ea74212b4853862d52d974",
+          "name": "SmokeParticle",
+          "persistentUuid": "6439d0b6-8955-4eda-adbd-726c0ba3a55b",
+          "type": "ParticleEmitter3D::ParticleEmitter3D",
+          "variant": "",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "EndColor": "0;0;0",
+            "StartColor": "255;255;255",
+            "StartOpacity": 204,
+            "SpayConeAngle": 10,
+            "StartSizeMin": 5,
+            "StartSizeMax": 20,
+            "EndScale": 3,
+            "Flow": 150,
+            "LifespanMin": 0.45,
+            "LifespanMax": 0.5,
+            "Duration": 123456,
+            "StartSpeedMin": 200,
+            "StartSpeedMax": 300,
+            "ShouldAutodestruct": true,
+            "RenderMode": "Model",
+            "Model3D": "IcoSphere.glb",
+            "Blending": "Normal",
+            "StartRotationXMin": 0,
+            "StartRotationXMax": 0,
+            "StartRotationZMin": 0,
+            "StartRotationZMax": 0,
+            "StartAngularVelocityRatioZMin": 0,
+            "StartAngularVelocityRatioZMax": 1,
+            "StartRotationYMin": 90,
+            "StartRotationYMax": 90,
+            "GravityTop": "Z+",
+            "Gravity": 0,
+            "EndOpacity": 0,
+            "ZoneRadius": 10,
+            "StartAngularVelocityZMin": 360,
+            "StartAngularVelocityZMax": 360,
+            "StartAngularVelocityXMax": 0,
+            "StartAngularVelocityYMin": 0,
+            "StartAngularVelocityXMin": 0,
+            "StartAngularVelocityYMax": 0
+          },
+          "childrenContent": {
+            "Particle": {
+              "adaptCollisionMaskAutomatically": true,
+              "updateIfNotVisible": false,
+              "animations": [
+                {
+                  "name": "Image",
+                  "useMultipleDirections": false,
+                  "directions": [
+                    {
+                      "looping": false,
+                      "timeBetweenFrames": 0.08,
+                      "sprites": [
+                        {
+                          "hasCustomCollisionMask": false,
+                          "image": "LightGlow.png",
+                          "points": [],
+                          "originPoint": {
+                            "name": "origine",
+                            "x": 0,
+                            "y": 0
+                          },
+                          "centerPoint": {
+                            "automatic": true,
+                            "name": "centre",
+                            "x": 0,
+                            "y": 0
+                          },
+                          "customCollisionMask": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "assetStoreId": "351f05a136c91ee1d9d6ff4f9cfbc4d40b3744d7c7ea74212b4853862d52d974",
+          "name": "SmokeSphereParticle",
+          "persistentUuid": "bc361ea4-d9ab-4672-9a21-3935ebd7fc8d",
+          "type": "ParticleEmitter3D::ParticleEmitter3D",
+          "variant": "",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "EndColor": "0;0;0",
+            "StartColor": "255;255;255",
+            "StartOpacity": 204,
+            "SpayConeAngle": 0,
+            "StartSizeMin": 20,
+            "StartSizeMax": 20,
+            "EndScale": 0,
+            "Flow": 80,
+            "LifespanMin": 0.25,
+            "LifespanMax": 0.5,
+            "Duration": 123456,
+            "StartSpeedMin": 200,
+            "StartSpeedMax": 300,
+            "ShouldAutodestruct": true,
+            "RenderMode": "Model",
+            "Model3D": "IcoSphere.glb",
+            "Blending": "Normal",
+            "StartRotationXMin": 0,
+            "StartRotationXMax": 0,
+            "StartRotationZMin": 0,
+            "StartRotationZMax": 0,
+            "StartAngularVelocityRatioZMin": 0,
+            "StartAngularVelocityRatioZMax": 1,
+            "StartRotationYMin": 90,
+            "StartRotationYMax": 90,
+            "GravityTop": "Z+",
+            "Gravity": 0,
+            "EndOpacity": 0,
+            "StartAngularVelocityZMin": 1440,
+            "StartAngularVelocityZMax": 1440,
+            "StartAngularVelocityXMax": 1,
+            "StartAngularVelocityYMin": 0,
+            "StartAngularVelocityXMin": 0,
+            "StartAngularVelocityYMax": 1
+          },
+          "childrenContent": {
+            "Particle": {
+              "adaptCollisionMaskAutomatically": true,
+              "updateIfNotVisible": false,
+              "animations": [
+                {
+                  "name": "Image",
+                  "useMultipleDirections": false,
+                  "directions": [
+                    {
+                      "looping": false,
+                      "timeBetweenFrames": 0.08,
+                      "sprites": [
+                        {
+                          "hasCustomCollisionMask": false,
+                          "image": "LightGlow.png",
+                          "points": [],
+                          "originPoint": {
+                            "name": "origine",
+                            "x": 0,
+                            "y": 0
+                          },
+                          "centerPoint": {
+                            "automatic": true,
+                            "name": "centre",
+                            "x": 0,
+                            "y": 0
+                          },
+                          "customCollisionMask": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "NewParticleEmitter",
+          "persistentUuid": "932e107d-785e-4461-81d7-a9834f53a2c3",
+          "type": "ParticleEmitter3D::ParticleEmitter3D",
+          "variant": "",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "StartRotationZMin": 0,
+            "StartRotationZMax": 360,
+            "EndColor": "56;255;0",
+            "StartAngularVelocityZMin": 360,
+            "StartAngularVelocityZMax": 360
+          },
+          "childrenContent": {
+            "Particle": {
+              "adaptCollisionMaskAutomatically": true,
+              "updateIfNotVisible": false,
+              "animations": [
+                {
+                  "name": "Image",
+                  "useMultipleDirections": false,
+                  "directions": [
+                    {
+                      "looping": false,
+                      "metadata": "{\"pskl\":{}}",
+                      "timeBetweenFrames": 0.08,
+                      "sprites": [
+                        {
+                          "hasCustomCollisionMask": true,
+                          "image": "Image4",
+                          "points": [],
+                          "originPoint": {
+                            "name": "origine",
+                            "x": 0,
+                            "y": 0
+                          },
+                          "centerPoint": {
+                            "automatic": true,
+                            "name": "centre",
+                            "x": 0,
+                            "y": 0
+                          },
+                          "customCollisionMask": [
+                            [
+                              {
+                                "x": 0,
+                                "y": 24
+                              },
+                              {
+                                "x": 64,
+                                "y": 24
+                              },
+                              {
+                                "x": 64,
+                                "y": 40
+                              },
+                              {
+                                "x": 0,
+                                "y": 40
+                              }
+                            ]
+                          ]
                         }
                       ]
                     }
@@ -1460,10 +1874,16 @@
             "objectName": "Heart_Full"
           },
           {
+            "objectName": "SmokeParticle"
+          },
+          {
+            "objectName": "SmokeSphereParticle"
+          },
+          {
             "objectName": "ModelParticle3"
           },
           {
-            "objectName": "ModelParticle5"
+            "objectName": "FrogParticle5"
           },
           {
             "objectName": "ModelParticle4"
@@ -1485,6 +1905,9 @@
           },
           {
             "objectName": "New3DModel"
+          },
+          {
+            "objectName": "NewParticleEmitter"
           }
         ]
       },
@@ -1790,7 +2213,7 @@
                 "rotation": 300
               },
               "stringParameters": {
-                "groundColor": "127;127;127",
+                "groundColor": "206;206;206",
                 "skyColor": "255;255;255",
                 "top": "Z+"
               },
@@ -1843,6 +2266,345 @@
         {
           "name": "Opacity",
           "type": "OpacityCapability::OpacityBehavior"
+        },
+        {
+          "name": "Resizable",
+          "type": "ResizableCapability::ResizableBehavior"
+        },
+        {
+          "name": "Scale",
+          "type": "ScalableCapability::ScalableBehavior"
+        }
+      ]
+    },
+    {
+      "b": 0,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "Untitled_32scene2",
+      "name": "Untitled scene2",
+      "r": 0,
+      "renderer3DWorldScale": 1,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 0,
+      "uiSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridDepth": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridOffsetZ": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.6897782140104495,
+        "windowMask": false,
+        "selectedLayer": "",
+        "gameEditorMode": "instances-editor"
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Box",
+          "persistentUuid": "973993aa-e664-4a48-927a-d636c281ae6b",
+          "width": 0,
+          "x": 633,
+          "y": 114,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Trail",
+          "persistentUuid": "30bfc165-98b8-4850-9f6a-3959cf25e7c3",
+          "width": 0,
+          "x": 829,
+          "y": 105,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "assetStoreId": "",
+          "name": "Box",
+          "persistentUuid": "ab669947-e8f9-4157-8a73-583691460564",
+          "type": "Scene3D::Cube3DObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "EllipseMovement",
+              "type": "EllipseMovement::EllipseMovement",
+              "RadiusX": 400,
+              "RadiusY": 400,
+              "LoopDuration": 0.5,
+              "InitialTurningLeft": false,
+              "InitialDirectionAngle": 0,
+              "ShouldRotate": false,
+              "RotationOffset": 0,
+              "CenterX": 0,
+              "CenterY": 0,
+              "MovementAngle": 0,
+              "OldX": 0,
+              "OldY": 0
+            }
+          ],
+          "content": {
+            "width": 20,
+            "height": 20,
+            "depth": 20,
+            "enableTextureTransparency": false,
+            "facesOrientation": "Y",
+            "frontFaceResourceName": "",
+            "backFaceResourceName": "",
+            "backFaceUpThroughWhichAxisRotation": "X",
+            "leftFaceResourceName": "",
+            "rightFaceResourceName": "",
+            "topFaceResourceName": "",
+            "bottomFaceResourceName": "",
+            "frontFaceVisible": true,
+            "backFaceVisible": true,
+            "leftFaceVisible": true,
+            "rightFaceVisible": true,
+            "topFaceVisible": true,
+            "bottomFaceVisible": true,
+            "frontFaceResourceRepeat": false,
+            "backFaceResourceRepeat": false,
+            "leftFaceResourceRepeat": false,
+            "rightFaceResourceRepeat": false,
+            "topFaceResourceRepeat": false,
+            "bottomFaceResourceRepeat": false,
+            "tileScale": 1,
+            "materialType": "StandardWithoutMetalness",
+            "tint": "255;255;255",
+            "isCastingShadow": true,
+            "isReceivingShadow": true
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "Trail",
+          "persistentUuid": "cce053bc-756a-4daf-9c2c-7c6e25e09124",
+          "type": "ParticleEmitter3D::ParticleEmitter3D",
+          "variant": "",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "AreParticlesRelative": false,
+            "RenderMode": "Trail",
+            "IsTrailFollowingLocalOrigin": true,
+            "TrailStartLengthMin": 3,
+            "TrailEndWidthRatio": 1,
+            "ShouldAutodestruct": false,
+            "Duration": 0,
+            "Flow": 1,
+            "EndScale": 1,
+            "StartSizeMin": 200,
+            "StartSizeMax": 200,
+            "LifespanMax": 1,
+            "EndOpacity": 255,
+            "TrailStartLengthMax": 3,
+            "EndColor": "255;255;255",
+            "StartColor": "255;255;255"
+          },
+          "childrenContent": {
+            "Particle": {
+              "adaptCollisionMaskAutomatically": true,
+              "updateIfNotVisible": false,
+              "animations": [
+                {
+                  "name": "Image",
+                  "useMultipleDirections": false,
+                  "directions": [
+                    {
+                      "looping": false,
+                      "metadata": "{\"pskl\":{}}",
+                      "timeBetweenFrames": 0.08,
+                      "sprites": [
+                        {
+                          "hasCustomCollisionMask": true,
+                          "image": "Image2",
+                          "points": [],
+                          "originPoint": {
+                            "name": "origine",
+                            "x": 0,
+                            "y": 0
+                          },
+                          "centerPoint": {
+                            "automatic": true,
+                            "name": "centre",
+                            "x": 0,
+                            "y": 0
+                          },
+                          "customCollisionMask": [
+                            [
+                              {
+                                "x": 0,
+                                "y": 0
+                              },
+                              {
+                                "x": 32,
+                                "y": 0
+                              },
+                              {
+                                "x": 32,
+                                "y": 32
+                              },
+                              {
+                                "x": 0,
+                                "y": 32
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "objectsFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "objectName": "Box"
+          },
+          {
+            "objectName": "Trail"
+          }
+        ]
+      },
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SetCenter"
+              },
+              "parameters": [
+                "Trail",
+                "=",
+                "Box.CenterX()",
+                "=",
+                "Box.CenterY()"
+              ]
+            },
+            {
+              "type": {
+                "value": "DebuggerTools::ConsoleLog"
+              },
+              "parameters": [
+                "\"Object: \" + ToString(round(Trail.X())) + \" \" + ToString(round(Trail.Y()))",
+                "\"info\"",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
+      "layers": [
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera2DPlaneMaxDrawingDistance": 5000,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Ambient Hemisphere Light",
+              "doubleParameters": {
+                "elevation": 40,
+                "intensity": 0.33,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "groundColor": "127;127;127",
+                "skyColor": "255;255;255",
+                "top": "Z+"
+              },
+              "booleanParameters": {}
+            },
+            {
+              "effectType": "Scene3D::DirectionalLight",
+              "name": "3D Sun Light",
+              "doubleParameters": {
+                "distanceFromCamera": 1500,
+                "elevation": 40,
+                "frustumSize": 4000,
+                "intensity": 0.75,
+                "minimumShadowBias": 0,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "color": "255;255;255",
+                "shadowQuality": "medium",
+                "top": "Z+"
+              },
+              "booleanParameters": {
+                "isCastingShadow": true
+              }
+            }
+          ]
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "EllipseMovement",
+          "type": "EllipseMovement::EllipseMovement"
+        },
+        {
+          "name": "Flippable",
+          "type": "FlippableCapability::FlippableBehavior"
+        },
+        {
+          "name": "Object3D",
+          "type": "Scene3D::Base3DBehavior"
         },
         {
           "name": "Resizable",
@@ -6786,7 +7548,7 @@
       "name": "ParticleEmitter3D",
       "previewIconUrl": "https://asset-resources.gdevelop.io/public-resources/Icons/f2e5a34bf465f781866677762d385d6c8e9e8d203383f2df9a3b7e0fad6a2cb5_fire.svg",
       "shortDescription": "Display a large number of particles in 3D to create visual effects in a 3D game.",
-      "version": "3.2.0",
+      "version": "3.2.1",
       "description": [
         "3D particle emitters let you create and display many small particles to simulate visual effects in your game — like fire, explosions, smoke, dust, magic, rain or snow.",
         "",
@@ -7060,6 +7822,9 @@
                 "        this.particleSystem = particleSystem;",
                 "        this.sprayConeAngle = 0;",
                 "        this.zoneRadius = 0;",
+                "        this.startSpeedMin = 0;",
+                "        this.startSpeedMax = 0;",
+                "        this.gravity = 0;",
                 "        this.colorOverLife = colorOverLife;",
                 "        this.sizeOverLife = sizeOverLife;",
                 "        this.applyForce = applyForce;",
@@ -7080,6 +7845,7 @@
                 "            case \"Trail\":",
                 "                this.particleSystem.renderMode = RenderMode.Trail;",
                 "                this.particleSystem.rendererEmitterSettings.startLength = new IntervalValue(30, 30);",
+                "                break;",
                 "            case \"Model\":",
                 "                this.particleSystem.renderMode = RenderMode.Mesh;",
                 "                this.particleSystem.startRotation = new EulerGenerator(",
@@ -7142,6 +7908,7 @@
                 "                geometry.attributes.position.setZ(index, y);",
                 "            }",
                 "            geometry.attributes.position.needsUpdate = true;",
+                "            geometry.computeVertexNormals();",
                 "            geometry.computeBoundingBox();",
                 "            mergedGeometries.set(resourceName, geometry);",
                 "        }",
@@ -7224,28 +7991,6 @@
                 "    }",
                 "",
                 "    /**",
-                "     * @param angularVelocityMin {number}",
-                "     */",
-                "    setStartAngularVelocityMin(angularVelocityMin) {",
-                "        const angularVelocity = this.rotationOverLife.angularVelocity;",
-                "        if (angularVelocity.a === undefined) {",
-                "            return;",
-                "        }",
-                "        angularVelocity.a = -gdjs.toRad(angularVelocityMin);",
-                "    }",
-                "",
-                "    /**",
-                "     * @param angularVelocityMax {number}",
-                "     */",
-                "    setStartAngularVelocityMax(angularVelocityMax) {",
-                "        const angularVelocity = this.rotationOverLife.angularVelocity;",
-                "        if (angularVelocity.b === undefined) {",
-                "            return;",
-                "        }",
-                "        angularVelocity.b = -gdjs.toRad(angularVelocityMax);",
-                "    }",
-                "",
-                "    /**",
                 "     * @param angularVelocityXMin {number}",
                 "     */",
                 "    setStartAngularVelocityXMin(angularVelocityXMin) {",
@@ -7298,6 +8043,12 @@
                 "            return;",
                 "        }",
                 "        angularVelocityZ.a = -gdjs.toRad(angularVelocityZMin);",
+                "",
+                "        const angularVelocity = this.rotationOverLife.angularVelocity;",
+                "        if (angularVelocity.a === undefined) {",
+                "            return;",
+                "        }",
+                "        angularVelocity.a = -gdjs.toRad(angularVelocityZMin);",
                 "    }",
                 "",
                 "    /**",
@@ -7309,6 +8060,12 @@
                 "            return;",
                 "        }",
                 "        angularVelocityZ.b = -gdjs.toRad(angularVelocityZMax);",
+                "",
+                "        const angularVelocity = this.rotationOverLife.angularVelocity;",
+                "        if (angularVelocity.b === undefined) {",
+                "            return;",
+                "        }",
+                "        angularVelocity.b = -gdjs.toRad(angularVelocityZMax);",
                 "    }",
                 "",
                 "    /**",
@@ -7319,7 +8076,7 @@
                 "        if (!startLength) {",
                 "            return;",
                 "        }",
-                "        startLength.a = startLengthMin * this.inverseWorldScale;",
+                "        startLength.a = startLengthMin;",
                 "    }",
                 "",
                 "    /**",
@@ -7330,7 +8087,7 @@
                 "        if (!startLength) {",
                 "            return;",
                 "        }",
-                "        startLength.b = startLengthMax * this.inverseWorldScale;",
+                "        startLength.b = startLengthMax;",
                 "    }",
                 "",
                 "    /**",
@@ -7420,14 +8177,31 @@
                 "     * @param startSpeedMin {number}",
                 "     */",
                 "    setStartSpeedMin(startSpeedMin) {",
-                "        this.particleSystem.startSpeed.a = startSpeedMin * this.inverseWorldScale;",
+                "        this.startSpeedMin = startSpeedMin;",
+                "        this.updateStartSpeed();",
                 "    }",
                 "",
                 "    /**",
                 "     * @param startSpeedMax {number}",
                 "     */",
                 "    setStartSpeedMax(startSpeedMax) {",
-                "        this.particleSystem.startSpeed.b = startSpeedMax * this.inverseWorldScale;",
+                "        this.startSpeedMax = startSpeedMax;",
+                "        this.updateStartSpeed();",
+                "    }",
+                "",
+                "    /**",
+                "     * Velocities of particles in world space are in the Three.js world units,",
+                "     * so they need the world scale. Velocities of relative particles are in",
+                "     * the emitter units, converted by the emitter transformation.",
+                "     */",
+                "    getVelocityScale() {",
+                "        return this.particleSystem.worldSpace ? this.inverseWorldScale : 1;",
+                "    }",
+                "",
+                "    updateStartSpeed() {",
+                "        const velocityScale = this.getVelocityScale();",
+                "        this.particleSystem.startSpeed.a = this.startSpeedMin * velocityScale;",
+                "        this.particleSystem.startSpeed.b = this.startSpeedMax * velocityScale;",
                 "    }",
                 "",
                 "    /**",
@@ -7456,6 +8230,8 @@
                 "     */",
                 "    setParticlesRelative(areParticlesRelative) {",
                 "        this.particleSystem.worldSpace = !areParticlesRelative;",
+                "        this.updateStartSpeed();",
+                "        this.updateGravity();",
                 "    }",
                 "",
                 "    /**",
@@ -7475,7 +8251,8 @@
                 "    }",
                 "",
                 "    updateEmitterShape() {",
-                "        const zoneRadius = Math.max(0, this.zoneRadius) * this.inverseWorldScale;",
+                "        // The emitter transformation converts the shape to the Three.js world units.",
+                "        const zoneRadius = Math.max(0, this.zoneRadius);",
                 "        // Without a zone, a spray angle of 0 emits in every direction from a point.",
                 "        // With a zone, it emits straight from every point of the disc.",
                 "        const isCone = this.sprayConeAngle <= 180 && (0 < this.sprayConeAngle || 0 < zoneRadius);",
@@ -7510,7 +8287,12 @@
                 "     * @param gravity {number}",
                 "     */",
                 "    setGravity(gravity) {",
-                "        this.applyForce.magnitude.value = gravity * this.inverseWorldScale;",
+                "        this.gravity = gravity;",
+                "        this.updateGravity();",
+                "    }",
+                "",
+                "    updateGravity() {",
+                "        this.applyForce.magnitude.value = this.gravity * this.getVelocityScale();",
                 "    }",
                 "",
                 "    /**",
@@ -10313,7 +11095,8 @@
                 "            const iter = particle.previous.values();",
                 "            for (let i = 0; i < particle.previous.length; i++) {",
                 "                const cur = iter.next();",
-                "                cur.value.size = this.width.genValue(particle.memory, (particle.previous.length - i) / particle.length);",
+                "                // We added a multiplication with size because it's more convenient for the extension.",
+                "                cur.value.size = this.width.genValue(particle.memory, (particle.previous.length - i) / particle.length) * particle.size.x;",
                 "            }",
                 "        }",
                 "    }",
@@ -14682,7 +15465,9 @@
                     "    layer.getRenderer().add3DRendererObject(particleSystem.emitter);",
                     "}",
                     "",
-                    "particleSystem.emitter.updateMatrixWorld(true);",
+                    "// Update the parents too, so that the first particles are emitted with the",
+                    "// scale of the layer (the 3D renderer world scale).",
+                    "particleSystem.emitter.updateWorldMatrix(true, true);",
                     "",
                     "",
                     "// See doStepPostEvents",
@@ -15060,23 +15845,67 @@
                     },
                     {
                       "type": {
-                        "value": "ParticleEmitter3D::ParticleEmitter3D::SetStartAngularVelocityMin"
+                        "value": "ParticleEmitter3D::ParticleEmitter3D::SetStartAngularVelocityXMin"
                       },
                       "parameters": [
                         "Object",
                         "=",
-                        "StartAngularVelocityMin",
+                        "StartAngularVelocityXMin",
                         ""
                       ]
                     },
                     {
                       "type": {
-                        "value": "ParticleEmitter3D::ParticleEmitter3D::SetStartAngularVelocityMax"
+                        "value": "ParticleEmitter3D::ParticleEmitter3D::SetStartAngularVelocityXMax"
                       },
                       "parameters": [
                         "Object",
                         "=",
-                        "StartAngularVelocityMax",
+                        "StartAngularVelocityXMax",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ParticleEmitter3D::ParticleEmitter3D::SetStartAngularVelocityYMin"
+                      },
+                      "parameters": [
+                        "Object",
+                        "=",
+                        "StartAngularVelocityYMin",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ParticleEmitter3D::ParticleEmitter3D::SetStartAngularVelocityYMax"
+                      },
+                      "parameters": [
+                        "Object",
+                        "=",
+                        "StartAngularVelocityYMax",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ParticleEmitter3D::ParticleEmitter3D::SetStartAngularVelocityZMin"
+                      },
+                      "parameters": [
+                        "Object",
+                        "=",
+                        "StartAngularVelocityZMin",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ParticleEmitter3D::ParticleEmitter3D::SetStartAngularVelocityZMax"
+                      },
+                      "parameters": [
+                        "Object",
+                        "=",
+                        "StartAngularVelocityZMax",
                         ""
                       ]
                     }
@@ -15752,7 +16581,7 @@
               "objectGroups": []
             },
             {
-              "description": "the start color of the object.",
+              "description": "the start color of the particle.",
               "fullName": "Start color",
               "functionType": "ExpressionAndCondition",
               "group": "3D particle emitter color configuration",
@@ -15835,7 +16664,7 @@
               "objectGroups": []
             },
             {
-              "description": "the end color of the object.",
+              "description": "the end color of the particle.",
               "fullName": "End color",
               "functionType": "ExpressionAndCondition",
               "group": "3D particle emitter color configuration",
@@ -15918,7 +16747,7 @@
               "objectGroups": []
             },
             {
-              "description": "the start opacity of the object.",
+              "description": "the start opacity of the particle.",
               "fullName": "Start opacity",
               "functionType": "ExpressionAndCondition",
               "group": "3D particle emitter color configuration",
@@ -16001,7 +16830,7 @@
               "objectGroups": []
             },
             {
-              "description": "the end opacity of the object.",
+              "description": "the end opacity of the particle.",
               "fullName": "End opacity",
               "functionType": "ExpressionAndCondition",
               "group": "3D particle emitter color configuration",
@@ -16168,7 +16997,7 @@
               "objectGroups": []
             },
             {
-              "description": "the start min size of the object.",
+              "description": "the start min size of the particle.",
               "fullName": "Start min size",
               "functionType": "ExpressionAndCondition",
               "group": "3D particle emitter configuration",
@@ -16251,7 +17080,7 @@
               "objectGroups": []
             },
             {
-              "description": "the start max size of the object.",
+              "description": "the start max size of the particle.",
               "fullName": "Start max size",
               "functionType": "ExpressionAndCondition",
               "group": "3D particle emitter configuration",
@@ -16335,7 +17164,7 @@
               "objectGroups": []
             },
             {
-              "description": "the end scale of the object.",
+              "description": "the end scale of the particle.",
               "fullName": "End scale",
               "functionType": "ExpressionAndCondition",
               "group": "3D particle emitter configuration",
@@ -16419,7 +17248,7 @@
               "objectGroups": []
             },
             {
-              "description": "the min start speed of the object.",
+              "description": "the min start speed of the particle.",
               "fullName": "Min start speed",
               "functionType": "ExpressionAndCondition",
               "group": "3D particle emitter speed configuration",
@@ -16502,7 +17331,7 @@
               "objectGroups": []
             },
             {
-              "description": "the max start speed of the object.",
+              "description": "the max start speed of the particle.",
               "fullName": "Max start speed",
               "functionType": "ExpressionAndCondition",
               "group": "3D particle emitter speed configuration",
@@ -16585,7 +17414,7 @@
               "objectGroups": []
             },
             {
-              "description": "the min lifespan of the object.",
+              "description": "the min lifespan of the particle.",
               "fullName": "Min lifespan",
               "functionType": "ExpressionAndCondition",
               "group": "3D particle emitter configuration",
@@ -16669,7 +17498,7 @@
               "objectGroups": []
             },
             {
-              "description": "the max lifespan of the object.",
+              "description": "the max lifespan of the particle.",
               "fullName": "Max lifespan",
               "functionType": "ExpressionAndCondition",
               "group": "3D particle emitter configuration",
@@ -17523,7 +18352,7 @@
               "objectGroups": []
             },
             {
-              "description": "the start min trail length of the object.",
+              "description": "the start min trail length of the particle.",
               "fullName": "Start min trail length",
               "functionType": "ExpressionAndCondition",
               "group": "3D particle emitter trail configuration",
@@ -17606,7 +18435,7 @@
               "objectGroups": []
             },
             {
-              "description": "the start max trail length of the object.",
+              "description": "the start max trail length of the particle.",
               "fullName": "Start max trail length",
               "functionType": "ExpressionAndCondition",
               "group": "3D particle emitter trail configuration",
@@ -17825,7 +18654,7 @@
               "objectGroups": []
             },
             {
-              "description": "the tail end width ratio of the object.",
+              "description": "the tail end width ratio of the particle.",
               "fullName": "Tail end width ratio",
               "functionType": "ExpressionAndCondition",
               "group": "3D particle emitter trail configuration",
@@ -18359,7 +19188,7 @@
               "objectGroups": []
             },
             {
-              "description": "the start min rotation X of the object.",
+              "description": "the start min rotation X of the particle.",
               "fullName": "Start min rotation X",
               "functionType": "ExpressionAndCondition",
               "group": "3D particle emitter model configuration",
@@ -18442,7 +19271,7 @@
               "objectGroups": []
             },
             {
-              "description": "the start max rotation X of the object.",
+              "description": "the start max rotation X of the particle.",
               "fullName": "Start max rotation X",
               "functionType": "ExpressionAndCondition",
               "group": "3D particle emitter model configuration",
@@ -18525,7 +19354,7 @@
               "objectGroups": []
             },
             {
-              "description": "the start min rotation Y of the object.",
+              "description": "the start min rotation Y of the particle.",
               "fullName": "Start min rotation Y",
               "functionType": "ExpressionAndCondition",
               "group": "3D particle emitter model configuration",
@@ -18608,7 +19437,7 @@
               "objectGroups": []
             },
             {
-              "description": "the start max rotation Y of the object.",
+              "description": "the start max rotation Y of the particle.",
               "fullName": "Start max rotation Y",
               "functionType": "ExpressionAndCondition",
               "group": "3D particle emitter model configuration",
@@ -18691,10 +19520,10 @@
               "objectGroups": []
             },
             {
-              "description": "the start min rotation Z of the object.",
+              "description": "the start min rotation Z of the particle.",
               "fullName": "Start min rotation Z",
               "functionType": "ExpressionAndCondition",
-              "group": "3D particle emitter model configuration",
+              "group": "3D particle emitter configuration",
               "name": "StartRotationZMin",
               "sentence": "the start min rotation Z",
               "events": [
@@ -18730,7 +19559,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "StartRotationZMin",
-              "group": "3D particle emitter model configuration",
+              "group": "3D particle emitter configuration",
               "name": "SetStartRotationZMin",
               "sentence": "",
               "events": [
@@ -18774,10 +19603,10 @@
               "objectGroups": []
             },
             {
-              "description": "the start max rotation Z of the object.",
+              "description": "the start max rotation Z of the particle.",
               "fullName": "Start max rotation Z",
               "functionType": "ExpressionAndCondition",
-              "group": "3D particle emitter model configuration",
+              "group": "3D particle emitter configuration",
               "name": "StartRotationZMax",
               "sentence": "the start max rotation Z",
               "events": [
@@ -18813,7 +19642,7 @@
               "fullName": "",
               "functionType": "ActionWithOperator",
               "getterName": "StartRotationZMax",
-              "group": "3D particle emitter model configuration",
+              "group": "3D particle emitter configuration",
               "name": "SetStartRotationZMax",
               "sentence": "",
               "events": [
@@ -18857,12 +19686,12 @@
               "objectGroups": []
             },
             {
-              "description": "the start min angular velocity of the object.",
-              "fullName": "Start min angular velocity",
+              "description": "the min angular velocity around Z axis of the particle.",
+              "fullName": "Min angular velocity Z",
               "functionType": "ExpressionAndCondition",
-              "group": "3D particle emitter rotation configuration",
-              "name": "StartAngularVelocityMin",
-              "sentence": "the start min angular velocity",
+              "group": "3D particle emitter configuration",
+              "name": "StartAngularVelocityZMin",
+              "sentence": "the min angular velocity around Z axis",
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -18873,7 +19702,7 @@
                         "value": "SetReturnNumber"
                       },
                       "parameters": [
-                        "StartAngularVelocityMin"
+                        "StartAngularVelocityZMin"
                       ]
                     }
                   ]
@@ -18895,9 +19724,9 @@
             {
               "fullName": "",
               "functionType": "ActionWithOperator",
-              "getterName": "StartAngularVelocityMin",
-              "group": "3D particle emitter rotation configuration",
-              "name": "SetStartAngularVelocityMin",
+              "getterName": "StartAngularVelocityZMin",
+              "group": "3D particle emitter configuration",
+              "name": "SetStartAngularVelocityZMin",
               "sentence": "",
               "events": [
                 {
@@ -18909,7 +19738,7 @@
                         "value": "SetNumberVariable"
                       },
                       "parameters": [
-                        "StartAngularVelocityMin",
+                        "StartAngularVelocityZMin",
                         "=",
                         "Value"
                       ]
@@ -18923,15 +19752,12 @@
                     "const value = eventsFunctionContext.getArgument(\"Value\");\r",
                     "\r",
                     "const adapter = object.__particleEmitterAdapter;\r",
-                    "adapter.setStartAngularVelocityMin(value);\r",
-                    "adapter.setStartAngularVelocityXMin(value * object._getStartAngularVelocityRatioXMin());\r",
-                    "adapter.setStartAngularVelocityYMin(value * object._getStartAngularVelocityRatioYMin());\r",
-                    "adapter.setStartAngularVelocityZMin(value * object._getStartAngularVelocityRatioZMin());\r",
+                    "adapter.setStartAngularVelocityZMin(value);\r",
                     ""
                   ],
                   "parameterObjects": "Object",
                   "useStrict": true,
-                  "eventsSheetExpanded": true
+                  "eventsSheetExpanded": false
                 }
               ],
               "parameters": [
@@ -18945,12 +19771,12 @@
               "objectGroups": []
             },
             {
-              "description": "the start max angular velocity of the object.",
-              "fullName": "Start max angular velocity",
+              "description": "the max angular velocity around Z axis of the particle.",
+              "fullName": "Max angular velocity Z",
               "functionType": "ExpressionAndCondition",
-              "group": "3D particle emitter rotation configuration",
-              "name": "StartAngularVelocityMax",
-              "sentence": "the start max angular velocity",
+              "group": "3D particle emitter configuration",
+              "name": "StartAngularVelocityZMax",
+              "sentence": "the max angular velocity around Z axis",
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -18961,7 +19787,7 @@
                         "value": "SetReturnNumber"
                       },
                       "parameters": [
-                        "StartAngularVelocityMax"
+                        "StartAngularVelocityZMax"
                       ]
                     }
                   ]
@@ -18983,9 +19809,9 @@
             {
               "fullName": "",
               "functionType": "ActionWithOperator",
-              "getterName": "StartAngularVelocityMax",
-              "group": "3D particle emitter rotation configuration",
-              "name": "SetStartAngularVelocityMax",
+              "getterName": "StartAngularVelocityZMax",
+              "group": "3D particle emitter configuration",
+              "name": "SetStartAngularVelocityZMax",
               "sentence": "",
               "events": [
                 {
@@ -18997,7 +19823,7 @@
                         "value": "SetNumberVariable"
                       },
                       "parameters": [
-                        "StartAngularVelocityMax",
+                        "StartAngularVelocityZMax",
                         "=",
                         "Value"
                       ]
@@ -19011,15 +19837,352 @@
                     "const value = eventsFunctionContext.getArgument(\"Value\");\r",
                     "\r",
                     "const adapter = object.__particleEmitterAdapter;\r",
-                    "adapter.setStartAngularVelocityMax(value);\r",
-                    "adapter.setStartAngularVelocityXMax(value * object._getStartAngularVelocityRatioXMax());\r",
-                    "adapter.setStartAngularVelocityYMax(value * object._getStartAngularVelocityRatioYMax());\r",
-                    "adapter.setStartAngularVelocityZMax(value * object._getStartAngularVelocityRatioZMax());\r",
+                    "adapter.setStartAngularVelocityZMax(value);\r",
                     ""
                   ],
                   "parameterObjects": "Object",
                   "useStrict": true,
                   "eventsSheetExpanded": true
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "ParticleEmitter3D::ParticleEmitter3D",
+                  "type": "object"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "the min angular velocity around X axis of the particle.",
+              "fullName": "Min angular velocity X",
+              "functionType": "ExpressionAndCondition",
+              "group": "3D particle emitter model configuration",
+              "name": "StartAngularVelocityXMin",
+              "sentence": "the min angular velocity around X axis",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnNumber"
+                      },
+                      "parameters": [
+                        "StartAngularVelocityXMin"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "ParticleEmitter3D::ParticleEmitter3D",
+                  "type": "object"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "ActionWithOperator",
+              "getterName": "StartAngularVelocityXMin",
+              "group": "3D particle emitter model configuration",
+              "name": "SetStartAngularVelocityXMin",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "StartAngularVelocityXMin",
+                        "=",
+                        "Value"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const object = objects[0];\r",
+                    "const value = eventsFunctionContext.getArgument(\"Value\");\r",
+                    "\r",
+                    "const adapter = object.__particleEmitterAdapter;\r",
+                    "adapter.setStartAngularVelocityXMin(value);\r",
+                    ""
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "ParticleEmitter3D::ParticleEmitter3D",
+                  "type": "object"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "the max angular velocity  around X axis of the particle.",
+              "fullName": "Max angular velocity X",
+              "functionType": "ExpressionAndCondition",
+              "group": "3D particle emitter model configuration",
+              "name": "StartAngularVelocityXMax",
+              "sentence": "the max angular velocity around X axis",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnNumber"
+                      },
+                      "parameters": [
+                        "StartAngularVelocityXMax"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "ParticleEmitter3D::ParticleEmitter3D",
+                  "type": "object"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "ActionWithOperator",
+              "getterName": "StartAngularVelocityXMax",
+              "group": "3D particle emitter model configuration",
+              "name": "SetStartAngularVelocityXMax",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "StartAngularVelocityXMax",
+                        "=",
+                        "Value"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const object = objects[0];\r",
+                    "const value = eventsFunctionContext.getArgument(\"Value\");\r",
+                    "\r",
+                    "const adapter = object.__particleEmitterAdapter;\r",
+                    "adapter.setStartAngularVelocityXMax(value);\r",
+                    ""
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "ParticleEmitter3D::ParticleEmitter3D",
+                  "type": "object"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "the min angular velocity around Y axis of the particle.",
+              "fullName": "Min angular velocity Y",
+              "functionType": "ExpressionAndCondition",
+              "group": "3D particle emitter model configuration",
+              "name": "StartAngularVelocityYMin",
+              "sentence": "the min angular velocity around Y axis",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnNumber"
+                      },
+                      "parameters": [
+                        "StartAngularVelocityYMin"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "ParticleEmitter3D::ParticleEmitter3D",
+                  "type": "object"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "ActionWithOperator",
+              "getterName": "StartAngularVelocityYMin",
+              "group": "3D particle emitter model configuration",
+              "name": "SetStartAngularVelocityYMin",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "StartAngularVelocityYMin",
+                        "=",
+                        "Value"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const object = objects[0];\r",
+                    "const value = eventsFunctionContext.getArgument(\"Value\");\r",
+                    "\r",
+                    "const adapter = object.__particleEmitterAdapter;\r",
+                    "adapter.setStartAngularVelocityYMin(value);\r",
+                    ""
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "ParticleEmitter3D::ParticleEmitter3D",
+                  "type": "object"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "the max angular velocity around Y axis of the particle.",
+              "fullName": "Max angular velocity Y",
+              "functionType": "ExpressionAndCondition",
+              "group": "3D particle emitter model configuration",
+              "name": "StartAngularVelocityYMax",
+              "sentence": "the max angular velocity around Y axis",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnNumber"
+                      },
+                      "parameters": [
+                        "StartAngularVelocityYMax"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "ParticleEmitter3D::ParticleEmitter3D",
+                  "type": "object"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "ActionWithOperator",
+              "getterName": "StartAngularVelocityYMax",
+              "group": "3D particle emitter model configuration",
+              "name": "SetStartAngularVelocityYMax",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "StartAngularVelocityYMax",
+                        "=",
+                        "Value"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const object = objects[0];\r",
+                    "const value = eventsFunctionContext.getArgument(\"Value\");\r",
+                    "\r",
+                    "const adapter = object.__particleEmitterAdapter;\r",
+                    "adapter.setStartAngularVelocityYMax(value);\r",
+                    ""
+                  ],
+                  "parameterObjects": "Object",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
                 }
               ],
               "parameters": [
@@ -19196,6 +20359,30 @@
                     "functionName": "SetShouldAutodestruct"
                   },
                   {
+                    "functionName": "StartRotationZMin"
+                  },
+                  {
+                    "functionName": "SetStartRotationZMin"
+                  },
+                  {
+                    "functionName": "StartRotationZMax"
+                  },
+                  {
+                    "functionName": "SetStartRotationZMax"
+                  },
+                  {
+                    "functionName": "StartAngularVelocityZMin"
+                  },
+                  {
+                    "functionName": "SetStartAngularVelocityZMin"
+                  },
+                  {
+                    "functionName": "StartAngularVelocityZMax"
+                  },
+                  {
+                    "functionName": "SetStartAngularVelocityZMax"
+                  },
+                  {
                     "functionName": "RenderMode"
                   },
                   {
@@ -19301,33 +20488,28 @@
                     "functionName": "SetStartRotationYMax"
                   },
                   {
-                    "functionName": "StartRotationZMin"
+                    "functionName": "StartAngularVelocityXMin"
                   },
                   {
-                    "functionName": "SetStartRotationZMin"
+                    "functionName": "SetStartAngularVelocityXMin"
                   },
                   {
-                    "functionName": "StartRotationZMax"
+                    "functionName": "StartAngularVelocityXMax"
                   },
                   {
-                    "functionName": "SetStartRotationZMax"
-                  }
-                ]
-              },
-              {
-                "folderName": "3D particle emitter rotation configuration",
-                "children": [
-                  {
-                    "functionName": "StartAngularVelocityMin"
+                    "functionName": "SetStartAngularVelocityXMax"
                   },
                   {
-                    "functionName": "SetStartAngularVelocityMin"
+                    "functionName": "StartAngularVelocityYMin"
                   },
                   {
-                    "functionName": "StartAngularVelocityMax"
+                    "functionName": "SetStartAngularVelocityYMin"
                   },
                   {
-                    "functionName": "SetStartAngularVelocityMax"
+                    "functionName": "StartAngularVelocityYMax"
+                  },
+                  {
+                    "functionName": "SetStartAngularVelocityYMax"
                   }
                 ]
               }
@@ -19636,7 +20818,7 @@
               "name": "Model3D"
             },
             {
-              "value": "90",
+              "value": "0",
               "type": "Number",
               "unit": "DegreeAngle",
               "label": "Start min rotation X",
@@ -19645,7 +20827,7 @@
               "name": "StartRotationXMin"
             },
             {
-              "value": "90",
+              "value": "0",
               "type": "Number",
               "unit": "DegreeAngle",
               "label": "Start max rotation X",
@@ -19690,72 +20872,54 @@
             {
               "value": "0",
               "type": "Number",
-              "unit": "Dimensionless",
+              "unit": "AngularSpeed",
               "label": "Min angular velocity X",
               "group": "Model",
               "advanced": true,
-              "name": "StartAngularVelocityRatioXMin"
+              "name": "StartAngularVelocityXMin"
             },
             {
               "value": "0",
               "type": "Number",
-              "unit": "Dimensionless",
+              "unit": "AngularSpeed",
               "label": "Max angular velocity X",
               "group": "Model",
               "advanced": true,
-              "name": "StartAngularVelocityRatioXMax"
+              "name": "StartAngularVelocityXMax"
             },
             {
               "value": "0",
               "type": "Number",
               "unit": "AngularSpeed",
-              "label": "Start min angular velocity",
+              "label": "Min angular velocity Z",
               "group": "Rotation",
-              "name": "StartAngularVelocityMin"
+              "name": "StartAngularVelocityZMin"
             },
             {
               "value": "0",
               "type": "Number",
               "unit": "AngularSpeed",
-              "label": "Start max angular velocity",
+              "label": "Max angular velocity Z",
               "group": "Rotation",
-              "name": "StartAngularVelocityMax"
+              "name": "StartAngularVelocityZMax"
             },
             {
               "value": "0",
               "type": "Number",
-              "unit": "Dimensionless",
+              "unit": "AngularSpeed",
               "label": "Min angular velocity Y",
               "group": "Model",
               "advanced": true,
-              "name": "StartAngularVelocityRatioYMin"
-            },
-            {
-              "value": "1",
-              "type": "Number",
-              "unit": "Dimensionless",
-              "label": "Min angular velocity Z",
-              "group": "Model",
-              "advanced": true,
-              "name": "StartAngularVelocityRatioZMin"
+              "name": "StartAngularVelocityYMin"
             },
             {
               "value": "0",
               "type": "Number",
-              "unit": "Dimensionless",
+              "unit": "AngularSpeed",
               "label": "Max angular velocity Y",
               "group": "Model",
               "advanced": true,
-              "name": "StartAngularVelocityRatioYMax"
-            },
-            {
-              "value": "1",
-              "type": "Number",
-              "unit": "Dimensionless",
-              "label": "Max angular velocity Z",
-              "group": "Model",
-              "advanced": true,
-              "name": "StartAngularVelocityRatioZMax"
+              "name": "StartAngularVelocityYMax"
             }
           ],
           "propertiesFolderStructure": {
@@ -19843,10 +21007,10 @@
                     "propertyName": "StartRotationZMax"
                   },
                   {
-                    "propertyName": "StartAngularVelocityMin"
+                    "propertyName": "StartAngularVelocityZMin"
                   },
                   {
-                    "propertyName": "StartAngularVelocityMax"
+                    "propertyName": "StartAngularVelocityZMax"
                   }
                 ]
               },
@@ -19906,22 +21070,16 @@
                     "propertyName": "StartRotationYMax"
                   },
                   {
-                    "propertyName": "StartAngularVelocityRatioXMin"
+                    "propertyName": "StartAngularVelocityXMin"
                   },
                   {
-                    "propertyName": "StartAngularVelocityRatioXMax"
+                    "propertyName": "StartAngularVelocityXMax"
                   },
                   {
-                    "propertyName": "StartAngularVelocityRatioYMin"
+                    "propertyName": "StartAngularVelocityYMin"
                   },
                   {
-                    "propertyName": "StartAngularVelocityRatioYMax"
-                  },
-                  {
-                    "propertyName": "StartAngularVelocityRatioZMin"
-                  },
-                  {
-                    "propertyName": "StartAngularVelocityRatioZMax"
+                    "propertyName": "StartAngularVelocityYMax"
                   }
                 ]
               },
@@ -19937,7 +21095,7 @@
     {
       "author": "@4ian, Tristan Rhodes (https://victrisgames.itch.io/)",
       "category": "Movement",
-      "dimension": "",
+      "dimension": "2D",
       "extensionNamespace": "",
       "fullName": "Ellipse movement",
       "gdevelopVersion": ">=5.5.222",
@@ -19945,8 +21103,8 @@
       "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0ibWRpLXNpbmUtd2F2ZSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGQ9Ik0xNi41LDIxQzEzLjUsMjEgMTIuMzEsMTYuNzYgMTEuMDUsMTIuMjhDMTAuMTQsOS4wNCA5LDUgNy41LDVDNC4xMSw1IDQsMTEuOTMgNCwxMkgyQzIsMTEuNjMgMi4wNiwzIDcuNSwzQzEwLjUsMyAxMS43MSw3LjI1IDEyLjk3LDExLjc0QzEzLjgzLDE0LjggMTUsMTkgMTYuNSwxOUMxOS45NCwxOSAyMC4wMywxMi4wNyAyMC4wMywxMkgyMi4wM0MyMi4wMywxMi4zNyAyMS45NywyMSAxNi41LDIxWiIgLz48L3N2Zz4=",
       "name": "EllipseMovement",
       "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/sine-wave.svg",
-      "shortDescription": "Move objects on ellipses or smoothly back and forth in one direction.",
-      "version": "1.1.0",
+      "shortDescription": "Move objects in elliptical paths or smooth back-and-forth in one direction.",
+      "version": "1.1.1",
       "description": [
         "It allows objects to move:",
         "- on an ellipsis or arcs",
@@ -20238,7 +21396,7 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "MettreX"
+                        "value": "SetX"
                       },
                       "parameters": [
                         "Object",
@@ -20265,7 +21423,7 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "MettreY"
+                        "value": "SetY"
                       },
                       "parameters": [
                         "Object",
